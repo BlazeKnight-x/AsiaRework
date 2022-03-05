@@ -1,0 +1,16 @@
+name = "Ming-Mong Mao War"
+war_goal = {
+	type = take_claim
+	casus_belli = cb_conquest
+	province = 2166
+}
+
+1443.3.1 = {
+	add_attacker = MNG
+	add_defender = MMA
+}
+
+1449.3.1 = {
+	rem_attacker = MNG
+	rem_defender = MMA
+}

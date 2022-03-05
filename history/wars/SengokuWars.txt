@@ -1,0 +1,49 @@
+#Vanilla File
+name = "Onin War"
+war_goal = {
+	type = take_claim
+	casus_belli = cb_conquest
+	province = 1819 # Tosa
+}
+
+1467.5.27 = {
+	add_attacker = YMN
+	add_attacker = OUC
+	add_attacker = SBA
+	
+	add_attacker = KNO
+	add_attacker = ISK
+	add_attacker = KTB
+	add_attacker = ODA
+	add_attacker = TKI
+	add_attacker = TTI
+	
+	add_defender = HSK
+	add_defender = TKD
+	add_defender = HTK
+	
+	add_defender = TKG
+	add_defender = ROK
+	add_defender = AMA
+}
+
+1477.12.16 = {
+	rem_attacker = YMN
+	rem_attacker = OUC
+	rem_attacker = SBA
+	
+	rem_attacker = KNO
+	rem_attacker = ISK
+	rem_attacker = KTB
+	rem_attacker = ODA
+	rem_attacker = TKI
+	rem_attacker = TTI
+	
+	rem_defender = HSK
+	rem_defender = TKD
+	rem_defender = HTK
+	
+	rem_defender = TKG
+	rem_defender = ROK
+	rem_defender = AMA
+}

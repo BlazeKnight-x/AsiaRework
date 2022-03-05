@@ -1,0 +1,20 @@
+bookmark =
+{
+	name = "GC_INDIA_BOOKMARK"
+	desc = "GC_INDIA_BOOKMARK_DESC"
+	date = 1444.11.11
+
+	center = 2231
+	
+	country = VIJ
+	country = BAH
+	country = BNG
+	country = DLH
+	country = SRH
+	country = JNP
+	country = TIM
+	country = TRS
+	country = SHY
+	country = QAR
+	country = QOM
+}
