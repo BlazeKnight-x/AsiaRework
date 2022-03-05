@@ -1,0 +1,6 @@
+government = monarchy
+add_government_reform = eastern_trading_city
+primary_culture = jeju
+religion = mahayana
+technology_group = chinese
+capital = 2741 # Jeju

@@ -1,0 +1,70 @@
+government = tribal
+add_government_reform = tribal_kingdom
+primary_culture = khampa
+religion = vajrayana
+technology_group = chinese
+capital = 6508 #Powo
+government_rank = 1
+
+1440.1.1 = {
+	monarch = {
+		name = "Nyima Jiebu"
+		adm = 3
+		dip = 3
+		mil = 4
+	}
+}
+
+1490.1.1 = {
+	monarch = {
+		name = "Qujie Wangqiu Rao Dan"
+		adm = 1
+		dip = 2
+		mil = 3
+	}
+}
+
+1540.1.1 = {
+	monarch = {
+		name = "Diba San'a"
+		adm = 1
+		dip = 2
+		mil = 3
+	}
+}
+
+1590.1.1 = {
+	monarch = {
+		name = "Diba Chigan"
+		adm = 1
+		dip = 2
+		mil = 3
+	}
+}
+
+1640.1.1 = {
+	monarch = {
+		name = "Zabu Sonan Yangjian"
+		adm = 1
+		dip = 2
+		mil = 3
+	}
+}
+
+1690.1.1 = {
+	monarch = {
+		name = "Baima Cewang"
+		adm = 1
+		dip = 2
+		mil = 3
+	}
+}
+
+1740.1.1 = {
+	monarch = {
+		name = "Wangqin Dundui"
+		adm = 1
+		dip = 2
+		mil = 3
+	}
+}

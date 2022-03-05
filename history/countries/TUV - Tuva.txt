@@ -1,0 +1,17 @@
+government = tribal
+add_government_reform = steppe_horde
+government_rank = 1
+technology_group = nomad_group
+religion = tengri_pagan_reformed
+primary_culture = oirats
+capital = 716 #Tannu Uriankhai
+
+1433.1.1 = {
+	monarch = {
+		name = "Naghachu"
+		dynasty = "Uriankhai"
+		adm = 2
+		dip = 3
+		mil = 2
+	}
+}

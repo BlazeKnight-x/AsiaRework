@@ -1,0 +1,104 @@
+government = monarchy
+add_government_reform = daimyo
+government_rank = 1
+primary_culture = togoku
+religion = shinto
+technology_group = chinese
+capital = 1028
+
+1416.1.1 = {
+	monarch = {
+		name = "Mochito"
+		dynasty = "Uesugi"
+		birth_date = 1418.1.1
+		death_date = 1467.10.4
+		adm = 4
+		dip = 5
+		mil = 5
+	}
+}
+
+1449.1.1 = {
+	monarch = {
+		name = "Kenbo"
+		dynasty = "Uesugi"
+		birth_date = 1435.1.1
+#		death_date = 1455.2.10
+		adm = 0
+		dip = 0
+		mil = 0
+	}
+}
+
+1455.2.11 = {
+	monarch = {
+		name = "Mochito"
+		dynasty = "Uesugi"
+		birth_date = 1418.1.1
+		death_date = 1467.10.4
+		adm = 4
+		dip = 5
+		mil = 5
+	}
+}
+
+
+1467.10.5 = {
+	monarch = {
+		name = "Norikata"
+		dynasty = "Uesugi"
+		birth_date = 1451.1.1
+#		death_date = 1473.12.13
+		adm = 1
+		dip = 2
+		mil = 4
+	}
+}
+
+1473.12.14 = {
+	monarch = {
+		name = "Sadamasa"
+		dynasty = "Uesugi"
+		birth_date = 1443.6.14
+#		death_date = 1494.11.2
+		adm = 1
+		dip = 1
+		mil = 0
+	}
+}
+
+1494.11.3 = {
+	monarch = {
+		name = "Tomoyoshi"
+		dynasty = "Uesugi"
+		birth_date = 1473.1.1
+#		death_date = 1518.4.21
+		adm = 1
+		dip = 0
+		mil = 0
+	}
+}
+	
+1518.4.23 = { 
+	monarch = {
+		name = "Tomooki"
+		dynasty = "Uesugi"
+		birth_date = 1488.1.1
+#		death_date = 1537.6.4
+		adm = 0
+		dip = 2
+		mil = 2
+	}
+}
+	
+1537.6.5 = { 
+	monarch = {
+		name = "Tomosada"
+		dynasty = "Uesugi"
+		birth_date = 1525.1.1
+#		death_date = 1546.5.19
+		adm = 1
+		dip = 3
+		mil = 2
+	}
+}

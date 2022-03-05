@@ -1,0 +1,10 @@
+government = monarchy
+add_government_reform = chinese_warring_state
+technology_group = chinese
+religion = confucianism
+primary_culture = sichuanese
+capital = 679	#Chengdu
+
+1444.1.1 = {
+	set_country_flag = chinese_warring_state
+}
