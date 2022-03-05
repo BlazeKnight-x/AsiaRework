@@ -1,0 +1,24 @@
+owner = JST
+controller = JST
+culture = kanto
+religion = shinto
+capital = "Kazusa"
+trade_goods = fish
+hre = no
+base_tax = 5
+base_production = 5
+base_manpower = 4
+is_city = yes
+add_core = JST
+discovered_by = chinese
+discovered_by = nomad_group
+discovered_by = MCH
+discovered_by = KHA
+discovered_by = OIR
+discovered_by = QNG
+discovered_by = ANU
+
+1542.1.1 = { discovered_by = POR }
+# Battle of Konodai
+1590.8.10 = { remove_core = JST add_core = TKG owner = TKG controller = TKG }
+# Tokugawa shogunate founded
