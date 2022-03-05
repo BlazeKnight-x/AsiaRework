@@ -1,0 +1,23 @@
+#2745 - Gyeongju
+
+owner = KOR
+controller = KOR
+culture = gyeongsang
+religion = confucianism
+capital = "Gyeongju"
+trade_goods = tea
+hre = no
+base_tax = 10
+base_production = 10
+base_manpower = 4
+is_city = yes
+add_core = KOR
+discovered_by = chinese
+discovered_by = nomad_group
+center_of_trade = 2
+fort_15th = yes #represents Multiple Forts in Busan (7 Years War)
+
+1542.1.1 = { discovered_by = POR }
+1592.5.25 = { controller = ODA } # Japanese invasion - Siege of Busan
+1598.12.24 = { controller = KOR }
+1653.1.1 = { discovered_by = NED } # Hendrick Hamel
