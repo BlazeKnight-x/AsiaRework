@@ -1,0 +1,83 @@
+government = theocracy
+add_government_reform = ikko_ikki_reform
+government_rank = 1
+primary_culture = japanese
+religion = mahayana
+technology_group = chinese
+capital = 6100	# Kaga
+
+
+1457.1.1 = { 
+	monarch = {
+		name = "Rennyo"
+		dynasty = "Hongan-ji"
+		birth_date = 1415.1.1
+		adm = 6
+		dip = 5
+		mil = 3
+	}
+}
+	
+1457.1.1 = {
+	heir = {
+		name = "Jitsunyo"
+		monarch_name = "Jitsunyo"
+		dynasty = "Hongan-ji"
+		birth_date = 1457.1.1
+		death_date = 1525.1.1
+		claim = 90
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+1499.1.1 = { 
+	monarch = {
+		name = "Jitsunyo"
+		dynasty = "Hongan-ji"
+		birth_date = 1457.1.1
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+	
+1499.1.1 = {
+	heir = {
+		name = "Shonyo"
+		monarch_name = "Shonyo"
+		dynasty = "Hongan-ji"
+		birth_date = 1499.1.1
+		death_date = 1560.1.1
+		claim = 90
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+1525.1.1 = {
+	monarch = {
+		name = "Shonyo" 
+		dynasty = "Hongan-ji"
+		birth_date = 1499.1.1
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+	
+}
+
+1560.1.1 = {
+	monarch = {
+		name = "Kennyo" 
+		dynasty = "Hongan-ji"
+		birth_date = 1543.20.2
+		adm = 2
+		dip = 4
+		mil = 3
+	}
+	
+}
+

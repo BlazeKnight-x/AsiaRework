@@ -1,0 +1,23 @@
+government = monarchy
+add_government_reform = chinese_warring_state
+technology_group = chinese
+religion = confucianism
+primary_culture = xibei
+capital = 700 # Xi'an
+
+1444.1.1 = {
+	set_country_flag = chinese_warring_state
+}
+
+1627.1.1 = {
+	monarch = {
+		name = "Zicheng"
+		dynasty = "Li"
+		adm = 2
+		dip = 3
+		mil = 4
+	}
+	capital = 700 # Xi'an
+}
+
+1644.1.1 = { capital = 700 }

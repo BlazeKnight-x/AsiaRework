@@ -1,0 +1,171 @@
+government = monarchy
+add_government_reform = daimyo
+government_rank = 1
+primary_culture = kanto
+religion = shinto
+technology_group = chinese
+capital = 6102	# Kazusa
+
+1415.1.1 = {
+	monarch = {
+		name = "Yoshizane"
+		dynasty = "Satomi"
+		adm = 4
+		dip = 3
+		mil = 5
+		}
+}
+
+1448.1.1 = {
+	heir = {
+		name = "Shigeyoshi"
+		monarch_name = "Shigeyoshi"
+		dynasty = "Shigeyoshi"
+		birth_date = 1448.1.1
+		death_date = 1505.5.18
+		claim = 90
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
+
+1463.1.1 = {
+	monarch = {
+		name = "Shigeyoshi" 
+		dynasty = "Satomi"
+		birth_date = 1448.1.1
+		adm = 2
+		dip = 2
+		mil = 2
+		}
+}
+
+1480.1.1 = {
+	heir = {
+		name = "Yoshimichi"
+		monarch_name = "Yoshimichi"
+		dynasty = "Satomi"
+		birth_date = 1480.1.1
+		death_date = 1518.1.1
+		claim = 90
+		adm = 1
+		dip = 2
+		mil = 2
+	}
+}
+
+1495.1.1 = {
+	monarch = {
+		name = "Yoshimichi" 
+		dynasty = "Satomi"
+		birth_date = 1480.1.1
+		adm = 1
+		dip = 2
+		mil = 2
+		}
+}
+
+1518.1.1 = {
+	monarch = {
+		name = "Sanetaka"
+		dynasty = "Satomi"
+		birth_date = 1483.1.1
+		adm = 1
+		dip = 3
+		mil = 5
+		}
+}
+
+1518.1.1 = {
+	heir = {
+		name = "Yoshitaka"
+		monarch_name = "Yoshitaka"
+		dynasty = "Satomi"
+		birth_date = 1512.1.1
+		death_date = 1574.1.1
+		claim = 90
+		adm = 2
+		dip = 2
+		mil = 5
+	}
+}
+	
+1533.1.1 = { 
+	monarch = {
+		name = "Yoshitaka"
+		dynasty = "Satomi"
+		birth_date = 1400.1.1
+		adm = 2
+		dip = 3
+		mil = 5
+		}
+	clear_scripted_personalities = yes
+	add_ruler_personality = conqueror_personality	
+	}
+	
+1533.1.1 = {
+	heir = {
+		name = "Yoshihiro"
+		monarch_name = "Yoshihiro"
+		dynasty = "Satomi"
+		birth_date = 1530.1.1
+		death_date = 1578.7.5
+		claim = 90
+		adm = 2
+		dip = 2
+		mil = 0
+	}
+}
+	
+1574.1.1 = { 
+	monarch = {
+		name = "Yoshihiro"
+		dynasty = "Satomi"
+		birth_date = 1530.1.1
+#		death_date = 1578.7.5
+		adm = 2
+		dip = 2
+		mil = 0
+		}
+	}
+}
+
+1578.7.6 = { 
+	monarch = {
+		name = "Yoshitaka"
+		dynasty = "Satomi"
+		birth_date = 1550.1.1
+#		death_date = 1587.1.1
+		adm = 1
+		dip = 1
+		mil = 3
+		}
+	}
+}
+
+1587.1.1 = { 
+	monarch = {
+		name = "Yoshiyasu"
+		dynasty = "Satomi"
+		birth_date = 1550.1.1
+#		death_date = 1600.1.1
+		adm = 1
+		dip = 4
+		mil = 3
+		}
+	}
+}
+
+1600.1.1 = { 
+	monarch = {
+		name = "Tadayoshi"
+		dynasty = "Satomi"
+		birth_date = 1580.1.1
+#		death_date = 1622.7.22
+		adm = 0
+		dip = 0
+		mil = 0
+		}
+	}
+}

@@ -1,0 +1,7 @@
+government = tribal
+add_government_reform = steppe_horde
+primary_culture = uyghur #kirgiz
+religion = sunni
+technology_group = nomad_group
+religious_school = hanafi_school
+government = 2

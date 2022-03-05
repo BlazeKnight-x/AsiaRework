@@ -1,0 +1,18 @@
+government = monarchy
+add_government_reform = plutocratic_reform
+primary_culture = bugis
+religion = animism
+technology_group = chinese
+capital = 6088	# Bone
+
+1424.1.1 = {
+	monarch = {
+		name = "La Saliyu Karampelluwa"
+		dynasty = "Bone"
+		birth_date = 1424.1.1
+		death_Date = 1496.1.1
+		adm = 3
+		dip = 3
+		mil = 3
+	}
+}

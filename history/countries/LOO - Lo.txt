@@ -1,0 +1,41 @@
+government = monarchy
+add_government_reform = feudalism_reform
+technology_group = indian
+primary_culture = tibetan
+religion = vajrayana
+capital = 6501
+
+
+1370.1.1 = { #Legendary founder of Lo Manthang
+	monarch = {
+		name = "Ame Pal"
+		dynasty = "Lo"
+		ADM = 4
+		DIP = 2
+		MIL = 5
+	}
+}
+
+1380.1.1 = {
+	heir = {
+		name = "Amgun Sangpo"
+		monarch_name = "Amgun Sangpo"
+		dynasty = "Lo"
+		birth_date = 1380.1.1
+		death_date = 1450.1.1
+		claim = 95
+		ADM = 4
+		DIP = 3
+		MIL = 2
+	}
+}
+
+1450.1.1 = {
+	monarch = {
+		name = "Native Council"
+		adm = 3
+		dip = 3
+		mil = 3
+		regent = yes
+	}
+}

@@ -1,0 +1,73 @@
+government = monarchy
+add_government_reform = daimyo
+government_rank = 1
+primary_culture = shikoku
+religion = shinto
+technology_group = chinese
+capital = 1819	# Tosa
+
+1437.1.1 = {
+	monarch = {
+		name = "Norifumi" 
+		dynasty = "Ichijo"
+		birth_date = 1423.1.1
+		adm = 1
+		dip = 1
+		mil = 1
+	}
+}
+
+1480.11.6 = {
+	monarch = {
+		name = "Fusaie" 
+		dynasty = "Ichijo"
+		birth_date = 1423.1.1
+		adm = 4
+		dip = 6
+		mil = 3
+	}
+}
+
+1539.12.23 = {
+	monarch = {
+		name = "Fusa Fuyu" 
+		dynasty = "Ichijo"
+		birth_date = 1498.1.1
+		adm = 1
+		dip = 1
+		mil = 0
+	}
+}
+
+1543.11.23 = {
+	monarch = {
+		name = "Fusamoto" 
+		dynasty = "Ichijo"
+		birth_date = 1522.1.1
+		adm = 2
+		dip = 2
+		mil = 4
+	}
+}
+
+1549.5.9 = {
+	monarch = {
+		name = "Kanesada" 
+		dynasty = "Ichijo"
+		birth_date = 1543.1.1
+		adm = 2
+		dip = 3
+		mil = 1
+	}
+}
+
+1585.7.27 = {
+	monarch = {
+		name = "Tadamasa" 
+		dynasty = "Ichijo"
+		birth_date = 1543.1.1
+		adm = 1
+		dip = 2
+		mil = 0
+	}
+}
