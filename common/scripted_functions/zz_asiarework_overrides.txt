@@ -1,0 +1,53 @@
+can_improve_tax = {
+	condition = {
+		tooltip = CANNOT_DEV_TAX_IN_TRIBUTARY
+		potential = {
+			owner = {
+				OR = {
+					is_subject_of_type = confucian_tributary_state
+					is_subject_of_type = military_commission
+				}
+				is_subject_of = from
+			}
+		}
+		allow = {
+			always = no
+		}
+	}
+}
+
+can_improve_production = {
+	condition = {
+		tooltip = CANNOT_DEV_PRODUCTION_IN_TRIBUTARY
+		potential = {
+			owner = {
+				OR = {
+					is_subject_of_type = confucian_tributary_state
+					is_subject_of_type = military_commission
+				}
+				is_subject_of = from
+			}
+		}
+		allow = {
+			always = no
+		}
+	}
+}
+
+can_improve_manpower = {
+	condition = {
+		tooltip = CANNOT_DEV_MANPOWER_IN_TRIBUTARY
+		potential = {
+			owner = {
+				OR = {
+					is_subject_of_type = confucian_tributary_state
+					is_subject_of_type = military_commission
+				}
+				is_subject_of = from
+			}
+		}
+		allow = {
+			always = no
+		}
+	}
+}

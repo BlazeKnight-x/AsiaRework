@@ -1,0 +1,112 @@
+ar_emperor_of_china_crisis = {
+	potential = {
+		is_emperor_of_china = yes
+		OR = {
+			current_age = age_of_discovery
+			NOT = { #They have their own unique disaster.
+				tag = MNG
+			} 
+		}
+		normal_or_historical_nations = yes
+	}
+	
+	can_start = {
+		NOT = {
+			has_country_modifier = new_mandate_holder
+		}
+		OR = { #Does not own all of the 4 ancient capitals of China.
+			NOT = { owns = 1816 } #Beijing
+			NOT = { owns = 1821 } #Nanjing
+			NOT = { owns = 700 } #Xi'an
+			NOT = { owns = 1836 } #Luoyang
+		}
+	}
+	
+	can_stop = {
+		owns = 1816 #Beijing
+		owns = 1821 #Nanjing
+		owns = 700 #Xi'an
+		owns = 1836 #Luoyang
+	}
+	
+	progress = {
+		modifier = {
+			factor = 100
+			has_dlc = "Mandate of Heaven"
+			NOT = { is_emperor_of_china = yes }
+		}
+		modifier = { #30 < Mandate < 50
+			factor = 1
+			NOT = { imperial_mandate = 50 }
+			imperial_mandate = 30
+		}
+		modifier = { #10 < Mandate < 30
+			factor = 3
+			NOT = { imperial_mandate = 30 }
+			imperial_mandate = 10
+		}
+		modifier = { #Mandate < 10
+			factor = 5
+			NOT = { imperial_mandate = 10 }
+		}
+		modifier = {
+			factor = 1
+			NOT = { owns = 1816 }
+		}
+		modifier = {
+			factor = 1
+			NOT = { owns = 1821 }
+		}
+		modifier = {
+			factor = 1
+			NOT = { owns = 700 }
+		}
+		modifier = {
+			factor = 1
+			NOT = { owns = 1836 }
+		}
+	}
+	
+	can_end = {
+		if = {
+			limit = {
+				has_dlc = "Mandate of Heaven"
+			}
+			OR = {
+				is_emperor_of_china = yes
+				imperial_mandate = 50
+			}
+			owns = 1816 #Beijing
+			owns = 1821 #Nanjing
+			owns = 700 #Xi'an
+			owns = 1836 #Luoyang
+		}
+		else = {
+			owns = 1816 #Beijing
+			owns = 1821 #Nanjing
+			owns = 700 #Xi'an
+			owns = 1836 #Luoyang
+		}
+		is_bankrupt = no
+		NOT = { num_of_loans = 5 }
+		NOT = { corruption = 5 }
+		NOT = { num_of_rebel_armies = 1 }
+		NOT = { num_of_rebel_controlled_provinces = 1 }
+	}
+	
+	modifier = {
+		land_morale = -0.15
+		imperial_mandate = -0.2
+		global_unrest = 15
+	}
+	
+	on_start = asiarework_mandate.3
+	on_end = asiarework_mandate.4
+	
+	on_monthly = {
+		events = {
+		}
+		random_events = {
+		}
+	}
+}

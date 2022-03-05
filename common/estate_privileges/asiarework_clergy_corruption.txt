@@ -1,0 +1,52 @@
+# Mod
+estate_church_clergy_run_bureaucracy = {
+	icon = privilege_grant_autonomy
+	land_share = 10
+	max_absolutism = -10
+	loyalty = 0.1
+	influence = 0.3
+	is_valid = {
+		OR = {
+			religion = confucianism
+			religion = buddhism
+			religion = mahayana
+			religion = vajrayana
+			religion = shinto
+			religion = muism
+		}
+	}
+	penalties = {
+		meritocracy = -0.1
+		yearly_corruption = 0.1
+		imperial_mandate = -0.05
+	}
+	benefits = {
+		advisor_cost = -0.1
+		advisor_pool = 1
+		state_governing_cost = -0.1
+	}
+	ai_will_do = {
+		factor = 0
+	}
+}
+# Clone
+#estate_hungu_clergy_run_bureaucracy = {
+#	icon = privilege_grant_autonomy
+#	land_share = 10
+#	max_absolutism = -10
+#	loyalty = 0.1
+#	influence = 0.3
+#	penalties = {
+#		meritocracy = -0.1
+#		yearly_corruption = 0.1
+#		imperial_mandate = -0.05
+#	}
+#	benefits = {
+#		advisor_cost = -0.1
+#		advisor_pool = 1
+#		state_governing_cost = -0.1
+#	}
+#	ai_will_do = {
+#		factor = 0
+#	}
+#}

@@ -1,0 +1,39 @@
+#Confucian Reforms (Church Aspects)
+imperial_examinations_aspect_modifier = {
+	advisor_cost = -0.1
+	religion = yes
+}
+
+denounce_hierarchy_aspect_modifier = {
+	global_institution_spread = 0.1
+	idea_cost = -0.1
+	religion = yes
+}
+
+globalism_aspect_modifier = {
+	technology_cost = -0.1
+	religion = yes
+}
+
+religious_tolerance_aspect_modifier = {
+	#no_religion_penalty = yes - only works on ideas
+	tolerance_heretic = 5
+	tolerance_heathen = 5
+	religion = yes
+}
+
+military_reform_aspect_modifier = {
+	defensiveness = 0.2
+	fort_maintenance_modifier = -0.2
+	religion = yes
+}
+
+#-------------------------------------------------------------------
+confucian_reforms_estates_mad_modifier = {
+	global_unrest = 10
+	religion = yes
+}
+
+confucianism_reforms_timer = {
+
+}

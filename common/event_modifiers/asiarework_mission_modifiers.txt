@@ -1,0 +1,161 @@
+#####################################
+### KOREA ###
+#####################################
+
+gaesong_trade_power_modifier = {
+	province_trade_power_value = 5
+}
+
+kor_daedongbeop_modifier = {
+	global_tax_modifier = 0.1
+	global_unrest = -0.5
+}
+
+kor_country_of_fortresses_modifier = {
+	defensiveness = 0.25
+}
+
+kor_office_of_advisors = {
+	advisor = 1
+}
+
+kor_national_coinage_modifier = {
+	inflation_reduction = -0.1
+}
+
+kor_geum_river_estuary = {
+	province_trade_power_value = 5
+	picture = "estuary_icon"
+}
+
+goguryeo_restored_mod = {
+	prestige = 1
+}
+
+hwacha_firepower_bonus2 = {
+	fire_damage = 0.1 #Nerfed from 25%
+}
+
+kor_turtle_fleets2 = {
+	navy_tradition = 0.5
+	#global_ship_recruit_speed = -0.33
+	#leader_naval_shock = 1
+}
+
+kor_korean_manchuria = {
+	cavalry_power = 0.1
+	cavalry_cost = -0.1
+}
+
+kor_united_east_sea = {
+	naval_maintenance_modifier = -0.1
+	galley_power = 0.15
+}
+
+kor_greater_korea_restored_cmod = {
+	prestige = 1
+	land_morale = 0.05
+	global_manpower_modifier = 0.1
+}
+
+kor_naval_attrition_temp_cmod = {
+	range = 0.25
+}
+
+kor_practical_learning = {
+	global_institution_spread = 0.1
+	embracement_cost = -0.1
+}
+
+kor_ended_factionalism = {
+	#monarch_admin_power = 1
+	all_power_cost = -0.05
+}
+
+#####################################
+### JAPAN & AINU ###
+#####################################
+
+generic_culture_convert_mod = {
+	local_culture_conversion_cost = -0.25
+}
+
+anu_pushed_back_yamato = {
+	infantry_power = 0.1
+}
+
+anu_restoration_of_ainu = {
+	prestige = 1
+	global_trade_goods_size_modifier = 0.1
+	development_cost = -0.1
+}
+
+#####################################
+### VIETNAM ###
+#####################################
+vietnam_nam_tien_pmod = {
+	local_culture_conversion_cost = -0.2
+}
+
+vietnam_city_of_kings_pmod = {
+	local_tax_modifier = 0.1
+	trade_goods_size_modifier = 0.1
+	local_development_cost = -0.1
+}
+
+dai_fertile_red_river = {
+	local_development_cost = -0.1 #Tropical climate: +10%
+}
+
+dai_curtailed_nobles2 = {
+	state_governing_cost = -0.1
+}
+
+dai_centralized_state = {
+	global_tax_modifier = 0.1
+	global_manpower_modifier = 0.1
+}
+
+dai_chinese_relations = {
+	diplomatic_reputation = 1
+}
+
+dai_national_defence = {
+	discipline = 0.05
+}
+
+dai_restored_nam_viet_modifier = {
+	prestige = 2
+	land_morale = 0.1
+}
+
+#####################################
+### TIBET ###
+#####################################
+
+ldk_cashmere_wool_pmod = {
+	global_trade_goods_size_modifier = 0.10
+}
+
+uts_dalai_lama_pmod = {
+	global_missionary_strength = 0.01
+	tolerance_own = 2
+	missionary_maintenance_cost = -0.20
+}
+
+uts_reconquest_pmod = {
+	core_creation = -0.25
+	shock_damage = 0.1
+	global_unrest = -2
+	years_of_nationalism = -5
+}
+
+qam_trade_city_pmod = {
+	cavalry_cost = -0.05
+	global_own_trade_power = 0.1
+}
+
+qam_patronize_local_festivals_pmod = {
+	cavalry_power = 0.10
+	army_tradition = 0.25
+}

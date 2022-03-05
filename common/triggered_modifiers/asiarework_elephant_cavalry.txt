@@ -1,0 +1,15 @@
+asiarework_elephant_cavalry = {
+	potential = {
+		always = no
+		#tech_group = indian
+		#tech_group = indochinese
+	}
+	
+	trigger = {
+		always = yes
+	}
+	
+	#cavalry_shock = 1
+	cavalry_power = 1
+	cavalry_cost = 1
+}

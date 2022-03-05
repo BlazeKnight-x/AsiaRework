@@ -1,0 +1,23 @@
+confucianism_church_power = {
+	potential = {
+		religion = confucianism
+	}
+	
+	trigger = {
+		always = yes
+	}
+	
+	church_power_modifier = -0.5
+}
+
+tengri_permanent_base = {
+	potential = {
+		religion = tengri_pagan_reformed
+	}
+	
+	trigger = {
+		always = yes
+	}
+	
+	cav_to_inf_ratio = 0.25
+}

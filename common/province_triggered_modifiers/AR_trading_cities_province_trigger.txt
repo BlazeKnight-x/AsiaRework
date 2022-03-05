@@ -1,0 +1,23 @@
+eastern_trading_city_province_trigger = {
+	potential = {
+		normal_or_historical_nations = yes
+	}
+
+	trigger = {
+		owner = {
+			has_reform = eastern_trading_city 
+		}
+	}
+
+	province_trade_power_value = 10
+	ship_recruit_speed = -0.25
+	
+	#Province scope
+	on_activation = {
+	
+	}
+	
+	on_deactivation = {
+	
+	}
+}

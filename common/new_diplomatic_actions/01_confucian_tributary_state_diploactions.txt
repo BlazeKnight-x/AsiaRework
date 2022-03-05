@@ -1,0 +1,486 @@
+# Triggers and effects will be given the Actor's scope, with the Recipient's as FROM
+
+# ROOT = Overlord, FROM = Subject
+
+### Overlord Actions #######################################################################
+offer_confucian_tributary = {
+	category = influence
+	alert_index = 40
+	alert_tooltip = offer_confucian_tributary_alert_tooltip
+	require_acceptance = yes # Whether the recipient gets an option to decline
+	is_visible = {
+		can_be_overlord = confucian_tributary_state
+		is_subject = no
+		FROM = {
+			is_subject = no
+			OR = {
+				technology_group = chinese
+				AND = {
+					technology_group = nomad_group
+					is_neighbor_of = ROOT
+				}
+			}
+		}
+	}
+	is_allowed = {
+		is_at_war = no
+		FROM = {
+			is_at_war = no
+			NOT = { has_reform = chinese_warring_state }
+		}
+		### Same Stuff As Is Visible
+		hidden_trigger = {
+			can_be_overlord = confucian_tributary_state
+			FROM = {
+				is_subject = no
+				OR = {
+					technology_group = chinese
+					AND = {
+						technology_group = nomad_group
+						is_neighbor_of = ROOT
+					}
+				}
+			}
+		}
+	}
+	on_accept = {
+		create_subject = {
+			subject_type = confucian_tributary_state
+			subject = FROM
+		}
+	}
+	on_decline = {
+		add_trust = {
+			who = FROM
+			value = -15
+			mutual = yes
+		}
+	}
+
+	ai_acceptance = {
+		#Is the Empire of China ###########################
+		add_entry = {
+			name = NEW_DIPLO_IS_EOC
+			limit = { is_emperor_of_china = yes }
+			export_to_variable = { which = ai_value value = 100 }
+		}
+		#Lost the Empire of China
+		add_entry = {
+			name = NEW_DIPLO_LOST_EOC
+			limit = {
+				has_country_modifier = lost_mandate_of_heaven
+			}
+			export_to_variable = { which = ai_value value = -1000 }
+		}
+		#They are a Kingdom ###########################
+		add_entry = {
+			name = NEW_DIPLO_THEY_KINGDOM
+			limit = { FROM = { government_rank = 2 NOT = { government_rank = 3 } } }
+			export_to_variable = { which = ai_value value = -20 }
+		}
+		#They are an Empire ###########################
+		add_entry = {
+			name = NEW_DIPLO_THEY_EMPIRE
+			limit = { FROM = { government_rank = 3 } }
+			export_to_variable = { which = ai_value value = -1000 }
+		}
+		#They are a Horde ###########################
+		add_entry = {
+			name = NEW_DIPLO_HORDE
+			limit = { FROM = { has_reform = steppe_horde } }
+			export_to_variable = { which = ai_value value = -100 }
+		}
+		add_entry = {
+			name = NEW_DIPLO_SHOGUNATE
+			limit = { FROM = { has_reform = shogunate } }
+			export_to_variable = { which = ai_value value = -1000 }
+		}
+		#Opinion ###########################
+		add_entry = {
+			name = NEW_DIPLO_OPINION
+			export_to_variable = { which = ai_value value = opinion who = FROM }
+			multiply_variable = { which = ai_value value = 0.25 }
+		}
+		#Diplo Rep ###########################
+		add_entry = {
+			name = NEWDIPLO_DIPLO_REP
+			export_to_variable = { which = ai_value value = modifier:diplomatic_reputation }
+			multiply_variable = { which = ai_value value = 2 }
+		}
+		#Development ###########################
+		add_entry = { #Neither are limited
+			name = NEWDIPLO_DEV_COMPARE
+			limit = {
+				export_to_variable = { which = our_dev value = total_development }
+				export_to_variable = { which = their_dev value = total_development who = FROM}
+				NOT = {
+					check_variable = { which = our_dev value = 1000 }
+					check_variable = { which = their_dev value = 1000 }
+				}
+			}
+			export_to_variable = { which = ai_value value = total_development }
+			subtract_variable = { which = ai_value value = total_development who = FROM }
+			multiply_variable = { which = ai_value value = 0.02 }
+		}
+		add_entry = { #Root is Too large
+			name = NEWDIPLO_DEV_COMPARE
+			limit = {
+				export_to_variable = { which = our_dev value = total_development }
+				export_to_variable = { which = their_dev value = total_development who = FROM}
+				check_variable = { which = our_dev value = 500 }
+				NOT = { check_variable = { which = their_dev value = 500 } }
+			}
+			export_to_variable = { which = ai_value value = 500 }
+			subtract_variable = { which = ai_value value = total_development who = FROM }
+			multiply_variable = { which = ai_value value = 0.02 }
+		}
+		add_entry = { #From is Too large
+			name = NEWDIPLO_DEV_COMPARE
+			limit = {
+				export_to_variable = { which = our_dev value = total_development }
+				export_to_variable = { which = their_dev value = total_development who = FROM}
+				NOT = { check_variable = { which = our_dev value = 500 } }
+				check_variable = { which = their_dev value = 500 }
+			}
+			export_to_variable = { which = ai_value which = our_dev }
+			subtract_variable = { which = ai_value value = 500 }
+			multiply_variable = { which = ai_value value = 0.02 }
+		}
+		#Attitudes ###########################
+		add_entry = {
+			name = NEW_DIPLO_ATTITUDE_FRIENDLY
+			limit = { FROM = { OR = {
+				ai_attitude = { who = ROOT attitude = attitude_friendly }
+				ai_attitude = { who = ROOT attitude = attitude_allied }
+			} } }
+			export_to_variable = { which = ai_value value = 20 }
+		}
+		add_entry = {
+			name = NEW_DIPLO_ATTITUDE_THREATENED
+			limit = { FROM = {
+				ai_attitude = { who = ROOT attitude = attitude_threatened }
+			} }
+			export_to_variable = { which = ai_value value = 100 }
+		}
+		add_entry = {
+			name = NEW_DIPLO_ATTITUDE_NEUTRAL
+			limit = { FROM = {
+				ai_attitude = { who = ROOT attitude = attitude_neutral }
+			} }
+			export_to_variable = { which = ai_value value = -20 }
+		}
+		add_entry = {
+			name = NEW_DIPLO_ATTITUDE_RIVALRY
+			limit = { FROM = {
+				ai_attitude = { who = ROOT attitude = atittude_rival }
+			} }
+			export_to_variable = { which = ai_value value = -1000 }
+		}
+		add_entry = {
+			name = NEW_DIPLO_ATTITUDE_HOSTILE
+			limit = { FROM = {
+				ai_attitude = { who = ROOT attitude = attitude_hostile }
+			} }
+			export_to_variable = { which = ai_value value = -1000 }
+		}
+		add_entry = {
+			name = NEW_DIPLO_ATTITUDE_OUTRAGED
+			limit = { FROM = {
+				ai_attitude = { who = ROOT attitude = attitude_outraged }
+			} }
+			export_to_variable = { which = ai_value value = -1000 }
+		}
+		add_entry = {
+			name = NEW_DIPLO_TRUST_BELOW_30
+			limit = { FROM = {
+				NOT = { trust = { who = ROOT value = 30 } }
+			} }
+			export_to_variable = { which = ai_value value = -1000 }
+		}
+	}
+	ai_will_do = { # this is a trigger
+		has_reform = celestial_empire
+		trust = { who = FROM value = 30 }
+		FROM = { OR = {
+			total_development = 100
+			is_neighbor_of = ROOT
+		} }
+	}
+}
+
+break_confucian_tributary_overlord = {
+	category = influence
+	require_acceptance = no
+	is_visible = {
+		overlord_of = FROM
+		FROM = {
+			is_subject_of_type = confucian_tributary_state
+		}
+	}
+	is_allowed = {
+		hidden_trigger = {
+			overlord_of = FROM
+			FROM = {
+				is_subject_of_type = confucian_tributary_state
+			}
+		}
+	}
+	on_accept = {
+		FROM = {
+			grant_independence = yes
+		}
+		add_trust = {
+			who = FROM
+			value = -15
+			mutual = yes
+		}
+	}
+	ai_will_do = {
+		NOT = {
+			trust = { who = FROM value = 30 }
+		}
+	}
+}
+
+### Subject Actions ########################################################################
+request_to_be_confucian_tributary = {
+	category = influence
+	alert_index = 40
+	alert_tooltip = request_confucian_tributary_alert_tooltip
+	require_acceptance = yes # Whether the recipient gets an option to decline
+	is_visible = {
+		is_subject = no
+		OR = {
+			technology_group = chinese
+			AND = {
+				technology_group = nomad_group
+				is_neighbor_of = FROM
+			}
+		}
+		FROM = {
+			is_subject = no
+			can_be_overlord = confucian_tributary_state
+		}
+	}
+	is_allowed = {
+		is_at_war = no
+		NOT = { has_reform = chinese_warring_state }
+		FROM = {
+			is_at_war = no
+		}
+		### Same Stuff as Is Visible
+		hidden_trigger = {
+			is_subject = no
+			OR = {
+				technology_group = chinese
+				AND = {
+					technology_group = nomad_group
+					is_neighbor_of = FROM
+				}
+			}
+			FROM = {
+				is_subject = no
+				can_be_overlord = confucian_tributary_state
+			}
+		}
+	}
+	ai_acceptance = {
+		#They are the Empire of China
+		add_entry = {
+			name = NEW_DIPLO_IS_EOC
+			limit = { FROM = { is_emperor_of_china = yes } }
+			export_to_variable = { which = ai_value value = 100 }
+		}
+		
+		#Opinion ###########################
+		add_entry = {
+			name = NEW_DIPLO_OPINION
+			export_to_variable = { which = ai_value value = opinion who = FROM }
+			multiply_variable = { which = ai_value value = 0.25 }
+		}
+		#Diplo Rep ###########################
+		add_entry = {
+			name = NEWDIPLO_DIPLO_REP
+			export_to_variable = { which = ai_value value = modifier:diplomatic_reputation }
+			multiply_variable = { which = ai_value value = 2 }
+		}
+		#Development ###########################
+		add_entry = { #Neither are limited
+			name = NEWDIPLO_DEV_COMPARE
+			limit = {
+				export_to_variable = { which = our_dev value = total_development }
+				export_to_variable = { which = their_dev value = total_development who = FROM}
+				NOT = {
+					check_variable = { which = our_dev value = 1000 }
+					check_variable = { which = their_dev value = 1000 }
+				}
+			}
+			export_to_variable = { which = ai_value value = total_development }
+			subtract_variable = { which = ai_value value = total_development who = FROM }
+			multiply_variable = { which = ai_value value = -0.02 }
+		}
+		add_entry = { #Root is Too large
+			name = NEWDIPLO_DEV_COMPARE
+			limit = {
+				export_to_variable = { which = our_dev value = total_development }
+				export_to_variable = { which = their_dev value = total_development who = FROM}
+				check_variable = { which = our_dev value = 500 }
+				NOT = { check_variable = { which = their_dev value = 500 } }
+			}
+			export_to_variable = { which = ai_value value = 500 }
+			subtract_variable = { which = ai_value value = total_development who = FROM }
+			multiply_variable = { which = ai_value value = -0.02 }
+		}
+		add_entry = { #From is Too large
+			name = NEWDIPLO_DEV_COMPARE
+			limit = {
+				export_to_variable = { which = our_dev value = total_development }
+				export_to_variable = { which = their_dev value = total_development who = FROM}
+				NOT = { check_variable = { which = our_dev value = 500 } }
+				check_variable = { which = their_dev value = 500 }
+			}
+			export_to_variable = { which = ai_value which = our_dev }
+			subtract_variable = { which = ai_value value = 500 }
+			multiply_variable = { which = ai_value value = -0.02 }
+		}
+		#Attitudes
+		add_entry = {
+			name = NEW_DIPLO_ATTITUDE_FRIENDLY
+			limit = { FROM = { OR = {
+				ai_attitude = { who = ROOT attitude = attitude_friendly }
+				ai_attitude = { who = ROOT attitude = attitude_allied }
+			} } }
+			export_to_variable = { which = ai_value value = 20 }
+		}
+		add_entry = {
+			name = NEW_DIPLO_ATTITUDE_THREATENED
+			limit = { FROM = {
+				ai_attitude = { who = ROOT attitude = attitude_threatened }
+			} }
+			export_to_variable = { which = ai_value value = 100 }
+		}
+		add_entry = {
+			name = NEW_DIPLO_ATTITUDE_NEUTRAL
+			limit = { FROM = {
+				ai_attitude = { who = ROOT attitude = attitude_neutral }
+			} }
+			export_to_variable = { which = ai_value value = -20 }
+		}
+		add_entry = {
+			name = NEW_DIPLO_ATTITUDE_RIVALRY
+			limit = { FROM = {
+				ai_attitude = { who = ROOT attitude = atittude_rival }
+			} }
+			export_to_variable = { which = ai_value value = -1000 }
+		}
+		add_entry = {
+			name = NEW_DIPLO_ATTITUDE_HOSTILE
+			limit = { FROM = {
+				ai_attitude = { who = ROOT attitude = attitude_hostile }
+			} }
+			export_to_variable = { which = ai_value value = -1000 }
+		}
+		add_entry = {
+			name = NEW_DIPLO_ATTITUDE_OUTRAGED
+			limit = { FROM = {
+				ai_attitude = { who = ROOT attitude = attitude_outraged }
+			} }
+			export_to_variable = { which = ai_value value = -1000 }
+		}
+		add_entry = {
+			name = NEW_DIPLO_TRUST_BELOW_30
+			limit = {
+				NOT = { trust = { who = FROM value = 30 } }
+			}
+			export_to_variable = { which = ai_value value = -1000 }
+		}
+	}
+	ai_will_do = {
+		NOT = {
+			attitude = attitude_hostile
+			attitude = attitude_outraged
+			attitude = attitude_outraged
+			government_rank = 3
+			trust = { who = FROM value = 30 }
+		}
+		ai_attitude = { who = FROM attitude = attitude_threatened }
+		FROM = { OR = {
+			is_emperor_of_china = yes
+			government_rank = 3
+		} }
+	}
+	on_accept = {
+		FROM = {
+			create_subject = {
+				subject_type = confucian_tributary_state
+				subject = ROOT
+			}
+		}
+	}
+	on_decline = { }
+}
+
+break_confucian_tributary_subject = {
+	category = influence
+	require_acceptance = no
+	is_visible = {
+		is_subject_of_type = confucian_tributary_state
+		FROM = {
+			overlord_of = ROOT
+		}
+	}
+	is_allowed = {
+		hidden_trigger = {
+			is_subject_of_type = confucian_tributary_state
+			FROM = {
+				overlord_of = ROOT
+			}
+		}
+	}
+	on_accept = {
+		grant_independence = yes
+		add_trust = {
+			who = FROM
+			value = -15
+			mutual = yes
+		}
+	}
+	ai_will_do = {
+		OR = {
+			NOT = { trust = { who = FROM value = 30 } }
+			liberty_desire = 75
+			FROM = {
+				has_country_modifier = lost_mandate_of_heaven
+			}
+		}
+	}
+}
+
+confucian_tributary_state_request_tribute_from_overlord = {
+	category = influence
+	require_acceptance = no
+	is_visible = {
+		always = no #
+		is_subject_of_type = confucian_tributary_state
+		FROM = {
+			overlord_of = ROOT
+		}
+	}
+	is_allowed = {
+		hidden_trigger = {
+			is_subject_of_type = confucian_tributary_state
+			FROM = {
+				overlord_of = ROOT
+			}
+			NOT = { has_country_modifier = cts_asked_for_tribute }
+		}
+	}
+	on_accept = {
+		country_event = {
+			id = asiarework_tributary.1
+		}
+	}
+	ai_will_do = {
+		always = no #Currently, no.
+	}
+}

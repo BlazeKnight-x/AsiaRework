@@ -1,0 +1,956 @@
+#######################################
+############ KOREA 
+#######################################
+
+#Joseon Ideas
+KOR_ideas = {
+	start = {
+		hostile_attrition = 1
+		ship_durability = 0.1
+	}
+	bonus = {
+		artillery_fire = 1
+	}
+	trigger = {
+		tag = KOR
+	}
+	free = yes
+	hanguel_alphabet = {
+		technology_cost = -0.05
+		innovativeness_gain = 0.25
+	}
+	grand_code = {
+		global_unrest = -1
+	}
+	hyanyak_system = {
+		development_cost = -0.1
+	}
+	geobukseon = {
+		naval_morale = 0.2
+	}
+	kor_ginseng_trade = {
+		production_efficiency = 0.1
+	}
+	kyujanggak = {
+		idea_cost = -0.1
+	}
+	kor_geojunggi = {
+		build_cost = -0.1
+	}
+}
+
+#Tamna Ideas
+TAM_ideas = {
+	start = {
+		global_own_trade_power = 0.25
+		naval_forcelimit_modifier = 0.25
+	}
+	bonus = {
+		naval_morale = 0.2
+	}
+	trigger = {
+		tag = TAM
+	}
+	free = yes
+	tam_samseong_myth = {
+		global_unrest = -1
+	}
+	tam_maritime_trade = {
+		trade_efficiency = 0.1
+	}
+	tam_independent_tamna = {
+		infantry_power = 0.1
+	}
+	tam_protect_against_piracy = {
+		galley_power = 0.1
+		ship_durability = 0.05
+	}
+	tam_ties_to_korea = {
+		diplomatic_reputation = 1
+	}
+	tam_millennium_long_history = {
+		prestige = 1
+	}
+	tam_three_legendary_founders = {
+		ae_impact = -0.25
+	}
+}
+
+#######################################
+############ CHINA 
+#######################################
+
+#Great Ming ideas
+CHI_ideas = {
+	start = {
+		harsh_treatment_cost = -0.2
+		heir_chance = 1
+	}
+	bonus = {
+		development_cost = -0.1
+	}
+	trigger = {
+		tag = MNG
+	}
+	free = yes		#will be added at load.
+	nine_garrisons_of_the_great_wall = {
+		defensiveness = 0.05
+		garrison_size = 0.25
+	}
+	revived_three_grand_divisions = {
+		discipline = 0.05
+	}
+	yellow_river_dykes = {
+		production_efficiency = 0.1
+	}
+	salt_monopoly = {
+		trade_efficiency = 0.1
+	}
+	single_whip_law = {
+		global_tax_modifier = 0.10
+	}
+	the_red_cannon = {
+		leader_land_fire = 1
+	}
+	inward_perfection = {
+		imperial_mandate = 0.05
+		stability_cost_modifier = -0.10
+	}
+}
+
+
+#######################################
+############ JAPAN 
+#######################################
+
+#United Japan
+JAP_ideas = {
+	start = {
+		infantry_power = 0.1
+		army_tradition_decay = -0.01
+	}
+	bonus = {
+		discipline = 0.05
+	}
+	trigger = {
+		tag = JAP
+	}
+	free = yes
+	jap_unification_under_the_emperor = {
+		stability_cost_modifier = -0.1
+	}
+	jap_raider_boats = {
+		privateer_efficiency = 0.15
+		allowed_marine_fraction = 0.1
+		#movement_speed_onto_off_boat_modifier = 0.66
+	}
+	jap_military_traditions = {
+		land_morale = 0.1
+	}
+	reformed_land_holding = {
+		global_manpower_modifier = 0.2
+	}
+	jap_modernization = {
+		technology_cost = -0.05
+		global_institution_spread = 0.1
+	}
+	jap_land_of_the_rising_sun = {
+		prestige = 1
+	}
+	jap_class_upheaval = {
+		global_tax_modifier = 0.1
+	}
+}
+
+#Satomi Ideas
+JST_ideas = {
+	start = {
+		global_sailors_modifier = 0.15
+		naval_maintenance_modifier = -0.1
+	}
+	bonus = {
+		global_manpower_modifier = 0.15
+	}
+	trigger = {
+		tag = JST
+	}
+	free = yes
+	
+	jst_fish_economy = {
+		production_efficiency = 0.15
+	}
+	jst_cadet_branches = {
+		core_creation = -0.1
+	}
+	jst_awa_shrine = {
+		prestige = 1
+	}
+	jst_across_the_channel = {
+		movement_speed = 0.15
+	}
+	jst_burning_of_kamakura = {
+		land_morale = 0.1
+	}
+	jst_defence_of_kururi = {
+		siege_ability = 0.1
+		hostile_attrition = 0.5
+	}
+	jst_tateyama_castle = {
+		defensiveness = 0.15
+	}
+}
+
+#Rokkaku Ideas
+ROK_ideas = {
+	start = {
+		global_trade_goods_size_modifier = 0.1
+		global_manpower_modifier = 0.15
+	}
+	bonus = {
+		land_morale = 0.1
+	}
+	trigger = {
+		tag = ROK
+	}
+	free = yes
+	
+	rok_lake_biwa = {
+		prestige = 1
+	}
+	rok_enryaku_ji = {
+		global_unrest = -1
+	}
+	rok_koka_ryu = {
+		movement_speed = 0.1
+		spy_offence = 0.2
+	}
+	rok_kanmoji_castle = {
+		defensiveness = 0.15
+	}
+	rok_fifty_three_families = {
+		hostile_attrition = 1
+	}
+	rok_civil_reform = {
+		trade_efficiency = 0.1
+	}
+	rok_otsu = {
+		global_own_trade_power = 0.2
+	}
+}
+
+### Daimyo Buffs ###
+MRI_ideas = {
+	start = {
+		navy_tradition = 1
+		ship_durability = 0.05
+		#diplomats = 1
+	}
+	bonus = {
+		#leader_land_fire = 1
+		leader_naval_fire = 1
+	}
+	
+	trigger = {
+		tag = MRI
+	}
+	
+	free = yes
+	
+	mri_descendant_of_oe_hiromoto = {
+		#adm_tech_cost_modifier = -0.1
+		technology_cost = -0.05
+	}
+	mri_leader_of_kokujin_ikki = {
+		land_forcelimit_modifier = 0.2
+	}
+	mri_diplomatic_intrigues = {
+		diplomatic_upkeep = 1
+	}
+	mri_three_arrows = {
+		#global_autonomy = -0.05
+		stability_cost_modifier = -0.1
+	}
+	mri_hiroshima_castle = {
+		development_cost = -0.1
+	}
+	mri_itsukushima_shrine = {
+		#ship_durability = 0.05
+		naval_morale = 0.15
+	}
+	mri_hagi_ware = {
+		#prestige = 1
+		global_trade_goods_size_modifier = 0.1
+	}
+}
+
+#######################################
+############ MANCHURIA
+#######################################
+
+#Jurchen Ideas
+MJZ_ideas = {
+	start = {
+		land_morale = 0.1
+		global_manpower_modifier = 0.15
+		has_banners = 1
+	}
+	bonus = {
+		land_attrition = -0.1
+	}
+	trigger = {
+		OR = {
+			tag = MJZ
+			tag = MHX
+		}
+	}
+	free = yes
+	
+	sons_of_the_mountain = {
+		hostile_attrition = 1.0
+	}
+	jurchen_pigtail = {
+		horde_unity = 0.5
+		legitimacy = 0.5
+		global_unrest = -1
+	}
+	jurchen_foreign_service = {
+		leader_land_shock = 1
+	}
+	jurchen_border_skirmishes = {
+		manpower_recovery_speed = 0.2
+	}
+	jurchen_many_wives = {
+		heir_chance = 0.5
+	}
+	jurchen_warlords_generosity = {
+		improve_relation_modifier = 0.25
+	}
+	the_jurchen_banners = {
+		amount_of_banners = 0.15
+	}
+}
+
+#Manchu (Later Jin) Ideas
+MCH_ideas = {
+	start = {
+		leader_land_shock = 1	
+		land_maintenance_modifier = -0.05
+		has_banners = 1
+	}
+	bonus = {
+		land_morale = 0.15	
+	}
+	trigger = {
+		tag = MCH
+	}
+	free = yes
+	
+	united_three_jurchens = {
+		global_manpower_modifier = 0.15
+		core_creation = -0.15
+	}
+	manchu_eight_banners = {
+		amount_of_banners = 0.25
+	}
+	the_manchu_alphabet = {
+		global_institution_spread = 0.05
+		stability_cost_modifier = -0.1
+	}
+	the_later_jin = {
+		horde_unity = 1
+		legitimacy = 1
+	}	
+	link_with_the_mongol_dynasty = {
+		cavalry_power = 0.15
+	}
+	manchu_chinese_learning = {
+		mil_tech_cost_modifier = -0.1
+	}
+	seven_grievances = {
+		ae_impact = -0.1
+	}
+}
+
+#Great Qing Ideas
+QNG_ideas = {
+	start = {
+		core_creation = -0.2
+		ae_impact = -0.1
+		has_banners = 1
+	}
+	bonus = {
+		advisor_cost = -0.15
+	}
+	trigger = {
+		tag = QNG
+	}
+	free = yes
+	expand_the_banners = {
+		amount_of_banners = 0.3
+	}
+	the_green_standard_army = {
+		manpower_recovery_speed = 0.15
+		global_manpower_modifier = 0.15
+	}
+	pigtail_or_death = {
+		global_unrest = -2
+	}
+	qng_bogda_khan = {
+		cavalry_power = 0.2
+		#years_of_nationalism = -5
+		#legitimacy = 1
+		#meritocracy = 1
+	}
+	the_chinese_rules = {
+		administrative_efficiency = 0.05
+	}
+	qing_viceroyalties = {
+		governing_capacity_modifier = 0.1
+		#state_maintenance_modifier = -0.15
+		#global_autonomy = -0.05
+	}
+	the_ten_great_campaigns = {
+		land_morale = 0.15
+		prestige_from_land = 0.5
+	}
+}
+
+#Nanai Ideas
+nanai_ideas = {
+	start = {
+		tolerance_own = 2
+		hostile_attrition = 1
+	}
+	bonus = {
+		land_morale = 0.1
+	}
+	trigger = {
+		OR = {
+			tag = EJZ #Nanai
+			tag = NHX #Udege
+			tag = ORO #Oroch
+			tag = ULC #Ulch
+		}
+	}
+	free = yes
+	
+	nanai_amur_river = {
+		global_sailors_modifier = 0.15
+	}
+	nanai_fish_skin_tatars = {
+		production_efficiency = 0.1
+	}
+	nanai_bear_tiger = {
+		shock_damage = 0.1
+	}
+	nanai_souls = {
+		horde_unity = 1
+		legitimacy = 1
+	}
+	nanai_amban = {
+		stability_cost_modifier = -0.1
+	}
+	nanai_kasa_tavori = {
+		prestige = 1
+	}
+	nanai_identity = {
+		infantry_power = 0.1
+	}
+}
+
+#Nivkh Ideas
+NVK_ideas = {
+	start = {
+		naval_maintenance_modifier = -0.1
+		trade_efficiency = 0.1
+	}
+	bonus = {
+		diplomatic_reputation = 2 #Nivkh Diplomats
+	}
+	trigger = {
+		tag = NVK
+	}
+	free = yes
+	
+	nanai_amur_river = { } #15% Sailors
+	nanai_fish_skin_tatars = { } #10% Production
+	nivkh_bear_festival = {
+		stability_cost_modifier = -0.1
+	}
+	nivkh_khal = {
+		global_unrest = -1
+	}
+	anu_riches_of_the_sea = { #From Ainu ideas
+		global_trade_goods_size_modifier = 0.1
+	}
+	anu_hunters_and_warriors = {
+		hostile_attrition = 1
+	}
+	nivkh_kinrsh = {
+		infantry_power = 0.1
+	}
+}
+
+#######################################
+############ TIBET
+#######################################
+
+KSH_ideas = {
+	start = {
+		global_missionary_strength = 0.01
+		tolerance_heathen = 2
+	}
+	
+	bonus = {
+		land_attrition = -0.1
+	}
+
+	trigger = {
+		OR = {
+			tag = KSH
+			tag = GIL
+			tag = HNZ
+			tag = CTR
+		}
+	}
+	free = yes		#will be added at load.
+	
+	ksh_defense_of_kashmir = {
+		defensiveness = 0.15
+		discipline = 0.05
+		
+	}
+	ksh_shams_ud_din = {
+		prestige = 1
+	}
+	ksh_appointing_local_chiefs = {
+		num_accepted_cultures = 1
+		global_manpower_modifier = 0.15
+		
+	}
+	ksh_conquest_of_ladakh = {
+		core_creation = -0.1
+		global_unrest = -1
+	}
+	ksh_butshikan = {
+		global_tax_modifier = 0.1
+		diplomatic_annexation_cost = -0.15
+	}
+	ksh_srinagar_mosques = {
+		build_cost = -0.1
+	}
+	ksh_foreign_artisans = {
+		production_efficiency = 0.10
+		global_trade_goods_size_modifier = 0.1
+	}
+}
+
+UTS_ideas = {
+	start = {
+		global_missionary_strength = 0.01
+		global_unrest = -1
+	}
+	
+	bonus = {
+		technology_cost = -0.05
+	}
+
+	trigger = {
+		OR = {
+			tag = UTS
+			tag = PHA
+			tag = PWO
+			tag = RAL
+		}
+	}
+	free = yes		#will be added at load.
+	
+	uts_heart_of_tibet = {
+		core_creation = -0.1
+		fabricate_claims_cost = -0.25
+		
+	}
+	uts_city_of_monasteries = {
+		missionaries = 1
+		build_cost = -0.05
+	}
+	uts_powo_savages = {
+		infantry_power = 0.1
+		hostile_attrition = 1
+		
+	}
+	uts_phagmodrupa_administration = {
+		stability_cost_modifier = -0.15
+	}
+	potala_palace = {	#Taken from Tibetan NI's in vanilla                      
+	diplomatic_reputation = 1
+	}
+	uts_rise_of_rinpungpas = {
+		ae_impact = -0.15
+	}
+	pale_earth = { #Taken from Tibetan NI's in vanilla                      
+		idea_cost = -0.1
+	}
+
+}
+
+BHU_ideas = { #Here just in case another Bhutanese tag is added
+	start = {
+		fort_maintenance_modifier = -0.10
+		tolerance_own = 2
+	}
+	
+	bonus = {
+		technology_cost = -0.1
+	}
+
+	trigger = {
+		OR = {
+			tag = BHU
+			tag = BUM
+			tag = THI
+			tag = PAK
+		}
+	}
+	free = yes		#will be added at load.
+	
+	bhu_land_of_peaks_and_valleys = {
+		global_manpower_modifier = 0.1
+		global_trade_goods_size_modifier = 0.1
+		
+	}
+	bhu_unification = {
+		province_warscore_cost = -0.1
+		global_autonomy = -0.025
+	}
+	bhu_dzongs = {
+		defensiveness = 0.25
+		build_cost = -0.1
+		
+	}
+	bhu_tsa_yig_chenmo = {
+		tolerance_heretic = 1
+		missionary_maintenance_cost = -0.25
+	}
+	bhu_penlops = {	
+		state_maintenance_modifier = -0.15
+	}
+	bhu_dual_government = {
+		legitimacy = 1
+		devotion = 1
+	}
+	bhu_hard_to_conquer = { 
+		hostile_attrition = 1
+	}
+
+}
+
+KAM_ideas = {
+	start = {
+		cavalry_flanking = 0.5
+		cavalry_cost = -0.1
+	}
+	
+	bonus = {
+		advisor_cost = -0.1
+	}
+
+	trigger = {
+		OR = {
+			tag = KAM
+			tag = QAM
+			tag = NAN
+			tag = LIN
+			tag = CKL
+			tag = HOR
+		}
+	}
+	free = yes		#will be added at load.
+	
+	kam_horse_tea_road = {
+		trade_efficiency = 0.1
+	}
+	kam_unification = {
+		province_warscore_cost = -0.15
+	}
+	yaks = { #Taken from Tibetan NI's in vanilla                      
+		production_efficiency = 0.15
+	}
+	kam_derge_patronage_of_the_arts = {
+		prestige = 1
+	}
+	kam_horse_archery = {	
+		cavalry_power = 0.1
+		land_morale = 0.1
+	}
+	kam_hengduan_mountains = {
+		hostile_attrition = 1
+	}
+	kam_frontier_of_tibet = { 
+		culture_conversion_cost = -0.15
+	}
+
+}
+
+amdo_ideas = {
+	start = {
+		cavalry_power = 0.15
+		improve_relation_modifier = 0.3
+	}
+	bonus = {
+		advisor_cost = -0.1
+	}
+
+	trigger = {
+		OR = {
+			tag = JON
+			tag = GLK
+		}
+	}
+	free = yes		#will be added at load.
+	
+	amdo_golok_fighters = {
+		infantry_power = 0.1
+		female_advisor_chance = 0.3
+		
+	}
+	amdo_drog_pa = {
+		cavalry_cost = -0.15
+	}
+	amdo_choni_monastery = { 
+		tolerance_own = 1
+	}
+	amdo_tale_of_conquest = {
+		prestige_decay = -0.01
+		legitimacy = 1
+	}
+	amdo_ten_virtues = {	
+		global_tax_modifier = 0.1
+	}
+	amdo_ruling_48_clans = {
+		num_accepted_cultures = 1
+	}
+	amdo_sheng_pa = { 
+		production_efficiency = 0.1
+	}
+
+}
+
+TIB_ideas = { #revamped, put here so all my NI's are in one place
+	start = {
+		defensiveness = 0.2
+		global_missionary_strength = 0.01
+	}
+
+	bonus = {
+		global_unrest = -1
+	}
+	
+	trigger = {
+		tag = TIB
+	}
+	free = yes
+	
+	TIB_vassal_diplomacy  = {                    
+		diplomatic_annexation_cost = -0.15
+		reduced_liberty_desire = 10
+	}
+	bon_influence = {                
+		leader_land_shock = 1
+	}
+	yaks = {
+		production_efficiency = 0.15
+	}
+	TIB_ganden_phodrang = {            
+		devotion = 1
+		stability_cost_modifier = -0.1
+	}
+	potala_palace = {                             
+		diplomatic_reputation = 1
+		monthly_karma = 0.1
+	}
+	TIB_neo_tibetan_armor = {
+		fire_damage_received = -0.15
+	}
+	TIB_do_kham_horsemen = {
+		cavalry_power = 0.1
+	}
+}
+
+LIJ_ideas = {
+	start = {
+		global_trade_goods_size_modifier = 0.15
+		fire_damage = 0.1
+	}
+	
+	bonus = {
+		movement_speed = 0.15
+	}
+
+	trigger = {
+		tag = LIJ
+	}
+	free = yes		#will be added at load.
+	
+	LIJ_chief_of_prefecture = {
+		legitimacy = 1
+		global_tax_modifier = 0.1
+	}
+	LIJ_multireligiousity = {
+		tolerance_heretic = 1
+		tolerance_heathen = 1
+	}
+	LIJ_elderly_oversight = { 
+		stability_cost_modifier = -0.1
+		global_unrest = -1
+	}
+	LIJ_dongba_script = {
+		tolerance_own = 1
+	}
+	LIJ_native_gods = {	
+		hostile_attrition = 1
+		land_attrition = -0.10
+	}
+	LIJ_to_repay_the_debts_of_a_tree = {
+		prestige = 1
+	}
+	kam_horse_tea_road = { 
+		trade_efficiency = 0.1
+	}
+}
+
+#######################################
+############ INDOCHINA
+#######################################
+
+#Vietnamese Ideas
+DAI_ideas = {
+	start = {
+		land_morale = 0.1
+		culture_conversion_cost = -0.15
+	}
+	bonus = {
+		development_cost = -0.1
+	}
+	trigger = {
+		OR = {
+			tag = DAI
+			tag = TOK
+			tag = ANN
+		}
+	}
+	free = yes		#will be added at load.
+	the_great_proclamation = {
+		infantry_power = 0.1
+	}
+	autonomous_villages = { #confucian_revival = { prestige = 1 }
+		defensiveness = 0.2
+		hostile_attrition = 1.0
+	}
+	literary_reform = {
+		technology_cost = -0.05
+		idea_cost = -0.05
+	}
+	village_militia = {
+		global_manpower_modifier = 0.25
+	}
+	vietnam_navy = {
+		galley_power = 0.2
+	}
+	#don_dien = { core_creation = -0.10 } Same thing as Village Militia
+	vietnam_independence = {
+		discipline = 0.05
+	}
+	thuan_thien = {
+		legitimacy = 1
+		meritocracy = 0.5
+		#imperial_mandate = 0.05 makes no sense why Vietnam gets it but not Korea, Japan, Manchus, Mongols in NIs
+	}
+}
+
+#Thai Ideas
+SIA_ideas = {
+	start = {
+		diplomatic_reputation = 1
+		global_own_trade_power = 0.25
+	}
+	bonus = {
+		development_cost = -0.1
+	}
+	trigger = {
+		has_country_flag = united_thailand
+		OR = {
+			tag = AYU
+			tag = SUK
+			tag = LNA
+		}
+	}
+	free = yes
+	akson_thai = { #Straight from Sukhothai
+		technology_cost = -0.05
+	}
+	sia_corvee_system = { #Similar to Ayutthaya's 10% Manpower
+		global_manpower_modifier = 0.2
+		build_cost = -0.1
+	}
+	sia_white_elephant = {
+		tolerance_own = 2
+	}
+	sia_war_elephants = { #Buffed version of Sukhothai's 10%
+		cavalry_power = 0.15
+	}
+	sia_eastern_venice = {
+		trade_efficiency = 0.1
+	}
+	sia_foreign_mercenaries = { #Buffed version of Ayutthaya's -15% Merc Maintenance
+		merc_maintenance_modifier = -0.15
+		mercenary_discipline = 0.05
+	}
+	thai_nationalism = {
+		land_morale = 0.2
+	}
+}
+
+LXA_ideas = {
+	start = {
+		tolerance_own = 2
+		global_missionary_strength = 0.01
+	}
+	
+	bonus = {
+		land_forcelimit_modifier = 0.2
+	}
+	
+	trigger = {
+		tag = LXA
+	}
+	free = yes
+	
+	lao_ethnic_diversity = {
+		num_accepted_cultures = 1
+	}	
+	lxa_elephant_cavalry = {
+		cavalry_power = 0.2 #Buffed from 10%
+		#cav_to_inf_ratio = 0.25
+	}	
+	court_history_of_lang_xang = {
+		ae_impact = -0.1
+		advisor_cost = -0.1 #improve_relation_modifier = 0.15
+	}
+	lxa_white_elephant = {
+		war_exhaustion = -0.02
+		global_tax_modifier = 0.1 #global_unrest = -1
+	}
+	flowering_of_culture = {
+		stability_cost_modifier = -0.1
+		development_cost = -0.1
+	}
+	merchants_of_vientiane = {
+		defensiveness = 0.1
+		trade_efficiency = 0.1 #hostile_attrition = 1
+	}
+	renaissance_of_lan_xang = {
+		technology_cost = -0.05
+		global_institution_spread = 0.1
+	}
+}

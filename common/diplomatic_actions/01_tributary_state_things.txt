@@ -1,0 +1,18 @@
+
+intervene_in_war = {
+	condition = {
+		tooltip = TRIBUTARY_ALWAYS_INTERVENE
+		potential = {
+			ROOT = {
+				overlord_of = FROM
+			}
+			FROM = { OR = {
+				is_subject_of_type = tributary_state
+				is_subject_of_type = confucian_tributary_state
+			} }
+		}
+		allow = {
+			always = yes
+		}
+	}
+}

@@ -1,0 +1,348 @@
+#Pyongan
+1845 = Pyeongyang
+2744 = Yeongbyeon
+4232 = Ganggye
+6002 = Anju
+
+#Hamgyeong
+732 = Hamheung
+2742 = Yukjin
+2743 = Gyeongseong
+6004 = Wonsan
+
+#Hwanghae
+733 = Hwangju
+4231 = Haeju
+6001 = Pyeongsan
+
+#Gyeonggi
+735 = Hanseong
+4230 = Suwon
+6000 = Kaesong
+
+#Chungcheong
+1013 = Cheongju
+4229 = Chungju
+6009 = Gongju
+
+#Gangwon
+734 = Wonju
+2694 = Gangneung
+6005 = Chuncheon
+
+#Jeolla
+737 = Jeonju
+2741 = Jeju
+4228 = Naju
+6003 = Mokpo
+6008 = Gwangju
+
+#Gyeongsang
+736 = Sangju
+2745 = Gyeongju
+4227 = Jinju
+6006 = Busan
+6007 = Daegu
+
+#Same as korean_g.txt
+#Greater Korea
+
+#Greater Korea
+
+#Liaoning
+726 = { "Yoyang" "Yoyang" } #Simyang is fine as well
+2112 = { "Bakjak" "Bakjak" } #Goguryeo
+2113 = { "Geonan" "Geonan" } #Gaizhou - Goguryeo
+6099 = { "Hyeondo" "Hyeondo" } #Goguryeo
+#4652 = "" #Haicheng - Haicheng is no longer a province because 4652 was moved too far out
+6014 = { "Bisa" "Bisa" } #Dalian - Goguryeo
+
+#Jilin (North and South)
+730 = { "Buyeoseong" "Buyeoseong" } #"Gillim" #Korean reading of Chinese 'Jilin'
+2109 = { "Buyeo" "Buyeo" } #Goguryeo Fort, also contains part of Balhae Buyeo province
+2110 = { "Bokju" "Bokju" } #Yehe; from map of Balhae - Balhae city in lower Buyeo province
+2111 = { "Jolbon" "Jolbon" } #First Capital of Gogoryeo, more historical significance
+2188 = { "Makhil" "Makju" } #"Hoeryeong"; from map of Balhae - province of Balhae & corresponding city
+4201 = { "Gungnae" "Gungnae" } #Jangryeong - Old capital of Goguryeo
+
+#Ningguta
+2107 = { "Nyeongan" "Nyeongan" } #Dongju?
+2108 = { "Gando" "Yongwon" } #Yongwon is modern name for Yanbian Korean prefecture, historical name is Gando
+4653 = { "Hyeondeok" "Seongju" } #Maolian - from map of Balhae; Heungju for city?
+4654 = { "Yongcheong" "Bakju" } #Fu'erhe; from map of Balhae - Eastern half of Yongcheong province with Bakju city
+4661 = { "Dangju" "Dangju" } #Edala; from map of Balhae - more realistic city is probably Balhae Sanggyeong but we don't want capitals to be DPNs
+
+#Furdan
+1850 = { "Anbyeon" "Anju" } #Anbyeon province in Balhae and Anju city
+2106 = { "Solbin" "Hwaju" } #Jeongri province is another to think about if Furdan gets split in future
+2186 = { "Iman" "Iman" } #Iman; province name from Chinese to Korean reads the same
+4655 = { "Miju" "Miju" } #Shilimian - questionable accuracy, nothing better
+
+#South Ilan Hala
+731 = { "Cheolli" "Yeongju" } #"Samseong"; Cheolli is a Balhae province, Yeongju is an independent province/city of Balhae but in area
+4217 = { "Anwon" "Jeoju" } # Part of Balhae Anwon province & contains Jeoju city
+4663 = { "Dongpyeong" "Taju" } #Hurha - from map of Balhae, Taju "Ta" comes from Lake Khanka (another city can be Ikju)
+4656 = { "Moju" "Moju" } #"Moju" #Wolanhe - questionable accuracy, nothing better
+
+#Others from vanilla eu4
+667 = Gwangdong
+668 = Omun
+679 = Seongdo
+688 = Gaebong
+700 = Seoan
+704 = "Nyeongwon"
+1020 = Gyeongdo
+1021 = Seobjin
+1028 = Mujang
+1816 = Bukgyeong
+1821 = Namgyeong
+1822 = Soju #Drunk much?
+1832 = Daehwa
+1833 = "Gil'an"
+1836 = Nakyang
+4182 = Bijeon
+4224 = Sangmo
+
+#Manchu/Mongol
+701 = Hatu #Ordos
+2190 = Hwarim #Qaraqorum
+
+#Japan
+4651 = Daema #Tsushima
+1015 = Yugu #Okinawa
+
+1852 = Jeunguya #Tokachi
+1031  = Donghai #Kamikawa
+1847 = Seohai #Shiribeshi
+4193 = Songjeon #Oshima
+1033 = Garyangbuji #Sakhalin, Karafuto
+
+4131 = Yugo #Mutsu
+4192 = Uhu #Ugo
+1025 = Ujeon #Uzen
+1026 = Yukjeon #Rikuzen
+
+4191 = Haya #Shimotsuke
+1027 = Sangryuk #Hitachi
+4190 = Hachong #Shimousa
+
+1843 = Sangya #Kozuke
+
+4188 = Sinnong #Shinano
+1029 = Gapbi #Kai
+1839 = Junha #Suruga
+4360 = Samha #Mikawa
+
+1835 = Minong #Mino
+1030 = Mijang #Owari
+
+4187 = Gii #Kii
+
+1024 = Wolhu #Echigo
+1837 = Woljung #Etchu
+1023 = Woljeon #Echizen
+
+4185 = Danhu #Tango
+1830 = Danma #Tajima
+1018 = Churun #Izumo
+4183 = Ammi #Iwami
+
+1019 = Pama #Harima
+4184 = Biju #Bizen
+1825 = Anun #Aki
+1017 = Jubang #Suo
+
+1820 = Apa #Awa
+4186 = Iyeo #Iyo
+1819 = Tojwa #Tosa
+
+1012 = Salma #Satsuma
+4180 = Ilhyang #Hyuga
+4181 = Bihu #Higo
+
+1014 = Punghu #Bungo
+1818 = Chukjeon #Chikuzen
+
+#North China
+703 = Yeolha #Chengde, Rehe
+4194 = Yeongpyeong #Yongping
+2136 = Seonhwa #Xuanhua
+
+695 = Hagan #Hejian
+696 = Bojeong #Baoding
+4195 = Jeongjeong #Zhending
+2137 = Daemyeong #Daming
+
+697 = Daedong #Datong
+2177 = Yeongmu #Ningwu
+693 = Taewon #Taiyuan
+2178 = Yukan #Lu'an
+694 = Aneup #Pingyang
+
+2179 = Yeonan #Yan'an
+4198 = Bongsang #Fengxiang
+689 = Hanjung #Hanzhong
+
+698 = Yeongha #Ningxia
+2181 = Pyeongryang #Pingliang
+699 = Nanju #Lanzhou
+2180 = Cheonsu #Tianshui
+2183 = Minju #Taozhou
+
+2182 = Seoryang #Liangzhou
+2184 = Seoryeong #Xining
+708 = Jangaek #Zhangye
+707 = Okmun #Yumen
+
+692 = Hoegyeong #Huaiqing
+
+2138 = Mujeong #Wuding
+691 = Jenam #Jinan
+2140 = Yeonju #Yanzhou
+690 = Ikdo #Qingzhou
+2139 = Naeju #Laizhou
+
+687 = Namyang #Nanyang
+2176 = Sangchu #Shangqiu
+2175 = Yeoyeong #Runing
+
+2144 = Buyang #Fuyang
+1838 = Hapbi #Hefei
+2143 = Bongyang #Fengyang
+
+2141 = Seoju #Xuzhou
+4196 = Gongyu #Haizhou
+2142 = Hoean #Huai'an
+
+#Xinan
+2170 = Songban #Songqu
+2169 = Nangjung #Langzhong
+4211 = Dalju #Dazhou
+
+4212 = Gaju #Jiazhou
+680 = Junggyeong #Chongqing
+
+4213 = Noju #Luzhou
+2168 = Paju #Bozhou
+675 = Omong #Umung
+2748 = Geonchang #Jianchang
+
+2167 = YeoGang #Lijiang
+661 = Daeri #Dali
+2166 = Deokgoeng #Dehong
+2165 = Boi #Pu'er
+
+4199 = Dongin #Tongren
+673 = Jinwon #Zhenyuan
+674 = Gwiyang #Guiyang
+662 = Unnam #Yunnan
+663 = Gwangnam #Guangnan
+
+#South China
+685 = Yangju #Yangzhou
+2145 = Jingang #Zhenjiang
+
+2146 = Yeongguk #Ningguo
+2147 = Hwiju #Huizhou
+686 = Angyeong #Anqing
+
+4197 = Hwanggang #Huangzhou
+682 = Muchang #Wuchang
+2171 = Yangyang #Xiangyang
+2172 = Hyeongju #Jingzhou
+
+672 = Mureung #Wuling
+671 = Jangsa #Changsha
+2173 = Wonreung #Yuanling
+2174 = Heongyang #Hengyang
+
+683 = Namchang #Nanchang
+2151 = Payang #Poyang
+670 = Gamju #Ganzhou
+
+684 = Hangju #Hangzhou
+2148 = Soheung #Shaoxin
+2149 = Yeongpa #Ningbo
+2150 = Geumhwa #Jinhua
+1824 = Onju #Wenzhou
+
+2152 = Geonnyeong #Jianning
+669 = Bokju #Fuzhou
+1829 = Cheonju #Quanzhou
+2153 = Jeongju #Tingzhou
+
+2156 = Joju #Chaochow
+2157 = Hyeju #Waichow
+2158 = Sogwan #Shiukwan
+
+1840 = Gyerim #Guilin
+2162 = Oju #Ngchow
+2163 = Yuju #Liuzhou
+664 = Neungun #Lingyun
+2164 = Namnyeong #Namning
+
+665 = Jogyeong #Shiuhing
+2159 = Noeju #Leichow
+2161 = Happo #Limchow
+666 = Haegu #Kingchow
+2160 = Aeju #Ngaichow
+
+2154 = Daebuk #Kelang, Taipei
+2155 = Daejung #Middag, Taichung
+738 = Daenam #Sakam, Tainan
+
+#Vietnam
+685 = Yangju #Yangzhou
+2145 = Jingang #Zhenjiang
+
+2146 = Yeongguk #Ningguo
+2147 = Hwiju #Huizhou
+686 = Angyeong #Anqing
+
+4197 = Hwanggang #Huangzhou
+682 = Muchang #Wuchang
+2171 = Yangyang #Xiangyang
+2172 = Hyeongju #Jingzhou
+
+672 = Mureung #Wuling
+671 = Jangsa #Changsha
+2173 = Wonreung #Yuanling
+2174 = Heongyang #Hengyang
+
+683 = Namchang #Nanchang
+2151 = Payang #Poyang
+670 = Gamju #Ganzhou
+
+684 = Hangju #Hangzhou
+2148 = Soheung #Shaoxin
+2149 = Yeongpa #Ningbo
+2150 = Geumhwa #Jinhua
+1824 = Onju #Wenzhou
+
+2152 = Geonnyeong #Jianning
+669 = Bokju #Fuzhou
+1829 = Cheonju #Quanzhou
+2153 = Jeongju #Tingzhou
+
+2156 = Joju #Chaochow
+2157 = Hyeju #Waichow
+2158 = Sogwan #Shiukwan
+
+1840 = Gyerim #Guilin
+2162 = Oju #Ngchow
+2163 = Yuju #Liuzhou
+664 = Neungun #Lingyun
+2164 = Namnyeong #Namning
+
+665 = Jogyeong #Shiuhing
+2159 = Noeju #Leichow
+2161 = Happo #Limchow
+666 = Haegu #Kingchow
+2160 = Aeju #Ngaichow
+
+2154 = Daebuk #Kelang, Taipei
+2155 = Daejung #Middag, Taichung
+738 = Daenam #Sakam, Tainan
+
+#New World
+868 = Naseong #Chumash, Los Angeles

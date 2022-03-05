@@ -1,0 +1,358 @@
+### Meritocracy Base ###
+meritocracy_for_empires = {
+	potential = {
+		uses_meritocracy = yes
+		has_dlc = "Mandate of Heaven"
+		has_dlc = "Cradle of Civilization"
+		total_development = 1000
+	}
+
+	trigger = {	
+		total_development = 1000
+	}
+
+	meritocracy = -3
+}
+
+meritocracy_for_kingdoms = {
+	potential = {
+		uses_meritocracy = yes
+		has_dlc = "Mandate of Heaven"
+		total_development = 300
+		OR = {
+			NOT = { total_development = 1000 }
+			NOT = { has_dlc = "Cradle of Civilization" }
+		}
+	}
+
+	trigger = {	
+		total_development = 300
+		OR = {
+			NOT = { total_development = 1000 }
+			NOT = { has_dlc = "Cradle of Civilization" }
+		}
+	}
+
+	meritocracy = -2
+}
+
+meritocracy_for_kingdoms_small = {
+	potential = {
+		uses_meritocracy = yes
+		has_dlc = "Mandate of Heaven"
+		total_development = 100
+		NOT = { total_development = 300 }
+	}
+	
+	trigger = {	
+		total_development = 100
+		NOT = { total_development = 300 }
+	}
+
+	meritocracy = -1
+}
+
+meritocracy_for_duchies = {
+	potential = {
+		always = no #No need to display no decay for small nations.
+		uses_meritocracy = yes
+		has_dlc = "Mandate of Heaven"
+		NOT = { total_development = 100 }
+	}
+	
+	trigger = {	
+		NOT = { total_development = 100 }
+	}
+
+	meritocracy = 0
+}
+
+### EMPIRE OF CHINA MECHANICS ###
+# This is a modifier that the EoC has until it passes all 5 reforms.
+unreformed_empire_of_china = { #Physiocratic Economy
+	potential = {
+		has_dlc = "Mandate of Heaven"
+		has_reform = celestial_empire
+	}
+	
+	trigger = {
+		NOT = {
+			has_global_flag = reform_land_tax_flag
+		}
+	}
+	
+	land_morale = -0.1
+	naval_morale = -0.1
+	discipline = -0.1
+}
+
+chinese_autonomy_modifier = {
+	potential = {
+		always = no
+		has_dlc = "Mandate of Heaven"
+		is_emperor_of_china = yes
+		NOT = {
+			has_global_flag = reform_land_tax_flag
+		}
+	}
+	trigger = {
+		always = no
+	}
+	
+	min_autonomy = 25
+}
+
+early_game_mandate_nerf = {
+	potential = {
+		has_reform = celestial_empire
+		has_dlc = "Mandate of Heaven"
+		tag = MNG
+	}
+	trigger = {
+		current_age = age_of_discovery
+	}
+	imperial_mandate = -0.20
+}
+
+#EOC owns ancient capitals
+ai_wants_chinese_capitals = {
+	potential = {
+		ai = yes
+		OR = {
+			owns = 1816
+			owns = 1821
+			owns = 700
+			owns = 1836
+		}
+		has_dlc = "Mandate of Heaven"
+		capital_scope = {
+			superregion = china_superregion
+		}
+	}
+	trigger = {
+		owns = 1816
+		owns = 1821
+		owns = 700
+		owns = 1836
+	}
+
+	ai_weight = {
+		factor = 100 # Makes AI try to conquer the cities
+	}
+}
+
+has_control_of_beijing = {
+	potential = {
+		has_reform = celestial_empire
+		has_dlc = "Mandate of Heaven"
+	}
+	trigger = {
+		controls = 1816
+	}
+	
+	ai_weight = {
+		factor = -1000 # Do what you can to avoid this modifier
+	}
+	
+	imperial_mandate = 0.03
+	amount_of_banners = 0.5
+}
+
+has_control_of_nanjing = {
+	potential = {
+		has_reform = celestial_empire
+		has_dlc = "Mandate of Heaven"
+	}
+	trigger = {
+		controls = 1821
+	}
+	
+	ai_weight = {
+		factor = -1000 # Do what you can to avoid this modifier
+	}
+	
+	imperial_mandate = 0.03
+	amount_of_banners = 0.5
+}
+
+has_control_of_xian = {
+	potential = {
+		has_reform = celestial_empire
+		has_dlc = "Mandate of Heaven"
+	}
+	trigger = {
+		controls = 700
+	}
+	
+	ai_weight = {
+		factor = -1000 # Do what you can to avoid this modifier
+	}
+	
+	imperial_mandate = 0.03
+	amount_of_banners = 0.5
+}
+
+has_control_of_luoyang = {
+	potential = {
+		has_reform = celestial_empire
+		has_dlc = "Mandate of Heaven"
+	}
+	trigger = {
+		controls = 1836
+	}
+	
+	ai_weight = {
+		factor = -1000 # Do what you can to avoid this modifier
+	}
+	
+	imperial_mandate = 0.03
+	amount_of_banners = 0.5
+}
+
+#EOC does not own ancient capitals
+#EOC's Triggered Mandate Modifiers taken from vanilla's file.
+lost_control_of_beijing = {
+	potential = {
+		has_reform = celestial_empire
+		has_dlc = "Mandate of Heaven"
+	}
+
+	trigger = {
+		OR = {
+			NOT = { owns = 1816 }
+			NOT = { controls = 1816 }
+		}
+	}
+	
+	imperial_mandate = -0.2
+}
+
+lost_control_of_nanjing = {
+	potential = {
+		has_reform = celestial_empire
+		has_dlc = "Mandate of Heaven"
+	}
+
+	trigger = {
+		OR = {
+			NOT = { owns = 1821 }
+			NOT = { controls = 1821 }
+		}
+	}
+
+	imperial_mandate = -0.2
+}
+lost_control_of_xian = {
+	potential = {
+		has_reform = celestial_empire
+		has_dlc = "Mandate of Heaven"
+	}
+
+	trigger = {
+		OR = {
+			NOT = { owns = 700 }
+			NOT = { controls = 700 }
+		}
+	}
+
+	imperial_mandate = -0.2
+}
+lost_control_of_luoyang = {
+	potential = {
+		has_reform = celestial_empire
+		has_dlc = "Mandate of Heaven"
+	}
+
+	trigger = {
+		OR = {
+			NOT = { owns = 1836 }
+			NOT = { controls = 1836 }
+		}
+	}
+
+	imperial_mandate = -0.2
+}
+
+## Modifiers for Tributary States after EoC passes Reforms ##
+establish_gaituguiliu_modifier = {
+	potential = {
+		is_subject_of_type = confucian_tributary_state
+		overlord = {
+			is_emperor_of_china = yes
+		}
+		has_global_flag = establish_gaituguiliu_flag
+	}
+	trigger = {
+		overlord = {
+			is_emperor_of_china = yes
+		}
+	}
+	
+	governing_capacity = 100
+}
+
+seaban_modifier = {
+	potential = {
+		is_subject_of_type = confucian_tributary_state
+		overlord = {
+			is_emperor_of_china = yes
+		}
+		has_global_flag = seaban_flag
+	}
+	trigger = {
+		always = yes
+	}
+	
+	trade_efficiency = 0.1
+}
+
+reform_land_tax_modifier = {
+	potential = {
+		is_subject_of_type = confucian_tributary_state
+		overlord = {
+			is_emperor_of_china = yes
+		}
+		has_global_flag = reform_land_tax_flag
+	}
+	trigger = {
+		overlord = {
+			is_emperor_of_china = yes
+		}
+	}
+	
+	global_trade_goods_size_modifier = 0.1
+}
+
+military_governors_modifier = {
+	potential = {
+		is_subject_of_type = confucian_tributary_state
+		overlord = {
+			is_emperor_of_china = yes
+		}
+		has_global_flag = military_governors_flag
+	}
+	trigger = {
+		overlord = {
+			is_emperor_of_china = yes
+		}
+	}
+	
+	administrative_efficiency = 0.05
+}
+
+centralizing_top_government_modifier = {
+	potential = {
+		is_subject_of_type = confucian_tributary_state
+		overlord = {
+			is_emperor_of_china = yes
+		}
+		has_global_flag = centralizing_top_government_flag
+	}
+	trigger = {
+		overlord = {
+			is_emperor_of_china = yes
+		}
+	}
+	
+	country_admin_power = 1
+}

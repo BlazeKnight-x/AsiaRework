@@ -1,0 +1,62 @@
+mongolian_tumen = {
+	copy_from = vassal
+
+	# Triggers:
+	is_potential_overlord = {
+		culture_group = altaic # Mongolian
+		is_nomad = yes
+		government_rank = 2
+		is_subject = no
+	}
+	
+	# Graphics:
+	sprite = GFX_icon_tumen
+	diplomacy_overlord_sprite = GFX_icon_diplomacy_lead_tumen
+	diplomacy_subject_sprite = GFX_icon_diplomacy_am_tumen
+	
+	# Properties:
+	has_power_projection = yes
+	takes_diplo_slot = no
+	can_be_annexed = yes
+	pays_overlord = 0.0
+	military_focus = 1.5
+	forcelimit_to_overlord = 0 #Balance: Tumen represent decentralized tribal groups, not proper vassals
+	max_government_rank = 2
+	# Subject Interactions:
+	scutage = no
+	trust_on_start = 0
+	
+	base_liberty_desire = 0.0
+
+	relative_power_class = 1
+	liberty_desire_development_ratio = 0.0
+
+	can_fight = {
+		#same_overlord = mongolian_tumen
+	}
+	can_rival = {
+		#same_overlord = mongolian_tumen
+	}
+	can_ally = {
+		#same_overlord = mongolian_tumen
+	}
+	can_marry = {
+		#same_overlord = mongolian_tumen
+	}
+	
+	# Subject Interactions
+	#(disable)
+	embargo_rivals = no
+	scutage = no
+	divert_trade= no
+	grant_core_claim = yes
+	grant_province = yes
+	place_relative_on_throne = no
+	enforce_religion = no
+	seize_territory = no
+	
+	# Modifiers
+	
+	modifier_overlord = clear #We don't want to duplicate the ones inherited from vassal
+	modifier_subject = clear #Ditto
+}

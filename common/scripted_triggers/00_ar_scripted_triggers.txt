@@ -1,0 +1,41 @@
+#For Chinese Warring States
+#Primary Culture must be in Chinese group AND Must have capital in Chinese superregion
+is_chinese_warring_state = {
+	is_emperor_of_china = no
+	
+	culture_group = east_asian #Chinese culture group
+	capital_scope = {
+		superregion = china_superregion #This country's capital is in China.
+	}
+}
+
+
+is_horde = {
+	OR = {
+		is_nomad = yes
+		has_reform = manchu_tribal_federation
+	}
+}
+
+is_tributary = {
+	OR = {
+		is_subject_of_type = tributary_state
+		is_subject_of_type = confucian_tributary_state
+		is_subject_of_type = military_commission
+	}
+}
+
+uses_meritocracy = {
+	OR = {
+		has_reform = celestial_empire
+		has_reform = eastern_monarchy
+		has_reform = joseon_monarchy
+	}
+}
+
+dutch_republic_trigger = {
+	has_states_general_mechanic = yes
+	NOT = {
+		has_reform = joseon_monarchy
+	}
+}

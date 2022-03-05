@@ -1,0 +1,5 @@
+reformed_chinese_empire = {
+	technology_cost = -0.1
+	imperial_mandate = 0.2
+	meritocracy = 0.5
+}

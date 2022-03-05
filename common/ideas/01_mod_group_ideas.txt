@@ -1,0 +1,39 @@
+chinese_empire_ideas = {
+	start = {
+		global_manpower_modifier = 0.3
+		advisor_cost = -0.1
+	}
+	bonus = {
+		development_cost = -0.1
+	}
+	trigger = {
+		is_emperor_of_china = yes
+		culture_group = east_asian #Chinese
+	}
+	free = yes
+	nine_garrisons_of_the_great_wall = { #In Ming Ideas
+		#defensiveness = 0.05
+		#garrison_size = 0.25
+	}
+	chinese_empire_gunpowder = {
+		artillery_power = 0.1
+		siege_ability = 0.1
+	}
+	yellow_river_dykes = { #In Ming Ideas
+		#production_efficiency = 0.1
+	}
+	nation_of_rites_and_etiquette = { #From Chinese ideas
+		prestige = 1
+	}
+	head_tax = { #Old, unused Ming Idea
+		global_tax_modifier = 0.1
+	}
+	chinese_empire_middle_kingdom = { #Upgraded Version of Chinese Ideas
+		improve_relation_modifier = 0.1
+		diplomatic_reputation = 2
+	}
+	inward_perfection = { #In Ming Ideas
+		#imperial_mandate = 0.05
+		#stability_cost_modifier = -0.10
+	}
+}

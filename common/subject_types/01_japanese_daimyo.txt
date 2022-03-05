@@ -1,0 +1,213 @@
+daimyo_vassal = {
+	copy_from = vassal
+	count = vassal
+	
+	# Graphics:
+	sprite = GFX_icon_daimyo
+	diplomacy_overlord_sprite = GFX_icon_diplomacy_lead_daimyo
+	diplomacy_subject_sprite = GFX_icon_diplomacy_am_daimyo
+	
+	# Properties:
+	has_power_projection = yes
+	takes_diplo_slot = no
+	gives_daimyo_bonuses = yes
+	gets_help_with_rebels = no
+	separatists_become_subjects = yes
+	allows_taking_land_without_independence = yes
+	can_use_claims = no
+	can_have_subjects_of_other_types = yes
+	
+	trust_on_start = 0
+	
+	#Liberty Desire
+	base_liberty_desire = 0.0 #10.0
+	liberty_desire_negative_prestige = 0.0
+	liberty_desire_development_ratio = 0.5 #normal vassal is 0.25
+	liberty_desire_same_dynasty = 0.0
+	liberty_desire_revolution = 0.0
+	
+	#Stats
+	pays_overlord = 1.0 #normal vassal is 1.0
+	forcelimit_to_overlord = 0.0
+	military_focus = 1.2
+
+	relative_power_class = 1 #3
+	#diplomacy_view_class = 2 #new
+	
+	can_fight = {
+		same_overlord = daimyo_vassal
+		same_overlord = daimyo_kanrei
+	}
+	can_rival = {
+		same_overlord = daimyo_vassal
+		same_overlord = daimyo_kanrei
+	}
+	can_ally = {
+		same_overlord = daimyo_vassal
+		same_overlord = daimyo_kanrei
+	}
+	can_marry = {
+		same_overlord = daimyo_vassal
+		same_overlord = daimyo_kanrei
+	}
+	
+	
+	# Subject Interactions
+	#(disable)
+	scutage = no
+	grant_core_claim = yes
+	grant_province = yes
+	place_relative_on_throne = no
+	enforce_religion = no
+	enforce_culture = no
+	seize_territory = no
+	#(enable)
+	force_seppuku = yes
+	#contribute_to_capital = yes
+	force_isolation = yes
+	return_land = yes
+	conscript_general = yes
+	#(special)
+	sword_hunt = yes
+	sankin_kotai = yes
+	expel_ronin = yes
+	
+	# Modifiers
+	
+	modifier_overlord = clear #We don't want to duplicate the ones inherited from vassal
+	modifier_subject = clear #Ditto
+	modifier_subject = {
+		modifier = daimyo_nation_modifier #25% AE
+	}
+	modifier_overlord = {
+		modifier = daimyo_subject
+	}
+	
+	
+	modifier_overlord = {
+		modifier = overlord_sword_hunt
+		trigger = {
+			has_country_modifier = subject_sword_hunt
+		}
+	}
+	
+	overlord_opinion_modifier = null #Daimyos get no relations bonus with Overlord
+	subject_opinion_modifier = null
+}
+
+daimyo_kanrei = {
+	copy_from = daimyo_vassal
+	
+	# Graphics:
+	sprite = GFX_icon_daimyo
+	diplomacy_overlord_sprite = GFX_icon_diplomacy_lead_daimyo
+	diplomacy_subject_sprite = GFX_icon_diplomacy_am_daimyo
+	
+	# Properties:
+	has_power_projection = yes
+	takes_diplo_slot = no
+	gives_daimyo_bonuses = yes
+	gets_help_with_rebels = no
+	separatists_become_subjects = yes
+	allows_taking_land_without_independence = yes
+	can_use_claims = no
+
+	trust_on_start = 0
+	
+	#Liberty Desire
+	base_liberty_desire = 0
+	liberty_desire_negative_prestige = 0.0
+	liberty_desire_development_ratio = 0.5
+	liberty_desire_same_dynasty = 0.0
+	liberty_desire_revolution = 30.0
+	
+	#Kanrei Stats
+	pays_overlord = 0.0
+	military_focus = 1.2
+
+	relative_power_class = 0 #Only considers self vs Overlord
+
+	can_fight = {
+		same_overlord = daimyo_vassal
+		same_overlord = daimyo_kanrei
+	}
+	can_rival = {
+		same_overlord = daimyo_vassal
+		same_overlord = daimyo_kanrei
+	}
+	can_ally = {
+		same_overlord = daimyo_vassal
+		same_overlord = daimyo_kanrei
+	}
+	can_marry = {
+		same_overlord = daimyo_vassal
+		same_overlord = daimyo_kanrei
+	}
+	
+	forcelimit_to_overlord = 0
+	
+	# Subject Interactions
+	#(disable)
+	embargo_rivals = no
+	scutage = no
+	
+	placate_rulers = no
+	grant_core_claim = yes
+	grant_province = yes
+	place_relative_on_throne = no
+	enforce_religion = no
+	enforce_culture = no
+	seize_territory = no
+	#(enable)
+	### force_seppuku = no
+	#contribute_to_capital = no
+	### force_isolation = no
+	### return_land = no
+	conscript_general = no
+	#(special)
+	sword_hunt = no
+	sankin_kotai = no
+	expel_ronin = no
+	
+	# (continuous)
+	divert_trade = no
+	embargo_rivals = no
+	
+	# Modifiers
+	
+	modifier_overlord = clear #We don't want to duplicate the ones inherited from vassal
+	modifier_subject = clear #Ditto
+	#modifier_subject = {
+	#	modifier = subject_nation
+	#}
+	modifier_overlord = {
+		modifier = daimyo_subject
+	}
+	
+	
+	modifier_overlord = {
+		modifier = overlord_sword_hunt
+		trigger = {
+			has_country_modifier = subject_sword_hunt
+		}
+	}
+	
+	modifier_overlord = {
+		modifier = daimyo_big_military_modifier_overlord
+		trigger = {
+			not = { liberty_desire = 50 }
+		}
+	}
+}
+
+daimyo_small = {
+	copy_from = daimyo_vassal
+	
+	# Graphics:
+	sprite = GFX_icon_daimyo
+	diplomacy_overlord_sprite = GFX_icon_diplomacy_lead_daimyo
+	diplomacy_subject_sprite = GFX_icon_diplomacy_am_daimyo
+	
+	# Properties:
+	can_have_subjects_of_other_types = no
+}

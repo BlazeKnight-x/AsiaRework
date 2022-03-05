@@ -1,0 +1,8 @@
+tributary_state_payed_tribute = {
+	all_power_cost = -0.01
+	trade_efficiency = 0.1
+}
+
+tributary_state_overlord_lost_mandate = {
+	liberty_desire = 1000
+}

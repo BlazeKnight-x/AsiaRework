@@ -1,0 +1,42 @@
+ai_horde_bandaid = {
+	potential = {
+		is_nomad = yes
+		ai = yes #not visible to player
+	}
+	trigger = {
+		ai = yes
+	}
+	horde_unity = 3
+}
+
+ai_eoc_bandaid = {
+	potential = {
+		is_emperor_of_china = yes
+		ai = yes #not visible to player
+	}
+	trigger = {
+		ai = yes
+	}
+	governing_capacity = 2000
+}
+
+ai_warring_states_bandaid = {
+	potential = {
+		has_reform = chinese_warring_state
+		ai = yes
+	}
+	trigger = {
+		ai = yes
+		OR = {
+			is_in_war = {
+				casus_belli = cb_chinese_civil_war
+			}
+			is_in_war = {
+				casus_belli = cb_chinese_unification
+			}
+		}
+	}
+	
+	global_manpower_modifier = 0.3
+	land_forcelimit_modifier = 0.3
+}

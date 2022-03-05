@@ -1,0 +1,122 @@
+establish_gaituguiliu_decision = {
+	empire = celestial_empire
+	emperor = {
+		#meritocracy = 0.5
+		governing_capacity = 500
+	}
+	on_effect = {
+		#governing_capacity = 100
+		custom_tooltip = establish_gaituguiliu_tt
+		hidden_effect = {
+			set_global_flag = establish_gaituguiliu_flag
+		}
+	}
+	on_invalid = {
+		clr_global_flag = establish_gaituguiliu_flag
+	}
+	ai_will_do = {
+		is_at_war = no
+	}
+}
+
+seaban_decision = {
+	empire = celestial_empire
+	emperor = {
+		diplomats = 1
+		trade_efficiency = 0.1 #was 0.05
+	}
+	on_effect = {
+		# Trade Eff 0.1
+		custom_tooltip = seaban_tt
+		hidden_effect = {
+			set_global_flag = seaban_flag
+		}
+	}
+	on_invalid = {
+		clr_global_flag = seaban_flag
+	}
+	ai_will_do = {
+		is_at_war = no
+	}
+}
+
+reform_land_tax_decision = {
+	empire = celestial_empire
+	emperor = {
+		#global_autonomy = -0.05
+		global_trade_goods_size_modifier = 0.1
+		custom_tooltip = lose_chinese_autonomy_modifier_tt #Loses the Autonomy Modifier
+	}
+	on_effect = {
+		#governing_capacity = 100
+		custom_tooltip = reform_land_tax_tt
+		hidden_effect = {
+			set_global_flag = reform_land_tax_flag
+		}
+	}
+	on_invalid = {
+		clr_global_flag = reform_land_tax_flag
+	}
+	ai_will_do = {
+		is_at_war = no
+	}
+}
+
+military_governors_decision = {
+	empire = celestial_empire
+	emperor = {
+		administrative_efficiency = 0.05
+	}
+	on_effect = {
+		#administrative_efficiency = 0.05
+		custom_tooltip = military_governors_tt
+		hidden_effect = {
+			set_global_flag = military_governors_flag
+		}
+	}
+	on_invalid = {
+		clr_global_flag = military_governors_flag
+	}
+	ai_will_do = {
+		is_at_war = no
+	}
+}
+
+centralizing_top_government_decision = {
+	empire = celestial_empire
+	emperor = {
+		#monarch_admin_power = 1
+		country_admin_power = 1
+	}
+	on_effect = {
+		#country_admin_power = 1
+		custom_tooltip = centralizing_top_government_tt
+		hidden_effect = {
+			set_global_flag = centralizing_top_government_flag
+		}
+		add_country_modifier = {
+			name = "reformed_chinese_empire"
+			duration = -1
+		}
+		override_country_name = CHINA_OVERRIDE
+	}
+	off_effect = {
+		custom_tooltip = centralizing_top_government_tt
+		hidden_effect = {
+			set_global_flag = centralizing_top_government_flag
+		}
+		remove_country_modifier = "reformed_chinese_empire"
+		restore_country_name = yes
+	}
+	on_invalid = {
+		custom_tooltip = centralizing_top_government_tt
+		hidden_effect = {
+			set_global_flag = centralizing_top_government_flag
+		}
+		remove_country_modifier = "reformed_chinese_empire"
+		restore_country_name = yes
+	}
+	ai_will_do = {
+		is_at_war = no
+	}
+}

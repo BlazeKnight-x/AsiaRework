@@ -1,0 +1,29 @@
+is_han_chinese = {
+	culture_group = east_asian
+	NOT = {
+		primary_culture = manchu_new
+		primary_culture = sino_mongol
+		primary_culture = sino_korean
+		primary_culture = sino_japonic
+		primary_culture = sino_vietnamese
+	}
+}
+
+confucian_reforms_estates_are_pleased = {
+	custom_tooltip = "confucian_reforms_estates_are_pleased_tt"
+	estate_loyalty = {
+		estate = estate_church
+		loyalty = 30
+	}
+	estate_loyalty = {
+		estate = estate_burghers
+		loyalty = 30
+	}
+	OR = {
+		has_parliament = yes
+		estate_loyalty = {
+			estate = estate_nobles
+			loyalty = 30
+		}
+	}
+}

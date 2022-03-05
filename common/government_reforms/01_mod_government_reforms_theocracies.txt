@@ -1,0 +1,26 @@
+
+ikko_ikki_reform = {
+    icon = "shogunate"
+    allow_normal_conversion = yes
+    monastic = yes
+	potential = {
+		culture_group = japanese_g
+		religion = mahayana
+	}
+    valid_for_nation_designer = yes
+    nation_designer_cost = 10
+    nation_designer_trigger = {
+        culture_group = japanese_g
+        religion = mahayana
+    }
+    legacy_equivalent = theocratic_government
+    lock_level_when_selected = yes
+
+    modifiers = {
+		manpower_recovery_speed = 0.1
+		development_cost = -0.1
+	}
+    custom_attributes = {
+        locked_government_type = yes
+    }
+}

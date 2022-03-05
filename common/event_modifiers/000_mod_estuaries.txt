@@ -1,0 +1,55 @@
+#Format
+#river_estuary_modifier = {
+#	province_trade_power_value = 10
+#	picture = "estuary_icon"
+#}
+
+#Korea
+han_estuary_modifier = {
+	province_trade_power_value = 10
+	picture = "estuary_icon"
+}
+
+taedong_estuary_modifier = {
+	province_trade_power_value = 10
+	picture = "estuary_icon"
+}
+
+nakdong_estuary_modifier = {
+	province_trade_power_value = 10
+	picture = "estuary_icon"
+}
+
+#China
+
+huang_he_split_estuary_modifier = { #Split
+	province_trade_power_value = 5
+	picture = "estuary_icon"
+}
+
+yangtze_split_estuary_modifier = { #Split in the mod
+	province_trade_power_value = 5
+	picture = "estuary_icon"
+}
+
+liao_river_estuary_modifier = {
+	province_trade_power_value = 10
+	picture = "estuary_icon"
+}
+
+amur_river_estuary_modifier = {
+	province_trade_power_value = 10
+	picture = "estuary_icon"
+}
+
+#Vietnam
+red_river_split_estuary_modifier = { #Split over 2 provinces in the mod
+	province_trade_power_value = 5
+	picture = "estuary_icon"
+}
+
+#Borneo
+mahakam_river_estuary_modifier = {
+	province_trade_power_value = 10
+	picture = "estuary_icon"
+}

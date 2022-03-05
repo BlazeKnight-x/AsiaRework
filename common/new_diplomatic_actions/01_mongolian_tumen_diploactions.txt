@@ -1,0 +1,425 @@
+# Triggers and effects will be given the Actor's scope, with the Recipient's as FROM
+
+# ROOT = Overlord, FROM = Subject
+
+### Overlord Actions #######################################################################
+offer_mongolian_tumen = {
+	category = influence
+	alert_index = 30 # ask_for_march
+	alert_tooltip = offer_mongolian_tumen_alert_tooltip
+	require_acceptance = yes # Whether the recipient gets an option to decline
+	is_visible = {
+		is_nomad = yes
+		is_subject = no
+		FROM = {
+			is_subject = no
+			government = tribal
+			OR = {
+				is_nomad = yes
+				has_reform = manchu_tribal_federation
+			}
+		}
+	}
+	is_allowed = {
+		custom_trigger_tooltip = {
+			tooltip = offer_mongolian_tumen_allowed_tooltip
+			is_at_war = no
+			alliance_with = FROM
+			FROM = {
+				is_at_war = no
+				has_opinion = {
+					who = ROOT
+					value = 190
+				}
+			}
+		}
+		### Same Stuff As Is Visible
+		hidden_trigger = {
+			is_nomad = yes
+			FROM = {
+				is_subject = no
+				government = tribal
+			}
+		}
+	}
+	on_accept = {
+		create_subject = {
+			subject_type = mongolian_tumen
+			subject = FROM
+		}
+	}
+	on_decline = {
+		add_trust = {
+			who = FROM
+			value = -10
+			mutual = yes
+		}
+	}
+
+	ai_acceptance = {
+		#Base Value
+		add_entry = {
+			name = NEW_DIPLO_BASE_VALUE
+			export_to_variable = { which = ai_value  value = -10 }
+		}
+		#They are a Kingdom ###########################
+		add_entry = {
+			name = NEW_DIPLO_THEY_KINGDOM
+			limit = { FROM = { government_rank = 2 NOT = { government_rank = 3 } } }
+			export_to_variable = { which = ai_value value = -20 }
+		}
+		#They are an Empire ###########################
+		add_entry = {
+			name = NEW_DIPLO_THEY_EMPIRE
+			limit = { FROM = { government_rank = 3 } }
+			export_to_variable = { which = ai_value value = -1000 }
+		}
+		#They are a Horde ###########################
+		add_entry = {
+			name = NEW_DIPLO_HORDE
+			limit = { FROM = { has_reform = steppe_horde } }
+			export_to_variable = { which = ai_value value = -20 }
+		}
+		#They have subjects
+		add_entry = {
+			name = NEWDIPLO_they_have_subjects
+			limit = {
+				FROM = {
+					num_of_subjects = 1
+				}
+			}
+			export_to_variable = { which = ai_value  value = -1000 }
+		}
+		#Border Distance
+		add_entry = {
+			name = NEWDIPLO_border_distance
+			export_to_variable = {
+				which = ai_value
+				value = border_distance
+				who = FROM
+			}
+			divide_variable = { which = ai_value  value = -2 }
+		}
+		#Proposer's Land Force Limit compared to Target's
+		add_entry = {
+			name = NEWDIPLO_force_limit_compare
+			export_to_variable = { which = ai_value  value = -1 }
+			export_to_variable = { which = our_FL  value = land_forcelimit }
+			export_to_variable = { which = their_FL  value = land_forcelimit  who = FROM }
+			divide_variable = { which = our_FL  which = their_FL } #our FL as a % of their FL
+			change_variable = { which = ai_value  which = our_FL }
+			multiply_variable = { which = ai_value  value = 10 } #ex: double FL gives +10 chance
+		}
+		#Proposer's Max Manpower compared to Target's
+		add_entry = {
+			name = NEWDIPLO_max_manpower_compare
+			export_to_variable = { which = ai_value  value = -1 }
+			export_to_variable = { which = our_manpower  value = max_manpower }
+			export_to_variable = { which = their_manpower  value = max_manpower  who = FROM }
+			divide_variable = { which = our_manpower  which = their_manpower } #our manpower as a % of their manpower
+			change_variable = { which = ai_value  which = our_manpower }
+			multiply_variable = { which = ai_value  value = 10 }
+		}
+		#Difference in Ruler Military Skill
+		add_entry = {
+			name = NEWDIPLO_ruler_military_compare
+			export_to_variable = { which = ai_value  value = MIL }
+			export_to_variable = { which = their_MIL  value = MIL  who = FROM }
+			multiply_variable = { which = their_MIL  value = -1 }
+			change_variable = { which = ai_value  which = their_MIL }
+			multiply_variable = { which = ai_value  value = 5 } #Every MIL point difference = 5 AI Reasons
+		}
+		#Attitudes ###########################
+		add_entry = {
+			name = NEW_DIPLO_ATTITUDE_FRIENDLY
+			limit = { FROM = { OR = {
+				ai_attitude = { who = ROOT attitude = attitude_friendly }
+				ai_attitude = { who = ROOT attitude = attitude_allied }
+			} } }
+			export_to_variable = { which = ai_value value = 10 }
+		}
+		add_entry = {
+			name = NEW_DIPLO_ATTITUDE_THREATENED
+			limit = { FROM = {
+				ai_attitude = { who = ROOT attitude = attitude_threatened }
+			} }
+			export_to_variable = { which = ai_value value = 10 }
+		}
+		add_entry = {
+			name = NEW_DIPLO_ATTITUDE_NEUTRAL
+			limit = { FROM = {
+				ai_attitude = { who = ROOT attitude = attitude_neutral }
+			} }
+			export_to_variable = { which = ai_value value = -20 }
+		}
+		add_entry = {
+			name = NEW_DIPLO_ATTITUDE_RIVALRY
+			limit = { FROM = {
+				ai_attitude = { who = ROOT attitude = atittude_rival }
+			} }
+			export_to_variable = { which = ai_value value = -100 }
+		}
+		add_entry = {
+			name = NEW_DIPLO_ATTITUDE_HOSTILE
+			limit = { FROM = {
+				ai_attitude = { who = ROOT attitude = attitude_hostile }
+			} }
+			export_to_variable = { which = ai_value value = -100 }
+		}
+		add_entry = {
+			name = NEW_DIPLO_ATTITUDE_OUTRAGED
+			limit = { FROM = {
+				ai_attitude = { who = ROOT attitude = attitude_outraged }
+			} }
+			export_to_variable = { which = ai_value value = -100 }
+		}
+		
+		# Trust
+		add_entry = {
+			name = NEWDIPLO_trust
+			limit = {
+				FROM = {
+					trust = { who = ROOT  value = 50 }
+				}
+			}
+			export_to_variable = {
+				which = ai_value
+				value = trust
+				who = FROM
+			}
+			
+			divide_variable = { which = ai_value  value = 5 }
+			change_variable = { which = ai_value  value = -10 }
+		}
+		add_entry = {
+			name = NEWDIPLO_trust
+			limit = {
+				FROM = {
+					NOT = { trust = { who = ROOT  value = 50 } }
+					trust = { who = ROOT  value = 30 }
+				}
+			}
+			export_to_variable = {
+				which = ai_value
+				value = trust
+				who = FROM
+			}
+			multiply_variable = { which = ai_value  value = 2 }
+			change_variable = { which = ai_value  value = -100 }
+		}
+		add_entry = {
+			name = NEWDIPLO_trust
+			limit = {
+				FROM = {
+					NOT = { trust = { who = ROOT  value = 30 } }
+				}
+			}
+			export_to_variable = { which = ai_value  value = -2000 }
+		}
+	}
+	ai_will_do = { # this is a trigger
+		trust = { who = FROM value = 30 }
+		NOT = {
+			ai_attitude = { who = from attitude = attitude_hostile }
+			ai_attitude = { who = from attitude = attitude_outraged }
+			ai_attitude = { who = from attitude = attitude_rival }
+		}
+	}
+}
+
+break_mongolian_tumen_overlord = {
+	category = influence
+	require_acceptance = no
+	is_visible = {
+		overlord_of = FROM
+		FROM = {
+			is_subject_of_type = mongolian_tumen
+		}
+	}
+	is_allowed = {
+		hidden_trigger = {
+			overlord_of = FROM
+			FROM = {
+				is_subject_of_type = mongolian_tumen
+			}
+		}
+	}
+	on_accept = {
+		FROM = {
+			grant_independence = yes
+		}
+	}
+	ai_will_do = {
+		NOT = {
+			trust = { who = FROM value = 30 }
+		}
+	}
+}
+
+### Subject Actions ########################################################################
+request_to_be_mongolian_tumen = {
+	category = influence
+	alert_index = 30
+	alert_tooltip = request_mongolian_tumen_alert_tooltip
+	require_acceptance = yes # Whether the recipient gets an option to decline
+	is_visible = {
+		is_subject = no
+		government = tribal
+		FROM = {
+			can_be_overlord = mongolian_tumen
+		}
+	}
+	is_allowed = {
+		is_at_war = no
+		FROM = { is_at_war = no }
+		### Same Stuff as Is Visible
+		hidden_trigger = {
+			is_subject = no
+			government = tribal
+			FROM = {
+				can_be_overlord = mongolian_tumen
+			}
+		}
+	}
+	ai_acceptance = {
+		#Opinion ###########################
+		add_entry = {
+			name = NEW_DIPLO_OPINION
+			export_to_variable = { which = ai_value value = opinion who = FROM }
+			multiply_variable = { which = ai_value value = 0.25 }
+		}
+		#Diplo Rep ###########################
+		add_entry = {
+			name = NEWDIPLO_DIPLO_REP
+			export_to_variable = { which = ai_value value = modifier:diplomatic_reputation }
+			multiply_variable = { which = ai_value value = 3 }
+		}
+		#Does not neighbor you or your direct subjects
+		add_entry = {
+			name = NEW_DIPLO_MILITARY_COMMISION_NOT_NEIGHBORS
+			limit = {
+				NOT = { OR = { 
+					is_neighbor_of = FROM
+					from = { all_subject_country = {
+						limit = {
+							NOT = {
+								is_subject_of_type = tributary_state
+								is_subject_of_type = confucian_tributary_state
+							}
+						}
+						is_neighbor_of = root
+					} }
+				} }
+			}
+			export_to_variable = { which = ai_value value = -1000 }
+		}
+		#Development ###########################
+		add_entry = { #Neither are limited
+			name = NEWDIPLO_DEV_COMPARE
+			limit = {
+				export_to_variable = { which = our_dev value = total_development }
+				export_to_variable = { which = their_dev value = total_development who = FROM}
+				NOT = {
+					check_variable = { which = our_dev value = 1000 }
+					check_variable = { which = their_dev value = 1000 }
+				}
+			}
+			export_to_variable = { which = ai_value value = total_development }
+			subtract_variable = { which = ai_value value = total_development who = FROM }
+			multiply_variable = { which = ai_value value = -0.02 }
+		}
+		add_entry = { #Root is Too large
+			name = NEWDIPLO_DEV_COMPARE
+			limit = {
+				export_to_variable = { which = our_dev value = total_development }
+				export_to_variable = { which = their_dev value = total_development who = FROM}
+				check_variable = { which = our_dev value = 500 }
+				NOT = { check_variable = { which = their_dev value = 500 } }
+			}
+			export_to_variable = { which = ai_value value = 500 }
+			subtract_variable = { which = ai_value value = total_development who = FROM }
+			multiply_variable = { which = ai_value value = -0.02 }
+		}
+		add_entry = { #From is Too large
+			name = NEWDIPLO_DEV_COMPARE
+			limit = {
+				export_to_variable = { which = our_dev value = total_development }
+				export_to_variable = { which = their_dev value = total_development who = FROM}
+				NOT = { check_variable = { which = our_dev value = 500 } }
+				check_variable = { which = their_dev value = 500 }
+			}
+			export_to_variable = { which = ai_value which = our_dev }
+			subtract_variable = { which = ai_value value = 500 }
+			multiply_variable = { which = ai_value value = -0.02 }
+		}
+		#Attitudes
+		add_entry = {
+			name = NEW_DIPLO_ATTITUDE_FRIENDLY
+			limit = { FROM = { OR = {
+				ai_attitude = { who = ROOT attitude = attitude_friendly }
+				ai_attitude = { who = ROOT attitude = attitude_allied }
+			} } }
+			export_to_variable = { which = ai_value value = 100 }
+		}
+		add_entry = {
+			name = NEW_DIPLO_ATTITUDE_THREATENED
+			limit = { FROM = {
+				ai_attitude = { who = ROOT attitude = attitude_threatened }
+			} }
+			export_to_variable = { which = ai_value value = -20 }
+		}
+		add_entry = {
+			name = NEW_DIPLO_ATTITUDE_NEUTRAL
+			limit = { FROM = {
+				ai_attitude = { who = ROOT attitude = attitude_neutral }
+			} }
+			export_to_variable = { which = ai_value value = -20 }
+		}
+		add_entry = {
+			name = NEW_DIPLO_ATTITUDE_RIVALRY
+			limit = { FROM = {
+				ai_attitude = { who = ROOT attitude = atittude_rival }
+			} }
+			export_to_variable = { which = ai_value value = -1000 }
+		}
+		add_entry = {
+			name = NEW_DIPLO_ATTITUDE_HOSTILE
+			limit = { FROM = {
+				ai_attitude = { who = ROOT attitude = attitude_hostile }
+			} }
+			export_to_variable = { which = ai_value value = -1000 }
+		}
+		add_entry = {
+			name = NEW_DIPLO_ATTITUDE_OUTRAGED
+			limit = { FROM = {
+				ai_attitude = { who = ROOT attitude = attitude_outraged }
+			} }
+			export_to_variable = { which = ai_value value = -1000 }
+		}
+		add_entry = {
+			name = NEW_DIPLO_TRUST_BELOW_30
+			limit = {
+				NOT = { trust = { who = FROM value = 30 } }
+			}
+			export_to_variable = { which = ai_value value = -1000 }
+		}
+	}
+	ai_will_do = {
+		NOT = {
+			attitude = attitude_hostile
+			attitude = attitude_outraged
+			attitude = attitude_outraged
+			trust = { who = FROM value = 30 }
+		}
+		ai_attitude = { who = FROM attitude = attitude_threatened }
+	}
+	on_accept = {
+		FROM = {
+			create_subject = {
+				subject_type = mongolian_tumen
+				subject = ROOT
+			}
+		}
+	}
+	on_decline = { }
+}
