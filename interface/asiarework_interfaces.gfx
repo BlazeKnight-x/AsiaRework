@@ -1,0 +1,124 @@
+spriteTypes = {
+
+	spriteType = {
+		name = "GFX_asiarework_inwards_perfection_good"
+		texturefile = "gfx//interface//asiarework_inwards_perfection_good.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_asiarework_inwards_perfection_bad"
+		texturefile = "gfx//interface//asiarework_inwards_perfection_bad.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_asiarework_imperial_examinations"
+		texturefile = "gfx//interface//asiarework_imperial_examinations.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_asiarework_religious_tolerance"
+		texturefile = "gfx//interface//asiarework_religious_tolerance.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_asiarework_hierarchy"
+		texturefile = "gfx//interface//asiarework_hierarchy.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_asiarework_globalism"
+		texturefile = "gfx//interface//asiarework_globalism.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_asiarework_military_reform"
+		texturefile = "gfx//interface//asiarework_military_reform.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_confucian_aspects_icon"
+		texturefile = "gfx//interface//confucian_aspects_icon.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_confucianism_religion_modifier_overlay"
+		texturefile = "gfx//interface//confucianism_religion_modifier_overlay.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_generic_anglican_aspect_icon"
+		texturefile = "gfx//interface//asiarework_generic_anglican_aspect_icon.dds"
+	}
+	
+	spriteType = {
+		name = "privilege_inwards_perfection_ming"
+		texturefile = "gfx//interface//privileges//inwards_perfection_ming.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_disaster_ar_emperor_of_china_crisis"
+		texturefile = "gfx//interface//disasters//ar_emperor_of_china_crisis.dds"
+		noOfFrames = 3
+		loadType = "INGAME"
+	}
+	
+	spriteType = {
+		name = "GFX_icon_daimyo"
+		texturefile = "gfx//interface//asiarework_subjects//icon_daimyo.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_icon_diplomacy_lead_daimyo"
+		texturefile = "gfx//interface//asiarework_subjects//icon_diplomacy_lead_daimyo.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_icon_diplomacy_am_daimyo"
+		texturefile = "gfx//interface//asiarework_subjects//icon_diplomacy_am_daimyo.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_icon_tumen"
+		texturefile = "gfx//interface//asiarework_subjects//icon_tumen.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_icon_diplomacy_lead_tumen"
+		texturefile = "gfx//interface//asiarework_subjects//icon_diplomacy_lead_tumen.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_icon_diplomacy_am_tumen"
+		texturefile = "gfx//interface//asiarework_subjects//icon_diplomacy_am_tumen.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_icon_military_commission"
+		texturefile = "gfx//interface//asiarework_subjects//icon_military_commission.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_icon_diplomacy_lead_military_commission"
+		texturefile = "gfx//interface//asiarework_subjects//icon_diplomacy_lead_military_commission.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_icon_diplomacy_am_military_commission"
+		texturefile = "gfx//interface//asiarework_subjects//icon_diplomacy_am_military_commission.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_terrain_small_island"
+		texturefile = "gfx//interface//combat_terrain_small_island.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_hungu_faction"
+		texturefile = "gfx/interface/hungu_faction.dds"
+	}
+
+	spriteType = {
+		name = "GFX_sarim_faction"
+		texturefile = "gfx/interface/sarim_faction.dds"
+	}
+}

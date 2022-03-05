@@ -1,0 +1,157 @@
+﻿l_english:
+ muism: "Muist"
+ muism_religion_desc: "Muism is the polytheistic Shamanist religion of Korea. The name comes from the Korean word 'mu' that means shaman.\nMuism was the primary religion in Korea before the arrival of Buddhism in the late 400s, and is merely a minority in Joseon."
+ muism_rebels_title: "Religious"
+ muism_rebels_name: "$RELIGION$ Zealots"
+ muism_rebels_desc: "Religious fanatics tend to rise up in provinces controlled by nations of a different faith. They seek to spread their faith and smite all unbelievers."
+ muism_rebels_army: "$RELIGION$ Army"
+ muism_rebels_demand: "Convert $COUNTRYNAME$"
+ muism_rebels_demand_desc: "The religious rebels fight for the $RELIGION$ religion. They demand that we recognize its supremacy or at the very least cease our efforts to convert them and let them worship in peace."
+ 
+ harmonized_muism: "Harmonized Muism"
+ 
+ tengri_permanent_base: "Tengri Base Modifier"
+ 
+ #Confucian Reforms (Church Aspects)
+ CONFUCIAN_REFORMS: "Confucian Reforms"
+ CONFUCIAN_REFORMS_LONG: "Confucian Reforms"
+ CONFUCIAN_REFORMS_SHORT: "Reform"
+ confucian_church_power_label: "Reform Power"
+ 
+ confucianism_church_power: "Confucian Reform Power"
+ 
+ confucianism_reforms_timer_tooltip: "Has been at least 20 years since the last reform was passed"
+ 
+ # Confucian Reform Event #
+ asiarework_confucianism_pass_reform_event_title: "Attempt to pass a Reform"
+ asiarework_confucianism_pass_reform_event_negative_desc: "We are attempting to change the fundemental way our nation functions. This action will make our Conservative estates very angry. How should we proceed?"
+ asiarework_confucianism_pass_reform_event_a: "Pass the reform!"
+ asiarework_confucianism_pass_reform_event_b: "On second thought... never mind."
+ confucian_reforms_estates_mad_modifier: "Estates Angry at Reform"
+ desc_confucian_reforms_estates_mad_modifier: "The estates are displeased with our recent reform. We'll just wait until they calm down..."
+ confucian_reforms_estates_are_pleased_tt: "All estates have at least §Y30 loyalty§!"
+ confucian_reforms_estates_mad_tt: "All estates will lose §Y3.33%§! Land and lose §R20§! Loyalty"
+
+ # Religious Tolerance #
+ religious_tolerance_aspect: "§!§lPromote Religious Tolerance§!"
+ desc_religious_tolerance_aspect: "Confucianism stresses the importance of humanism, but Neo-Confucianism has taken over the minds of the elites and the government. We need to return to the old ways of tolerating religious beliefs instead of persecuting them.\n\n§TReligious Tolerance§! will give us the following modifiers: \nTolerance of Heretics: §G+5.00§!\nTolerance of Heathens: §G+5.00§!"
+ religious_tolerance_aspect_tt: "We will try to adopt '§TReligious Tolerance§!.'"
+ 
+ religious_tolerance_aspect_modifier: "§TReligious Tolerance§!"
+ desc_religious_tolerance_aspect_modifier: "Our government tolerates the various Buddhists and Shamanists living within our nation based on Confucianism's concept of humanism."
+ 
+ confucianism_tolerance_decision_title: "§!§lPromote Religious Tolerance§!"
+ confucianism_tolerance_decision_desc: "Confucianism stresses the importance of humanism, but Neo-Confucianism has taken over the minds of the elites and the government. We need to return to the old ways of tolerating religious beliefs instead of persecuting them."
+ 
+ # Imperial Examinations #
+ reformed_imperial_examinations_aspect: "§!§lReform Imperial Examinations§!"
+ desc_reformed_imperial_examinations_aspect: "The Imperial Examinations are supposed to encourage the idea that governmental roles are awarded based on merit, rather than birth. However, the reality is that only the upper class have time to study for the examinations, which are actually based off of Confucian classics more than merit. By reforming the examinations and making them more merit-based, we can reduce corruption and the cost of our advisors.\n\n§TReformed Imperial Examinations§! will give us the following modifiers: \nAdvisor Cost: §G-10.0%§!"
+ reformed_imperial_examinations_aspect_tt: "We will try to adopt '§TReformed Imperial Examinations§!.'"
+ 
+ imperial_examinations_aspect_modifier: "§TReformed Imperial Examinations§!"
+ desc_imperial_examinations_aspect_modifier: "The reformed imperial examinations have created numerous benefits for our bureacracy."
+ 
+ confucianism_imperial_examinations_decision_title: "§!§lReform Imperial Examinations§!"
+ confucianism_imperial_examinations_decision_desc: "The Imperial Examinations are supposed to encourage the idea that governmental roles are awarded based on merit, rather than birth. However, the reality is that only the upper class have time to study for the examinations, which are actually based off of Confucian classics more than merit. By reforming the examinations and making them more merit-based, we can reduce corruption and the cost of our advisors."
+ 
+ # Hierarchy #
+ denounce_hierarchy_aspect: "§!§lAbolish the Class System§!"
+ desc_denounce_hierarchy_aspect: "Our Hierarchial society is backwards and against Confucian's humanistic values. We should abolish the class system and work towards individual rights.\n\n§TDenounced Hierarchy§! will give us the following modifiers: \nInstitution Spread: §G+10.0%§!\nIdea Cost: §G-10.0%§!"
+ denounce_hierarchy_aspect_tt: "We will try to adopt '§TDenounced Hierarchy§!.'"
+ 
+ denounce_hierarchy_aspect_modifier: "§TDenounced Hierarchy§!"
+ desc_denounce_hierarchy_aspect_modifier: "Our government has moved away from the Confucian values of hierarchy. This has promoted the liberalization of our society."
+ 
+ confucianism_hierarchy_decision_title: "§!§lAbolish the Class System§!"
+ confucianism_hierarchy_decision_desc: "Our Hierarchial society is backwards and against Confucian's humanistic values. We should abolish the class system and work towards individual rights."
+ 
+ # Globalism #
+ globalism_aspect: "§!§lPersue Globalist Policy§!"
+ desc_globalism_aspect: "As new technologies develop, the world is becoming more connected. It is important for our nation to join the global world so that we may study new, foreign technologies and not be left behind.\n\n§TGlobalism§! will give us the following modifiers: \nTechnology Cost: §G-10.0%§!"
+ globalism_aspect_tt: "We will try to adopt '§TGlobalism§!.'"
+ 
+ globalism_aspect_modifier: "§TGlobalism§!"
+ desc_globalism_aspect_modifier: "Our nation has opened up to the outside world."
+ 
+ confucianism_globalism_decision_title: "§!§lPersue Globalist Policy§!"
+ confucianism_globalism_decision_desc: "As new technologies develop, the world is becoming more connected. It is important for our nation to join the global world so that we may study new, foreign technologies and not be left behind."
+ 
+ # Military Reform #
+ military_reform_aspect: "§!§lPromote Officers on Merit§!"
+ desc_military_reform_aspect: "Confucianism emphasises peace, but that does not mean we should be unable to defend ourselves. Our many fortresses across our land are maintained by officers from the noble class. We should abolish that practice and instead promote officers on merit.\n\n§TMilitary Reform§! will give us the following modifiers: \nFort Defense: §G+20.0%§!\nFort Maintenance Modifier: §G-20.0%§!"
+ military_reform_aspect_tt: "We will try to adopt '§TMilitary Reform§!.'"
+ 
+ military_reform_aspect_modifier: "§TMilitary Reform§!"
+ desc_military_reform_aspect_modifier: "We have adopted modern firearms and have seen our army improve as a result."
+ 
+ confucianism_military_reform_decision_title: "§!§lPromote Officers on Merit§!"
+ confucianism_military_reform_decision_desc: "Confucianism emphasises peace, but that does not mean we should be unable to defend ourselves. Our many fortresses across our land are maintained by officers from the noble class. We should abolish that practice and instead promote officers on merit."
+ 
+ 
+ #Bon
+ tonpa_shenrab:0 "Shenrab"
+ tonpa_shenrab_desc:0 "Tonpa Shenrab, the Completely Enlightened One the founder of the Yung Drung Bön religion, was born in 16,017 BC, in the land of Olmo Lung Ring. Tonpa Shenrab appeared initially as an ordinary man. Before he attained enlightenment (Buddhahood), he went through the six realms of cyclic existence in countless births. He entered the door of enlightenment through the practices of accumulating merit and purifying himself, resulting in the attainment of the transcendental qualities of loving kindness and compassion. He is superior among all the exalted enlightened beings and is dedicated to the liberation of all sentient beings. In order to rescue them, he turned the Dharma Wheel of Bön three times as an antidote to all suffering."
+ shenlha_odkar:0 "Odkar"
+ shenlha_odkar_desc:0 "Shenlha Odkar is the deity of Supreme Compassion. Out of his compassion the Bon teachings and practices have grown to assist all sentient beings on the path to liberation. He is the master teacher of all teachers and teaching has become his primary activity. Odkar means ‘white light’ and his natural body is pearlescent, the body of perfection (dzog ku). Shenlha Odkar is always dressed in elaborate, ceremonial robes with his hands in the meditation mudra. He sits on a throne supported by two snow lions, which represent Shenlha Odkar’s supremacy over all life forms."
+ men_lha:0 "Menlha"
+ men_lha_desc:0 "Medicine Buddha, Men Lha, is a manifestation of Tonpa Shenrab, the original Bon Teacher and Enlightened One. The history of the Medicine Buddha teaching comes from the sutra of ‘Healing Method for Sickness of Affliction and Ignorance’ from the ‘Mandala of King of Medicine and Ritual Ceremonies for Enlightenment’ text. Importantly medicine is associated here with wellness as enlightenment. Tonpa Shenrab became aware of the suffering of people living to the north of ancient Olmo Lung Ring on a little island called Dawa Ruting. This island was dominated by the evil deeds of the Prince Drachen Korlo, whose actions caused disturbances, sickness and suffering for the people. Tonpa Shenrab gave this teaching to eliminate their suffering, and heal them from temporal difficult conditions, to purify negative karmic deeds and to free them from the five inner poisons based on ignorance, and to harmonize and restore peace to the region."
+ yum_chen_sherab_chamma:0 "Chamma"
+ yum_chen_sherab_chamma_desc:0 "All Bön deities come from Chamma, she is the compassionate and wise mother of all. Chamma is the feminine counterpart to Shenlha Odkar. Her body is also “dzo ku,” the body of perfection. Chamma is available to everyone for comfort, guidance and healing as she has the power to dispel all obstacles such as fear, sickness, sadness or negative impact of demonic forces. She is thereby able to prolong life. Chamma holds a mirror in her left hand. This mirror represents the purity of Chamma heart as reflected in a perfect understanding of the karma and suffering of all beings. The vase in her right hand contains the essence of the potential hopes, dreams and accomplishments of all who are committed to Chamma. Her throne is supported, like Shenlha Odkar, by two snow lions representing her supremacy over all life."
+ sidpe_gyalmo:0 "Gyalmo"
+ sidpe_gyalmo_desc:0 "Sidpe Gyalmo, Queen of the Universe, is the chief wrathful protector deity of the Yung Drung Bön. She has a horrifying aspect in order to frighten evil ones. Her job is to protect all sentient beings from harm. Sidpe Gyalmo is the most special guardian of all Yung Drung Bön. She is a deity of exorcism and healing using her ferocious aspect to transmute all negative energies thus assisting in the healing of all sentient beings. Her body is draped in skulls and fresh flayed human skin to indicate her dominion over evil and death. Sidpe Gyalmo has a special shrine in all Yung Drung Bön temples where prayers are said to her round the year, morning and night by a Sidpe Gyalmo prayer master. These prayer masters thank her for her special love and protection of Yung Drung Bön and all sentient beings. They ask her to liberate the world from evil and bring everlasting peace."
+ yeshe_walmo:0 "Walmo"
+ yeshe_walmo_desc:0 "Yeshe Walmo, Wisdom Protector is considered the wisdom aspect of Sipe Gyalmo. Throughout the ages, whenever the Bön religion suffered persecution, lamas would hide Bön texts and sacred ritual objects in mountains. Yeshe Walmo is the deity in charge of keeping Bön texts and sacred items safe. She is the preserver and protector of all Bön wisdom and allows these objects to be found when times are ripen. These hidden objects are known as “terma” and the finder, usually a dakini, is known as a “terton.” Dakinis, feminine spirit beings, often manifest in human form. There are many stories of termas being discovered by tertons in Tibet even in this modern day."
+ bon:0 "Bon"
+ dongba:0 "Dongba"
+ gurung:0 "Gurung Dharma"
+ bon_religion_desc: "Bon is the indigenous religion of Tibet, practiced throughout the plateau before Buddhism's arrival. Despite a late syncretic movement known as Bonsar, only a few provinces on the eastern and southern edges of Tibet start off Bon."
+
+ bon_rebels_demand:0 "Convert $COUNTRYNAME$"
+ bon_rebels_demand_desc:0 "The religious rebels fight for the $RELIGION$ religion. They demand that we recognize its supremacy or at the very least cease our efforts to convert them and let them worship in peace."
+ bon_rebels_title:0 "Religious"
+ bon_rebels_name:0 "$RELIGION$ Zealots"
+ bon_rebels_desc:0 "Religious fanatics tend to rise up in provinces controlled by nations of a different faith. They seek to spread their faith and smite all unbelievers."
+ bon_rebels_army:0 "$RELIGION$ Army"
+
+#Shamanism
+ udaganism:0 "Shamanism"
+ black_shamanism:0 "Black Shamanism"
+ yellow_shamanism:0 "Yellow Shamanism"
+ kamuy_huci:0 "Kamuy-huci"
+ kamuy_huci_desc:0 "Kamuy-huci is the Ainu goddess of the hearth, also known as Iresu Kamuy (People Teacher)"
+ kim_un_kamuy:0 "Kim-un-kamuy"
+ kim_un_kamuy_desc:0 "Kim-un-kamuy is the Ainu god of bears and mountains."
+ repun_kamuy:0 "Repun Kamuy"
+ repun_kamuy_desc:0 "Repun Kamuy is the Ainu god of the sea."
+ yh_mif:0 "Yh-Mif"
+ yh_mif_desc:0 "Nivkhs believe the island of Sakhalin is a giant beast lying on its belly with the trees of the island as its hair. When the beast is upset, it awakens and trembles the earth causing earthquakes."
+ amba:0 "Amba"
+ amba_desc:0 "Amba is the Nanai tiger deity."
+ bugady_musun:0 "Bugady Musun"
+ bugady_musun_desc:0 "Bugady Musun is the Evenki patron of wildlife and guardian of animals."
+ toko_yoto:0 "Toko'yoto"
+ toko_yoto_desc:0 "Toko'yoto is the Chukchi god of the sea, also responsible for the power over life and death."
+ quikil:0 "Quikil"
+ quikil_desc:0 "Kutkh is a Raven spirit traditionally revered by the Koryak."
+ pugu:0 "Pugu"
+ pugu_desc:0 "Pugu is the Yukaghir god of the sun, justice and law."
+ tomam:0 "Tomam"
+ tomam_desc:0 "Tomam was the Ket goddess of migratory birds. She is associated with the south and warmth"
+ the_shamans:0 "The Shamans"
+ the_shamans_desc:0 "Shamans have been conceptualized as those who are able to gain knowledge and power to heal in the spiritual world or dimension."
+ udaganism_religion_desc: "Shamanism represents the various beliefs of the people in Siberia and parts of the Far East."
+ tengri_permanent_base: "Tengri Base Modifier"
+
+#Shinto kami
+ amaterasu:0 "Amaterasu"
+ amaterasu_desc:0 "Amaterasu, also known as Amaterasu-Omikami, is the goddess of the sun in Japanese mythology. One of the major deities (kami) of Shinto, she is also portrayed in Japan's earliest literary texts, the Kojiki (ca. 712 CE) and the Nihon Shoki (720 CE), as the ruler of the heavenly realm Takamagahara and the mythical ancestress of the Japanese imperial house via her grandson Ninigi."
+ hachiman:0 "Hachiman"
+ hachiman_desc:0 "In Japanese religion, Hachiman is the syncretic divinity of archery and war, incorporating elements from both Shinto and Buddhism. His messenger is the dove, symbolizes both the bow and arrow found in samurai banners associated to him where he is called "Yumiya Hachiman"."
+ inari:0 "Inari"
+ inari_desc:0 "Inari Okami is the Japanese kami of foxes, fertility, rice, tea and sake, of agriculture and industry, of general prosperity and worldly success. Inari's foxes, or kitsune, are pure white and act as their messengers."
+ ryujin:0 "Ryujin"
+ ryujin_desc:0 "Ryujin was the tutelary deity of the sea in Japanese mythology. In many versions Ryujin had the ability to transform into a human shape. Many believed the god had knowledge on medicine and many considered him as the bringer of rain and thunder, Ryujin is also the patron god (ujigami) of several family groups. This Japanese dragon symbolized the power of the ocean had a large mouth. He is considered a good god and patron of Japan, since the Japanese population has for millennia lived off the bounty of the sea. Ryujin is also credited with the challenge of a hurricane which sank the Mongolian flotilla sent by Kublai Khan."
+ susanoo:0 "Susanoo"
+ susanoo_desc:0 "Susanoo is a kami in Japanese mythology. The younger brother of Amaterasu, goddess of the sun and mythical ancestress of the Japanese imperial line, he is a multifaceted deity with contradictory characteristics (both good and bad), being portrayed in various stories either as a wild, impetuous god associated with the sea and storms, as a heroic figure who killed a monstrous serpent, or as a local deity linked with the harvest and agriculture. Syncretic beliefs that arose after the introduction of Buddhism to Japan also saw Susanoo becoming conflated with deities of pestilence and disease."
+ tsukuyomi:0 "Tsukuyomi"
+ tsukuyomi_desc:0 "Tsukuyomi is the moon god in Japanese mythology and the Shinto religion. The name "Tsukuyomi" is a compound of the Old Japanese words tsuku ("moon, month") and yomi ("reading, counting")"

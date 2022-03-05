@@ -1,0 +1,277 @@
+﻿l_english:
+ ################################################
+ # Korea ----------------------------------------
+ ################################################
+ 
+ western_korea_area:1 "Gyeonggi"
+ western_korea_area_name:0 "Gyeonggi"
+ western_korea_area_adj:0 "Gyeonggi"
+ hamgyeong_area:0 "Hamgyeong"
+ hamgyeong_area_name:0 "Hamgyeong"
+ hamgyeong_area_adj:0 "Hamgyeong"
+ pyongan_area:0 "Pyongan"
+ pyongan_area_name:0 "Pyongan"
+ pyongan_area_adj:0 "Pyongan"
+ south_korea_area:1 "Jeolla"
+ south_korea_area_name:0 "Jeolla"
+ south_korea_area_adj:0 "Jeolla"
+ eastern_korea_area:1 "Gyeongsang"
+ eastern_korea_area_name:1 "Gyeongsang"
+ eastern_korea_area_adj:1 "Gyeongsangi"
+ chungcheong_area:0 "Chungcheong"
+ chungcheong_area_name:0 "Chungcheong"
+ chungcheong_area_adj:0 "Chungcheong"
+ hwanghae_area:0 "Hwanghae"
+ hwanghae_area_name:0 "Hwanghae"
+ hwanghae_area_adj:0 "Hwanghae"
+ gangwon_area:0 "Gangwon"
+ gangwon_area_name:0 "Gangwon"
+ gangwon_area_adj:0 "Gangwon"
+ 
+ ################################################
+ # China ----------------------------------------
+ ################################################
+ north_china_region:1 "North China Plain"
+ north_china_region_name:1 "North China Plain"
+ north_china_region_adj: "North Han"
+ lower_yangtze_region: "Lower Yangtze"
+ lower_yangtze_region_name: "Lower Yangtze"
+ lower_yangtze_region_adj: "South Han"
+ northwest_china_region: "Northwest China"
+ northwest_china_region_name: "Northwest China"
+ northwest_china_region_adj: "Northwest Han"
+ central_china_region: "Central China"
+ central_china_region_name: "Central China"
+ central_china_region_adj: "Central Han"
+ 
+ outer_hebei_area: "Outer Hebei"
+ outer_hebei_area_name: "Outer Hebei"
+ outer_hebei_area_adj: "Hebei"
+ 
+ shandong_area:0 "East Shandong"
+ shandong_area_name:0 "East Shandong"
+ shandong_area_adj:0 "Shandong"
+ north_shandong_area: "North Shandong"
+ north_shandong_area_name: "North Shandong"
+ north_shandong_area_adj: "Shandong"
+ south_shandong_area:0 "South Shandong"
+ south_shandong_area_name:0 "South Shandong"
+ south_shandong_area_adj:0 "Shandong"
+ 
+ central_jiangsu_area: "Central Jiangsu"
+ central_jiangsu_area_name: "Central Jiangsu"
+ central_jiangsu_area_adj: "Jiangsu"
+ 
+ zhejiang_area:0 "North Zhejiang"
+ zhejiang_area_name:0 "North Zhejiang"
+ zhejiang_area_adj:0 "North Zhejiangi"
+ south_zhejiang_area:0 "South Zhejiang"
+ south_zhejiang_area_name:0 "South Zhejiang"
+ south_zhejiang_area_adj:0 "South Zhejiangi"
+ 
+ jiangxi_area:0 "North Jiangxi"
+ jiangxi_area_name:0 "North Jiangxi"
+ jiangxi_area_adj:0 "North Jiangxi"
+ south_jiangxi_area:0 "South Jiangxi"
+ south_jiangxi_area_name:0 "South Jiangxi"
+ south_jiangxi_area_adj:0 "South Jiangxi"
+ 
+ fujian_area:0 "North Fujian"
+ fujian_area_name:0 "North Fujian"
+ fujian_area_adj:0 "North Fujiani"
+ south_fujian_area:0 "South Fujian"
+ south_fujian_area_name:0 "South Fujian"
+ south_fujian_area_adj:0 "South Fujiani"
+ 
+ huguang_area:0 "East Hubei"
+ huguang_area_name:0 "East Hubei"
+ huguang_area_adj:0 "East Hubei"
+ west_hubei_area:0 "West Hubei"
+ west_hubei_area_name:0 "West Hubei"
+ west_hubei_area_adj:0 "West Hubei"
+ 
+ hunan_area:0 "North Hunan"
+ hunan_area_name:0 "North Hunan"
+ hunan_area_adj:0 "North Hunan"
+ south_hunan_area:0 "South Hunan"
+ south_hunan_area_name:0 "South Hunan"
+ south_hunan_area_adj:0 "South Hunan"
+ 
+ shanxi_area:0 "North Shanxi"
+ shanxi_area_name:0 "North Shanxi"
+ shanxi_area_adj:0 "North Shanxi"
+ south_shanxi_area:0 "South Shanxi"
+ south_shanxi_area_name:0 "South Shanxi"
+ south_shanxi_area_adj:0 "South Shanxi"
+ 
+ shaanxi_area:0 "North Shanxxi"
+ shaanxi_area_name:0 "North Shanxxi"
+ shaanxi_area_adj:0 "North Shanxxi"
+ south_shaanxi_area:0 "South Shanxxi"
+ south_shaanxi_area_name:0 "South Shanxxi"
+ south_shaanxi_area_adj:0 "South Shanxxi"
+ 
+ sichuan_area: "Chengdu"
+ sichuan_area_name: "Chengdu"
+ sichuan_area_adj: "Chengdu"
+ east_sichuan_area: "Chongqing"
+ east_sichuan_area_name: "Chongqing"
+ east_sichuan_area_adj: "Chongqingi"
+ 
+ liaoning_area:0 "Liaodong"
+ liaoning_area_name:0 "Liaodong"
+ liaoning_area_adj:0 "Liaodong"
+ 
+ liaoxi_area:0 "North Liaodong"
+ liaoxi_area_name:0 "North Liaodong"
+ liaoxi_area_adj:0 "North Liaodong"
+ 
+ east_hebei_area:0 "East Hebei"
+ east_hebei_area_name:0 "East Hebei"
+ east_hebei_area_adj:0 "East Hebei"
+ 
+ guizhou_area:0 "North Guizhou"
+ guizhou_area_name:0 "North Guizhou"
+ guizhou_area_adj:0 "Guizhoui"
+ south_guizhou_area: "South Guizhou"
+ south_guizhou_area_name: "South Guizhou"
+ south_guizhou_area_adj: "Guizhoui"
+ 
+ guangxi_area: "North Guangxi"
+ guangxi_area_area: "North Guangxi"
+ guangxi_area_adj: "Guangxi"
+ east_guangxi_area: "West Guangxi"
+ east_guangxi_area_name: "West Guangxi"
+ east_guangxi_area_adj: "Guangxi"
+ south_guangxi_area: "South Guangxi"
+ south_guangxi_area_name: "South Guangxi"
+ south_guangxi_area_adj: "Guangxi"
+ 
+ canton_area:0 "Canton"
+ canton_area_name:0 "Canton"
+ canton_area_adj:0 "Cantonese"
+ 
+ hainan_area:0 "Hainan & Ports"
+ hainan_area_name:0 "Hainan & Ports"
+ hainan_area_adj:0 "Hainan"
+ 
+ yun_gui_area:0 "East Yunnan"
+ yun_gui_area_name:0 "East Yunnan"
+ yun_gui_area_adj:0 "Yunnanese"
+ yun_gui_borderland_area:0 "West Yunnan"
+ yun_gui_borderland_area_name:0 "West Yunnan"
+ yun_gui_borderland_area_adj:0 "Yunnanese"
+ south_yunnan_area: "South Yunnan"
+ south_yunnan_area_name: "South Yunnan"
+ south_yunnan_area_adj: "Yunnanese"
+ 
+ ################################################
+ # Manchuria ------------------------------------
+ ################################################
+ 
+ north_jilin_area:0 "North Jilin"
+ north_jilin_area_name:0 "North Jilin"
+ north_jilin_area_adj:0 "Jilin"
+ 
+ central_ilan_hala_area:0 "Central Ilan Hala"
+ central_ilan_hala_area_name:0 "Central Ilan Hala"
+ central_ilan_hala_area_adj:0 "Ilan Halan"
+ 
+ ################################################
+ # Mongolia -------------------------------------
+ ################################################
+ 
+ # Inner Mongolia
+ alxa_area: "Alxa"
+ alxa_area_name: "Alxa"
+ alxa_area_adj: "Alxa League"
+ 
+ ordos_area:1 "Ordos"
+ ordos_area_name:1 "Ordos"
+ ordos_area_adj:1 "Ordos"
+ 
+ eastern_mongolia:1 "Jirem"
+ eastern_mongolia_name:1 "Jirem"
+ eastern_mongolia_adj:1 "Jirem"
+ 
+ inner_mongolia_area:1 "Ulanqab"
+ inner_mongolia_area_name:1 "Ulanqab"
+ inner_mongolia_area_adj:1 "Ulanqab"
+ 
+ hulunbuir_area: "Hulunbuir"
+ hulunbuir_area_name: "Hulunbuir"
+ hulunbuir_area_adj: "Hulunbuir"
+ 
+ # Outer Mongolia
+ outer_mongolia_area:1 "Setsen"
+ outer_mongolia_area_name:1 "Setsen"
+ outer_mongolia_area_adj:1 "Setsen"
+ 
+ central_mongolia_area:2 "Tüsheet"
+ central_mongolia_area_name:2 "Tüsheet"
+ central_mongolia_area_adj:2 "Tüsheet"
+ 
+ sain_noyon_area: "Sain Noyon"
+ sain_noyon_area_name: "Sain Noyon"
+ sain_noyon_area_adj: "Sain Noyon"
+ 
+ uliastai_area:1 "Zasagat"
+ uliastai_area_name:1 "Zasagat"
+ uliastai_area_adj:1 "Zasagat"
+ 
+ ################################################
+ 
+ #Japan
+ kanto_area: "South Kanto"
+ kanto_area_name: "South Kanto"
+ kanto_area_adj: "Kantonian"
+ eastern_kanto_area: "North Kanto"
+ eastern_kanto_area_name: "North Kanto"
+ eastern_kanto_area_adj: "Kantonian"
+ 
+ ################################################
+ 
+ #Indochina
+ north_vietnam_area:0 "Northern Vietnam"
+ north_vietnam_area_adj:0 "North Vietnamese"
+ vietnam_area:0 "North Central Coast"
+ vietnam_area_adj:0 "Vietnamese"
+
+ ################################################
+ 
+ #Tibet and stuff
+ tsaidam_area: "Tsaidam"
+ tsaidam_area_name: "Tsaidam"
+ tsaidam_area_adj: "Tsaidam"
+ siling_lake_area: "Siling Lake"
+ siling_lake_area_name: "Siling Lake"
+ siling_lake_area_adj: "Siling Lake"
+ ladakh_area: "Ladakh"
+ ladakh_area_name: "Ladakh"
+ ladakh_area_adj: "Ladakhi"
+ gyelrong_area: "Gyelrong"
+ gyelrong_area_name: "Gyelrong"
+ gyelrong_area_adj: "Gyelrong"
+ chaubisi_rajya_area: "Chaubisi Rajya"
+ chaubisi_rajya_area_name: "Chaubisi Rajya"
+ chaubisi_rajya_area_adj: "Chaubisi Rajyan"
+ nepal_area: "Kathmandu"
+ nepal_area_name: "Kathmandu"
+ nepal_area_adj: "Kathmandu"
+ hor_area: "Hor"
+ hor_area_name: "Hor"
+ hor_area_adj: "Hor"
+ lijiang_area: "Lijiang"
+ lijiang_area_name: "Lijiang"
+ lijiang_area_adj: "Nakhi"
+ nyingchi_area: "Nyingchi"
+ nyingchi_area_name: "Nyingchi"
+ nyingchi_area_adj: "Nyingchian"
+ yalong_area: "Yalong"
+ yalong_area_name: "Yalong"
+ yalong_area_adj: "Yalong"
+ qamdo_area: "Qamdo"
+ qamdo_area_name: "Qamdoan"
+ qamdo_area_adj: "Qamdoan"
+ 
+ ################################################

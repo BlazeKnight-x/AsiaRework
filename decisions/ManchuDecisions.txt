@@ -1,0 +1,177 @@
+country_decisions = {
+
+	manchu_nation_1 = { #Form Manchu
+		major = yes
+		potential = {
+			normal_or_historical_nations = yes
+			was_never_end_game_tag_trigger = yes
+			NOT = { has_country_flag = formed_manchu_flag }
+			OR = {
+				ai = no
+				is_playing_custom_nation = no
+			}
+			NOT = { exists = MCH }
+			NOT = { exists = QNG }
+			OR = {
+				primary_culture = manchu
+				primary_culture = manchu_new
+			}
+			is_colonial_nation = no
+		}
+		provinces_to_highlight = {
+			OR = {
+				area = north_jilin_area
+				area = jilin_area
+				area = ningguta_area
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}
+		allow = {
+			is_free_or_tributary_trigger = yes
+			is_at_war = no			
+			north_jilin_area = {
+				type = all
+				owned_by = ROOT
+				is_core = ROOT
+			}
+			jilin_area = {
+				type = all
+				owned_by = ROOT
+				is_core = ROOT
+			}
+			ningguta_area = {
+				type = all
+				owned_by = ROOT
+				is_core = ROOT
+			}
+			OR = {
+				liaoning_area = {
+					type = all
+					owned_by = ROOT
+					is_core = ROOT
+				}
+				AND = {
+					furdan_area = {
+						type = all
+						owned_by = ROOT
+						is_core = ROOT
+					}
+					central_jilin_area = {
+						type = all
+						owned_by = ROOT
+						is_core = ROOT
+					}
+				}
+			}
+		}
+		effect = {
+			730 = {
+				move_capital_effect = yes
+			}
+			manchuria_region = {
+				add_core = MCH
+			}
+			add_prestige = 25
+			change_tag = MCH
+			swap_non_generic_missions = yes
+			if = {
+				limit = {
+					NOT = { government_rank = 2 }
+				}
+				set_government_rank = 2
+			}
+			if = {
+				limit = {
+					has_reform = manchu_tribal_federation
+				}
+				add_government_reform = steppe_horde
+			}
+			set_country_flag = formed_manchu_flag
+			if = {
+				limit = { has_custom_ideas = no }
+				country_event = { id = ideagroups.1 } #Swap Ideas
+			}
+		}
+		ai_importance = 500		
+	}
+
+	form_manchu_dynasty = { #Form Qing
+		major = yes
+		potential = {
+			tag = MCH
+			was_never_end_game_tag_trigger = yes
+			normal_or_historical_nations = yes
+			OR = {
+				ai = no
+				is_playing_custom_nation = no
+			}
+			NOT = { exists = QNG }
+			NOT = { has_country_flag = manchu_dynasty_formed }
+
+			OR = {
+				ai = no
+				AND = {
+					ai = yes
+					num_of_cities = 5
+				}
+			}
+		}
+		provinces_to_highlight = {
+			OR = {
+				province_id = 726		# Shenyang
+				province_id = 1816		# Beijing
+			}
+			NOT = { owned_by = ROOT }
+		}
+		allow = {
+			owns = 726		# Shenyang
+			owns = 1816		# Beijing
+			is_at_war = no
+			is_subject = no
+			NOT = {
+				has_ruler_modifier = tribal_succession_crisis
+			}
+		}
+		effect = {
+			custom_tooltip = manchu_form_qing_tooltip #--------------------------------------
+			set_country_flag = chinese_warring_state_flag
+			#--------------------------------------------------------------------
+			1816 = {
+				move_capital_effect = yes
+				add_core = QNG
+			}
+			
+			change_tag = QNG
+			swap_non_generic_missions = yes
+			remove_non_electors_emperors_from_empire_effect = yes
+			
+			change_government = monarchy
+			add_government_reform = chinese_warring_state
+			if = {
+				limit = {
+					NOT = { religion = confucianism }
+				}
+				change_religion = confucianism
+				add_country_modifier = {
+					name = "religious_tolerance_aspect_modifier"
+					duration = -1
+				}
+			}
+			
+			add_prestige = 100
+			set_country_flag = manchu_dynasty_formed
+			if = {
+				limit = { has_custom_ideas = no }
+				country_event = { id = ideagroups.1 } #Swap Ideas
+			}
+		}
+		ai_will_do = {
+			factor = 500
+		}
+		ai_importance = 400
+	}
+
+} #End of country decisions

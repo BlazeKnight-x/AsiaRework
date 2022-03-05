@@ -1,0 +1,231 @@
+#################################################
+# Events for Mongols
+#
+# written by BlazeKnight
+#
+#################################################
+
+namespace = asiarework_mongol
+
+# Failed Tumu Crisis - the Oirats lose control
+country_event = {
+	id = asiarework_mongol.1
+	title = "asiarework_mongol.1_title"
+	desc = "asiarework_mongol.1_desc"
+	picture = KING_SICK_IN_BED_eventPicture
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+	major = yes
+	
+	trigger = {
+		tag = OIR
+		#The Tumu Crisis has fired or it can no longer fire
+		OR = {
+			is_year = 1500
+			has_global_flag = tumu_crisis_fired
+		}
+		#And the Oirats Lost or Tied the war against Ming & They are not at war with Ming.
+		NOT = {
+			owns_or_non_sovereign_subject_of = 1816
+			is_in_war = {
+				attacker_leader = MNG
+			}
+			is_in_war = {
+				defender_leader = MNG
+			}
+		}
+	}
+
+	option = {
+		name = "asiarework_mongol.1_option1"
+		custom_tooltip = asiarework_mongols_break
+		hidden_effect = {
+			every_subject_country = {
+				limit = {
+					is_subject_of_type = mongolian_tumen
+				}
+				grant_independence = yes
+				add_casus_belli = {
+					target = PREV
+					type = cb_disloyal_vassal
+					months = 120
+				}
+			}
+		}
+	}
+}
+
+# Oirats Won the Tumu Crisis vs Ming and have taken Chinese land
+country_event = {
+	id = asiarework_mongol.2
+	title = "asiarework_mongol.2_title"
+	desc = "asiarework_mongol.2_desc"
+	picture = HORDE_ON_HORSEBACK_eventPicture
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+	major = yes
+	
+	trigger = {
+		tag = OIR
+		NOT = {
+			is_in_war = {
+				attacker_leader = MNG
+			}
+			is_in_war = {
+				defender_leader = MNG
+			}
+		}
+		owns_or_non_sovereign_subject_of = 1816
+	}
+	
+	option = {
+		name = "asiarework_mongol.2_option1"
+		set_country_flag = tumu_crisis_victory
+		custom_tooltip = oir_form_yuan
+		# From Form Yuan ----------------------------------------------------------------
+		clr_country_flag = esen_taishi_oirats
+		custom_tooltip = mongol_form_yuan_tooltip #--------------------------------------
+		hidden_effect = {
+			set_country_flag = chinese_warring_state_flag
+			set_country_flag = proclaimed_later_yuan_flag
+			every_country = {
+				limit = {
+					OR = {
+						primary_culture = mongol
+						primary_culture = chahar
+						primary_culture = oirats
+						primary_culture = khalkha
+					}
+				}
+				change_primary_culture = sino_mongol
+				if = { #Change Ruler to Sino-Mongol
+					limit = {
+						OR = {
+							ruler_culture = mongol
+							ruler_culture = chahar
+							ruler_culture = oirats
+							ruler_culture = khalkha
+						}
+					}
+					set_ruler_culture = sino_mongol
+				}
+				if = {  #Change Heir to Sino-Mongol
+					limit = {
+						has_heir = yes
+						OR = {
+							heir_culture = mongol
+							heir_culture = chahar
+							heir_culture = oirats
+							heir_culture = khalkha
+						}
+					}
+					set_heir_culture = sino_mongol
+				}
+				if = {  #Change Consort to Sino-Mongol
+					limit = {
+						has_consort = yes
+						OR = {
+							consort_culture = mongol
+							consort_culture = chahar
+							consort_culture = oirats
+							consort_culture = khalkha
+						}
+					}
+					set_consort_culture = sino_mongol
+				}
+			}
+			every_province = { #Change all Mongolic provinces to Sino-Mongol
+				limit = {
+					OR = {
+						culture = mongol
+						culture = chahar
+						culture = oirats
+						culture = khalkha
+					}
+				}
+				change_culture = sino_mongol
+			}
+		}
+		#--------------------------------------------------------------------
+		1816 = {
+			change_province_name = Khanbaliq
+			rename_capital = Khanbaliq
+			move_capital_effect = yes
+			add_core = YUA
+		}
+		723 = {
+			change_province_name = Xanadu
+			rename_capital = Xanadu 
+		}
+		
+		change_tag = YUA
+		swap_non_generic_missions = yes
+		remove_non_electors_emperors_from_empire_effect = yes
+		
+		if = {
+			limit = {
+				has_reform = steppe_horde
+			}
+			change_government = monarchy
+			add_government_reform = chinese_warring_state
+		}
+		if = {
+			limit = {
+				NOT = { religion = confucianism }
+			}
+			change_religion = confucianism
+			add_country_modifier = {
+				name = "religious_tolerance_aspect_modifier"
+				duration = -1
+			}
+		}
+		custom_tooltip = asiarework_mongol.2_mongols_integrate
+		hidden_effect = {
+			every_subject_country = {
+				limit = { is_subject_of_type = mongolian_tumen }
+				ROOT = { inherit = PREV }
+			}
+		}
+		add_prestige = 100
+		set_country_flag = formed_yuan_flag
+		if = {
+			limit = { has_custom_ideas = no }
+			country_event = { id = ideagroups.1 } #Swap Ideas
+		}
+	}
+}
+
+# Oirats go to war with Ming scripted
+country_event = {
+	id = asiarework_mongol.3
+	title = "asiarework_mongol.3_title"
+	desc = "asiarework_mongol.3_desc"
+	picture = HORDE_ON_HORSEBACK_eventPicture
+	fire_only_once = yes
+	
+	trigger = {
+		tag = OIR
+		NOT = { has_global_flag = tumu_crisis_fired } #The Oirats and Incompetent Ming ruler could not have already gone to war
+		is_year = 1449
+		exists = MNG
+		NOT = { alliance_with = MNG }
+		NOT = { war_with = MNG }
+	}
+	
+	mean_time_to_happen = {
+		months = 1
+	}
+	
+	option = {
+		name = "asiarework_mongol.3_option1"
+		1816 = {
+			add_core = OIR
+		}
+		declare_war_with_cb = {
+			who = MNG
+			casus_belli = cb_horde_vs_civ
+		}
+	}
+}

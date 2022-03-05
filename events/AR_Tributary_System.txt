@@ -1,0 +1,56 @@
+#################################################
+# Events for Tributary mechanics
+#
+# written by BlazeKnight
+#
+#################################################
+
+namespace = asiarework_tributary
+
+#Overlord gets Timely Tributary Summary
+country_event = {
+	id = asiarework_tributary.1
+	title = "asiarework_tributary.1_title"
+	desc = "asiarework_tributary.1_desc"
+	picture = GOOD_WITH_MONARCH_eventPicture
+	
+	is_triggered_only = yes
+	major = yes
+	
+	trigger = {
+		#blank
+	}
+	
+	immediate = {
+		set_variable = {
+			which = total_tribute_value
+			value = 0
+		}
+		all_subject_country = {
+			if = {
+				is_tributary = yes
+			}
+			change_variable = {
+				which = total_tribute_value
+				value = tribute_value
+			}
+		}
+	}
+	
+	option = {
+		name = "asiarework_tributary.1_pay_none"
+		set_country_flag = overlord_no_tribute_flag
+	}
+	option = {
+		name = "asiarework_tributary.1_pay_low"
+		set_country_flag = overlord_low_tribute_flag
+	}
+	option = {
+		name = "asiarework_tributary.1_pay_mid"
+		set_country_flag = overlord_mid_tribute_flag
+	}
+	option = {
+		name = "asiarework_tributary.1_pay_high"
+		set_country_flag = overlord_high_tribute_flag
+	}
+}

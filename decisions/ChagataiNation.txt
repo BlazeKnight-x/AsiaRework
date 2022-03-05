@@ -1,0 +1,60 @@
+country_decisions = {
+
+	form_chagatai_decision = {
+		major = yes
+		potential = {
+			always = no #######
+		
+			normal_or_historical_nations = yes
+			was_never_end_game_tag_trigger = yes
+			NOT = { has_country_flag = formed_chagatai_flag }
+			OR = {
+				ai = no
+				is_playing_custom_nation = no
+			}
+			NOT = { exists = CGT }
+			culture_group = turkic #Turanian
+			is_colonial_nation = no
+			OR = {
+				is_former_colonial_nation = no
+				AND = {
+					is_former_colonial_nation = yes
+					ai = no
+				}
+			}
+		}
+		provinces_to_highlight = {
+			province_id = 454 #Samarkand
+			province_id = 451 #Kabul
+			province_id = 739 #Kashgar
+			province_id = 4027 #Turpan
+			province_id = 461 #Almaty
+			NOT = { OR = {
+				owned_by = ROOT
+				every_subject_country = {
+					owned_by = PREV
+				}
+			} }
+		}
+		allow = {
+						
+		}
+		effect = {
+			set_government_rank = 3			
+			change_tag = CGT
+			swap_non_generic_missions = yes
+			remove_non_electors_emperors_from_empire_effect = yes
+			
+			set_country_flag = formed_chagatai_flag
+			add_prestige = 100
+			if = {
+				limit = { has_custom_ideas = no }
+				country_event = { id = ideagroups.1 } #Swap Ideas
+			}
+		}
+		ai_will_do = {
+			factor = 500
+		}
+		ai_importance = 400
+	}
+}

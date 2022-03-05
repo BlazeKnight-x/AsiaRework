@@ -1,0 +1,346 @@
+﻿l_english:
+ #######################
+ ### Korean Missions ###
+ #######################
+ 
+ ### Slot 1 ###
+ ### Empire Tree
+ kor_defy_china_title: "Defy the Ming"
+  kor_defy_china_desc: "The relationship between Korea and China was not always friendly. Ming and Goryeo had disputes over Liaodong, and the early Joseon era was marked by Ming takeover of Jurchen tribes that were once under Korean influence. If we wish to reclaim our lost territory then we must return to openly contesting China's Sinocentric world view."
+ kor_reclaim_liaoning_title:0 "Reclaim Yeodong"
+  kor_reclaim_liaoning_desc:0 "The Yeodong region was the heartland of the first recorded Korean state Gojoseon and was a great pride of Goguryeo many centuries ago. The area and its native Korean population should fly under the Joseon flag!"
+ kor_subjugate_manchu_title:0 "Subjugate Jurchens"
+  kor_subjugate_manchu_desc:0 "Long ago, Jurchen tribes past the Baekdu mountains payed tribute to the Great Goguryeo. We must reestablish our control over the Jurchens."
+ 
+ ### Military Buffs Tree
+ kor_develop_musketeers_title: "Develop Musketeers"
+  kor_develop_musketeers_desc: "In order to enhance the Korean military we must adopt the musket and create a strong line of infantry."
+ 
+ ### Social Tree
+ kor_state_sponsored_seowon_title: "Improve Hyanggyo"
+  kor_state_sponsored_seowon_desc: "The Hyanggyo have lately had trouble competing with privately run institutions, like seowons and seodangs. Upgrading our schools should help them house more students, which is in high demand in Korea."
+  kor_all_areas_have_great_temple: "All areas in the Korea region:\nHave a §YGreat Temple§!"
+ kor_governing_far_provinces_title: "Governing the Provinces"
+  kor_governing_far_provinces_desc: "Korea is a huge nation with many people across a vast land. Areas of local governance must be established if we wish to control all our provinces."
+  kor_all_areas_have_yamen: "All areas in the Korea region:\nHave a §YYamen§!"
+ 
+ 
+ ### Slot 2 ###
+ kor_merchants_of_kaesong_title: "Merchants of Gaesong"
+  kor_merchants_of_kaesong_desc: "The city of Gaesong, the capital of Goryeo, was once a flourishing center of commerce. The creation of new marketplaces should revive that culture and attract more traders from abroad."
+ 
+ ### Empire Tree
+ kor_take_jilin_title:0 "Conquer Buyeo"
+  kor_take_jilin_desc:0 "The area that once was the heartland of the Buyeo culture has since been seized by various tribes, and the culture there has been lost. The area should fall under a Korean nation once more!"
+ goguryeo_restoration_title:0 "Restore Goguryeo"
+  goguryeo_restoration_desc:0 "For nearly a thousand years, the full territory of the ancient Empire of Goguryeo has been squabbled over and ransacked. Reclaiming this former territory would push Korea into becoming a great power, as it once was." 
+ kor_restore_greater_korea_title:0 "Proclaim Greater Korea"
+  kor_restore_greater_korea_desc:0 "Many Korean kingdoms have controlled different areas of the peninsula and Manchuria, but nobody has ever been able to unite it all. We will make history by integrating all once Korean lands, from the south of Jeju island up to the far eastern lands of Balhae!"
+ 
+ ### Defensive Tree
+ kor_improve_yukjin_title: "Improve the Yukjin"
+  kor_improve_yukjin_desc: "The Yukjin (six garrisons), established under King Sejong, serve to protect Joseon from Jurchen raiders from across the Tumen River. Improvements to the fortifications will allow them to protect these cities for future generations."
+ 
+ ### Social Tree
+ kor_fund_national_seowon_title: "Establish Hyanggyo"
+  kor_fund_national_seowon_desc: "Private seowon schools have begun to pop up throughout our country, providing Confucian education to our upper class. Establishing some state schools (Hyanggyo) across the nation will allow all of our citizens to become educated."
+  kor_all_areas_have_temple: "All areas in the Korea region:\nHave a §YTemple§!"
+ 
+ kor_nationalize_daedongbeop_title: "Nationalize Daedongbeop"
+  kor_nationalize_daedongbeop_desc: "The Daedongbeop system is a land tax reform that standardized taxation payments by making them be payed in rice. Implemented in Gyeonggi province, it has seen great effect in alleviating the burden of the common people. Although factions in the government appose the reform in provinces outside of the capital region, the reform would have great effects if implemented nationwide, as it can grant the crown more control over the nation and reduce corruption from local government officials."
+ kor_reform_amhaengeosa_title: "Reform Amhaengosa"
+  kor_reform_amhaengeosa_desc: ""
+ 
+ ### Slot 3 ###
+ kor_temple_hanseong_title: "Temple for the Capital"
+  kor_temple_hanseong_desc: "A temple for the capital institution, the Sungkyunkwan, should help advance education in our most prestigious school."
+ 
+ ### Empire Tree
+ kor_pyeongyang_mission_title: "The Ancient Capital"
+  kor_pyeongyang_mission_desc: "The city of Pyeongyang is one of the oldest cities of Korea and once a great capital of the Goguryeo and Goryeo. To let such an important historical city decay would mean that the state is not fit to rule Korea."
+ 
+ kor_restore_gungnae_title: "Restore Gungnae"
+  kor_restore_gungnae_desc: "The ancient capital of Goguryeo, Gungnae, has fallen tremendously from its glory days, now merely reduced to some ruins in a foreign land. To cememt our claim to the territory of Gorguryeo, we must rebuild the old city and repopulate the Buyeo region with Koreans."
+ 
+ ### Defensive Tree
+ kor_fortify_the_ports_title: "Fortify the Ports"
+  kor_fortify_the_ports_desc: "The southern ports of the Korean peninsula are the most vulnerable to pirate attacks. Fortifying these key cities will help defend them from attackers."
+ 
+ kor_country_of_forts_title: "Country of Fortresses"
+  kor_country_of_forts_desc: "Since the time of the three kingdoms, Koreans have been known to build elaborate fortresses. Investing heavily into our forts will keep the country safe from foreign threats, as it did a millenium ago."
+ 
+ ### Social Tree
+ kor_revive_hall_of_worthies_title: "Establish Hongmungwan"
+  kor_revive_hall_of_worthies_desc: "The Hall of Worthies was abolished by King Sejo in his coup. To make up for this, we must create a new office of government: the Office of Special Advisors."
+ kor_build_rural_inf_title: "Separate the Peasants"
+  kor_build_rural_inf_desc: "Separating the farmers from the soldiers is good wow!"
+ kor_silhak_mission_title: "Adopt Silhak"
+  kor_silhak_mission_desc: "Silhak, or \"practical learning,\" is a social movement away from the increasingly metaphysical nature of Neo-Confucian. It seeks to reform the rigid Confucian social structure and consider the welfare of the people to solve social problems. Adopting Silhak views would bring Joseon into the modern age technologically and socially."
+ 
+ ### Slot 4 ###
+ kor_cultivate_hanseong_title:0 "Development of Hanseong"
+  kor_cultivate_hanseong_desc:0 "Our capital is the beacon of Korean culture, yet it pales in comparison to Gaesong, the old capital of Goryeo and a once populous city before the disasterous Mongol invasions. We should invest into our capital, turning it into a world city on par with the old capitals of Silla and Goryeo."
+ kor_establish_library_title: "Establish Gyujanggak"
+  kor_establish_library_desc: "The establishment of a royal library should improve the institution of Hanseong and allow for more advancements in science and technology."
+ 
+ kor_gyeongju_mission_title: "Gyeongju, the Eastern Port"
+  kor_gyeongju_mission_desc: "Gyeongju, once the ancient capital of Silla and a world city, has fallen quite significantly from that position. Developing the city and the surrounding region should allow it to regain its position as one of the world's largest trading centers."
+ 
+ #Korean Japan Tree
+ kor_build_trade_ships_title:0 "Protect Korean Trade"
+  kor_build_trade_ships_desc:0 "The Japanese have always relied on Korea for its imports of Chinese and Korean goods, however the seas have always been infested with Waegu pirates. We must build patrol ships to protect our trade from such thieving bandits."
+ kor_naval_education_title:0 "Preserve Naval History"
+  kor_naval_education_desc:0 "Koreans have a long tradition of quality shipbuilding. We must educate our sailors in order to keep that tradition."
+ 
+ kor_take_daemado_title:0 "Claim Daemado"
+  kor_take_daemado_desc:0 "Although the So lords have conceded to us, a more direct ruling of Daemado would be more optimal and give us power over the Japanese isles."
+ 
+ kor_annex_south_jap_title:0 "Remove Waegu Threat"
+  kor_annex_south_jap_desc:0 "The Waegu pirates have been a pest to the Koreans for over a millenia and the Japanese lords in Kyoto refuse to cooperate with us in their removal. We must fully occupy their naval bases ourselves in Kyushu to remove these bastards!"
+ kor_annex_japan_title:0 "Rule over Japan"
+  kor_annex_japan_desc:0 "With Kyoto gone, the rest of Japan stands no chance against our conquest. It is time to bring the Japanese isles into Korean hands."
+ 
+ owns_kyushu_tooltip: "Owns all provinces on §YKyushu Island§!"
+ 
+ #Colonial Korean Tree
+ kor_discover_siberia_title:0 "Discover Kamchatka"
+  kor_discover_siberia_desc:0 "After exploring icy waters, we've found small, friendly tribes living in eastern Siberia. Our people have already begun to exchange goods and ideas with them."
+ kor_discover_america_title:0 "Discover America"
+  kor_discover_america_desc:0 "After hearing tales of a new land beyond the ocean from the Siberian tribes, we've finally found the new land!"
+ kor_colonize_alaska_title:0 "Chilly Colonies"
+  kor_colonize_alaska_desc:0 "Although the area is very hostile, our people have already went and created a small settlement in the new continent."
+ kor_global_navy_title:0 "Blue-Water Navy"
+  kor_global_navy_desc:0 "In order to exert power over our own borders, we need a fleet ready to go to the high seas."
+ 
+ kor_address_wealth_inequality_title: "Address Wealth Inequality"
+  kor_address_wealth_inequality_desc: "The gap between the poor and rich has been expanding since the start of the Joseon kingdom. Providing to the peasants should help reduce this growing wealth gap."
+ kor_encourage_national_coinage_title: "Encourage National Coinage"
+  kor_encourage_national_coinage_desc: "The people of Joseon still use rice or cotton as a means of exchange. Introducing a national coin could help stabilize the economy and make it easier to conduct business."
+ kor_maintain_balance_title: "Maintain Balance"
+  kor_maintain_balance_desc: "The factionalism present in the country plagues the government and creates hostile situations. Maintaining balance between the two sides should help reduce factional conflicts."
+ 
+ ### Slot 5 ###
+ kor_docks_of_the_south_title: "Docks of the South"
+  kor_docks_of_the_south_desc: "The rampid piracy in the waters makes the docks of the south important for our ships, both war and merchant vessels alike. Upgrading these ports should help us continue to defend against piracy and ensure Korean merchants dominate the seas."
+ kor_geum_river_title: "Geum River"
+  kor_geum_river_desc: "The Geum River forms a natural estuary in the city of Jeonju. Developing this fertile land could be highly profitable."
+ 
+ kor_home_navy_title:0 "Maintain Home Fleet"
+  kor_home_navy_desc:0 "As Japan consolidates, we must build a navy of war ships big enough to defend our coasts and act as a fleet in being."
+ kor_korean_daemado_title:0 "Integrate Daemado"
+  kor_korean_daemado_desc:0 "With the island Daema properly under our rule, we should bring it closer to our heartland and make it part of Gyeongsang province by encouraging Korean culture on the island."
+ 
+ #Colonial Korean Tree
+ kor_discover_siberia_title:0 "Discover Kamchatka"
+  kor_discover_siberia_desc:0 "After exploring icy waters, we've found small, friendly tribes living in eastern Siberia. Our people have already begun to exchange goods and ideas with them."
+ kor_discover_america_title:0 "Discover America"
+  kor_discover_america_desc:0 "After hearing tales of a new land beyond the ocean from the Siberian tribes, we've finally found the new land!"
+ kor_colonize_alaska_title:0 "Chilly Colonies"
+  kor_colonize_alaska_desc:0 "Although the area is very hostile, our people have already went and created a small settlement in the new continent."
+ kor_global_navy_title:0 "Blue-Water Navy"
+  kor_global_navy_desc:0 "In order to exert power over our own borders, we need a fleet ready to go to the high seas."
+ 
+ #################### Daimyo Missions ####################
+ daimyo_add_claims_on_culture_tt: "Gain permanent claims on all provinces of your primary culture in the §YJapan§! region."
+ 
+ ##Ainu Missions
+ anu_hokkaido_title: "Reconquest of Mosir"
+  anu_hokkaido_desc: "The people of the sun have pushed our people and ancestors far too north, and they now occupy what is rightfully mosir, the land of the Ainu. We must kick the Yamato off of our island and liberate the Ainu population living in subjugation."
+ anu_tohoku_title: "2nd Thirty-Eight Year War"
+  anu_tohoku_desc: "Once upon a time, the Ainu and Emishi controlled Tohoku. The people of the sun have invaded and eradicated the Emishi people and culture. The reconquest of our ancient territory in Tohoku will guarantee that the few Ainu people living there are not lost."
+ anu_kanto_title: "Invasion of Kanto"
+  anu_kanto_desc: "The fertile lands of the Kanto plain once belonged to our ancestors. We must retake the rich area and turn it into an Ainu "
+ anu_east_honshu_title: "Reconquer East Honshu"
+  anu_east_honshu_desc: "The Ainu people once lived across all of Eastern Honshu, but we were pushed out of the land by the Yamato invaders. We need to reclaim our furthest "
+ anu_end_yamato_title: "End the Yamato"
+  anu_end_yamato_desc: "The people of the sun have ruled over the islands of Japan for far too long. We must fully subdue them and conquer the 4 main islands of Japan."
+ ANU_OWN_JAPAN: "Owns the islands of §YHokkaido§!, §YHonshu§!, §YShikoku§!, and §YKyushu§!"
+ 
+ ##Vietnamese Missions 
+ 
+ #Slot 1
+ dai_hanoi_title: "Rebuilding of Dong Kinh"
+  dai_hanoi_desc: "The Cham-Viet wars of the late 1300s has left our nation in ruins. The capital, Dong Kinh, was sacked multiple times by the Cham forces. We must rebuild our imperial city and begin to repair our nation so that we can regain our strength and strike at the Champa while they are also weakened."
+  
+ # The South
+ dai_regain_control_over_tonkin_title: "Control the South"
+  dai_regain_control_over_tonkin_desc: "The lands far from Dong Kinh fall outside of central authority and are controlled by nobles. To combat this, we must create government buildings to control our Southern lands and prevent the nobility from taking control."
+ dai_finish_off_champa_title: "Finish off Champa"
+  dai_finish_off_champa_desc: "The Champa kingdom has threatened and sacked our nation for too long. We must strike at them before they are able to recover from the previous wars, and finally finish our conquest of the south."
+ dai_conquer_mekong_delta_title: "Conquer Mekong Delta"
+  dai_conquer_mekong_delta_desc: "The once grand Khmer empire has been in a long decline, and the fertile Mekong delta looks ripe for the taking."
+ dai_conquer_khmer_title: "Finish off the Khmer"
+  dai_conquer_khmer_desc: "The Khmer are too weak to defend themselves. Inner Cambodia shall belong to us, lest we let the Thais or another foreign power control the region."
+ 
+ #Slot 2
+ 
+ # The South Culture Conversion
+ dai_populate_champa_title: "Nam Tien"
+  dai_populate_champa_desc: "The conquest of Champa has created new lands for the Vietnamese people to settle."
+ dai_populate_mekong_title: "Populate the Mekong Delta"
+  dai_populate_mekong_desc: "The march to the south has continued and reached its end in the fertile Mekong delta, giving us another major river delta for Vietnamese people to settle in."
+ 
+ #Slot 3
+ # Political Tree
+ dai_control_rivaling_families_title: "Control Nobility"
+  dai_control_rivaling_families_desc: "Various noble factions constantly threaten the unity of the nation. Their influence must be reduced so that civil war does not break out."
+ dai_centralize_the_state_title: "Centralize the State"
+  dai_centralize_the_state_desc: "To increase our control over the nation, we must seek reforms to centralize te government. By doing so, we will also keep the estates at bay while strengthening our control over the nation's resources."
+ dai_develop_hue_title: "Develop Phu Xuan"
+  dai_develop_hue_desc: "The city of Phu Xuan looks to be a good area to create a southern capital, but whether it should be our primary capital over Dong Kinh is another question."
+ 
+ dai_combat_china_title: "Combat China"
+  dai_combat_china_desc: "When we fight the Chinese once again, the Vietnamese people will be ready."
+ 
+ # The West
+ dai_muang_phuan_title: "Begin Invading Muang Phuan"
+  dai_muang_phuan_desc: "Muang Phuan, a minor kingdom situated between us and Lan Xang, has been our tributary state. However, disputes with Lan Xang always question the legitimacy of our claim to the area and threatens to escalate into military conflict. We must seek to integrate Muang Phuan more directly, but the Laotians to our west will likely have something to say about that."
+ dai_muang_phuan_2_title: "Integrate Muang Phuan"
+  dai_muang_phuan_2_desc: "Now that we have successfully sacked Lan Xang and forced them to recognize our rule over Muang Phuan, it is time to integrate them properly into our nation."
+ dai_conquer_laos_title: "Conquer Lan Xang"
+  dai_conquer_laos_desc: "The Kingdom of Lan Xang have shown to be incapable of defending themselves. Rather than sack their lands, we should seek to expand into the region to secure our own Western border and to gain the rich cities of Laos."
+ dai_the_thai_threat_title: "The Thai Threat"
+  dai_the_thai_threat_desc: "The Thai kingdoms pose a great security issue to our nation. Whether we conquer them, vassalize them, or even form alliances with them diplomatically, we must find a method to secure our western border from the various Tai people."
+  dai_central_thai_area_tt: "The Central Thailand area is owned by §Yus§!, our §Ynon-Tributary subjects§!, or our §Yallies§!."
+  dai_sukhothai_area_tt: "The Sukhothai area is owned by §Yus§!, our §Ynon-Tributary subjects§!, or our §Yallies§!."
+  
+ #Slot 4
+ dai_religious_question_title: "Religious Question"
+  dai_religious_question_desc: "The Chinese domination has brought in a wave of Neo-Confucian literari that opposes Buddhism. We must decide if our state will continue to adhere to the Buddhist faith or secularize."
+  dai_viet_confucian_event_tooltip: "The event \"§YConfucian Heritage§!\" has fired."
+ dai_bureacratic_reforms_title: "Bureacratic Reforms"
+  dai_bureacratic_reforms_desc: "The traditional Buddhist aristocracy have had too much influence for far too long. A wave of scholar-literati will replace them and push our nation into an institutional golden age."
+ dai_resurgent_viet_title: "Resurgent Dai Viet"
+  dai_resurgent_viet_desc: "With reforms to limit the nobility and bring control back to the state, Dai Viet has become a resurgent power, undivisive and centralized."
+ dai_chinese_menace_title: "The Chinese Menace"
+  dai_chinese_menace_desc: "We must prepare for conflict with the Chinese menace, as they have always invaded and attempted to assimilate the Red River delta in the past."
+  dai_north_vietnam_area_has_fort_tt: "The §YNorthern Vietnam§! area has at least §Y1§! fort."
+ nanyue_restore_title:0 "Restore Nam Viet"
+  nanyue_restore_desc:0 "The ancient kingdom of Nam Viet (called Nanyue by the Chinese) controlled territory deep into the now-Chinese south. If we were to reclaim these lands lost over a millenia ago, our dynasty would truly be known as the greatest point in Vietnamese history."
+ 
+ #Slot 5
+ dai_educational_temples_title: "Educational Temples"
+  dai_educational_temples_desc: "To increase education throughout the land, we must build Confucian and scholarly temples across the land."
+  dai_educational_temples_tt: "There are at least §Y5§! Temples or Great Temples in Vietnam proper."
+ dai_build_universities_title: "State Universities"
+  dai_build_universities_desc: "Dai Viet must not decline in its educational reforms, and we must continue to create new institutions to educate the great Viet people."
+ dai_befriend_china_title: "Maintain Relations"
+  dai_befriend_china_desc: "The Chinese threat to the north is massive; we must secure favorable diplomatic relations until we are able to challenge the Dragon militarily."
+  dai_befriend_china_tt: "This trigger can be bypassed if no country is the Emperor of China, or if you are the Emperor of China."
+ 
+ ##Thailand Missions
+ unification_of_ayu_suk_title:0 "Unification of Ayutthaya and Sukhothai"
+  unification_of_ayu_suk_desc:0 "Our royal family inhabits both the Kingdoms of Ayutthaya and Sukhothai. It is time one ruler rules them both."
+ conquer_lanna_title:0 "Conquer Lan Na"
+  conquer_lanna_desc:0 "Lan Na, our rival Thai kingdom, threatens our control in Indochina. We should take their Thai people under our rule."
+ unified_thailand_mission_title:0 "Unified Thailand"
+  unified_thailand_mission_desc:0 "The Thai people have finally been united under one banner."
+  
+ northern_thai_conscript_general_title:0 "Conscript a General"
+  northern_thai_conscript_general_desc:0 ""
+ conquer_sukhothai_title:0 "Conquer Sukhothai"
+  conquer_sukhothai_desc:0 "Sukhothai, our rival Thai kingdom, should be our first place of conquest. Defeating them will make our position much stronger."
+ conquer_ayutthaya_title:0 "Conquer Ayutthaya"
+  conquer_ayutthaya_desc:0 "Ayutthaya is the last remaining Thai kingdom. If we capitulate them, then surely a united Thailand will be a powerhouse."
+ conquer_ligor_title:0 "Conquer Ligor"
+  conquer_ligor_desc:0 "The Southern Thais must come under our wing. With it, the Thai people will finally be united."
+ lna_unified_thailand_mission_title:0 "Unified Thailand"
+  lna_unified_thailand_mission_desc:0 "The Thai people have finally been united under one banner."
+ 
+ conquer_pegu_title:0 "Invade Lower Burma"
+  conquer_pegu_desc:0 ""
+ invade_burma_title:0 "Invade Burma"
+  invade_burma_desc:0 ""
+ claim_khorat_title:0 "Claim Khorat"
+  claim_khorat_desc:0 ""
+ 
+ ##Philippine Minor Missions
+ #Luzon Missions
+ luzon_unite_home_title:0 "Unite Luzon Area"
+  luzon_unite_home_desc:0 "In order to secure the Philippine archipelago, we must unite our own region first."
+ luzon_annex_visayas_title:0 "Annex Visayas"
+  luzon_annex_visayas_desc:0 "Now that we have united Luzon, we must strike at our weaker, southern neighbors to strengthen our own nation."
+ visayas_unite_home_title:0 "Unite Visayas Area"
+  visayas_unite_home_desc:0 "In order to secure the Philippine archipelago, we must unite our own region first."
+ visayas_annex_mindanao_title:0 "Annex Mindanao"
+  visayas_annex_mindanao_desc:0 "Now that we have united Visayas, we must strike at our weaker, southern neighbors to secure our independence against the Tondo."
+ mindanao_unite_home_title:0 "Unite Mindanao Area"
+  mindanao_unite_home_desc:0 "In order to secure the Philippine archipelago, we must unite our own region first."
+ mindanao_annex_visayas_title:0 "Annex Visayas"
+  mindanao_annex_visayas_desc:0 "Now that we have united Mindanao, we must strike at our divided, northern neighbors to strengthen our own nation."
+ 
+ ##Maryul/Ladakh Missions
+ LDK_cashmere_wool_title:0 "Cashmere Wool"
+ LDK_cashmere_wool_desc:0 "Now that Kashmir is under our domain, we can control the lucrative wool trade that this region is the epicenter of. By boosting production of wool in Kashmir, we can build the backbone for our economy in trade."
+ LDK_western_ambition_title:0 "Western Ambition"
+ LDK_western_ambition_desc:0 "The Kingdom of Maryul’s core has been consolidated under our name, but it was once way grander. In particular, the state’s frontier once extended further into Kashmir. We should use this to our advantage, making sure to get all of Kashmir and Gilgit."
+ LDK_kora_la_pass_title:0 "Kora La Pass"
+ LDK_kora_la_pass_desc:0 "The Kora La pass has been one of the first avenues through the mountains, and has been the key to the salt trade. Since we control both sides of the pass, we can amass great wealth in the salt trade if we build infrastructure in the area."
+ LDK_maryul_legacy_title:0 "Maryul's Legacy"
+ LDK_maryul_legacy_desc:0 "The Kingdom of Maryul once held all of Western Tibet, where the feeble states of Guge and Ladakh now sit. Both states having some legitimacy; Guge, in Ngari, the homeland of the kingdom, while Ladakh holds the last lands that the kingdom once had before collapse. This situation cannot last forever; only one can take the mantle of the Kingdom of Maryul."
+ LDK_pacify_mustang_title:0 "Pacify Mustang"
+ LDK_pacify_mustang_desc:0 "The kingdom of Mustang to our south has always greedily eyed Purang from us, and, with a shiny new castle, makes it even more tempting as a target. We have got to make sure their plan falls right in its tracks."
+ LDK_restore_tegla_kar_title:0 "Restore Tegla Kar"
+ LDK_restore_tegla_kar_desc:0 "Tegla Kar is a fort on a cliff overlooking Purang, and was the main fort of the Kingdom of Purang. Now, it will succumb to the elements, weathering away into insignificance, if we do not act. However, threats from the Kingdom of Lo and the greedy Central Tibetans show that we need something to defend ourselves; Tegla Kar would be perfect."
+ LDK_conquest_of_bod_title:0 "Conquest of Bod"
+ LDK_conquest_of_bod_desc:0 "Central Tibet is currently in a power struggle between the Rinpungpas and Phagmodrupas, and, as soon as they consolidate, they would definitely try to conquer the new renovated castle on their border. So we must try to seize the core of Tibet from our rivals to the east, securing big cities like Shigatse and Lhasa, as well as the city of Sakya."
+
+ ##U-Tsang Missions
+ UTS_subjugate_guge_title:0 "Subjugate Guge"
+ UTS_subjugate_guge_desc:0 "To our west lay Guge, a region ripe for the taking. By making sure the ruler here swears fealty to us, our claim to unite Tibet will be closer and closer, as we also kill our rivals."
+ UTS_utsang_rivals_title:0 "U-Tsang Rivals"
+ UTS_utsang_rivals_desc:0 "The center of Tibet, Ü-Tsang, has been in a power struggle recently. The upstart Rinpungpas against the established Phagmodrupas; U versus Tsang. If we can control this currently volatile region, we are setting ourselves in a good position to reunify Tibet."
+ UTS_unite_tibet_title:0 "Unite Tibet"
+ UTS_unite_tibet_desc:0 "Now that we have a firm grasp over Tibet, it is time to just make the final touches and adjustments to truly unify Tibet under our banner!"
+ UTS_conquer_kham_title:0 "Conquer Kham"
+ UTS_conquer_kham_desc:0 "To our east lay Kham and Amdo, two regions too focused on their internal squabbling.We already claim these lands as part of our realm, and they hold the trade cities that facilitate the Tea and Horse road, so we will need these lands in order to unite Tibet."
+ UTS_religious_choice_title:0 "Religious Center"
+ UTS_religious_choice_desc:0 "Ü-Tsang has always been known as the religious center of Tibet; we must build many temples to honor our religious heritage."
+ UTS_dalai_lama_title:0 "Home of the Dalai Lama"
+ UTS_dalai_lama_desc:0 "The Dalai Lama is based in Lhasa, in our own homeland. He is the main figure in Buddhism, and we should use that to our advantages by patronizing religion even further."
+
+ ##Mdo-Kham Missions
+ QAM_unite_culture_title:0 "Establish a Powerbase"
+ QAM_unite_culture_desc:0 "Kham, Gyelrong and Amdo has been fragmented since the Yuan Dynasty withdrew from our land, but it does not have to stay like this. In order for us to have a chance to unite the east under our rule, we must begin our quest to create ourselves a local powerbase."
+ QAM_unify_mdokhams_title:0 "Unite Mdo-Khams"
+ QAM_unify_mdokhams_desc:0 "Now that we have united our region, it is time to expand our reach to all of Kham, Gyelrong and Amdo."
+ QAM_conquer_utsang_title:0 "Pounce on Ü-Tsang"
+ QAM_conquer_utsang_desc:0 "Now with Kham secured; it is time we attack the core of Tibet; Ü-Tsang. Too focused on their internal bickering while at they still de-facto claim our land? It is time for us to seize the former capital of Tibet once and for all."
+ QAM_chinese_relations_title:0 "Chinese Relations"
+ QAM_chinese_relations_desc:0 "As the closest Tibetans to China, we would like to trade with them. But first we need to cozy up to the Emperor, so his wrath won’t end our new state, and making a trade agreement easier."
+ QAM_trade_city_title:0 "Develop a Trade City"
+ QAM_trade_city_desc:0 "In order to better facilitate trade between us and China, we must have a stand-out city; a city that the rest of Kham relies on, and a city that can sustain our economy."
+ QAM_patronize_local_festivals_title:0 "Patronize Local Festivals"
+ QAM_patronize_local_festivals_desc:0 "All throughout Tibet, and especially in Kham and the surrounding area, festivals that exemplify our horsemanship dot the land. By further expanding and officializing these events, combining this with the natural talent of our Do-Kham roots, and we can make some of the best cavalrymen the world has ever seen."
+
+#Nivkhs
+ NVK_subdue_ainu_title:0 "Subdue the Ainu"
+ NVK_subdue_ainu_desc:0 "With the Ainu kicked out of Sakhalin, they would obviously want revenge. We will need to conquer Ezochi in order for them to truly learn their lesson."
+ NVK_okhotsk_sea_title:0 "Empire of the Okhotsk"
+ NVK_okhotsk_sea_desc:0 "The Okhotsk Sea holds lots of opportunities. Not only do its shores have an abundance of fish, but we can also gain new knowledge about what lay further east..."
+ NVK_discover_america_title:0 "Finding Cur-Miv"
+ NVK_discover_america_desc:0 "The tribes we have encountered near the Okhotsk speak of a lush land to the east, a land shrouded in mystery, a land ripe for the taking for our maritime state!"
+ NVK_settle_america_title:0 "Colonize Cur-Miv"
+ NVK_settle_america_desc:0 "Now with a grasp on this new world, we should begin settling the continent to further expand our reach."
+ NVK_unite_sakhalin_title:0 "Unite Sakhalin"
+ NVK_unite_sakhalin_desc:0 "The Ainu have attacked our people and lands on Sakhalin before. We will need to get the whole island for ourselves in order for us to not only win an old rivalry, but also to begin our expansion."
+ NVK_secure_inland_title:0 "Secure a Hinterland"
+ NVK_secure_inland_desc:0 "The Amur River, being the lifeblood of Northern Manchuria, has been important to all the peoples in the region, and we are lucky to inhabit its estuary. But others may want our homeland due to it's strategic position. By conquering inland a little bit, we secure ourselves from the west."
+ NVK_move_south_title:0 "Moving South"
+ NVK_move_south_desc:0 "Now with a bit of a hinterland to protect us, we should further advance down the coastline."
+ NVK_dominate_amur_title:0 "Dominate the Amur"
+ NVK_dominate_amur_desc:0 "With our privileged coastal position on the Amur's entrance to the wide sea, we should now press forward and take the whole Amur River for ourselves."
+
+#Wild Jurchens
+ MYR_unite_evenks_title:0 "Unify the Evenks"
+ MYR_unite_evenks_desc:0 "Currently, the Solon, Oroqen and Negidal are fractured, despite their common Evenk origins. We must unite the Evenks under our rule!"
+ MYR_siberia_title:0 "Into Siberia"
+ MYR_siberia_desc:0 "We, as the dominant Tunguusic state, should begin to tink of taking the brothers to our north into our state."
+ MYR_unite_yerens_title:0 "Unify the Amur"
+ MYR_unite_yerens_desc:0 "Now with the Evenks and Nanais united, it is time to assert our dominance on the whole Amur region!"
+ MYR_invade_manchuria_title:0 "Invade the Jianzhou and Haixi"
+ MYR_invade_manchuria_desc:0 "The Jianzhou and Haixi Jurchens shall fall; the Wild Jurchens shall rise and form a new state!"
+ MYR_unite_nanai_title:0 "Unify the Nanai"
+ MYR_unite_nanai_desc:0 "The various peoples related to the Nanai like the Ulchs, Udeges, Orochs and Nanais have also come under threat by the Jurchens. We must resist foreign advancement by uniting the Nani people under one banner!"
+ MYR_invade_sakhalin_title:0 "Invade Sakhalin"
+ MYR_invade_sakhalin_desc:0 "The Orochs, one of the peoples under our realm, have a relative stuck on Sakhalin. Using this pretense, we should strike the Nivkhs and Ainus and take the island for our new state."

@@ -1,0 +1,57 @@
+country_decisions = {
+	
+	form_joseon = {
+		major = yes
+		potential = {
+			NOT = { tag = KOR }
+			was_never_end_game_tag_trigger = yes
+			culture_group = korean_g
+		}
+		provinces_to_highlight = {
+			region = korea_region
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}
+		allow = {
+			NOT = { exists = KOR }
+			is_free_or_tributary_trigger = yes
+			is_nomad = no
+			is_at_war = no
+			num_of_owned_provinces_with = {
+				is_core = ROOT
+				region = korea_region
+				value = 20
+			}
+			owns_core_province = 735
+			owns_core_province = 2745
+		}
+		effect = {
+			change_tag = KOR
+			swap_non_generic_missions = yes
+			if = {
+				limit = { government_rank = 2 }
+				set_government_rank = 2
+			}
+			korea_region = {
+				limit = {
+					NOT = { is_core = ROOT }
+				}
+				add_core = KOR
+			}
+			set_country_flag = formed_korea_flag
+			add_reform = eastern_monarchy
+			set_legacy_government = eastern_monarchy
+			if = {
+				limit = { has_custom_ideas = no }
+				country_event = { id = ideagroups.1 } #Swap Ideas
+			}
+		}
+		ai_will_do = {
+			factor = 500
+		}
+	}
+
+}
+

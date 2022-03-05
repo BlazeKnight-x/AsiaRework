@@ -1,0 +1,28 @@
+#Asiarework eventpictures
+
+spriteTypes = {
+	spriteType = {
+		name = "KOR_FACTIONS_eventPicture"
+		texturefile = "gfx/event_pictures/event_pictures_AR/KOR_FACTIONS_eventPicture.dds"
+	}
+	spriteType = {
+		name = "KOR_ACCUSATION_eventPicture"
+		texturefile = "gfx/event_pictures/event_pictures_AR/KOR_ACCUSATION_eventPicture.dds"
+	}
+	spriteType = {
+		name = "KOR_CONFUCIAN_BHUDDIST_eventPicture"
+		texturefile = "gfx/event_pictures/event_pictures_AR/KOR_CONFUCIAN_BHUDDIST_eventPicture.dds"
+	}
+	spriteType = {
+		name = "KOR_FIRE_ADVISOR_eventPicture"
+		texturefile = "gfx/event_pictures/event_pictures_AR/KOR_FIRE_ADVISOR_eventPicture.dds"
+	}
+	spriteType = {
+		name = "KOR_SCHOLAR_eventPicture"
+		texturefile = "gfx/event_pictures/event_pictures_AR/KOR_SCHOLAR_eventPicture.dds"
+	}
+	spriteType = {
+		name = "KOR_REPORT_eventPicture"
+		texturefile = "gfx/event_pictures/event_pictures_AR/KOR_REPORT_eventPicture.dds"
+	}
+}

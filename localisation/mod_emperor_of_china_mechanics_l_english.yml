@@ -1,0 +1,171 @@
+﻿l_english:
+#Misc
+ #Eastern Government
+ eastern_monarchy:0 "Eastern Monarchy"
+ eastern_monarchy_desc:0 "Eastern monarchies maintain their dynasty and believe that their rulers have the right to rule from heaven."
+
+#Balancing
+ ALLIANCE_EOC:1 "The Emperor of China views themselves as above all others and will never sign alliances."
+ 
+ unreformed_empire_of_china:1 "Insufficient Governing"
+ desc_unreformed_empire_of_china:1 "Although the Chinese ways of governing are excellent, it is still impossible to defend every corner of the empire with high quality soldiers. China is simply too vast and far too populus for this to be possible right now.\n§MThis modifier goes away after completing all Empire of China reforms.§!"
+ chinese_autonomy_modifier: "Insufficient Governing"
+ desc_chinese_autonomy_modifier: "Although our governing abilities is great, China is so vast that we are unable to control everything."
+ 
+ reformed_chinese_empire:0 "Reformed Chinese Empire"
+ desc_reformed_chinese_empire:0 "Through rigorous reform and grit we have managed to reform the archaic Mandate of Heaven system. Long live the Middle Kingdom!"
+ 
+ claim_mandate_of_heaven_chinese_title:0 "Claim the Mandate of Heaven!"
+ claim_mandate_of_heaven_chinese_desc:0 "Our dynasty has grown in power and now controls a significant portion of the Middle Kingdom. It's time for us to proclaim ourselves as the rightful ruler of China!"
+
+ NO_WAR_JOSEON:0 "Ming has wrestled control of the Jurchens out of our hands. It would be unwise to directly conquer them unless we are already opposed to Ming."
+ ALLIANCE_JOSEON:0 "Joseon's inwards nature makes them refrain from military alliances."
+ 
+ ALLIANCE_SHOGUN:0 "The Japanese isles are too divided for foreigners to want an alliance."
+ NO_WAR_SHOGUN:0 "The Japanese isles must be united before we are to expand outwards."
+ 
+ CHINA_OVERRIDE: "Chinese Empire"
+ CHINA_OVERRIDE_ADJ: "Chinese"
+ KOREA_OVERRIDE: "Korea"
+ KOREA_OVERRIDE_ADJ: "Korean"
+ 
+ #Chinese Warring States
+ chinese_warring_state:0 "Chinese Warring State"
+ chinese_warring_state_desc:0 "A powerful ruler in the East seeking to unite China and claim the Mandate of Heaven for themselves.\n§MA warring state who comes out victorious in the Chinese civil war will automatically claim the Mandate of Heaven for themselves and become the new Emperor of China.§!"
+ ALLIANCE_CHINESE_WARRING_STATE:0 "Chinese Warring States cannot ally other nations."
+ 
+ #Chinese
+ become_chinese_warring_state_title:0 "Become a Chinese Warring State"
+ become_chinese_warring_state_desc:0 "China deserves to be united under our dynasty! We will join the warring states to compete for full domination of China."
+ become_chinese_warring_state_effectDesc:0 "\n§MWe will become a Chinese Warring State, which allows us to instantly annex other Chinese Warring states with 100% occupation.§!"
+ 
+ #Manchu
+ manchu_form_qing_tooltip:0 "We will be able to assimilate into the Chinese culture group upon gaining the mandate.\n§MWe will become a Chinese Warring State, which allows us to instantly annex other Chinese Warring states with 100% occupation.§!"
+ convert_to_chinese_culture_manchu_title: "Become Sinicised"
+ convert_to_chinese_culture_manchu_desc: "Now that we are the rulers of China, our people have begun absorbing the Chinese culture. If we are to truly be the rightful rulers of China, we must officially adopt Chinese culture."
+ convert_to_chinese_culture_manchu_tt: "All Jurchens will adopt the Manchu identity and assimilate into the Chinese culture group."
+ 
+ mongol_form_yuan_tooltip:0 "We will be able to assimilate into the Chinese culture group upon gaining the mandate.\n§MWe will become a Chinese Warring State, which allows us to instantly annex other Chinese Warring states with 100% occupation.§!"
+ convert_to_chinese_culture_mongol_title: "Become Sinicised"
+ convert_to_chinese_culture_mongol_desc: "Now that we are the rulers of China, our people have begun absorbing the Chinese culture. If we are to truly be the rightful rulers of China, we must officially adopt Chinese culture."
+ convert_to_chinese_culture_mongol_tt: "All Khalkhas, Oirats, Chakhars, and Khorchins will adopt the Sino-Mongol identity and assimilate into the Chinese culture group."
+ 
+ accepts_china_proper_cultures: "Accepts 3 Han Chinese cultures"
+ 
+ #Koreans
+ become_chinese_warring_state_korean_title:0 "Become a Sinicised Warring State"
+ become_chinese_warring_state_korean_desc:0 "The weakness of China has given us an opportunity to strike at the Chinese core. Perhaps we can unite the Middle Kingdom, and create our own imperial dynasty.\n§MWe will become a Chinese Warring State, which allows us to instantly annex other Chinese Warring states with 100% occupation.§!"
+ convert_to_chinese_culture_korean_title: "Become Sinicised"
+ convert_to_chinese_culture_korean_desc: "Now that we are the rulers of China, our people have begun absorbing the Chinese culture. If we are to truly be the rightful rulers of China, we must officially adopt Chinese culture."
+ convert_to_chinese_culture_korean_effect_tt: "All Koreans will adopt the Sino-Korean identity and assimilate into the Chinese culture group."
+ 
+ #Japanese
+ become_chinese_warring_state_japanese_title:0 "Become a Sinicised Warring State"
+ become_chinese_warring_state_japanese_desc:0 "The weakness of China has given us an opportunity to strike at the Chinese core. Perhaps we can unite the Middle Kingdom, and create our own imperial dynasty.\n§MWe will become a Chinese Warring State, which allows us to instantly annex other Chinese Warring states with 100% occupation.§!"
+ owns_japan_proper_tt: "Owns Japan Proper (no Ryukyuan or non-Japanese provinces)"
+ convert_to_chinese_culture_japanese_title: "Become Sinicised"
+ convert_to_chinese_culture_japanese_desc: "Now that we are the rulers of China, our people have begun absorbing the Chinese culture. If we are to truly be the rightful rulers of China, we must officially adopt Chinese culture."
+ convert_to_chinese_culture_japanese_effect_tt: "All Japanese will adopt the Sino-Japanese identity and assimilate into the Chinese culture group."
+ 
+ #Viets
+ become_chinese_warring_state_vietnamese_title:0 "Become a Sinicised Warring State"
+ become_chinese_warring_state_vietnamese_desc:0 "The weakness of China has given us an opportunity to strike at the Chinese core. Perhaps we can unite the Middle Kingdom, and create our own imperial dynasty.\n§MWe will become a Chinese Warring State, which allows us to instantly annex other Chinese Warring states with 100% occupation.§!"
+ convert_to_chinese_culture_vietnamese_title: "Become Sinicised"
+ convert_to_chinese_culture_vietnamese_desc: "Now that we are the rulers of China, our people have begun absorbing the Chinese culture. If we are to truly be the rightful rulers of China, we must officially adopt Chinese culture."
+ convert_to_chinese_culture_vietnamese_effect_tt: "All Vietnamese and Zhuang will assimilate into the Chinese culture group."
+ 
+ #New CB, War Goal, Peace Option, etc.
+ po_chinese_warring_state_full_annex_desc:0 "[From.GetName] completely capitulates to [Root.GetName], losing all of their land and sovereignty in the process. [Root.GetName] will get territorial cores on any province with Chinese culture."
+ CB_ALLOWED_po_chinese_warring_state_full_annex:0 "Complete Annexation"
+ PEACE_po_chinese_warring_state_full_annex:0 "Complete Annexation"
+ 
+ po_chinese_warring_state_unite_china_desc:0 "[From.GetName] gives up all provinces in the China superregion to [Root.GetName]. [Root.GetName] will get territorial cores on any province with Chinese culture."
+ CB_ALLOWED_po_chinese_warring_state_unite_china:0 "Taking China superregion lands"
+ PEACE_po_chinese_warring_state_unite_china:0 "Take China Superregion"
+ 
+ chinese_civil_war_wargoal:0 "Annex the opposing warring state so we can unite China under our banner!"
+ 
+ ### Chinese Emperor CBs
+ # Take China
+ po_emperor_of_china_unite_china_desc:0 "[From.GetName] gives up all provinces in the China superregion to [Root.GetName]."
+ CB_ALLOWED_po_emperor_of_china_unite_china:0 "Taking China superregion lands"
+ PEACE_po_emperor_of_china_unite_china:0 "Take China Superregion"
+ # Full Annex
+ po_emperor_of_china_full_annex_desc:0 "[From.GetName] completely capitulates to [Root.GetName], losing all of their land and sovereignty in the process."
+ CB_ALLOWED_po_emperor_of_china_unite_china:0 "Complete Annexation"
+ PEACE_po_emperor_of_china_unite_china:0 "Complete Annexation"
+ 
+ cb_chinese_civil_war:0 "Chinese Civil War"
+ cb_chinese_civil_war_desc:0 "We must unite China under our dynasty."
+ 
+ #Dynamic EOC
+ asiarework_mandate.1_title:0 "New Empire of China"
+ asiarework_mandate.1_desc:0 "The cycle of dynastical rise and fall has once again completed its loop. We are the only remaining great power from the struggles of the warring states period. Heaven has given our dynasty the right to rule over the Middle Kingdom, and the Chinese people can now see that we are the true Emperor of China."
+ asiarework_mandate.1_option_1: "The world shall recognize the $COUNTRY$ Dynasty as the center of civilization!"
+ become_eoc_cores_claims: "All Chinese provinces in our capital region will become cores.\nAll provinces in the China superregion that we own will become territorial cores.\nWe will gain permanent claims on all provinces not owned by us in the China superregion.\nGives access to the \"Unify China\" CB, allowing us to fully annex all China superregion territories and gain full cores for capital region provinces and territorial cores elsewhere."
+ 
+ asiarework_mandate.2_title:0 "Crumbling Dynasty"
+ asiarework_mandate.2_desc:0 "The decline of our empire is clearly apparent - we do not hold any of the four ancient capitals of China and our legitimacy is low. Warring states have taken over major cities. It is clear that the Mandate of Heaven is no longer with us."
+ asiarework_mandate.2_option_1:0 "May the heavens have mercy on us!"
+ 
+ ar_emperor_of_china_crisis: "Crisis of the Empire of China"
+ ar_emperor_of_china_crisis_desc: "If the Emperor of China is to lose control over the four ancient capitals of China, the nation is sure to devolve into chaos..."
+ 
+ asiarework_mandate.3_title: "Eruption of Chinese Civil War"
+ asiarework_mandate.3_desc: "Not controlling the four ancient capital of China for too long has created too many cracks in our legitimacy... people across China are slowly believing that we have lost the Mandate of Heaven. Mismanagement and strife are rampant and discontent is spreading rapidly among the people; already new warlords have risen in revolt. We must strike these rebellions down and regain control over the four ancient capitals to prove that our dynasty is still the rightful rulers of China!"
+ asiarework_mandate.3_o: "Rally the troops and stomp the opposition!"
+ asiarework_mandate.3_tt: "We must own the key cities of §YBeijing§!, §YNanjing§!, §YXi'an§!, and §YLuoyang§! to stop the crisis of our nation."
+ 
+ asiarework_mandate.5_title: "New Emperor of China"
+ asiarework_mandate.5_desc: "It is clear that [event_target:EmperorOfChina.GetName] is the new Emperor of China. The Mandate of Heaven rests on them, and the old Emperor's nation sits in ruin and mass revolts. We must decide if we should begin paying tribute to the new Emperor."
+ asiarework_mandate.5_o1: "Recognize the [event_target:EmperorOfChina.GetName] as the Emperor."
+ asiarework_mandate.5_o2: "We do not need recognition from the new Emperor!"
+ 
+ asiarework_mandate.6_title: "New Emperor of China"
+ asiarework_mandate.6_desc: "It is clear that [event_target:EmperorOfChina.GetName] is the new Emperor of China. The Mandate of Heaven rests on them, and the old Emperor's nation sits in ruin and mass revolts. We must decide if we should begin paying tribute to the new Emperor."
+ asiarework_mandate.6_o1: "Recognize the [event_target:EmperorOfChina.GetName] as the Emperor."
+ asiarework_mandate.6_o2: "We do not need recognition from the new Emperor!"
+ 
+ chinese_capital_north_china: "§MThis decision fundementally decides where we will gain cores in China.§!\nWe will gain cores on all provinces with Chinese culture in the §YNorth China region.§!\nProvinces in the §YSouth China region§! will give us territorial cores when we own them.\nWe will gain permanent claims on all provinces in the §YChina superregion§! we do not own."
+ chinese_capital_south_china: "§MThis decision fundementally decides where we will gain cores in China.§!\nWe will gain cores on on all provinces with Chinese culture in the §YSouth China region.§!\nProvinces in the §YNorth China region§! will give us territorial cores when we own them.\nWe will gain permanent claims on all provinces in the §YChina superregion§! we do not own."
+ 
+ #EOC Mandate Modifiers
+ early_game_mandate_nerf:0 "Conservative Chinese Thinking"
+ desc_early_game_mandate_nerf:0 "The upper class of China continues to be very conservative. It may take a few generations of people before new ideas begin to entice the people."
+ 
+ has_control_of_beijing:0 "Emperor Controls Northern Capital"
+ desc_has_control_of_beijing:0 "Our Mandate of Heaven is strengthened by our hold of the Northern Capital."
+ has_control_of_nanjing:0 "Emperor Controls Southern Capital"
+ desc_has_control_of_nanjing:0 "Our Mandate of Heaven is strengthened by our hold of the Southern Capital."
+ has_control_of_xian:0 "Emperor Controls Western Capital"
+ desc_has_control_of_xian:0 "Our Mandate of Heaven is strengthened by our hold of the Western Capital."
+ has_control_of_luoyang:0 "Emperor Controls Central Capital"
+ desc_has_control_of_luoyang:0 "Our Mandate of Heaven is strengthened by our hold of the Central Capital."
+ 
+ lost_control_of_beijing:1 "Emperor Does not Control Northern Capital"
+ desc_lost_control_of_beijing:0 "It bodes poorly for our claim to the Mandate of Heaven if we do not hold the Northern Capital."
+ lost_control_of_nanjing:1 "Emperor Does not Control Southern Capital"
+ desc_lost_control_of_nanjing:0 "It bodes poorly for our claim to the Mandate of Heaven if we do not hold the Southern Capital."
+ lost_control_of_xian:0 "Emperor Does not Control Western Capital"
+ desc_lost_control_of_xian:0 "It bodes poorly for our claim to the Mandate of Heaven if we do not hold the Western Capital."
+ lost_control_of_luoyang:0 "Emperor Does not Control Central Capital"
+ desc_lost_control_of_luoyang:0 "It bodes poorly for our claim to the Mandate of Heaven if we do not hold the Central Capital."
+ 
+ #EoC Reforms
+ establish_gaituguiliu_modifier: "Introduced Gaituguiliu"
+ seaban_modifier: "Reformed Seaban"
+ reform_land_tax_modifier: "Delegated Zongdu"
+ military_governors_modifier: "Established Lifan Yuan"
+ centralizing_top_government_modifier: "Reshaped Bureaucratic Ranks"
+ 
+ establish_gaituguiliu_tt: "§WTributaries of the Emperor receive:\n  Governing Capacity: §G+100§!"
+ seaban_tt: "§WTributaries of the Emperor receive:\n  Trade Efficiency: §G+10.0%§!"
+ reform_land_tax_tt: "§WTributaries of the Emperor receive:\n  Goods Produced Modifier: §G+10.0%§!"
+ lose_chinese_autonomy_modifier_tt: "§WThe Emperor will lose the modifier: §YInsufficient Governing§!"
+ military_governors_tt: "§WTributaries of the Emperor receive:\n  Administrative Efficiency: §G+5.0%§!"
+ centralizing_top_government_tt: "§WTributaries of the Emperor receive:\n  Monthly Administrative Power: §G+1§!"
+ 
+ #Manchurian Unification
+ asiarework_manchu.1_title:0 "Manchurian Unification"
+ asiarework_manchu.1_desc:0 "The great Nurhaci has risen and created the idea of a Manchurian state."
+ asiarework_manchu.1_option_1:0 "Come together, Manchus! Let us relive the glory days of the Later Jin!"

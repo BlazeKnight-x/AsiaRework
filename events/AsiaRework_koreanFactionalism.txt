@@ -1,0 +1,2378 @@
+namespace = kor_factionalism
+
+# Written by K
+
+# Heir of Wrong Division
+country_event = {
+	id = kor_factionalism.1
+	title = "kor_factionalism.1.t"
+	desc = "kor_factionalism.1.d"
+	picture = IMPERIAL_SEAL_eventPicture
+
+	trigger = {
+		has_dlc = "Res Publica"
+		has_estate = estate_nobles
+		has_reform = joseon_monarchy_2
+		has_consort = yes
+		is_female = no
+		has_consort_regency = no
+		has_heir = no
+		OR = {
+			statists_vs_orangists = 0.5
+			NOT = { statists_vs_orangists = -0.5 }
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 360
+	}
+
+	# He is my rightful heir
+	option = {
+		name = "kor_factionalism.1.a"
+		
+		define_heir = {
+			male = yes
+			dynasty = ROOT
+			age = 0
+			claim = 50
+			no_consort_with_heir = yes
+		}
+		if = {
+			limit = {
+				statists_vs_orangists = 0.5
+			}
+			set_heir_flag = kor_biased_west
+		}
+		else = {
+			set_heir_flag = kor_biased_east
+		}
+		set_heir_flag = kor_heir_wrong_division
+		add_estate_loyalty = {
+			estate = estate_nobles
+			loyalty = -15
+		}
+		hidden_effect = {
+			if = {
+				limit = {
+					NOT = { has_global_flag = Kor_Huibin_Jang }
+				}
+				country_event = { 
+					id = kor_factionalism.7
+					days = 730
+					random = 30
+				}
+			}
+		}
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 0
+				NOT = { estate_loyalty = { estate = estate_noble loyalty = 40 } }
+			}
+		}
+	}
+
+	# Wonderful, but he can't be my rightful heir.
+	option = {
+		name = "kor_factionalism.1.b"
+		if = {
+			limit = {
+				statists_vs_orangists = 0.5
+			}
+			change_statists_vs_orangists = 0.15
+		}
+		else = {
+		change_statists_vs_orangists = -0.15
+		}
+		ai_chance = {
+			factor = 1
+		}
+	}
+}
+
+# Japanese threats
+country_event = {
+	id = kor_factionalism.2
+	title = "kor_factionalism.2.t"
+	desc = "kor_factionalism.2.d"
+	picture = SENGOKU_eventPicture
+
+	is_triggered_only = yes
+
+	trigger = {
+		tag = KOR
+		has_reform = joseon_monarchy_2
+	}
+
+	# We must prepare for any future threats.
+	option = {
+		name = "kor_factionalism.2.a"
+		add_treasury = -100
+		change_statists_vs_orangists = -0.15
+		add_country_modifier = {
+			name = kor_fort_reinforcements
+			duration = 3650
+		}
+		hidden_effect = {
+			JAP = { country_event = { id = kor_factionalism.5 days = 183 } }
+		}
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 0
+				NOT = { treasury = 150 }
+			}
+		}
+	}
+
+	# It's a waste of time and money.
+	option = {
+		name = "kor_factionalism.2.b"
+		change_statists_vs_orangists = 0.15
+		add_country_modifier = {
+			name = kor_fort_abandoned
+			duration = 3650
+		}
+#		hidden_effect = {
+#			JAP = { country_event = { id = kor_factionalism.6 days = 183 } }
+#		}
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 0
+				treasury = 500
+			}
+		}
+	}
+}
+
+# Manchu threats
+country_event = {
+	id = kor_factionalism.3
+	title = "kor_factionalism.3.t"
+	desc = "kor_factionalism.3.d"
+	picture = HORDE_ON_HORSEBACK_eventPicture
+
+	is_triggered_only = yes
+
+	trigger = {
+		tag = KOR
+		has_reform = joseon_monarchy_2
+	}
+
+	# We must prepare for any future threats.
+	option = {
+		name = "kor_factionalism.3.a"
+		add_treasury = -100
+		change_statists_vs_orangists = 0.15
+		add_country_modifier = {
+			name = kor_fort_reinforcements
+			duration = 3650
+		}
+
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 0
+				NOT = { treasury = 150 }
+			}
+		}
+	}
+
+	# It's a waste of time and money.
+	option = {
+		name = "kor_factionalism.3.b"
+		change_statists_vs_orangists = -0.15
+		add_country_modifier = {
+			name = kor_fort_abandoned
+			duration = 3650
+		}
+
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 0
+				treasury = 500
+			}
+		}
+	}
+}
+
+# War against Joseon
+country_event = {
+	id = kor_factionalism.4
+	title = "kor_factionalism.4.t"
+	desc = "kor_factionalism.4.d"
+	picture = MILITARY_CAMP_eventPicture
+
+	trigger = {
+		always = no
+		NOT = { has_country_modifier = war_against_joseon }
+		OR = {
+			tag = MCH
+			tag = JAP
+		}
+		KOR = {
+			AND = {
+				exists = yes
+				has_reform = joseon_monarchy_2
+				NOT = { is_subject_of = ROOT }
+			}
+		}
+		NOT = { alliance_with = KOR }
+		NOT = { marriage_with = KOR }
+		NOT = { is_emperor_of_china = yes }
+	}
+
+	mean_time_to_happen = {
+		months = 360
+	}
+
+	# Prepare for war.
+	option = {
+		name = "kor_factionalism.4.a"
+		add_treasury = -150
+		add_country_modifier = {
+			name = war_against_joseon
+			duration = 3650
+		}
+		hidden_effect = {
+			if = {
+				limit = {
+					tag = MCH
+				}	
+			KOR = { country_event = { id = kor_factionalism.4 days = 183 } }
+			}
+			else = {
+
+			KOR = { country_event = { id = kor_factionalism.3 days = 183 } }
+
+			}
+		}
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 0
+				NOT = { treasury = 100 }
+			}
+			modifier = {
+				factor = 0
+				NOT = {
+					army_strength = {
+						who = KOR
+						value = 0.66
+					}
+				}
+			}
+			modifier = {
+				factor = 0.1
+				OR = {
+					ai_attitude = {
+						who = KOR
+						attitude = attitude_friendly
+					}
+					ai_attitude = {
+						who = KOR
+						attitude = attitude_threatened
+					}
+				}
+			}
+			modifier = {
+				factor = 100
+				OR = {
+					is_rival = KOR
+					ai_attitude = {
+						who = KOR
+						attitude = attitude_outraged
+					}
+					ai_attitude = {
+						who = KOR
+						attitude = attitude_hostile
+					}
+					ai_attitude = {
+						who = KOR
+						attitude = attitude_domineering
+					}
+				}
+			}
+		}
+	}
+
+	# Not right now.
+	option = {
+		name = "kor_factionalism.4.b"
+		ai_chance = {
+			factor = 1
+		}
+	}
+}
+
+# Jujahak
+country_event = {
+	id = kor_factionalism.5
+	title = "kor_factionalism.5.t"
+	desc = "kor_factionalism.5.d"
+	picture = KOR_SCHOLAR_eventPicture
+
+	trigger = {
+		has_dlc = "Res Publica"
+		has_estate = estate_church
+		has_reform = joseon_monarchy_2
+	}
+
+	mean_time_to_happen = {
+		months = 360
+	}
+
+	# Favor the West
+	option = {
+		name = "kor_factionalism.5.a"
+
+		change_statists_vs_orangists = -0.15
+		if = {
+			limit = {
+				statists_vs_orangists = 0.5
+			}
+			add_estate_loyalty = {
+				estate = estate_church
+				loyalty = -10
+			}
+		}
+		ai_chance = {
+			factor = 1
+		}
+	}
+
+	# Favor the East
+	option = {
+		name = "kor_factionalism.5.b"
+		change_statists_vs_orangists = 0.15
+		if = {
+			limit = {
+				statists_vs_orangists = -0.5
+			}
+
+			add_estate_loyalty = {
+				estate = estate_church
+				loyalty = -10
+			}
+		}
+		ai_chance = {
+			factor = 1
+		}
+	}
+}
+
+# Ijo Jeonrang
+country_event = {
+	id = kor_factionalism.6
+	title = "kor_factionalism.6.t"
+	desc = "kor_factionalism.6.d"
+	picture = KOR_FACTIONS_eventPicture
+
+	trigger = {
+		has_dlc = "Res Publica"
+		has_estate = estate_nobles
+		has_reform = joseon_monarchy_2
+	}
+
+	mean_time_to_happen = {
+		months = 360
+	}
+
+	# Favor the West
+	option = {
+		name = "kor_factionalism.6.a"
+
+		change_statists_vs_orangists = -0.2
+		if = {
+			limit = {
+				statists_vs_orangists = 0.5
+			}
+			add_estate_loyalty = {
+				estate = estate_nobles
+				loyalty = -10
+			}
+		}
+		ai_chance = {
+			factor = 1
+		}
+	}
+
+	# Favor the East
+	option = {
+		name = "kor_factionalism.6.b"
+		change_statists_vs_orangists = 0.2
+		if = {
+			limit = {
+				NOT = { statists_vs_orangists = -0.5 }
+			}
+
+			add_estate_loyalty = {
+				estate = estate_nobles
+				loyalty = -10
+			}
+		}
+		ai_chance = {
+			factor = 1
+		}
+	}
+}
+
+# Huibin Jang
+country_event = {
+	id = kor_factionalism.7
+	title = "kor_factionalism.7.t"
+	desc = "kor_factionalism.7.d"
+	picture = ROYAL_COUPLE_FUTURE_eventPicture
+	fire_only_once = yes
+
+	trigger = {
+		tag = KOR
+		has_dlc = "Res Publica"
+		has_reform = joseon_monarchy_2
+		has_estate = estate_nobles
+		has_consort = yes
+		NOT = { has_global_flag = Kor_Huibin_Jang }
+		has_heir = yes
+		has_heir_flag = kor_heir_wrong_division
+	}
+
+	mean_time_to_happen = {
+		months = 1200
+	}
+
+	immediate = {
+		set_global_flag = Kor_Huibin_Jang
+		clr_heir_flag = kor_heir_wrong_division
+	}
+
+	# Make her a queen!
+	option = {
+		name = "kor_factionalism.7.a"
+		remove_consort = yes
+		define_consort = {
+			name = "Okjeong"
+			dynasty = "Jang"
+			culture = korean
+			female = yes
+		}
+		add_heir_claim = 30
+		clr_heir_flag = kor_heir_wrong_division
+		hidden_effect = { add_queen_personality = silver_tongue_personality }
+		if = {
+			limit = {
+				has_heir_flag = kor_biased_west
+			}
+			change_statists_vs_orangists = -0.7
+			hidden_effect = { set_consort_flag = kor_biased_west }
+		}
+		else = {
+			change_statists_vs_orangists = 0.7
+			hidden_effect = { set_consort_flag = kor_biased_east }
+		}
+		add_estate_loyalty = {
+			estate = estate_nobles
+			loyalty = -10
+		}
+		ai_chance = {
+			factor = 10
+		}
+	}
+
+	# That's a bit too radical.
+	option = {
+		name = "kor_factionalism.7.b"
+		add_heir_claim = -15
+		if = {
+			limit = {
+				has_heir_flag = kor_biased_west
+			}
+			change_statists_vs_orangists = 0.1
+		}
+		else = {
+			change_statists_vs_orangists = -0.1
+		}
+		ai_chance = {
+			factor = 1
+		}
+	}
+}
+
+# Heir shows concern
+country_event = {
+	id = kor_factionalism.8
+	title = "kor_factionalism.8.t"
+	desc = "kor_factionalism.8.d"
+	picture = KOR_REPORT_eventPicture
+
+	trigger = {
+		tag = KOR
+		has_dlc = "Res Publica"
+		has_reform = joseon_monarchy_2
+		has_estate = estate_nobles
+		has_heir = yes
+		NOT = { has_heir_flag = kor_biased_east }
+		NOT = { has_heir_flag = kor_biased_west }
+		OR = {
+			statists_vs_orangists = 0.5
+			NOT = { statists_vs_orangists = -0.5 }
+		}
+		
+	}
+
+	mean_time_to_happen = {
+		months = 360
+	}
+
+	# Tell him to back down.
+	option = {
+		name = "kor_factionalism.8.a"
+		add_heir_claim = 15
+		if = {
+			limit = {
+				statists_vs_orangists = 0.5
+			}
+			change_statists_vs_orangists = 0.05
+		}
+		else = {
+			change_statists_vs_orangists = -0.05
+		}
+		add_estate_loyalty = {
+			estate = estate_nobles
+			loyalty = 5
+		}
+		ai_chance = {
+			factor = 1
+		}
+	}
+
+	# He has a point.
+	option = {
+		name = "kor_factionalism.8.b"
+		if = {
+			limit = {
+				statists_vs_orangists = 0.5
+			}
+			change_statists_vs_orangists = -0.2
+			hidden_effect = { set_heir_flag = kor_tangpyeongchaek }
+		}
+		else = {
+			change_statists_vs_orangists = 0.2
+			hidden_effect = { set_heir_flag = kor_tangpyeongchaek }
+		}
+		add_estate_loyalty = {
+			estate = estate_nobles
+			loyalty = -10
+		}
+		ai_chance = {
+			factor = 1
+		}
+	}
+}
+
+# Infertile
+country_event = {
+	id = kor_factionalism.9
+	title = "kor_factionalism.9.t"
+	desc = "kor_factionalism.9.d"
+	picture = KOR_ACCUSATION_eventPicture
+	fire_only_once = yes
+
+	trigger = {
+		tag = KOR
+		has_dlc = "Res Publica"
+		has_reform = joseon_monarchy_2
+		has_estate = estate_nobles
+		has_heir = no
+		ruler_age = 35
+		ruler_consort_marriage_length = 8
+
+		OR = {
+			AND = {
+				statists_vs_orangists = 0.7
+				has_ruler_flag = kor_biased_west
+			}
+			AND = {
+				NOT = { statists_vs_orangists = -0.7 }
+				has_ruler_flag = kor_biased_east
+			}
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 360
+		modifier = {
+			factor = 0.1
+			ruler_has_personality = infertile_personality
+		}
+	}
+
+	# HOW DARE THEY?
+	option = {
+		name = "kor_factionalism.9.a"
+		if = {
+			limit = {
+				statists_vs_orangists = 0.7
+			}
+			change_statists_vs_orangists = -1.3
+		}
+		else = {
+			change_statists_vs_orangists = 1.3
+		}
+		add_stability = -1
+		ai_chance = {
+			factor = 2
+		}
+	}
+
+	# Give in to their demands.
+	option = {
+		name = "kor_factionalism.9.b"
+		define_heir = {
+			male = yes
+			age = 27
+			dynasty = ROOT
+			claim = 50
+			adm = 5
+			no_consort_with_heir = yes
+		}
+		if = {
+			limit = {
+				statists_vs_orangists = 0.7
+			}
+			change_statists_vs_orangists = 0.1
+			hidden_effect = { set_heir_flag = kor_biased_east }
+		}
+		else = {
+			change_statists_vs_orangists = -0.1
+			hidden_effect = { set_heir_flag = kor_biased_west }
+		}
+
+		ai_chance = {
+			factor = 1
+		}
+	}
+}
+
+# The Yesong Debate
+country_event = {
+	id = kor_factionalism.10
+	title = "kor_factionalism.10.t"
+	desc = "kor_factionalism.10.d"
+	picture = KOR_ACCUSATION_eventPicture
+	fire_only_once = yes
+
+	trigger = {
+		tag = KOR
+		has_dlc = "Res Publica"
+		has_reform = joseon_monarchy_2
+		has_ruler_flag = Kor_prev_ruler_second_son
+		has_estate = estate_church
+	}
+
+	mean_time_to_happen = {
+		months = 30
+	}
+
+	# The West logic is right.
+	option = {
+		name = "kor_factionalism.10.a"
+		change_statists_vs_orangists = -0.1
+		add_estate_loyalty = {
+			estate = estate_church
+			loyalty = 10
+		}
+		hidden_effect = {
+			KOR = { country_event = { id = kor_factionalism.4 days = 3650 } }
+		}
+		ai_chance = {
+			factor = 1
+		}
+	}
+
+	# My father deserves a 3-year funeral.
+	option = {
+		name = "kor_factionalism.10.b"
+		change_statists_vs_orangists = 0.15
+		add_prestige = 10
+		clr_ruler_flag = Kor_prev_ruler_second_son
+		#This event should be related to legitimacy, not prestige. Sadly Joseon monarchy uses meritocracy instead.
+		#Why did paradox replaced legitimacy as meritocracy anyway? As if the two are in the same category.
+		ai_chance = {
+			factor = 1
+		}
+	}
+}
+
+
+# The Second Yesong Debate
+country_event = {
+	id = kor_factionalism.11
+	title = "kor_factionalism.11.t"
+	desc = "kor_factionalism.11.d"
+	picture = IMPERIAL_SEAL_eventPicture
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	trigger = {
+		tag = KOR
+		has_dlc = "Res Publica"
+		has_reform = joseon_monarchy_2
+		has_estate = estate_church
+		has_ruler_flag = Kor_prev_ruler_second_son
+	}
+
+	immediate = {
+		clr_ruler_flag = Kor_prev_ruler_second_son
+	}
+
+	# Stick to the West logic.
+	option = {
+		name = "kor_factionalism.11.a"
+		change_statists_vs_orangists = -0.1
+		add_estate_loyalty = {
+			estate = estate_church
+			loyalty = 5
+		}
+		ai_chance = {
+			factor = 1
+		}
+	}
+
+	# I thought the West respected my father.
+	option = {
+		name = "kor_factionalism.11.b"
+		change_statists_vs_orangists = 0.35
+		add_prestige = 10
+		ai_chance = {
+			factor = 1
+		}
+	}
+}
+
+# Factional pretender rebels
+country_event = {
+	id = kor_factionalism.12
+	title = "kor_factionalism.12.t"
+	desc = "kor_factionalism.12.d"
+	picture = CIVIL_WAR_eventPicture
+
+	trigger = {
+		has_dlc = "Res Publica"
+		has_reform = joseon_monarchy_2
+		OR = {
+			statists_vs_orangists = 0.6
+			NOT = { statists_vs_orangists = -0.6 }
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 180
+	}
+
+	# Crush them!
+	option = {
+		name = "kor_factionalism.12.a"
+		if = {
+			limit = {
+				statists_vs_orangists = 0.6
+			}
+			change_statists_vs_orangists = 0.2
+		}
+		else = {
+			change_statists_vs_orangists = -0.2
+		}
+		capital_scope = {
+			spawn_rebels = {
+				type = pretender_rebels
+				leader_dynasty = "Yi"
+				size = 10
+			}
+		}
+	}
+}
+
+# No longer favored
+country_event = {
+	id = kor_factionalism.13
+	title = "kor_factionalism.13.t"
+	desc = "kor_factionalism.13.d"
+	picture = KOR_FIRE_ADVISOR_eventPicture
+
+	trigger = {
+		has_dlc = "Res Publica"
+		has_reform = joseon_monarchy_2
+		has_estate = estate_nobles
+		has_estate = estate_church
+		has_heir = yes
+		NOT = { has_heir_flag = kor_heir_accepted }
+	}
+
+	mean_time_to_happen = {
+		months = 360
+	}
+
+	# I don't want to see em anymore
+	option = {
+		name = "kor_factionalism.13.a"
+		if = {
+			limit = {
+				has_heir_flag = kor_biased_east
+			}
+			change_statists_vs_orangists = -0.25
+		}
+		else_if = {
+			limit = {
+				has_heir_flag = kor_biased_west
+			}
+			change_statists_vs_orangists = 0.25
+		}
+		add_estate_loyalty = {
+			estate = estate_church
+			loyalty = -10
+		}
+		add_estate_loyalty = {
+			estate = estate_nobles
+			loyalty = -10
+		}
+		if = {
+			limit = { can_heir_be_child_of_consort = yes }
+			set_country_flag = kor_heir_second_son
+		}
+		remove_heir = yes
+		if = {
+			limit = { heir_claim = 80 }
+			add_prestige = -10
+		}
+		else_if = {
+			limit = { heir_claim = 50 }
+			add_prestige = -5
+		}
+		ai_chance = {
+			factor = 8
+			modifier = {
+				factor = 0
+				ruler_age = 50
+			}
+			modifier = {
+				factor = 0.5
+				heir_claim = 50
+			}
+			modifier = {
+				factor = 0.5
+				heir_claim = 80
+			}
+			modifier = {
+				factor = 0.5
+				has_consort = yes
+			}
+		}
+	}
+
+	# Family is family
+	option = {
+		name = "kor_factionalism.13.b"
+
+		set_heir_flag = kor_heir_accepted
+		if = {
+			limit = {
+				has_heir_flag = kor_biased_east
+			}
+			change_statists_vs_orangists = 0.1
+		}
+		else_if = {
+			limit = {
+				has_heir_flag = kor_biased_west
+			}
+			change_statists_vs_orangists = -0.1
+		}
+		ai_chance = {
+			factor = 12
+		}
+	}
+}
+
+# A new heir to the throne?
+country_event = {
+	id = kor_factionalism.14
+	title = "kor_factionalism.14.t"
+	desc = "kor_factionalism.14.d"
+	picture = IMPERIAL_SEAL_eventPicture
+
+	trigger = {
+		has_dlc = "Res Publica"
+		has_reform = joseon_monarchy_2
+		has_estate = estate_nobles
+		has_estate = estate_church
+		has_heir = yes
+		has_consort = yes
+		can_heir_be_child_of_consort = no
+		NOT = { 
+			OR = {
+				AND = {
+					has_heir_flag = kor_biased_east
+					has_consort_flag = kor_biased_east
+				}
+				AND = {
+					has_heir_flag = kor_biased_west
+					has_consort_flag = kor_biased_west
+				}
+			}
+		}
+		NOT = { has_heir_flag = kor_heir_accepted }
+	}
+
+	mean_time_to_happen = {
+		months = 90
+	}
+
+	# The heir will keep his place
+	option = {
+		name = "kor_factionalism.14.a"
+		add_heir_claim = -20
+		if = {
+			limit = {
+				has_heir_flag = kor_biased_east
+			}
+			change_statists_vs_orangists = 0.1
+		}
+		else_if = {
+			limit = {
+				has_heir_flag = kor_biased_west
+			}
+			change_statists_vs_orangists = -0.1
+		}
+		ai_chance = {
+			factor = 1
+		}
+	}
+
+	# New heir.
+	option = {
+		name = "kor_factionalism.14.b"
+
+		if = {
+			limit = {
+				has_heir_flag = kor_biased_east
+			}
+			change_statists_vs_orangists = -0.25
+		}
+		else_if = {
+			limit = {
+				has_heir_flag = kor_biased_west
+			}
+			change_statists_vs_orangists = 0.25
+		}
+		remove_heir = yes
+		define_heir = {
+			male = yes
+			age = 0
+			dynasty = ROOT
+			claim = 100
+		}
+		if = {
+			limit = {
+				has_consort_flag = kor_biased_east
+			}
+			set_heir_flag = kor_biased_east
+		}
+		else_if = {
+			limit = {
+				has_consort_flag = kor_biased_west
+			}
+			set_heir_flag = kor_biased_west
+		}
+		ai_chance = {
+			factor = 1
+		}
+	}
+}
+
+# Hwanguk
+country_event = {
+	id = kor_factionalism.15
+	title = "kor_factionalism.15.t"
+	desc = "kor_factionalism.15.d"
+	picture = KOR_FIRE_ADVISOR_eventPicture
+
+	trigger = {
+		has_dlc = "Res Publica"
+		has_reform = joseon_monarchy_2
+		has_estate = estate_nobles
+		ruler_age = 30
+		OR = {
+			statists_vs_orangists = 0.6
+			NOT = { statists_vs_orangists = -0.6 }
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 360
+	}
+
+	# The tides are turning
+	option = {
+		name = "kor_factionalism.15.a"
+		if = {
+			limit = {
+				statists_vs_orangists = 0.6
+			}
+			change_statists_vs_orangists = -1.3
+		}
+		else = {
+			change_statists_vs_orangists = 1.3
+		}
+		add_stability = -1
+		ai_chance = {
+			factor = 2
+		}
+	}
+
+	# Maintain the current situation.
+	option = {
+		name = "kor_factionalism.15.b"
+		if = {
+			limit = {
+				statists_vs_orangists = 0.6
+			}
+			change_statists_vs_orangists = 0.1
+		}
+		else = {
+			change_statists_vs_orangists = -0.1
+		}
+
+		ai_chance = {
+			factor = 1
+		}
+	}
+}
+
+# Report Against Treachery
+country_event = {
+	id = kor_factionalism.16
+	title = "kor_factionalism.16.t"
+	desc = "kor_factionalism.16.d"
+	picture = KOR_REPORT_eventPicture
+
+	trigger = {
+		has_dlc = "Res Publica"
+		has_reform = joseon_monarchy_2
+		has_estate = estate_nobles
+		OR = {
+			statists_vs_orangists = 0.6
+			NOT = { statists_vs_orangists = -0.6 }
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 240
+	}
+
+	# Arrest Everybody!
+	option = {
+		name = "kor_factionalism.16.b"
+		if = {
+			limit = {
+				statists_vs_orangists = 0.6
+			}
+			change_statists_vs_orangists = 0.15
+		}
+		else = {
+			change_statists_vs_orangists = -0.15
+		}
+		ai_chance = {
+			factor = 2
+		}
+	}
+
+	# No need to escalate the conflict.
+	option = {
+		name = "kor_factionalism.16.a"
+		if = {
+			limit = {
+				statists_vs_orangists = 0.6
+			}
+			change_statists_vs_orangists = 0.05
+		}
+		else = {
+			change_statists_vs_orangists = -0.05
+		}
+		random = {
+			chance = 33
+			country_event = { id = kor_factionalism.12 days = 30 }
+		}
+		ai_chance = {
+			factor = 1
+		}
+	}
+}
+
+# Advisor opposed by rival faction
+country_event = {
+	id = kor_factionalism.17
+	title = "kor_factionalism.17.t"
+	desc = "kor_factionalism.17.d"
+	picture = KOR_ACCUSATION_eventPicture
+
+	trigger = {
+		has_dlc = "Res Publica"
+		has_reform = joseon_monarchy_2
+		employed_advisor = {
+			category = ADM
+			religion = confucian
+		}
+		OR = {
+			has_country_flag = kor_adm_biased_west
+			has_country_flag = kor_adm_biased_east
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 360
+	}
+
+	# Don't fire him
+	option = {
+		name = "kor_factionalism.17.a"
+		if = {
+			limit = {
+				has_country_flag = kor_adm_biased_west
+			}
+			change_statists_vs_orangists = -0.05
+		}
+		else = {
+			change_statists_vs_orangists = 0.05
+		}
+		ai_chance = {
+			factor = 2
+		}
+	}
+
+	# Fire him
+	option = {
+		name = "kor_factionalism.17.b"
+		if = {
+			limit = {
+				has_country_flag = kor_adm_biased_west
+			}
+			change_statists_vs_orangists = 0.1
+		}
+		else = {
+			change_statists_vs_orangists = -0.1
+		}
+		remove_advisor_by_category = ADM
+		add_meritocracy = -5
+		ai_chance = {
+			factor = 1
+		}
+	}
+}
+
+# Government policies
+country_event = {
+	id = kor_factionalism.18
+	title = "kor_factionalism.18.t"
+	desc = "kor_factionalism.18.d"
+	picture = KOR_FACTIONS_eventPicture
+
+	trigger = {
+		has_dlc = "Res Publica"
+		has_reform = joseon_monarchy_2
+	}
+
+	mean_time_to_happen = {
+		months = 360
+	}
+
+	# Tax. East
+	option = {
+		name = "kor_factionalism.18.a"
+		change_statists_vs_orangists = 0.1
+		add_country_modifier = {
+			name = tax_reform
+			duration = 1095
+		}
+		ai_chance = {
+			factor = 1
+		}
+	}
+
+	# Manpower. West.
+	option = {
+		name = "kor_factionalism.18.b"
+		change_statists_vs_orangists = -0.1
+		add_country_modifier = {
+			name = kor_enlistment_reform
+			duration = 1095
+		}
+		ai_chance = {
+			factor = 1
+		}
+	}
+}
+
+# Factional Favoritism
+country_event = {
+	id = kor_factionalism.19
+	title = "kor_factionalism.19.t"
+	desc = "kor_factionalism.19.d"
+	picture = KOR_REPORT_eventPicture
+
+	trigger = {
+		has_dlc = "Res Publica"
+		has_reform = joseon_monarchy_2
+		has_estate = estate_nobles
+		OR = {
+			statists_vs_orangists = 0.65
+			NOT = { statists_vs_orangists = -0.65 }
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 360
+	}
+
+	# They're the party of virtues
+	option = {
+		name = "kor_factionalism.19.a"
+		if = {
+			limit = {
+				statists_vs_orangists = 0.6
+			}
+			change_statists_vs_orangists = 0.05
+		}
+		else = {
+			change_statists_vs_orangists = -0.05
+		}
+		add_estate_loyalty = {
+			estate = estate_nobles
+			loyalty = 10
+		}
+		add_prestige = 10
+		ai_chance = {
+			factor = 2
+		}
+	}
+
+	# Balance out the situation
+	option = {
+		name = "kor_factionalism.19.b"
+		if = {
+			limit = {
+				statists_vs_orangists = 0.6
+			}
+			change_statists_vs_orangists = -0.3
+			hidden_effect = {
+				if = {
+					limit = { has_ruler_flag = kor_biased_east }
+					clr_ruler_flag = kor_biased_east
+				}
+			}
+		}
+		else = {
+			change_statists_vs_orangists = 0.3
+			hidden_effect = {
+				if = {
+					limit = { has_ruler_flag = kor_biased_west }
+					clr_ruler_flag = kor_biased_west
+				}
+			}
+		}
+		add_stability = -1
+		add_estate_loyalty = {
+			estate = estate_nobles
+			loyalty = -10
+		}
+		ai_chance = {
+			factor = 1
+		}
+	}
+}
+
+# Heir Regency
+country_event = {
+	id = kor_factionalism.20
+	title = "kor_factionalism.20.t"
+	desc = "kor_factionalism.20.d"
+	picture = KING_SICK_IN_BED_eventPicture
+
+	trigger = {
+		has_dlc = "Res Publica"
+		has_reform = joseon_monarchy_2
+		has_heir = yes
+		heir_age = 15
+		ruler_age = 60
+		NOT = { has_heir_flag = kor_heir_regent }
+	}
+
+	mean_time_to_happen = {
+		months = 360
+	}
+
+	# Declare heir regency.
+	option = {
+		name = "kor_factionalism.20.a"
+		add_heir_claim = 10
+		set_heir_flag = kor_heir_regent
+		if = {
+			limit = {
+				has_heir_flag = kor_biased_east
+			}
+			change_statists_vs_orangists = 0.1
+		}
+		else_if = {
+			limit = {
+				has_heir_flag = kor_biased_west
+			}
+			change_statists_vs_orangists = -0.1
+		}
+		ai_chance = {
+			factor = 1
+		}
+	}
+
+	# The king does not need help in ruling joseon
+	option = {
+		name = "kor_factionalism.20.b"
+
+		change_adm = -1
+
+		ai_chance = {
+			factor = 1
+		}
+	}
+}
+
+# Banjeong Contributors
+country_event = {
+	id = kor_factionalism.21
+	title = "kor_factionalism.21.t"
+	desc = "kor_factionalism.21.d"
+	picture = NOBLE_ESTATE_DEMANDS_eventPicture
+
+	trigger = {
+		has_dlc = "Res Publica"
+		has_reform = joseon_monarchy_2
+		has_ruler_flag = kor_usurper
+		has_estate = estate_nobles
+	}
+
+	immediate = {
+		clr_ruler_flag = kor_usurper
+	}
+
+	mean_time_to_happen = {
+		days = 900
+	}
+
+	# Who do they think they are?
+	option = {
+		name = "kor_factionalism.21.a"
+
+		if = {
+			limit = {
+				has_ruler_flag = kor_biased_east
+			}
+			change_statists_vs_orangists = -0.1
+			hidden_effect = { clr_ruler_flag = kor_biased_east }
+		}
+		else_if = {
+			limit = {
+				has_ruler_flag = kor_biased_west
+			}
+			change_statists_vs_orangists = 0.1
+			hidden_effect = { clr_ruler_flag = kor_biased_west }
+		}
+		add_estate_loyalty = {
+			estate = estate_nobles
+			loyalty = -10
+		}
+		add_stability = -1
+		
+		ai_chance = {
+			factor = 1
+		}
+	}
+
+	# grant them privileges.
+	option = {
+		name = "kor_factionalism.21.b"
+
+		give_estate_land_share_medium = { estate = estate_nobles }
+		add_estate_loyalty = {
+			estate = estate_nobles
+			loyalty = 10
+		}
+		ai_chance = {
+			factor = 2
+		}
+	}
+}
+
+# A brilliant reformer
+country_event = {
+	id = kor_factionalism.23
+	title = "kor_factionalism.23.t"
+	desc = {
+		trigger = {
+			is_statists_in_power = yes		
+		}
+		desc = "kor_factionalism.23.d1"
+	}
+	desc = {
+		trigger = {
+			is_orangists_in_power = yes	
+		}
+		desc = "kor_factionalism.23.d2"
+	}
+	picture = SCHOLAR_eventPicture
+
+	trigger = {
+		has_dlc = "Res Publica"
+		has_reform = joseon_monarchy_2
+		has_estate = estate_nobles
+		has_estate = estate_church
+		OR = {
+			statists_vs_orangists = 0.33
+			NOT = { statists_vs_orangists = -0.33 }
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 360
+	}
+
+	# promote him
+	option = {
+		name = "kor_factionalism.23.a"
+		if = {
+			is_orangists_in_power = yes
+			change_statists_vs_orangists = -0.1
+		}
+		else = {
+			change_statists_vs_orangists = 0.1
+		}
+		define_advisor = {
+			type = natural_scientist
+			religion = confucianism
+			skill = 2
+			discount = yes
+		}
+		add_meritocracy = 5
+		add_estate_loyalty = {
+			estate = estate_nobles
+			loyalty = -10
+		}
+		add_estate_loyalty = {
+			estate = estate_church
+			loyalty = -10
+		}
+		ai_chance = {
+			factor = 3
+		}
+	}
+
+	# No special treatments
+	option = {
+		name = "kor_factionalism.23.b"
+		ai_chance = {
+			factor = 1
+		}
+	}
+}
+
+# Promoting an advisor
+country_event = {
+	id = kor_factionalism.24
+	title = "kor_factionalism.24.t"
+	desc = {
+		trigger = {
+			is_statists_in_power = yes		
+		}
+		desc = "kor_factionalism.24.d1"
+	}
+	desc = {
+		trigger = {
+			is_orangists_in_power = yes	
+		}
+		desc = "kor_factionalism.24.d2"
+	}
+	picture = MERITOCRACY_eventPicture
+
+	trigger = {
+		has_dlc = "Res Publica"
+		has_reform = joseon_monarchy_2
+		employed_advisor = {
+			category = ADM
+			religion = confucian
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 360
+	}
+
+	# promote him
+	option = {
+		name = "kor_factionalism.24.a"
+		if = {
+			is_orangists_in_power = yes
+			change_statists_vs_orangists = 0.1
+		}
+		else = {
+			change_statists_vs_orangists = -0.1
+		}
+		add_adm_power = 50
+		add_meritocracy = 5
+		ai_chance = {
+			factor = 3
+		}
+	}
+
+	# let's be careful
+	option = {
+		name = "kor_factionalism.24.b"
+		add_adm_power = 10
+		ai_chance = {
+			factor = 1
+		}
+	}
+}
+
+# The grand exams of Joseon
+country_event = {
+	id = kor_factionalism.25
+	title = "kor_factionalism.25.t"
+	desc = "kor_factionalism.25.d"
+
+	picture = IMPERIAL_EXAMINATION_eventPicture
+
+	immediate = {
+		hidden_effect = {
+			random_list = {
+				15 = { set_country_flag = kor_west_exams_artist }
+				15 = { set_country_flag = kor_west_exams_philosopher }
+				15 = { set_country_flag = kor_west_exams_theologian }
+				10 = { set_country_flag = kor_west_exams_inquisitor }
+				15 = { set_country_flag = kor_west_exams_treasurer }
+				15 = { set_country_flag = kor_west_exams_statesman }
+				15 = { set_country_flag = kor_west_exams_diplomat }
+			}
+			random_list = {
+				15 = { set_country_flag = kor_east_exams_artist }
+				15 = { set_country_flag = kor_east_exams_philosopher }
+				15 = { set_country_flag = kor_east_exams_theologian }
+				10 = { set_country_flag = kor_east_exams_inquisitor }
+				15 = { set_country_flag = kor_east_exams_treasurer }
+				15 = { set_country_flag = kor_east_exams_statesman }
+				15 = { set_country_flag = kor_east_exams_diplomat }
+			}
+			random_list = {
+				30 = { set_country_flag = kor_exams_natural_scientist }
+				15 = { set_country_flag = kor_exams_army_reformer }
+				20 = { set_country_flag = kor_exams_fortification_expert }
+				25 = { set_country_flag = kor_exams_trader }
+				10 = { set_country_flag = kor_exams_grand_captain }
+			}
+		}
+	}
+
+	trigger = {
+		has_dlc = "Res Publica"
+		has_reform = joseon_monarchy_2
+		has_estate = estate_nobles
+	}
+
+	mean_time_to_happen = {
+		months = 180
+	}
+
+	# Western candidate
+	option = {
+		name = "kor_factionalism.25.Wa"
+		change_statists_vs_orangists = -0.1
+		trigger_switch = {
+			on_trigger = has_country_flag
+			kor_west_exams_artist = {
+				define_advisor = { 
+					type = artist
+					religion = confucian
+					skill = 2
+				}
+			}
+			kor_west_exams_philosopher = {
+				define_advisor = { 
+					type = philosopher
+					religion = confucian
+					skill = 2
+				}
+			}
+			kor_west_exams_theologian = {
+				define_advisor = { 
+					type = theologian
+					religion = confucian
+					skill = 2
+				}
+			}
+			kor_west_exams_inquisitor = {
+				define_advisor = { 
+					type = inquisitor
+					religion = confucian
+					skill = 2
+				}
+			}
+			kor_west_exams_treasurer = {
+				define_advisor = { 
+					type = treasurer
+					religion = confucian
+					skill = 2
+				}
+			}
+			kor_west_exams_statesman = {
+				name = "kor_factionalism.25.Wb"
+				define_advisor = { 
+					type = statesman
+					religion = confucian
+					skill = 2
+				}
+			}
+			kor_west_exams_diplomat = {
+				define_advisor = { 
+					type = diplomat
+					religion = confucian
+					skill = 2
+				}
+			}
+		}
+		korfaction_clr_advisor_flags = yes
+		ai_chance = {
+			factor = 1
+		}
+	}
+
+	# Eastern candidate
+	option = {
+		name = "kor_factionalism.25.Ea"
+		change_statists_vs_orangists = 0.1
+		trigger_switch = {
+			on_trigger = has_country_flag
+			kor_east_exams_artist = {
+				define_advisor = { 
+					type = artist
+					religion = confucian
+					skill = 2
+				}
+			}
+			kor_east_exams_philosopher = {
+				define_advisor = { 
+					type = philosopher
+					religion = confucian
+					skill = 2
+				}
+			}
+			kor_east_exams_theologian = {
+				define_advisor = { 
+					type = theologian
+					religion = confucian
+					skill = 2
+				}
+			}
+			kor_east_exams_inquisitor = {
+				define_advisor = { 
+					type = inquisitor
+					religion = confucian
+					skill = 2
+				}
+			}
+			kor_west_exams_treasurer = {
+				define_advisor = { 
+					type = treasurer
+					religion = confucian
+					skill = 2
+				}
+			}
+			kor_east_exams_statesman = {
+				define_advisor = { 
+					type = statesman
+					religion = confucian
+					skill = 2
+				}
+			}
+			kor_east_exams_diplomat = {
+				define_advisor = { 
+					type = diplomat
+					religion = confucian
+					skill = 2
+				}
+			}
+		}
+		korfaction_clr_advisor_flags = yes
+		ai_chance = {
+			factor = 1
+		}
+	}
+
+	# Who is this unknown gentleman?
+	option = {
+		add_meritocracy = 5
+		name = "kor_factionalism.25.O"
+		trigger_switch = {
+			on_trigger = has_country_flag
+			kor_exams_natural_scientist = {
+				define_advisor = { 
+					type = natural_scientist
+					religion = confucian
+					skill = 2
+				}
+			}
+			kor_exams_army_reformer = {
+				define_advisor = { 
+					type = army_reformer
+					religion = confucian
+					skill = 2
+				}
+			}
+			kor_exams_fortification_expert = {
+				define_advisor = { 
+					type = fortification_expert
+					religion = confucian
+					skill = 2
+				}
+			}
+			kor_exams_trader = {
+				define_advisor = { 
+					type = trader
+					religion = confucian
+					skill = 2
+				}
+			}
+			kor_exams_grand_captain = {
+				define_advisor = { 
+					type = grand_captain
+					religion = confucian
+					skill = 2
+				}
+			}
+		}
+		
+		add_estate_loyalty = {
+			estate = estate_nobles
+			loyalty = -10
+		}
+
+		korfaction_clr_advisor_flags = yes
+		ai_chance = {
+			factor = 1
+		}
+	}
+}
+
+# The Munmyo enshrinement of Yi I and Seong Hon
+country_event = {
+	id = kor_factionalism.26
+	title = "kor_factionalism.26.t"
+	desc = "kor_factionalism.26.d"
+	picture = KOR_FACTIONS_eventPicture
+
+	trigger = {
+		has_dlc = "Res Publica"
+		has_reform = joseon_monarchy_2
+		has_estate = estate_nobles
+		is_statists_in_power = yes
+		NOT = { has_country_flag = kor_munmyo_west }
+		NOT = { has_country_flag = kor_munmyo_east }
+	}
+
+	mean_time_to_happen = {
+		months = 180
+	}
+
+	# Enshrinement
+	option = {
+		name = "kor_factionalism.26.a"
+		change_statists_vs_orangists = -0.1
+		add_estate_loyalty = {
+			estate = estate_nobles
+			loyalty = 5
+		}
+		add_estate_loyalty = {
+			estate = estate_church
+			loyalty = 10
+		}
+		set_country_flag = kor_munmyo_west
+		ai_chance = {
+			factor = 2
+		}
+	}
+
+	# The East won't like this.
+	option = {
+		name = "kor_factionalism.26.b"
+		change_statists_vs_orangists = 0.1
+		add_estate_loyalty = {
+			estate = estate_nobles
+			loyalty = -10
+		}
+		add_estate_loyalty = {
+			estate = estate_church
+			loyalty = -5
+		}
+		ai_chance = {
+			factor = 1
+		}
+	}
+}
+
+# Remove Yi I and Seong Hon from the Munmyo
+country_event = {
+	id = kor_factionalism.27
+	title = "kor_factionalism.27.t"
+	desc = "kor_factionalism.27.d"
+	picture = KOR_FACTIONS_eventPicture
+
+	trigger = {
+		has_dlc = "Res Publica"
+		has_reform = joseon_monarchy_2
+		has_estate = estate_nobles
+		statists_vs_orangists = 0.3
+		has_country_flag = kor_munmyo_west
+	}
+
+	mean_time_to_happen = {
+		months = 180
+	}
+
+	# Remove them.
+	option = {
+		name = "kor_factionalism.27.a"
+		change_statists_vs_orangists = 0.15
+		add_estate_loyalty = {
+			estate = estate_nobles
+			loyalty = 5
+		}
+		add_estate_loyalty = {
+			estate = estate_church
+			loyalty = 10
+		}
+		set_country_flag = kor_munmyo_east
+		clr_country_flag = kor_munmyo_west
+		ai_chance = {
+			factor = 2
+		}
+	}
+
+	# The West won't like this.
+	option = {
+		name = "kor_factionalism.27.b"
+		change_statists_vs_orangists = -0.1
+		add_estate_loyalty = {
+			estate = estate_nobles
+			loyalty = -10
+		}
+		add_estate_loyalty = {
+			estate = estate_church
+			loyalty = -5
+		}
+		ai_chance = {
+			factor = 1
+		}
+	}
+}
+
+# Restore Yi I and Seong Hon to the Munmyo
+country_event = {
+	id = kor_factionalism.28
+	title = "kor_factionalism.28.t"
+	desc = "kor_factionalism.28.d"
+	picture = KOR_FACTIONS_eventPicture
+
+	trigger = {
+		has_dlc = "Res Publica"
+		has_reform = joseon_monarchy_2
+		has_estate = estate_nobles
+		statists_vs_orangists = -0.3
+		has_country_flag = kor_munmyo_east
+	}
+
+	mean_time_to_happen = {
+		months = 180
+	}
+
+	# Restore them.
+	option = {
+		name = "kor_factionalism.28.a"
+		change_statists_vs_orangists = -0.15
+		add_estate_loyalty = {
+			estate = estate_nobles
+			loyalty = 5
+		}
+		add_estate_loyalty = {
+			estate = estate_church
+			loyalty = 10
+		}
+		set_country_flag = kor_munmyo_west
+		clr_country_flag = kor_munmyo_east
+		ai_chance = {
+			factor = 2
+		}
+	}
+
+	# I don't want to start it all over again.
+	option = {
+		name = "kor_factionalism.28.b"
+		change_statists_vs_orangists = 0.1
+		add_estate_loyalty = {
+			estate = estate_nobles
+			loyalty = -10
+		}
+		add_estate_loyalty = {
+			estate = estate_church
+			loyalty = -10
+		}
+		ai_chance = {
+			factor = 1
+		}
+	}
+}
+
+# The Queen's favored faction
+country_event = {
+	id = kor_factionalism.29
+	title = "kor_factionalism.29.t"
+	desc = {
+		trigger = {
+			has_consort_flag = kor_biased_west
+		}
+		desc = "kor_factionalism.29.d1"
+	}
+	desc = {
+		trigger = {
+			has_consort_flag = kor_biased_east
+		}
+		desc = "kor_factionalism.29.d2"
+	}
+	picture = QUEEN_AT_COUNCIL_TABLE_eventPicture
+
+	trigger = {
+		has_dlc = "Res Publica"
+		has_reform = joseon_monarchy_2
+		is_female = no
+		has_consort = yes
+		has_consort_regency = no
+		OR = {
+			has_consort_flag = kor_biased_east
+			has_consort_flag = kor_biased_west
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 360
+	}
+
+	# Anything for our queen.
+	option = {
+		name = "kor_factionalism.29.a"
+		if = {
+			limit = {
+				has_consort_flag = kor_biased_west
+			}
+			change_statists_vs_orangists = -0.10
+		}
+		else = {
+			change_statists_vs_orangists = 0.10
+		}
+		ai_chance = {
+			factor = 3
+		}
+	}
+
+	# No special favors.
+	option = {
+		name = "kor_factionalism.29.b"
+		capital_scope = {
+			area = {
+				add_province_modifier = {
+					name = angered_nobles
+					duration = 1825
+				}
+			}
+		}
+		ai_chance = {
+			factor = 1
+		}
+	}
+}
+
+# Education for the heir
+country_event = {
+	id = kor_factionalism.30
+	title = "kor_factionalism.30.t"
+	desc = "kor_factionalism.30.d"
+	picture = QUEEN_AND_MALE_HEIR_eventPicture
+
+	trigger = {
+		has_dlc = "Res Publica"
+		has_reform = joseon_monarchy_2
+		has_heir = yes
+		heir_age = 8
+		NOT = { heir_age = 25 }
+		NOT = { heir_adm = 6 }
+		NOT = { has_heir_flag = kor_biased_east }
+		NOT = { has_heir_flag = kor_biased_west }
+	}
+
+	mean_time_to_happen = {
+		months = 240
+	}
+
+	immediate = {
+		hidden_effect = {
+			random_list = {
+				50 = { set_country_flag = kor_western_education }
+				50 = { set_country_flag = kor_eastern_education }
+			}
+		}
+	}
+	# Leave him be.
+	option = {
+		name = "kor_factionalism.30.a"
+		hidden_effect = {
+			if = {
+				limit = {
+					has_country_flag = kor_western_education
+				}
+				set_heir_flag = kor_biased_west
+				clr_country_flag = kor_western_education
+			}
+			else = {
+				set_heir_flag = kor_biased_east
+				clr_country_flag = kor_eastern_education
+			}
+			ai_chance = {
+				factor = 3
+			}
+		}
+		change_heir_adm = 1
+	}
+
+	# He should be doing something else.
+	option = {
+		name = "kor_factionalism.30.b"
+		
+		ai_chance = {
+			factor = 1
+		}
+	}
+}
+
+# The king's ambitions
+country_event = {
+	id = kor_factionalism.31
+	title = "kor_factionalism.31.t"
+	desc = {
+		trigger = {
+			has_consort_flag = kor_biased_east
+		}
+		desc = "kor_factionalism.31.d1"
+	}
+	desc = {
+		trigger = {
+			has_consort_flag = kor_biased_west
+		}
+		desc = "kor_factionalism.31.d2"
+	}
+	picture = KOR_FIRE_ADVISOR_eventPicture
+
+	trigger = {
+		has_dlc = "Res Publica"
+		has_reform = joseon_monarchy_2
+		ruler_age = 30
+		OR = {
+			AND = {
+				statists_vs_orangists = 0.5
+				has_ruler_flag = kor_biased_west
+			}
+			AND = {
+				has_ruler_flag = kor_biased_east
+				NOT = { statists_vs_orangists = -0.5 }
+			}
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 360
+	}
+
+	# The time for Hwanguk has come!
+	option = {
+		name = "kor_factionalism.31.a"
+		if = {
+			limit = {
+				statists_vs_orangists = 0.5
+			}
+			change_statists_vs_orangists = -1
+		}
+		else = {
+			change_statists_vs_orangists = 1
+		}
+		add_stability = -1
+		add_prestige = 10
+		ai_chance = {
+			factor = 2
+		}
+	}
+
+	# Maintain the current situation.
+	option = {
+		name = "kor_factionalism.31.b"
+		if = {
+			limit = {
+				statists_vs_orangists = 0.5
+			}
+			change_statists_vs_orangists = 0.15
+			clr_ruler_flag = kor_biased_west
+		}
+		else = {
+			change_statists_vs_orangists = -0.15
+			clr_ruler_flag = kor_biased_east
+		}
+
+		ai_chance = {
+			factor = 1
+		}
+	}
+}
+
+# The party rejects king's policies
+country_event = {
+	id = kor_factionalism.32
+	title = "kor_factionalism.32.t"
+	desc = {
+		trigger = {
+			has_consort_flag = kor_biased_east
+		}
+		desc = "kor_factionalism.32.d1"
+	}
+	desc = {
+		trigger = {
+			has_consort_flag = kor_biased_west
+		}
+		desc = "kor_factionalism.32.d2"
+	}
+	picture = KOR_ACCUSATION_eventPicture
+
+	trigger = {
+		has_dlc = "Res Publica"
+		has_reform = joseon_monarchy_2
+		has_estate = estate_nobles
+		has_estate = estate_church
+		OR = {
+			AND = {
+				statists_vs_orangists = 0.5
+				has_ruler_flag = kor_biased_west
+			}
+			AND = {
+				has_ruler_flag = kor_biased_east
+				NOT = { statists_vs_orangists = -0.5 }
+			}
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 180
+	}
+
+	# Just give up the policy.
+	option = {
+		name = "kor_factionalism.32.a"
+		if = {
+			limit = {
+				statists_vs_orangists = 0.5
+			}
+			change_statists_vs_orangists = 0.1
+		}
+		else = {
+			change_statists_vs_orangists = -0.1
+		}
+		add_country_modifier = {
+			name = tax_income_loss
+			duration = 1825
+		}
+		ai_chance = {
+			factor = 3
+		}
+	}
+
+	# A mere faction cannot stop me!
+	option = {
+		name = "kor_factionalism.32.b"
+		if = {
+			limit = {
+				statists_vs_orangists = 0.5
+			}
+			change_statists_vs_orangists = -0.15
+		}
+		else = {
+			change_statists_vs_orangists = 0.15
+		}
+		add_estate_loyalty = {
+			estate = estate_nobles
+			loyalty = -15
+		}
+		add_estate_loyalty = {
+			estate = estate_church
+			loyalty = -10
+		}
+
+		ai_chance = {
+			factor = 1
+		}
+	}
+}
+
+# Balancing the Factions
+country_event = {
+	id = kor_factionalism.33
+	title = "kor_factionalism.33.t"
+	desc = "kor_factionalism.33.d"
+	picture = KOR_FACTIONS_eventPicture
+
+	trigger = {
+		has_dlc = "Res Publica"
+		has_reform = joseon_monarchy_2
+		OR = {
+			statists_vs_orangists = 0.6
+			NOT = { statists_vs_orangists = -0.6 }
+		}
+		has_estate = estate_church
+		has_estate = estate_nobles
+	}
+
+	mean_time_to_happen = {
+		months = 240
+	}
+
+	# Promote the young of the weaker side.
+	option = {
+		name = "kor_factionalism.33.a"
+		if = {
+			limit = {
+				statists_vs_orangists = 0.5
+			}
+			change_statists_vs_orangists = -0.15
+		}
+		else = {
+			change_statists_vs_orangists = 0.15
+		}
+		give_estate_land_share_massive = { estate = estate_church }
+		ai_chance = {
+			factor = 2
+		}
+	}
+
+	# Maintain the current situation.
+	option = {
+		name = "kor_factionalism.33.b"
+		
+		add_estate_loyalty = {
+			estate = estate_nobles
+			loyalty = 5
+		}
+		ai_chance = {
+			factor = 1
+		}
+	}
+}
+
+# Talent or Legitimacy
+country_event = {
+	id = kor_factionalism.34
+	title = "kor_factionalism.34.t"
+	desc = "kor_factionalism.34.d"
+	picture = QUEEN_AND_MALE_HEIR_eventPicture
+
+	trigger = {
+		has_dlc = "Res Publica"
+		has_estate = estate_nobles
+		has_reform = joseon_monarchy_2
+		has_consort = yes
+		is_female = no
+		has_consort_regency = no
+		has_heir = no
+		ruler_age = 40
+		ruler_consort_marriage_length = 8
+		OR = {
+			has_consort_flag = kor_biased_west
+			has_consort_flag = kor_biased_east
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 180
+	}
+
+	# We must think of the country's future.
+	option = {
+		name = "kor_factionalism.34.a"
+		
+		define_heir = {
+			male = yes
+			dynasty = ROOT
+			age = 15
+			adm = 2
+			dip = 1
+			mil = 1
+			claim = 50
+			no_consort_with_heir = yes
+		}
+		if = {
+			limit = {
+				has_consort_flag = kor_biased_west
+			}
+			change_statists_vs_orangists = 0.1
+		}
+		else = {
+			change_statists_vs_orangists = -0.1
+		}
+		add_estate_loyalty = {
+			estate = estate_nobles
+			loyalty = -10
+		}
+		capital_scope = {
+			area = {
+				add_province_modifier = {
+					name = angered_nobles
+					duration = 1825
+				}
+			}
+		}
+
+		ai_chance = {
+			factor = 3
+			modifier = {
+				factor = 0
+				NOT = { estate_loyalty = { estate = estate_noble loyalty = 35 } }
+			}
+		}
+	}
+
+	# Legitimacy is important.
+	option = {
+		name = "kor_factionalism.34.b"
+		if = {
+			limit = {
+				has_consort_flag = kor_biased_west
+			}
+			change_statists_vs_orangists = -0.1
+		}
+		else = {
+			change_statists_vs_orangists = 0.1
+		}
+		ai_chance = {
+			factor = 1
+		}
+	}
+}

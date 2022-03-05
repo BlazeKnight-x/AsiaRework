@@ -1,0 +1,9 @@
+sound = {
+	name = start_convert_muism
+	file = "start_conversion_pagan_shamanism.wav"
+}
+
+sound = {
+	name = religion_muism
+	file = "tab_religion_eastern.wav"
+}

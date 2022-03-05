@@ -1,0 +1,135 @@
+#################################################
+# Events for Confucianism mechanics
+#
+# written by BlazeKnight
+#
+#################################################
+
+namespace = asiarework_confucianism_events
+
+# Attempt to Pass a Reform #
+
+# religious_tolerance_aspect --
+country_event = {
+	id = asiarework_confucianism_events.3
+	title = "asiarework_confucianism_pass_reform_event_title"
+	desc = "asiarework_confucianism_pass_reform_event_negative_desc"
+	picture = GOOD_WITH_MONARCH_eventPicture #Temp
+	is_triggered_only = yes
+
+	# Pass the Reform! #
+	option = {
+		name = "asiarework_confucianism_pass_reform_event_a"
+		add_country_modifier = {
+			name = "religious_tolerance_aspect_modifier"
+			duration = -1
+		}
+		confucian_reform_estates_super_mad = yes
+	}
+	
+	# Never mind. #
+	option = {
+		name = "asiarework_confucianism_pass_reform_event_b"
+		add_church_power = 200
+	}
+}
+
+# reformed_imperial_examinations_aspect --
+country_event = {
+	id = asiarework_confucianism_events.5
+	title = "asiarework_confucianism_pass_reform_event_title"
+	desc = "asiarework_confucianism_pass_reform_event_negative_desc"
+	picture = GOOD_WITH_MONARCH_eventPicture #Temp
+	is_triggered_only = yes
+
+	# Pass the Reform! #
+	option = {
+		name = "asiarework_confucianism_pass_reform_event_a"
+		add_country_modifier = {
+			name = "imperial_examinations_aspect_modifier"
+			duration = -1
+		}
+		confucian_reform_estates_mad = yes
+	}
+	
+	# Never mind. #
+	option = {
+		name = "asiarework_confucianism_pass_reform_event_b"
+		add_church_power = 200
+	}
+}
+
+# denounce_hierarchy_aspect --
+country_event = {
+	id = asiarework_confucianism_events.7
+	title = "asiarework_confucianism_pass_reform_event_title"
+	desc = "asiarework_confucianism_pass_reform_event_negative_desc"
+	picture = GOOD_WITH_MONARCH_eventPicture #Temp
+	is_triggered_only = yes
+
+	# Pass the Reform! #
+	option = {
+		name = "asiarework_confucianism_pass_reform_event_a"
+		add_country_modifier = {
+			name = "denounce_hierarchy_aspect_modifier"
+			duration = -1
+		}
+		confucian_reform_estates_mad = yes
+	}
+	
+	# Never mind. #
+	option = {
+		name = "asiarework_confucianism_pass_reform_event_b"
+		add_church_power = 200
+	}
+}
+
+# globalism_aspect --
+country_event = {
+	id = asiarework_confucianism_events.9
+	title = "asiarework_confucianism_pass_reform_event_title"
+	desc = "asiarework_confucianism_pass_reform_event_negative_desc"
+	picture = GOOD_WITH_MONARCH_eventPicture #Temp
+	is_triggered_only = yes
+
+	# Pass the Reform! #
+	option = {
+		name = "asiarework_confucianism_pass_reform_event_a"
+		add_country_modifier = {
+			name = "globalism_aspect_modifier"
+			duration = -1
+		}
+		confucian_reform_estates_mad = yes
+	}
+	
+	# Never mind. #
+	option = {
+		name = "asiarework_confucianism_pass_reform_event_b"
+		add_church_power = 200
+	}
+}
+
+# military_reform_aspect --
+country_event = {
+	id = asiarework_confucianism_events.11
+	title = "asiarework_confucianism_pass_reform_event_title"
+	desc = "asiarework_confucianism_pass_reform_event_negative_desc"
+	picture = GOOD_WITH_MONARCH_eventPicture #Temp
+	is_triggered_only = yes
+
+	# Pass the Reform! #
+	option = {
+		name = "asiarework_confucianism_pass_reform_event_a"
+		add_country_modifier = {
+			name = "military_reform_aspect_modifier"
+			duration = -1
+		}
+		confucian_reform_estates_mad = yes
+	}
+	
+	# Never mind. #
+	option = {
+		name = "asiarework_confucianism_pass_reform_event_b"
+		add_church_power = 200
+	}
+}

@@ -1,0 +1,35 @@
+#################################################
+# Events for Automatic updates
+#
+# written by BlazeKnight
+#
+#################################################
+
+namespace = asiarework_update
+
+#On Peace Deal - Automatic Tributary promotion
+country_event = {
+	id = asiarework_update.1
+	
+	is_triggered_only = yes
+	hidden = yes
+	
+	trigger = {
+		government_rank = 3
+		has_subject_of_type = minor_tributary_state
+	}
+	
+	immediate = {
+		every_subject_country = {
+			limit = {
+				is_subject_of_type = minor_tributary_state
+			}
+			root = {
+				create_subject = {
+					subject_type = confucian_tributary_state
+					subject = this
+				}
+			}
+		}
+	}
+}

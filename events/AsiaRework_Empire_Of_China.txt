@@ -1,0 +1,916 @@
+#################################################
+# Events for Empire of China mechanics
+#
+# written by BlazeKnight
+#
+#################################################
+
+namespace = asiarework_mandate
+
+#Become the Emperor of China - (automatic) [New Dynasty United China]
+country_event = {
+	id = asiarework_mandate.1
+	title = "asiarework_mandate.1_title"
+	desc = "asiarework_mandate.1_desc"
+	picture = GOOD_WITH_MONARCH_eventPicture #Its an Imperial Crown.
+	
+	is_triggered_only = yes
+	major = yes
+	
+	trigger = {
+		has_reform = chinese_warring_state
+		owns = 1816 #Beijing
+		owns = 1821 #Nanjing
+		owns = 700 #Xi'an
+		owns = 1836 #Luoyang
+	}
+	
+	immediate = {
+		hidden_effect = {
+			dismantle_empire_of_china = no
+			clr_global_flag = empire_of_china_dismantled
+			clr_country_flag = chinese_warring_state_flag
+			set_emperor_of_china = ROOT
+		}
+	}
+	
+	option = {
+		name = "asiarework_mandate.1_option_1"
+		add_prestige = 100
+		if = {
+			limit = {
+				technology_group = nomad_group
+			}
+			change_technology_group = chinese
+			change_unit_type = chinese
+		}
+		if = {
+			limit = {
+				NOT = { religion = confucianism }
+			}
+			change_religion = confucianism
+			add_country_modifier = {
+				name = "religious_tolerance_aspect_modifier"
+				duration = -1
+			}
+		}
+		if = {
+			limit = { primary_culture = manchu }
+		}
+		1816 = { add_core = root }
+		1821 = { add_core = root }
+		700 = { add_core = root }
+		1836 = { add_core = root }
+		country_event = { id = china_events.43 }
+	}
+}
+
+# Automatic Loss of the EOC after losing too much land.
+country_event = {
+	id = asiarework_mandate.2
+	title = "asiarework_mandate.2_title"
+	desc = "asiarework_mandate.2_desc"
+	picture = GOOD_WITH_MONARCH_eventPicture #Its an Imperial Crown.
+	
+	is_triggered_only = yes
+	major = yes
+	
+	trigger = {
+		is_emperor_of_china = yes
+		OR = {
+			NOT = { #Does not own any of the 4 ancient capitals of China.
+				owns = 1816 #Beijing
+				owns = 1821 #Nanjing
+				owns = 700 #Xi'an
+				owns = 1836 #Luoyang
+			}
+		}
+		
+		NOT = { #Has less than 30 Mandate
+			imperial_mandate = 30
+		}
+	}
+	
+	immediate = {
+		hidden_effect = {
+			dismantle_empire_of_china = yes
+			set_global_flag = empire_of_china_dismantled
+			set_country_flag = chinese_warring_state_flag
+			remove_government_reform = celestial_empire
+			add_reform = chinese_warring_state
+			set_government_rank = 2
+			add_stability = -6
+			china_superregion = {
+				limit = {
+					is_permanent_claim = ROOT
+				}
+				remove_claim = ROOT
+			}
+			china_superregion = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				remove_core = ROOT
+			}
+			if = {
+				limit = {
+					has_country_modifier = new_mandate_holder
+				}
+				remove_country_modifier = new_mandate_holder
+			}
+		}
+	}
+	
+	option = {
+		name = "asiarework_mandate.2_option_1"
+		add_prestige = -100
+		add_country_modifier = {
+			name = lost_mandate_of_heaven
+			duration = 9125	# 25 years
+		}
+		restore_country_name = yes
+	}
+}
+
+# During Mandate Questioned Disaster, random major Chinese state breaks away.
+country_event = {
+	id = asiarework_mandate.3
+	title = "asiarework_mandate.3_title"
+	desc = "asiarework_mandate.3_desc"
+	picture = ANGRY_MOB_eventPicture
+	
+	is_triggered_only = yes
+	major = yes
+	
+	trigger = {
+	}
+	
+	immediate = {
+		hidden_effect = {
+			#Spawns Shun
+			if = {
+				limit = { NOT = {
+					tag = CSH
+					capital_scope = {
+						OR = {
+							area = henan_area
+							area = north_henan_area
+							area = gansu_area
+							area = west_gansu_area
+							area = shaanxi_area
+							area = south_shaanxi_area
+							area = huguang_area
+							area = west_hubei_area
+						}
+						NOT = {
+							province_id = 681 #Yichang
+							province_id = 6036 #Enshi
+						}
+					}
+				} }
+				every_owned_province = {
+					limit = {
+						OR = {
+							area = henan_area
+							area = north_henan_area
+							area = gansu_area
+							area = west_gansu_area
+							area = shaanxi_area
+							area = south_shaanxi_area
+							area = huguang_area
+							area = west_hubei_area
+						}
+						NOT = {
+							province_id = 681 #Yichang
+							province_id = 6036 #Enshi
+						}
+					}
+					add_core = CSH
+					clear_rebels = yes
+					cede_province = CSH
+				}
+				CSH = {
+					capital_scope = {
+						build_to_forcelimit = {
+							infantry = 0.6
+							cavalry = 0.3
+							artillery = 0.1
+						}
+					}
+					change_government = monarchy
+					add_government_reform = chinese_warring_state
+					adopt_reform_progress = ROOT
+					if = {
+						limit = {
+							700 = { owned_by = CSH } #Xian
+						}
+						set_capital = 700
+					}
+					else_if = {
+						limit = {
+							1836 = { owned_by = CSH } #Luoyang
+						}
+						set_capital = 1836
+					}
+				}
+			}
+			#Spawns Xi
+			if = {
+				limit = { NOT = {
+					tag = CXI
+					capital_scope = {
+						OR = {
+							area = sichuan_area
+							area = east_sichuan_area
+							area = chuannan_area
+							area = chuanbei_area
+							province_id = 681 #Yichang
+							province_id = 6036 #Enshi
+						}
+						NOT = {
+							province_id = 2748 #Jianchang
+						}
+					}
+				} }
+				every_owned_province = {
+					limit = {
+						OR = {
+							area = sichuan_area
+							area = east_sichuan_area
+							area = chuannan_area
+							area = chuanbei_area
+							province_id = 681 #Yichang
+							province_id = 6036 #Enshi
+						}
+						NOT = {
+							province_id = 2748 #Jianchang
+						}
+					}
+					add_core = CXI
+					clear_rebels = yes
+					cede_province = CXI
+				}
+				CXI = {
+					capital_scope = {
+						build_to_forcelimit = {
+							infantry = 0.6
+							cavalry = 0.3
+							artillery = 0.1
+						}
+					}
+					change_government = monarchy
+					add_government_reform = chinese_warring_state
+					adopt_reform_progress = ROOT
+					if = {
+						limit = {
+							679 = { owned_by = CXI } #Chengdu
+						}
+						set_capital = 679
+					}
+					else_if = {
+						limit = {
+							680 = { owned_by = CXI } #Chongqing
+						}
+						set_capital = 680
+					}
+				}
+			}
+			#Spawns Yue
+			if = {
+				limit = { NOT = {
+					tag = YUE
+					capital_scope = {
+						OR = {
+							area = canton_area
+							area = hainan_area
+							area = guangdong_area
+							area = west_guangdong_area
+							area = guangxi_area
+							area = east_guangxi_area
+							area = south_guangxi_area
+						}
+					}
+				} }
+				every_owned_province = {
+					limit = {
+						OR = {
+							area = canton_area
+							area = hainan_area
+							area = guangdong_area
+							area = west_guangdong_area
+							area = guangxi_area
+							area = east_guangxi_area
+							area = south_guangxi_area
+						}
+					}
+					add_core = YUE
+					clear_rebels = yes
+					cede_province = YUE
+				}
+				YUE = {
+					capital_scope = {
+						build_to_forcelimit = {
+							infantry = 0.6
+							cavalry = 0.3
+							artillery = 0.1
+						}
+					}
+					change_government = monarchy
+					add_government_reform = chinese_warring_state
+					adopt_reform_progress = ROOT
+					if = {
+						limit = {
+							667 = { owned_by = YUE } #Canton
+						}
+						set_capital = 667
+					}
+				}
+			}
+			#Spawns Dali
+			if = {
+				limit = { NOT = {
+					tag = CDL
+					capital_scope = {
+						OR = {
+							area = yun_gui_borderland_area
+							area = yun_gui_area
+							area = south_yunnan_area
+							province_id = 2748
+						}
+					}
+				} }
+				every_owned_province = {
+					limit = {
+						OR = {
+							area = yun_gui_borderland_area
+							area = yun_gui_area
+							area = south_yunnan_area
+							province_id = 2748
+						}
+					}
+					add_core = CDL
+					clear_rebels = yes
+					cede_province = CDL
+				}
+				CDL = {
+					capital_scope = {
+						build_to_forcelimit = {
+							infantry = 0.6
+							cavalry = 0.3
+							artillery = 0.1
+						}
+					}
+					change_government = monarchy
+					add_government_reform = chinese_warring_state
+					adopt_reform_progress = ROOT
+					if = {
+						limit = {
+							661 = { owned_by = CDL } #Dali
+						}
+						set_capital = 661
+					}
+					else_if = {
+						limit = {
+							662 = { owned_by = CDL } #Yunnan
+						}
+						set_capital = 662
+					}
+				}
+			}
+			#Spawns Yan
+			if = {
+				limit = { NOT = {
+					tag = YAN
+					capital_scope = {
+						OR = {
+							area = hebei_area
+							area = south_hebei_area
+							area = liaoning_area
+							area = liaoxi_area
+							area = shanxi_area
+							area = south_shanxi_area
+						}
+					}
+				} }
+				every_owned_province = {
+					limit = {
+						OR = {
+							area = hebei_area
+							area = south_hebei_area
+							area = liaoning_area
+							area = liaoxi_area
+							area = shanxi_area
+							area = south_shanxi_area
+						}
+					}
+					add_core = YAN
+					clear_rebels = yes
+					cede_province = YAN
+				}
+				YAN = {
+					capital_scope = {
+						build_to_forcelimit = {
+							infantry = 0.6
+							cavalry = 0.3
+							artillery = 0.1
+						}
+					}
+					change_government = monarchy
+					add_government_reform = chinese_warring_state
+					adopt_reform_progress = ROOT
+					if = {
+						limit = {
+							1816 = { owned_by = YAN } #Beijing
+						}
+						set_capital = 1816
+					}
+					else_if = {
+						limit = {
+							6017 = { owned_by = YAN } #Tianjin
+						}
+						set_capital = 6017
+					}
+				}
+			}
+			#Spawns Qi
+			if = {
+				limit = { NOT = {
+					tag = QIC
+					capital_scope = {
+						OR = {
+							area = shandong_area
+							area = west_shandong_area
+						}
+					}
+				} }
+				every_owned_province = {
+					limit = {
+						OR = {
+							area = shandong_area
+							area = west_shandong_area
+						}
+					}
+					add_core = QIC
+					clear_rebels = yes
+					cede_province = QIC
+				}
+				QIC = {
+					capital_scope = {
+						build_to_forcelimit = {
+							infantry = 0.6
+							cavalry = 0.3
+							artillery = 0.1
+						}
+					}
+					change_government = monarchy
+					add_government_reform = chinese_warring_state
+					adopt_reform_progress = ROOT
+					if = {
+						limit = {
+							691 = { owned_by = QIC } #Jinan
+						}
+						set_capital = 691
+					}
+				}
+			}
+			#Spawns Wu
+			if = {
+				limit = { NOT = {
+					tag = WUU
+					capital_scope = {
+						OR = {
+							area = zhejiang_area
+							area = south_zhejiang_area
+						}
+					}
+				} }
+				every_owned_province = {
+					limit = {
+						OR = {
+							area = zhejiang_area
+							area = south_zhejiang_area
+						}
+					}
+					add_core = WUU
+					clear_rebels = yes
+					cede_province = WUU
+				}
+				WUU = {
+					capital_scope = {
+						build_to_forcelimit = {
+							infantry = 0.6
+							cavalry = 0.3
+							artillery = 0.1
+						}
+					}
+					change_government = monarchy
+					add_government_reform = chinese_warring_state
+					adopt_reform_progress = ROOT
+					if = {
+						limit = {
+							684 = { owned_by = WUU } #Hangzhou
+						}
+						set_capital = 684
+					}
+				}
+			}
+			#Spawns Min
+			if = {
+				limit = { NOT = {
+					tag = MIN
+					capital_scope = {
+						OR = {
+							area = fujian_area
+							area = south_fujian_area
+							area = taiwan_area
+						}
+					}
+				} }
+				every_owned_province = {
+					limit = {
+						OR = {
+							area = fujian_area
+							area = south_fujian_area
+							area = taiwan_area
+						}
+						is_city = yes
+					}
+					add_core = MIN
+					clear_rebels = yes
+					cede_province = MIN
+				}
+				MIN = {
+					capital_scope = {
+						build_to_forcelimit = {
+							infantry = 0.6
+							cavalry = 0.3
+							artillery = 0.1
+						}
+					}
+					change_government = monarchy
+					add_government_reform = chinese_warring_state
+					adopt_reform_progress = ROOT
+					if = {
+						limit = {
+							1829 = { owned_by = MIN } #Quanzhou
+						}
+						set_capital = 1829
+					}
+				}
+			}
+			#Spawns Ming
+			if = {
+				limit = { NOT = {
+					tag = MNG
+					capital_scope = {
+						OR = {
+							area = jiangsu_area
+							area = south_jiangsu_area
+							area = anhui_area
+							area = south_anhui_area
+						}
+					}
+				} }
+				every_owned_province = {
+					limit = {
+						OR = {
+							area = jiangsu_area
+							area = south_jiangsu_area
+							area = anhui_area
+							area = south_anhui_area
+						}
+					}
+					add_core = MNG
+					clear_rebels = yes
+					cede_province = MNG
+				}
+				MNG = {
+					capital_scope = {
+						build_to_forcelimit = {
+							infantry = 0.6
+							cavalry = 0.3
+							artillery = 0.1
+						}
+					}
+					change_government = monarchy
+					add_government_reform = chinese_warring_state
+					adopt_reform_progress = ROOT
+					if = {
+						limit = {
+							1821 = { owned_by = MNG } #Nanjing
+						}
+						set_capital = 1821
+					}
+				}
+			}
+			#Spawns Miao
+			if = {
+				limit = { NOT = {
+					tag = CMI
+					capital_scope = {
+						OR = {
+							area = guizhou_area
+							area = south_guizhou_area
+						}
+					}
+				} }
+				every_owned_province = {
+					limit = {
+						OR = {
+							area = guizhou_area
+							area = south_guizhou_area
+						}
+					}
+					add_core = CMI
+					clear_rebels = yes
+					cede_province = CMI
+				}
+				CMI = {
+					capital_scope = {
+						build_to_forcelimit = {
+							infantry = 0.6
+							cavalry = 0.3
+							artillery = 0.1
+						}
+					}
+					change_government = monarchy
+					add_government_reform = chinese_warring_state
+					adopt_reform_progress = ROOT
+					if = {
+						limit = {
+							674 = { owned_by = CMI } #Guigang
+						}
+						set_capital = 674
+					}
+				}
+			}
+			#Spawns Chu
+			if = {
+				limit = { NOT = {
+					tag = CHC
+					capital_scope = {
+						OR = {
+							area = hunan_area
+							area = south_hunan_area
+						}
+					}
+				} }
+				every_owned_province = {
+					limit = {
+						OR = {
+							area = hunan_area
+							area = south_hunan_area
+						}
+					}
+					add_core = CHC
+					clear_rebels = yes
+					cede_province = CHC
+				}
+				CHC = {
+					capital_scope = {
+						build_to_forcelimit = {
+							infantry = 0.6
+							cavalry = 0.3
+							artillery = 0.1
+						}
+					}
+					change_government = monarchy
+					add_government_reform = chinese_warring_state
+					adopt_reform_progress = ROOT
+					if = {
+						limit = {
+							671 = { owned_by = CHC } #Changsha
+						}
+						set_capital = 671
+					}
+				}
+			}
+			#Spawns Ning
+			if = {
+				limit = { NOT = {
+					tag = NNG
+					capital_scope = {
+						OR = {
+							area = jiangxi_area
+							area = south_jiangxi_area
+						}
+					}
+				} }
+				every_owned_province = {
+					limit = {
+						OR = {
+							area = jiangxi_area
+							area = south_jiangxi_area
+						}
+					}
+					add_core = NNG
+					clear_rebels = yes
+					cede_province = NNG
+				}
+				NNG = {
+					capital_scope = {
+						build_to_forcelimit = {
+							infantry = 0.6
+							cavalry = 0.3
+							artillery = 0.1
+						}
+					}
+					change_government = monarchy
+					add_government_reform = chinese_warring_state
+					adopt_reform_progress = ROOT
+					if = {
+						limit = {
+							683 = { owned_by = NNG } #Nancheng
+						}
+						set_capital = 683
+					}
+				}
+			}
+		}
+	}
+	
+	#We must stomp this rebellion!
+	option = {
+		name = "asiarework_mandate.3_o"
+		custom_tooltip = asiarework_mandate.3_tt
+		if = {
+			limit = {
+				NOT = { tag = CSH }
+				exists = CSH
+			}
+			root = {
+				declare_war_with_cb = {
+					who = CSH
+					casus_belli = cb_chinese_civil_war
+				}
+			}
+		}
+		if = {
+			limit = {
+				NOT = { tag = YUE }
+				exists = YUE
+			}
+			root = {
+				declare_war_with_cb = {
+					who = YUE
+					casus_belli = cb_chinese_civil_war
+				}
+			}
+		}
+		if = {
+			limit = {
+				NOT = { tag = CXI }
+				exists = CXI
+			}
+			root = {
+				declare_war_with_cb = {
+					who = CXI
+					casus_belli = cb_chinese_civil_war
+				}
+			}
+		}
+		if = {
+			limit = {
+				NOT = { tag = CDL }
+				exists = CDL
+			}
+			root = {
+				declare_war_with_cb = {
+					who = CDL
+					casus_belli = cb_chinese_civil_war
+				}
+			}
+		}
+		if = {
+			limit = {
+				NOT = { tag = YAN }
+				exists = YAN
+			}
+			root = {
+				declare_war_with_cb = {
+					who = YAN
+					casus_belli = cb_chinese_civil_war
+				}
+			}
+		}
+		if = {
+			limit = {
+				NOT = { tag = WUU }
+				exists = WUU
+			}
+			root = {
+				declare_war_with_cb = {
+					who = WUU
+					casus_belli = cb_chinese_civil_war
+				}
+			}
+		}
+		if = {
+			limit = {
+				NOT = { tag = MIN }
+				exists = MIN
+			}
+			root = {
+				declare_war_with_cb = {
+					who = MIN
+					casus_belli = cb_chinese_civil_war
+				}
+			}
+		}
+		if = {
+			limit = {
+				NOT = { tag = MNG }
+				exists = MNG
+			}
+			root = {
+				declare_war_with_cb = {
+					who = MNG
+					casus_belli = cb_chinese_civil_war
+				}
+			}
+		}
+	}
+}
+
+### HIDDEN ###
+# On peace deal, Automatic removal of invalid subject types (Tributaries)
+country_event = {
+	id = asiarework_mandate.4
+	#title = "asiarework_mandate.4_title"
+	#desc = "asiarework_mandate.4_desc"
+	#picture = GOOD_WITH_MONARCH_eventPicture
+	hidden = yes
+	is_triggered_only = yes
+	
+	trigger = {
+		#Confucian Tributary is not valid overlord
+		NOT = {
+			can_be_overlord = tributary_state
+			can_be_overlord = confucian_tributary_state
+		}
+		calc_true_if = {
+			all_subject_country = {
+				OR = {
+					is_subject_of_type = tributary_state
+					is_subject_of_type = confucian_tributary_state
+				}
+			}
+			amount = 1
+		}
+	}
+	
+	immediate = {
+		hidden_effect = {
+			all_subject_country = {
+				limit = { OR = {
+					is_subject_of_type = tributary_state
+					is_subject_of_type = confucian_tributary_state
+				} }
+				grant_independence = yes
+			}
+		}
+	}
+	
+	option = {
+		name = "asiarework_mandate.4_o"
+	}
+}
+
+# On new EoC, Military Commisions abandon relationship and choose relations with new Emperor
+country_event = {
+	id = asiarework_mandate.6
+	title = "asiarework_mandate.6_title"
+	desc = "asiarework_mandate.6_desc"
+	picture = GOOD_WITH_MONARCH_eventPicture
+	is_triggered_only = yes
+	
+	trigger = {
+		is_subject_of_type = military_commission
+		overlord = {
+			is_emperor_of_china = yes
+		}
+	}
+	
+	immediate = {
+		grant_independence = yes
+	}
+	
+	option = {
+		name = "asiarework_mandate.6_o1"
+		event_target:EmperorOfChina = {
+			create_subject = {
+				subject_type = military_commission
+				subject = root
+			}
+		}
+	}
+	
+	option = {
+		name = "asiarework_mandate.6_o2"
+		add_trust = {
+			who = event_target:EmperorOfChina
+			value = -5
+			mutual = yes
+		}
+	}
+}

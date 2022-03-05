@@ -1,0 +1,66 @@
+#################################################
+# Events for Manchuria
+#
+# written by BlazeKnight
+#
+#################################################
+
+namespace = asiarework_manchu
+
+#Auto unite Manchus under the Later Jin Dynasty (Manchu)
+country_event = {
+	id = asiarework_manchu.1
+	title = "asiarework_manchu.1_title"
+	desc = "asiarework_manchu.1_desc"
+	picture = GOOD_WITH_MONARCH_eventPicture #Its an Imperial Crown.
+	
+	fire_only_once = yes
+	major = yes
+	
+	trigger = {
+		always = no
+		OR = {
+			tag = MJZ
+			tag = MCH
+		}
+		ai = yes
+		is_year = 1600
+		NOT = { is_year = 1700 }
+	}
+	
+	mean_time_to_happen = {
+		months = 192 #16 years from 1600
+	}
+	
+	option = {
+		name = "asiarework_manchu.1_option_1"
+		manchuria_region = {
+			type = all
+			add_core = ROOT
+		}
+		if = {
+			limit = {
+				MHX = {
+					ai = yes
+				}
+			}
+			inherit = MHX
+		}
+		if = {
+			limit = {
+				EJZ = {
+					ai = yes
+				}
+			}
+			inherit = MHX
+		}
+		if = {
+			limit = {
+				NHX = {
+					ai = yes
+				}
+			}
+			inherit = MHX
+		}
+	}
+}

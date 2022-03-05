@@ -1,0 +1,211 @@
+﻿l_english:
+ CANNOT_DEV_TAX_IN_TRIBUTARY: "You cannot §YImprove Base Tax§! in a province unless it is owned by you or one of your subjects."
+ CANNOT_DEV_PRODUCTION_IN_TRIBUTARY: "You cannot §YImprove Base Production§! in a province unless it is owned by you or one of your subjects."
+ CANNOT_DEV_MANPOWER_IN_TRIBUTARY: "You cannot §YImprove Base Manpower§! in a province unless it is owned by you or one of your subjects."
+ 
+ #######################################################################
+ ###### Confucian Tributary State ######
+ #######################################################################
+ #subject_type
+ confucian_tributary_state:0 "Tributary State"
+ confucian_tributary_state_title:0 "Tributary"
+ confucian_tributary_state_title_plural:0 "Tributaries"
+ confucian_tributary_state_is_our:0 "§Y$NAME$§! is our Tributary State."
+ confucian_tributary_state_long_desc:0 "A Tributary State exchanges tribute with the senior partner in adherence to the Confucian hierarchy. The smaller partner supposedly acknowledges the senior partner's superiority and gives tribute to show respect."
+ 
+  #######################################################################
+ ###### Minor Tributary States ######
+ #######################################################################
+ 
+ minor_tributary_state: "Tributary State"
+ minor_tributary_state_title: "Tributary"
+ minor_tributary_state_title_plural: "Tributaries"
+ minor_tributary_state_is_our: "§Y$NAME$§! is our Tributary State."
+ minor_tributary_state_long_desc: "A Tributary State exchanges tribute with the senior partner in adherence to the Confucian hierarchy. The smaller partner supposedly acknowledges the senior partner's superiority and gives tribute to show respect."
+ 
+ #######################################################################
+ ###### Normal Tributary States ######
+ #######################################################################
+
+ tributary_state:0 "Tributary State"
+ tributary_state_title:0 "Tributary State"
+ tributary_state_title_plural:0 "Tributary States"
+ tributary_state_is_our:0 "§Y$NAME$§! is our Tributary State."
+ tributary_state_long_desc:1 "A Tributary State must pay an annual Tribute to their Overlord in exchange for protection from independent nations' wars.  Tributary States do not follow their Overlord into war and are free to conduct their own diplomacy."
+ 
+ chinese_tributary_state_bonus:0 "Is a Tributary State"
+ tributary_state_payed_tribute: "Tribute from Overlord"
+ desc_tributary_state_payed_tribute: "Our tributary relationship with our overlord brings our nation new opportunities for trade. Our Overlord's gifts also let us develop further."
+ 
+ tributary_state_overlord_lost_mandate: "Overlord Lost the Mandate of Heaven"
+ desc_tributary_state_overlord_lost_mandate: ""
+ 
+ #New Diplo Actions
+ NEW_DIPLO_BASE_VALUE:0 "Base Value"
+ NEW_DIPLO_IS_EOC:0 "Is the Empire of China"
+ NEW_DIPLO_LOST_EOC: "Lost the Mandate of Heaven"
+ NEW_DIPLO_STATES_DEV_COMPARE:0 "Proposer's development in states compared to reciever"
+ NEW_DIPLO_OPINION:0 "Target nation's opinion about proposer"
+ NEW_DIPLO_ATTITUDE_FRIENDLY:0 "Friendly attitude towards proposer"
+ NEW_DIPLO_ATTITUDE_THREATENED:0 "Threatened attitude towards proposer"
+ NEW_DIPLO_ATTITUDE_NEUTRAL:0 "Neutral attitude towards proposer"
+ NEW_DIPLO_ATTITUDE_RIVALRY:0 "Rivalry attitude towards proposer"
+ NEW_DIPLO_ATTITUDE_HOSTILE:0 "Hostile attitude towards proposer"
+ NEW_DIPLO_ATTITUDE_OUTRAGED:0 "Outraged attitude towards proposer"
+ NEW_DIPLO_TOOLOWDEV:0 "Tributary would be too small for overlord to care"
+ NEW_DIPLO_DEV_OF_PROPOSER: "Development of Proposer"
+ NEW_DIPLO_DEV_OF_RECIEVER: "Development of Reciever"
+ NEW_DIPLO_THEY_KINGDOM: "They are a Kingdom"
+ NEW_DIPLO_THEY_EMPIRE: "They are an Empire"
+ NEW_DIPLO_HORDE: "They are a horde"
+ NEW_DIPLO_SHOGUNATE: "They are the Shogun and view themselves as an Empire"
+ NEWDIPLO_DEV_COMPARE: "Proposer's development compared to target nation's"
+ NEWDIPLO_DIPLO_REP: "Proposer's Diplomatic Reputation"
+ NEW_DIPLO_TRUST_BELOW_30: "Trust is below 30"
+ NEWDIPLO_border_distance: "Distance between borders"
+ NEWDIPLO_trust: "Trust"
+ NEWDIPLO_proposer_economic_base_compared_to_target_nation: "Proposer economic base compared to target nation"
+ NEWDIPLO_force_limit_compare: "Proposer's Land Force Limit compared to target's"
+ NEWDIPLO_max_manpower_compare: "Proposer's Max Manpower compared to target's"
+ NEWDIPLO_they_have_subjects: "They have subjects of their own"
+ NEWDIPLO_ruler_military_compare: "Difference in Ruler Military Skill"
+ 
+ # FORCE TRIBUTARY PO
+ po_become_confucian_tributary_desc: "[From.GetName] becomes a Tributary of [Root.GetName]."
+ CB_ALLOWED_po_become_confucian_tributary: "Forcing Tributary"
+ PEACE_po_become_confucian_tributary: "Force Tributary"
+ 
+ # OVERLORD Actions
+ offer_confucian_tributary_title:0 "Establish Tributary"
+ offer_confucian_tributary_tooltip:0 "Suggest that they become a Tributary State under us."
+ offer_confucian_tributary_desc:0 "Do you wish to ask §Y[From.GetName]§! to become your §YTributary State§!?\nAs their Overlord you will be able to ask for a yearly tribute from them in the form of ¤, £adm£, £dip£, £mil£ or £icon_manpower£.\nIn return, they will expect us to provide tribute towards them as well when requested."
+ offer_confucian_tributary_alert_tooltip:0 "§Y[$FROMCOUNTRY$§! offers us to become their Tributary State."
+ offer_confucian_tributary_dialog:0 "§Y[From.GetName]§! wants us to become their §YTributary State§!. If we accept, we will enter a regular tributary status and send them a yearly tribute in the form of ¤, £adm£, £dip£, £mil£ or £icon_manpower£.\nWe will still be able to have independent diplomatic relations with other countries."
+ 
+ break_confucian_tributary_overlord_title:0 "Cancel Tributary"
+ break_confucian_tributary_overlord_tooltip:0 "Cancel our Tributary State arrangement."
+ break_confucian_tributary_overlord_desc:0 "Do you wish to break our Tributary State arrangement with §Y[From.GetName]§!?\nThis will lower our relations with them."
+################################################################################
+ # SUBJECT Actions
+ request_to_be_confucian_tributary_title:0 "Become their Tributary"
+ request_to_be_confucian_tributary_tooltip:0 "Ask if you can become their Tributary State."
+ request_to_be_confucian_tributary_desc:0 "Do you wish to ask §Y[From.GetName]§! if you can become their §YTributary State§!?\nIf they accept, they can request that we send a yearly tribute in the form of ¤, £adm£, £dip£, £mil£ or £icon_manpower£.\nIn return, we can request lavish tributes from them."
+ request_to_be_confucian_tributary_alert_tooltip:0 "§Y$FROMCOUNTRY$§! wants to become our Tributary State."
+ request_to_be_confucian_tributary_dialog:0 "§Y$FROMCOUNTRY$§! wants to be our §YTributary State§!. If we accept, we can demand that they send us a yearly tribute in the form of ¤, £adm£, £dip£, £mil£ or £icon_manpower£.\nThey will still be able to have independent diplomatic relations with other countries."
+ 
+ break_confucian_tributary_subject_title:0 "Cancel Tributary Relation"
+ break_confucian_tributary_subject_tooltip:0 "Cancel our Tributary State arrangement."
+ break_confucian_tributary_subject_desc:0 "Do you wish to break our Tributary State arrangement with §Y[From.GetName]§!?\nThis will lower our relations with them."
+ 
+ ## Ask for Tribute #####################
+ confucian_tributary_state_request_tribute_from_overlord_title:0 "Request Tribute"
+ confucian_tributary_state_request_tribute_from_overlord_tooltip:0 "Request a tribute from our overlord."
+ confucian_tributary_state_request_tribute_from_overlord_desc: "Would you like to send a request for tribute to our overlord? You will be able to ask for gifts that can give Ducats, Monarch Power, Manpower, or Prestige."
+ 
+ ## Tribute Exchange ####################
+ asiarework_tributary.1_title: "Ask For Tribute"
+ asiarework_tributary.1_desc: "We can choose what to request from our overlord."
+ asiarework_tributary.1_gold: "Request Ducats"
+ asiarework_tributary.1_art: "Request Artifacts"
+ asiarework_tributary.1_adm: "Request Administrative Aid"
+ asiarework_tributary.1_dip: "Request Diplomatic Aid"
+ asiarework_tributary.1_mil: "Request Military Aid"
+ asiarework_tributary.1_man: "Request Manpower"
+ 
+ asiarework_tributary.2_title: "$FROM$ Asks for Tribute!"
+ asiarework_tributary.2_desc: "Our tributary state $FROM$ has asked for a benevolent gift from us. Sending tribute will increase our Mandate by 3."
+ asiarework_tributary.1_gold: "Send Them Ducats"
+ 
+ asiarework_tributary.1_art: "Send Them Artifacts"
+ asiarework_tributary.2_art_tt: "We will lose 10 prestige and they will gain 20 prestige."
+ 
+ asiarework_tributary.1_adm: "Send Them Administrative Aid"
+ 
+ asiarework_tributary.1_dip: "Send Them Diplomatic Aid"
+ 
+ asiarework_tributary.1_mil: "Send Them Military Aid"
+ 
+ asiarework_tributary.1_man: "Send Them Manpower"
+ 
+ 
+ asiarework_tributary.3_title: "Ask For Technological Aid"
+ asiarework_tributary.3_desc: "We will ask for unfinished"
+ 
+ #######################################################################
+ ###### Mongolian Tumen ######
+ #######################################################################
+ mongolian_tumen: "Tumen"
+ mongolian_tumen_title: "Tumen"
+ mongolian_tumen_title_plural: "Tumen"
+ mongolian_tumen_is_our: "§Y$NAME$§! is our Tumen."
+ mongolian_tumen_long_desc: "Mongolian Tumen have sworn their loyalty to a strong Khan."
+ 
+ offer_mongolian_tumen_title: "Offer Tumen"
+ offer_mongolian_tumen_tooltip: "Suggest that they become our Tumen."
+ offer_mongolian_tumen_allowed_tooltip: "§RTo create a tribal vassal, we must 1) Have a military alliance 2) They must have at least 190 opinion with you 3) You and the target must be at peace§!"
+ offer_mongolian_tumen_desc: "Do you wish to ask §Y[From.GetName]§! to become your §YTumen§!?"
+ offer_mongolian_tumen_alert_tooltip:0 "§Y$FROMCOUNTRY$§! offers us to become their Tumen."
+ offer_mongolian_tumen_dialog:0 "§Y[From.GetName]§! wants us to become their §YTumen§!."
+ 
+ break_mongolian_tumen_overlord_title: "Break Tumen"
+ break_mongolian_tumen_overlord_tooltip: "Cancel our Tumen arrangement."
+ break_mongolian_tumen_overlord_desc: "Do you wish to break our Military Commission arrangement with §Y[From.GetName]§!?"
+ 
+ request_to_be_mongolian_tumen_title: "Become their Tumen"
+ request_to_be_mongolian_tumen_tooltip:0 "Ask if you can become their Tumen."
+ request_to_be_mongolian_tumen_desc:0 "Do you wish to ask §Y[From.GetName]§! if you can become their §YTumen§!?"
+ request_to_be_mongolian_tumen_alert_tooltip:0 "§Y$FROMCOUNTRY$§! wants to become our Tumen."
+ request_to_be_mongolian_tumen_dialog:0 "§Y[From.GetName]§! wants to be our §YTumen§!."
+ 
+ #######################################################################
+ ###### Military Commissions ######
+ #######################################################################
+ 
+ military_commission: "Military Commission"
+ military_commission_title: "Military Commission"
+ military_commission_title_plural: "Military Commissions"
+ military_commission_is_our: "§Y$NAME$§! is our Military Commission."
+ military_commission_long_desc: "Military Commissions are special subjects avaliable to the Emperor of China. While nominally considered part of the Empire, the subject is in all real purposes independent and has its own diplomacy. Because the Emperor considers these subjects as an integral part of the Empire of China, they receive protection from any external attackers."
+ 
+ NEW_DIPLO_MILITARY_COMMISION_NOT_NEIGHBORS: "Not neighbors of you or your direct subjects"
+ 
+################################################################################
+ # OVERLORD Actions
+ offer_military_commission_title:0 "Establish Commission"
+ offer_military_commission_tooltip:0 "Suggest that they become a Military Commission under us."
+ offer_military_commission_desc:0 "Do you wish to ask §Y[From.GetName]§! to become your §YMilitary Commission§!?\nAs their Overlord you will be able to ask for a yearly tribute from them in the form of ¤, £adm£, £dip£, £mil£ or £icon_manpower£.\nIn return, they will expect us to provide protection from external threats."
+ offer_military_commission_alert_tooltip:0 "§Y$FROMCOUNTRY$§! offers us to become their Military Commission."
+ offer_military_commission_dialog:0 "§Y[From.GetName]§! wants us to become their §YMilitary Commission§!. If we accept, we will receive protection from external threats in exchange for a yearly tribute in the form of ¤, £adm£, £dip£, £mil£ or £icon_manpower£.\nWe will still be able to have independent diplomatic relations with other countries."
+ 
+ break_military_commission_overlord_title:0 "Cancel Commission"
+ break_military_commission_overlord_tooltip:0 "Cancel our Military Commission arrangement."
+ break_military_commission_overlord_desc:0 "Do you wish to break our Military Commission arrangement with §Y[From.GetName]§!?\nThis will lower our relations with them."
+################################################################################
+ # SUBJECT Actions
+ request_to_be_military_commission_title:0 "Become their Commission"
+ request_to_be_military_commission_tooltip:0 "Ask if you can become their Military Commission."
+ request_to_be_military_commission_desc:0 "Do you wish to ask §Y[From.GetName]§! if you can become their §YMilitary Commission§!?\nIf they accept, they can request that we send a yearly tribute in the form of ¤, £adm£, £dip£, £mil£ or £icon_manpower£.\nIn return, we can expect them to protect us from external threats."
+ request_to_be_military_commission_alert_tooltip:0 "§Y$FROMCOUNTRY$§! wants to become our Military Commission."
+ request_to_be_military_commission_dialog:0 "§Y[From.GetName]§! wants to be our §YMilitary Commission§!. If they accept, we can demand that they send us a yearly tribute in the form of ¤, £adm£, £dip£, £mil£ or £icon_manpower£.\nIn return, we will be expected to provide them protection from external threats."
+ 
+ break_military_commission_subject_title:0 "Cancel Commission"
+ break_military_commission_subject_tooltip:0 "Cancel our Military Commission arrangement."
+ break_military_commission_subject_desc:0 "Do you wish to break our Military Commission arrangement with §Y[From.GetName]§!?\nThis will lower our relations with them."
+ 
+ #######################################################################
+ ###### Japanese Daimyo Types ######
+ #######################################################################
+ daimyo_nation_modifier: "Daimyo Nation"
+ daimyo_nation_modifier_desc: "" #Unnecessary
+ 
+ daimyo_kanrei: "Kanrei"
+ daimyo_kanrei_title: "Kanrei"
+ daimyo_kanrei_title_plural: "Kanrei"
+ daimyo_kanrei_is_our: "§Y$NAME$§! is our Kanrei."
+ daimyo_kanrei_long_desc: "Kanreis are Daimyo that are politically favored by the Shogunate, which grants them special bonuses compared to other Daimyo."
+ 
+ daimyo_small: "Daimyo"
+ daimyo_small_title: "Daimyo"
+ daimyo_small_title_plural: "Daimyos"
+ daimyo_small_is_our: "§Y$NAME$§! is our Daimyo Vassal."
+ daimyo_small_long_desc: "A Daimyo subject must follow their overlord to war, cannot make certain diplomatic actions and will pay a fraction of his income to his overlord. Daimyo subjects can also fight each other."

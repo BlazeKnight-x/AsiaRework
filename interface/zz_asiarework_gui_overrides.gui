@@ -1,0 +1,299 @@
+guiTypes = {
+
+		############## CONFUCIANISM HARMONY ############## AsiaRework_1
+		windowType = {
+			name = "confucianism_specific_window"
+			backGround =""
+			position = { x=32 y=300 }	
+			size = { x=280 y=50 }
+			moveable = 0
+			dontRender = ""
+			horizontalBorder = ""
+			Orientation = "UPPER_LEFT"
+			
+			instantTextBoxType = {
+				name = "church_name"
+				position = { x = 72 y = -40 }
+				font = "vic_18"
+				borderSize = {x = 0 y = 0}
+				text = "Church of Nothingland"
+				maxWidth = 200
+				maxHeight = 25
+				Orientation = "UPPER_LEFT"
+				format = left
+			}
+			
+			instantTextBoxType = {
+				name = "church_power_label"
+				position = { x = 72 y = -19 }
+				font = "vic_18"
+				borderSize = {x = 0 y = 0}
+				maxWidth = 150
+				maxHeight = 25
+				Orientation = "UPPER_LEFT"
+				format = left
+			}
+			
+			guiButtonType = {
+				name = "view_aspects"
+				position = { x=10 y = -43}
+				quadTextureSprite ="GFX_confucian_aspects_icon"
+				Orientation = "LEFT"
+			}
+			
+			############### Vanilla Compatability #################
+			iconType =
+			{
+				name ="religion_overlay_confucianism_bg"
+				spriteType = "GFX_religion_overlay_big_bg"
+				position = { x= -9999 y = -9999 } #{ x= 26 y = 231 }
+			}
+
+			instantTextBoxType = {
+				name = "harmony_label"
+				position = { x= -9999 y = -9999 } #{ x = 40 y = 245 }
+				font = "vic_18"
+				borderSize = {x = 0 y = 0}
+				text = "CURRENT_HARMONY"
+				maxWidth = 230
+				maxHeight = 24
+				Orientation = "UPPER_LEFT"
+				format = centre
+			}
+
+			iconType =
+			{
+				name ="current_harmony_progress_bg"
+				spriteType = "GFX_piety_bar_bg"
+				position = { x= -9999 y = -9999 } #{ x= 62 y = 276 }
+			}
+			
+			iconType =
+			{
+				name ="current_harmony_progress_frame"
+				spriteType = "GFX_ideaView_progress_frame_long"
+				position = { x= -9999 y = -9999 } #{ x= 55 y = 273 }
+			}
+			
+			iconType =
+			{
+				name ="low_harmony"
+				spriteType = "GFX_low_harmony"
+				position = { x= -9999 y = -9999 } #{ x= 38 y = 265 }
+			}
+			
+			iconType =
+			{
+				name ="high_harmony"
+				spriteType = "GFX_high_harmony"
+				position = { x= -9999 y = -9999 } #{ x= 238 y = 265 }
+			}
+			
+			iconType =
+			{
+				name ="current_harmony"
+				spriteType = "GFX_war_overview_indicator"
+				position = { x= -9999 y = -9999 } #{ x= 130 y = 273 }
+			}
+			
+			instantTextBoxType = {
+				name = "current_harmony_value"
+				position = { x= -9999 y = -9999 } #{ x= 150 y = 279 }
+				font = "vic_18"
+				borderSize = {x = 0 y = 0}
+				text = "0"
+				maxWidth = 32
+				maxHeight = 24
+				Orientation = "UPPER_LEFT"
+				format = centre
+			}
+			
+			guiButtonType = {
+				name = "harmonizing_with_button"
+				position = { x= -9999 y = -9999 } #{ x = 275 y = 261 }
+				quadTextureSprite ="GFX_province_religion_button"
+				buttonFont = "vic_18"
+				Orientation = "LEFT"
+			}
+			
+			iconType = {
+				name ="harmonizing_with_icon"
+				spriteType = "GFX_icon_religion_small"
+				position = { x= -9999 y = -9999 } #{ x= 280 y = 265 }
+				allwaystransparent = yes
+			}
+			
+			iconType = {
+				name ="harmonization_progress"
+				spriteType = "GFX_treasure_fleet_progressbar2"
+				position = { x= -9999 y = -9999 } #{ x= 322 y = 291 }
+				rotation = 1.5708
+			}
+
+			iconType = {
+				name ="harmonization_progress_frame"
+				spriteType = "GFX_treasure_fleet_progress_frame2"
+				position = { x= -9999 y = -9999 } #{ x= 315 y = 263 }
+			}
+
+			listboxType = 
+			{
+				name ="harmonized_listbox"
+				position = { x= -9999 y = -9999 } #{ x = 35 y = 300 }
+				backGround=""
+				size = { x=340 y = 300 }
+				Orientation = "UPPER_LEFT"
+				horizontal = 1
+				spacing = 0
+				scrollbartype = "standardlistbox_slider"
+				borderSize = {x = 0 y = 0}
+			}
+			
+			windowType = {
+				name = "select_harmonize_religion_window"
+				backGround =""
+				position = { x= -9999 y = -9999 } #{ x=0 y=130 }
+				size = { x=280 y=150 }
+				moveable = 0
+				dontRender = ""
+				dontRender = ""
+				horizontalBorder = ""
+				Orientation = "UPPER_LEFT"
+
+				iconType = {
+					name ="harmonize_religion_window_bg"
+					spriteType = "GFX_country_religion_harmony_bg_standard"
+					position = { x= -9999 y = -9999 } #{ x= 13 y = 376 }
+				}
+				
+				listboxType = {
+					name = "religion_select_listbox"
+					backGround = ""
+					position = { x= -9999 y = -9999 } #{ x=7 y = 378 }
+					backGround=""
+					size = { x=516 y =154}
+					Orientation = "UPPER_LEFT"
+					horizontal = 0
+					spacing = 0
+					scrollbartype = "standardlistbox_slider"
+					borderSize = {x = 10 y = 10}
+				}
+				
+				guiButtonType = {
+					name = "back_button"
+					position = { x= -9999 y = -9999 } #{  x=240 y =535}
+					quadTextureSprite ="GFX_standard_button_71"	
+					tooltip = ""
+					tooltipText =""
+					delayedTooltipText = ""
+					buttonText = "BACK"
+					buttonFont = "vic_18"
+					clicksound = back_click
+				}			
+			}
+		}
+	
+	#Vestigal, does nothing unless in original file
+	windowType = { # Used when religion can't unlock aspects, only one-time fire them
+			name = "anglican_specific_window"
+			backGround =""
+			position = { x=32 y=300 }	
+			size = { x=280 y=50 }
+			moveable = 0
+			dontRender = ""
+			horizontalBorder = ""
+			Orientation = "UPPER_LEFT"
+			
+			instantTextBoxType = {
+				name = "church_name"
+				position = { x = 72 y = -40 }
+				font = "vic_18"
+				borderSize = {x = 0 y = 0}
+				text = "Church of Nothingland"
+				maxWidth = 200
+				maxHeight = 25
+				Orientation = "UPPER_LEFT"
+				format = left
+			}
+			
+		#	iconType =
+		#	{
+		#		name ="protestant_aspects_frame_bg"
+		#		spriteType = "GFX_country_religion_view_protestant_bg"
+		#		position = { x= 3 y = -44 }
+		#	}
+			
+			instantTextBoxType = {
+				name = "church_power_label"
+				position = { x = 72 y = -19 }
+				font = "vic_18"
+				borderSize = {x = 0 y = 0}
+				maxWidth = 150
+				maxHeight = 25
+				Orientation = "UPPER_LEFT"
+				format = left
+			}
+			
+			#AsiaRework: Change graphic of anglican aspects to the generic gear.
+			guiButtonType = {
+				name = "view_aspects"
+				position = { x=10 y = -43}
+				quadTextureSprite = "GFX_generic_anglican_aspect_icon" 
+				#"GFX_anglican_aspects_icon"
+				Orientation = "LEFT"
+			}
+		}
+	
+	################################################################################################
+	################# Church aspect item (for selection) For Confucianism AsiaRework_2
+	windowType = {
+		name = "countryreligionview_aspectitem_confucianism"
+		backGround =""
+		position = { x=10 y=-30 }	
+		size = { x=50 y=55 }
+		moveable = 0
+		dontRender = ""
+		horizontalBorder = ""
+		Orientation = "UPPER_LEFT"
+		
+		iconType =
+		{
+			name ="aspect_icon"
+			spriteType = "GFX_hindu_deities_strip"
+			position = { x= -51 y = -10 }
+		}
+		
+		instantTextBoxType = {
+			name = "aspect_name"
+			position = { x=11 y = -7 }
+			font = "vic_18"
+			borderSize = {x = 0 y = 0}
+			text = "AspectName"	
+			maxWidth = 300
+			maxHeight = 24
+			Orientation = "UPPER_LEFT"
+			format = left
+		}
+		
+		instantTextBoxType = {
+			name = "aspect_effect"
+			position = { x = 11 y = 11 }
+			font = "vic_18"
+			borderSize = {x = 0 y = 0}
+			text = "AspectEffect"	
+			maxWidth = 300
+			maxHeight = 24
+			Orientation = "UPPER_LEFT"
+			format = left
+		}
+		
+		guiButtonType = {
+			name = "pick_aspect"
+			position = { x=316 y = 6}
+			quadTextureSprite ="GFX_standard_button_71"
+			buttonText = "SELECT"
+			buttonFont = "vic_18"
+			Orientation = "LEFT"
+		}
+	}
+}

@@ -1,0 +1,1267 @@
+#######################################
+### Korean Mission Tree v2 by Blaze ###
+#######################################
+
+kor_slot_1 = {
+	slot = 1
+	generic = no
+	ai = yes
+	potential = {
+		tag = KOR
+		NOT = { map_setup = map_setup_random }
+	}
+	has_country_shield = yes
+	
+	### Empire Tree ###
+	kor_defy_china = {
+		icon = mission_unite_home_region
+		required_missions = { }
+		trigger = {
+			is_subject = no
+			#Uses some Vanilla tooltips
+			if = {
+				limit = {
+					has_dlc = "Mandate of Heaven"
+				}
+				OR = {
+					any_country = {
+						is_emperor_of_china = yes
+						custom_trigger_tooltip = {
+							tooltip = has_been_insulted_by_root
+							OR = {
+								has_opinion_modifier = {
+									who = ROOT
+									modifier = insulted
+								}
+								has_opinion_modifier = {
+									who = ROOT
+									modifier = scornfully_insulted
+								}
+							}
+						}
+					}
+					is_emperor_of_china = yes
+					custom_trigger_tooltip = {
+						tooltip = no_country_is_EoC
+						NOT = {
+							any_country = {
+								is_emperor_of_china = yes
+							}
+						}
+					}
+				}
+			}
+			else = {
+				OR = {
+					AND = {
+						exists = MNG
+						MNG = {
+							custom_trigger_tooltip = {
+								tooltip = has_been_insulted_by_root
+								OR = {
+									has_opinion_modifier = {
+										who = ROOT
+										modifier = insulted
+									}
+									has_opinion_modifier = {
+										who = ROOT
+										modifier = scornfully_insulted
+									}
+								}
+							}
+						}
+					}
+					NOT = { exists = MNG }
+				}
+			}
+		}
+		effect = {
+			if = {
+				has_dlc = { "Mandate of Heaven" }
+				remove_historical_friend = event_target:EmperorOfChina
+				add_historical_rival = event_target:EmperorOfChina
+			}
+			else = {
+				remove_historical_friend = MNG
+				add_historical_rival = MNG
+			}
+			liaoning_area = {
+				add_permanent_claim = root
+			}
+			jilin_area = {
+				add_permanent_claim = root
+			}
+			ningguta_area = {
+				add_permanent_claim = root
+			}
+			2106 = { #Furdan / Solbin
+				add_permanent_claim = root
+			}
+		}
+	}
+	
+	kor_reclaim_liaoning = {
+		icon = mission_manchu_warrior
+		required_missions = { kor_defy_china }
+		provinces_to_highlight = {
+			OR = {
+				area = liaoning_area
+			}
+			NOT = { owned_by = ROOT }
+		}
+		trigger = {
+			liaoning_area = {
+				type = all
+				owned_by = ROOT
+			}
+		}
+		effect = {
+			add_prestige = 20
+			liaoning_area = {
+				add_core = ROOT
+				#change_culture = pyongan
+			}
+			726 = { #Shenyang
+				change_culture = pyongan
+			}
+		}
+	}
+	
+	kor_subjugate_manchu = {
+		icon = mission_steppe_warriors
+		required_missions = { goguryeo_restoration }
+		position = 4
+		provinces_to_highlight = {
+			OR = {
+				region = manchuria_region
+			}
+			NOT = { country_or_vassal_holds = ROOT }
+		}
+		trigger = {
+			manchuria_region = {
+				type = all
+				country_or_vassal_holds = ROOT
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = "kor_korean_manchuria"
+				duration = 9125 #25 years
+			}
+		}
+	}
+	
+	### Military Buffs Tree ###
+	kor_harness_seokleon = {
+		icon = mission_non-western_soldiers
+		position = 5
+		required_missions = { }
+		trigger = {
+			has_global_modifier_value = { #Has +10% Discipline
+				which = discipline
+				value = 0.1
+			}
+		}
+		effect = {
+			create_general = {
+				tradition = 80
+			}
+		}
+	}
+	
+	kor_expand_hwacha = {
+		icon = mission_asian_cannon
+		required_missions = { kor_harness_seokleon }
+		trigger = {
+			num_of_artillery = 24
+		}
+		effect = {
+			add_mil_power = 50
+			add_country_modifier = {
+				name = hwacha_firepower_bonus2
+				duration = 7300 #20 years
+			}
+		}
+	}
+	
+	kor_develop_musketeers = {
+		icon = mission_assemble_an_army
+		required_missions = { kor_expand_hwacha }
+		trigger = {
+			mil_tech = 9
+			has_global_modifier_value = { #Has 20% ICA
+				which = infantry_power
+				value = 0.2
+			}
+		}
+		effect = {
+			add_army_tradition = 20
+		}
+	}
+	
+	### Social Tree ###
+	kor_state_sponsored_seowon = {
+		icon = mission_asian_city
+		position = 9
+		required_missions = { kor_fund_national_seowon }
+		trigger = {
+			custom_trigger_tooltip = {
+				tooltip = kor_all_areas_have_great_temple
+				pyongan_area = {
+					has_building = great_temple
+				}
+				hamgyeong_area = {
+					has_building = great_temple
+				}
+				western_korea_area = {
+					has_building = great_temple
+				}
+				hwanghae_area = {
+					has_building = great_temple
+				}
+				eastern_korea_area = {
+					has_building = great_temple
+				}
+				gangwon_area = {
+					has_building = great_temple
+				}
+				south_korea_area = {
+					has_building = great_temple
+				}
+				chungcheong_area = {
+					has_building = great_temple
+				}
+			}
+		}
+		effect = {
+			change_innovativeness = 10
+		}
+	}
+	
+	kor_governing_far_provinces = {
+		icon = mission_scholar_officials
+		position = 11
+		required_missions = { }
+		trigger = {
+			custom_trigger_tooltip = {
+				tooltip = kor_all_areas_have_yamen
+				pyongan_area = {
+					has_building = courthouse
+				}
+				hamgyeong_area = {
+					has_building = courthouse
+				}
+				western_korea_area = {
+					has_building = courthouse
+				}
+				hwanghae_area = {
+					has_building = courthouse
+				}
+				eastern_korea_area = {
+					has_building = courthouse
+				}
+				gangwon_area = {
+					has_building = courthouse
+				}
+				south_korea_area = {
+					has_building = courthouse
+				}
+				chungcheong_area = {
+					has_building = courthouse
+				}
+			}
+		}
+		effect = {
+			add_adm_power = 50
+		}
+	}
+}
+
+kor_slot_2 = {
+	slot = 2
+	generic = no
+	ai = yes
+	potential = {
+		tag = KOR
+		NOT = { map_setup = map_setup_random }
+	}
+	has_country_shield = yes
+	
+	kor_merchants_of_kaesong = {
+		icon = mission_early_game_buildings
+		required_missions = { }
+		provinces_to_highlight = {
+			province_id = 6000
+		}
+		trigger = {
+			6000 = { #Gaesong
+				base_production = 10
+			}
+		}
+		effect = {
+			6000 = {
+				add_permanent_province_modifier = { #means it lasts even through ownership change
+					name = gaesong_trade_power_modifier
+					duration = -1
+				}
+			}
+		}
+	}
+	
+	### Empire Tree ###
+	kor_take_jilin = {
+		icon = mission_chinese_general_riding
+		required_missions = { kor_defy_china }
+		position = 2
+		provinces_to_highlight = {
+			OR = {
+				area = north_jilin_area
+				area = jilin_area
+				area = ningguta_area
+				province_id = 2106
+			}
+			NOT = { owned_by = ROOT }
+		}
+		trigger = {
+			north_jilin_area = {
+				type = all
+				owned_by = ROOT
+			}
+			jilin_area = {
+				type = all
+				owned_by = ROOT
+			}
+			ningguta_area = {
+				type = all
+				owned_by = ROOT
+			}
+			owns = 2106
+		}
+		effect = {
+			add_prestige = 20
+			add_adm_power = 50
+		}
+	}
+	
+	goguryeo_restoration = {
+		icon = mission_conquer_50_development
+		required_missions = {
+			kor_reclaim_liaoning
+			kor_take_jilin
+			kor_pyeongyang_mission
+		}
+		provinces_to_highlight = {
+			OR = {
+				region = korea_region
+				area = north_jilin_area
+				area = jilin_area
+				area = liaoning_area
+				area = ningguta_area
+				province_id = 2106 #Furdan / Solbin
+			}
+			NOT = { owned_by = ROOT }
+		}
+		
+		trigger = {
+			korea_region = {
+				type = all
+				owned_by = ROOT
+			}
+			liaoning_area = {
+				type = all
+				owned_by = ROOT
+			}
+			north_jilin_area = {
+				type = all
+				owned_by = ROOT
+			}
+			jilin_area = {
+				type = all
+				owned_by = ROOT
+			}
+			ningguta_area = {
+				type = all
+				owned_by = ROOT
+			}
+			2106 = {
+				owned_by = ROOT
+			}
+		}
+		effect = {
+			add_prestige = 75
+			set_government_rank = 3
+			furdan_area = {
+				type = all
+				add_permanent_claim = ROOT
+			}
+			central_jilin_area = { #South Ilin Hala
+				type = all
+				add_permanent_claim = ROOT
+			}
+			add_country_modifier = {
+				name = "goguryeo_restored_mod"
+				duration = 9125 #25 years
+			}
+			2108 = { #Hunchun
+				change_culture = buyeo
+			}
+			#set_country_flag = goryeo_ideas_flag
+			#country_event = { id = ideagroups.1 }
+		}
+	}
+	
+	kor_restore_greater_korea = {
+		icon = mission_empire
+		required_missions = { goguryeo_restoration }
+		position = 5
+		provinces_to_highlight = {
+			OR = {
+				region = korea_region
+				area = liaoning_area
+				area = north_jilin_area
+				area = jilin_area
+				area = ningguta_area
+				province_id = 2106
+				area = furdan_area
+				area = central_jilin_area #South Ilin Hala
+			}
+			NOT = { owned_by = ROOT }
+		}
+		
+		trigger = {
+			korea_region = {
+				type = all
+				owned_by = ROOT
+				culture_group = korean
+			}
+			north_jilin_area = {
+				type = all
+				owned_by = ROOT
+				culture_group = korean
+			}
+			jilin_area = {
+				type = all
+				owned_by = ROOT
+				culture_group = korean
+			}
+			liaoning_area = {
+				type = all
+				owned_by = ROOT
+				culture_group = korean
+			}
+			ningguta_area = {
+				type = all
+				owned_by = ROOT
+				culture_group = korean
+			}
+			2106 = {
+				culture_group = korean
+			}
+			furdan_area = {
+				type = all
+				owned_by = ROOT
+				#culture_group = korean
+			}
+			central_jilin_area = {
+				type = all
+				owned_by = ROOT
+				#culture_group = korean
+			}
+		}
+		effect = {
+			add_prestige = 100
+			add_adm_power = 100
+			add_dip_power = 100
+			add_mil_power = 100
+			add_country_modifier = {
+				name = "kor_greater_korea_restored_cmod"
+				duration = -1
+			}
+		}
+	}
+	
+	### Defensive Tree ###
+	kor_improve_yukjin = {
+		icon = mission_great_wall
+		position = 6
+		required_missions = { }
+		provinces_to_highlight = {
+			province_id = 2742
+		}
+		trigger = {
+			2742 = {
+				owned_by = ROOT
+				base_manpower = 4
+				fort_level = 4
+			}
+		}
+		effect = {
+			add_army_tradition = 10
+		}
+	}
+	
+	### Social Tree ###
+	kor_fund_national_seowon = {
+		icon = mission_scholar_officials
+		position = 8
+		required_missions = { }
+		trigger = {
+			custom_trigger_tooltip = {
+				tooltip = kor_all_areas_have_temple
+				pyongan_area = {
+					has_building = temple
+				}
+				hamgyeong_area = {
+					has_building = temple
+				}
+				western_korea_area = {
+					has_building = temple
+				}
+				hwanghae_area = {
+					has_building = temple
+				}
+				eastern_korea_area = {
+					has_building = temple
+				}
+				gangwon_area = {
+					has_building = temple
+				}
+				south_korea_area = {
+					has_building = temple
+				}
+				chungcheong_area = {
+					has_building = temple
+				}
+			}
+		}
+		effect = {
+			change_statists_vs_orangists = 0.15
+		}
+	}
+	
+	kor_nationalize_daedongbeop = {
+		icon = mission_high_income
+		position = 9
+		required_missions = { kor_sarim_dominates }
+		trigger = {
+			#Has Deadongbeop?
+		}
+		effect = {
+			add_country_modifier = {
+				name = kor_daedongbeop_modifier
+				duration = 7300 #20 years
+			}
+		}
+	}
+	
+	kor_reform_amhaengeosa = {
+		icon = mission_high_income #WIP
+		position = 11
+		required_missions = { kor_nationalize_daedongbeop }
+		trigger = {}
+		effect = {}
+	}
+}
+
+kor_slot_3 = {
+	slot = 3
+	generic = no
+	ai = yes
+	potential = {
+		tag = KOR
+		NOT = { map_setup = map_setup_random }
+	}
+	has_country_shield = yes
+	
+	kor_temple_hanseong = {
+		icon = mission_hands_praying
+		required_missions = { }
+		provinces_to_highlight = {
+			province_id = 735
+		}
+		trigger = {
+			735 = {
+				owned_by = root
+				has_building = temple
+			}
+		}
+		effect = {
+			add_prestige = 10
+		}
+	}
+	
+	### Empire Tree
+	kor_pyeongyang_mission = {
+		icon = mission_asian_city
+		required_missions = { }
+		provinces_to_highlight = {
+			province_id = 1845
+		}
+		trigger = {
+			1845 = {
+				owned_by = root
+				development = 33
+			}
+		}
+		effect = {
+			add_prestige = 10
+		}
+	}
+	
+	kor_restore_gungnae = {
+		icon = mission_great_wall
+		position = 4
+		required_missions = { goguryeo_restoration }
+		provinces_to_highlight = {
+			province_id = 4201
+		}
+		trigger = {
+			4201 = {
+				owned_by = root
+				development = 30
+				fort_level = 2
+			}
+		}
+		effect = {
+			4201 = {
+				change_culture = buyeo
+			}
+		}
+	}
+	
+	### Defensive Tree ###
+	kor_fortify_the_ports = {
+		icon = mission_rice_field ###WIP
+		position = 6
+		required_missions = { }
+		provinces_to_highlight = {
+			area = south_korea_area #Jeolla
+			area = eastern_korea_area #Gyeongsang
+		}
+		trigger = {
+			eastern_korea_area = {
+				calc_true_if = {
+					OR = {
+						has_building = fort_15th
+						has_building = fort_16th
+						has_building = fort_17th
+						has_building = fort_18th
+					}
+					amount = 3
+				}
+				OR = {
+					has_building = coastal_defense
+					has_building = naval_battery
+				}
+			}
+			south_korea_area = {
+				calc_true_if = {
+					OR = {
+						has_building = fort_15th
+						has_building = fort_16th
+						has_building = fort_17th
+						has_building = fort_18th
+					}
+					amount = 1
+				}
+				OR = {
+					has_building = coastal_defense
+					has_building = naval_battery
+				}
+			}
+		}
+		effect = {
+			add_navy_tradition = 10
+		}
+	}
+	
+	kor_country_of_forts = {
+		icon = mission_japanese_fort
+		required_missions = {
+			kor_improve_yukjin
+			kor_fortify_the_ports
+		}
+		trigger = {
+			full_idea_group = defensive_ideas
+		}
+		effect = {
+			add_country_modifier = {
+				name = kor_country_of_fortresses_modifier
+				duration = -1
+			}
+		}
+	}
+	
+	### Social Tree
+	kor_revive_hall_of_worthies = {
+		icon = mission_scholar_officials
+		required_missions = { }
+		trigger = {
+			OR = {
+				NOT = {
+					has_country_modifier = hall_of_worthies
+				}
+				is_year = 1463
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = kor_office_of_advisors
+				duration = -1
+			}
+		}
+	}
+	
+	kor_build_rural_inf = {
+		icon = mission_asian_city
+		position = 9
+		required_missions = { kor_sarim_dominates }
+		trigger = {
+			all_owned_province = {
+				calc_true_if = {
+					has_building = barracks
+					has_building = training_fields
+					amount = 5
+				}
+			}
+			farm_estate = 5 #Food Manufactory
+		}
+		effect = {
+			add_mil_power = 50
+		}
+	}
+	
+	kor_silhak_mission = {
+		icon = mission_asian_city
+		position = 11
+		required_missions = { kor_build_rural_inf }
+		trigger = {
+			if = {
+				limit = { religion = confucianism }
+				has_country_modifier = imperial_examinations_aspect_modifier
+				has_country_modifier = denounce_hierarchy_aspect_modifier
+				has_country_modifier = globalism_aspect_modifier
+				has_country_modifier = religious_tolerance_aspect_modifier
+				has_country_modifier = military_reform_aspect_modifier
+			}
+			else = {
+				religious_unity = 100
+			}
+		}
+		effect = {
+			add_stability = 3
+			add_country_modifier = {
+				name = kor_practical_learning
+				duration = -1
+			}
+		}
+	}
+	
+	kor_end_factional_strife = {
+		icon = mission_scholar_officials
+		required_missions = {
+			kor_reform_amhaengeosa
+			kor_silhak_mission
+			kor_maintain_balance
+		}
+		trigger = {
+			stability = 3
+			absolutism = 70
+			crown_land_share = 90
+		}
+		effect = {
+			remove_country_modifier = kor_factional_upheaval
+			###WIP Remove Factionalism - States General
+			add_country_modifier = {
+				name = kor_ended_factionalism
+				duration = -1
+			}
+		}
+	}
+}
+
+kor_slot_4 = {
+	slot = 4
+	generic = no
+	ai = yes
+	potential = {
+		tag = KOR
+		NOT = { map_setup = map_setup_random }
+	}
+	has_country_shield = yes
+	
+	### Science Tree ###
+	kor_cultivate_hanseong = {
+		icon = mission_rice_field
+		required_missions = { }
+		provinces_to_highlight = {
+			province_id = 735
+		}
+		trigger = {
+			735 = {
+				owned_by = ROOT
+				development = 33
+			}
+		}
+		effect = {
+			735 = {
+				add_next_institution_embracement = 50
+			}
+			add_country_modifier = {
+				name = "kor_developed_capital" #Vanilla modifier
+				duration = 3650 #10 years
+			}
+		}
+	}
+	
+	kor_establish_library = {
+		icon = mission_asian_city
+		required_missions = {
+			kor_temple_hanseong
+			kor_cultivate_hanseong
+		}
+		provinces_to_highlight = {
+			province_id = 735
+		}
+		trigger = {
+			735 = {
+				has_building = university
+			}
+		}
+		effect = {
+			735 = {
+				add_next_institution_embracement = 50
+			}
+		}
+	}
+	
+	### Trade Tree ###
+	kor_gyeongju_mission = {
+		icon = mission_dominate_home_trade_node
+		required_missions = { }
+		provinces_to_highlight = {
+			province_id = 2745 #Gyeongju
+			province_id = 6006 #Busan
+		}
+		trigger = {
+			2745 = {
+				development = 30
+				province_has_center_of_trade_of_level = 2
+			}
+			6006 = {
+				development = 30
+			}
+		}
+		effect = {
+			if = {
+				limit = {
+					NOT = {
+						province_has_center_of_trade_of_level = 3
+					}
+					add_center_of_trade_level = 1
+				}
+			}
+			else = {
+				add_treasury = 1000
+			}
+		}
+	}
+	
+	### Japan Tree - left branch
+	kor_take_daemado = {
+		icon = mission_invade_island
+		required_missions = { kor_home_navy }
+		provinces_to_highlight = {
+			OR = {
+				province_id = 4651 #Tsushima / Daemado
+			}
+			NOT = { owned_by = ROOT }
+		}
+		trigger = {
+			owns = 4651
+		}
+		effect = {
+			add_prestige = 10
+			northern_kyushu = {
+				type = all
+				add_permanent_claim = ROOT
+			}
+			kyushu_area = {
+				type = all
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+	
+	kor_annex_south_jap = {
+		icon = mission_invade_island
+		required_missions = { kor_take_daemado }
+		
+		provinces_to_highlight = {
+			OR = {
+				area = kyushu_area
+				area = northern_kyushu
+			}
+			NOT = { owned_by = ROOT }
+			NOT = { province_id = 1015 } #Ryukyu
+		}
+		
+		trigger = {
+			custom_trigger_tooltip = {
+				tooltip = owns_kyushu_tooltip
+				northern_kyushu = {
+					type = all
+					country_or_non_sovereign_subject_holds = ROOT
+				}
+				kyushu_area = {
+					type = all
+					limit = { NOT = { province_id = 1015 } }
+					country_or_non_sovereign_subject_holds = ROOT
+				}
+			}
+		}
+		effect = {
+			add_adm_power = 50
+			kinai_area = {
+				type = all
+				add_permanent_claim = root
+			}
+			sanindo_area = {
+				type = all
+				add_permanent_claim = root
+			}
+			saigoku_area = {
+				type = all
+				add_permanent_claim = root
+			}
+			shikoku_area = {
+				type = all
+				add_permanent_claim = root
+			}
+		}
+	}
+	
+	kor_defeat_shogun = {  #Vanilla Mission
+		icon = mission_japanese_samurai
+		required_missions = { kor_annex_south_jap }
+		
+		provinces_to_highlight = {
+			province_id = 1020
+		}
+
+		trigger = {
+			owns = 1020 #Kyoto
+		}
+		effect = {
+			add_adm_power = 50
+			add_prestige = 25
+			japan_region = {
+				add_permanent_claim = ROOT
+			}
+		}
+	} #---------------------------------------------
+	
+	kor_annex_japan = {
+		icon = mission_united_east_sea
+		required_missions = { kor_defeat_shogun }
+		
+		provinces_to_highlight = {
+			OR = {
+				region = japan_region
+			}
+			NOT = { owned_by = ROOT }
+		}
+		trigger = {
+			japan_region = {
+				limit = { culture_group = japanese_g }
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		effect = {
+			add_adm_power = 100
+			add_country_modifier = {
+				name = "kor_united_east_sea"
+				duration = 9125 # 25 years
+			}
+		}
+	}
+	
+	### Factionalism Tree - Right branch
+	kor_address_wealth_inequality = {
+		icon = mission_rice_field
+		required_missions = { }
+		position = 8
+		
+		provinces_to_highlight = {
+			region = korea_region
+			NOT = { development = 8 }
+		}
+		
+		trigger = {
+			korea_region = {
+				type = all
+				development = 8
+			}
+			NOT = {
+				estate_territory = {
+					estate = estate_nobles
+					territory = 20
+				}
+			}
+		}
+		effect = {
+			change_statists_vs_orangists = 0.3 #Sarim gains influence
+		}
+	}
+	
+	kor_encourage_national_coinage = {
+		icon = mission_war_chest
+		required_missions = {
+			kor_sarim_dominates
+		}
+		position = 9
+		
+		trigger = {
+			share_of_starting_income = 2
+		}
+		effect = {
+			add_country_modifier = {
+				name = kor_national_coinage_modifier
+				duration = 7300 #20 years
+			}
+		}
+	}
+	
+	kor_maintain_balance = {
+		icon = mission_high_income
+		required_missions = {
+			kor_encourage_national_coinage
+		}
+		position = 11
+		
+		trigger = {
+			statists_vs_orangists = -10
+			NOT = {
+				statists_vs_orangists = 10
+			}
+		}
+		effect = {
+			add_stability = 1
+		}
+	}
+}
+
+kor_slot_5 = {
+	slot = 5
+	generic = no
+	ai = yes
+	potential = {
+		tag = KOR
+		NOT = { map_setup = map_setup_random }
+	}
+	has_country_shield = yes
+	
+	kor_docks_of_the_south = {
+		icon = mission_galleys_in_port
+		required_missions = { }
+		provinces_to_highlight = {
+			province_id = 4228 #Naju
+			province_id = 4227 #Jinju
+			province_id = 6006 #Busan
+			province_id = 2745 #Gyeongju
+		}
+		trigger = {
+			4228 = {
+				owned_by = root
+				OR = {
+					has_building = dock
+					has_building = drydock
+					has_building = marketplace
+					has_building = trade_depot
+					has_building = stock_exchange
+					has_building = shipyard
+					has_building = grand_shipyard
+				}
+			}
+			4227 = {
+				owned_by = root
+				OR = {
+					has_building = dock
+					has_building = drydock
+					has_building = marketplace
+					has_building = trade_depot
+					has_building = stock_exchange
+					has_building = shipyard
+					has_building = grand_shipyard
+				}
+			}
+			6006 = {
+				owned_by = root
+				OR = {
+					has_building = dock
+					has_building = drydock
+					has_building = marketplace
+					has_building = trade_depot
+					has_building = stock_exchange
+					has_building = shipyard
+					has_building = grand_shipyard
+				}
+			}
+			2745 = {
+				owned_by = root
+				OR = {
+					has_building = dock
+					has_building = drydock
+					has_building = marketplace
+					has_building = trade_depot
+					has_building = stock_exchange
+					has_building = shipyard
+					has_building = grand_shipyard
+				}
+			}
+		}
+		effect = {
+			add_navy_tradition = 10
+		}
+	}
+	
+	kor_geum_river = {
+		icon = mission_invade_island
+		required_missions = { kor_docks_of_the_south }
+		trigger = {
+			chungcheong_area = {
+				has_manufactory_trigger = yes
+			}
+			south_korea_area = { #Jeolla
+				has_manufactory_trigger = yes
+			}
+		}
+		effect = {
+			737 = { #Jeonju
+				add_province_modifier = {
+					name = kor_geum_river_estuary
+					duration = -1
+				}
+			}
+		}
+	}
+	
+	kor_home_navy = {
+		icon = mission_galleys_in_port
+		required_missions = { }
+		trigger = {
+			OR = {
+				num_of_heavy_ship = 5
+				num_of_galley = 20
+			}
+		}
+		effect = {
+			# Tsushima / Daemado
+			4651 = {
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+	
+	kor_turtle_ships = { #Vanilla Mission
+		icon = mission_turtle_ship
+		required_missions = { kor_home_navy }
+		trigger = {
+			has_global_modifier_value = {
+				which = ship_durability
+				value = 0.2
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = kor_turtle_fleets2
+				duration = -1
+			}
+		}
+	}
+	
+	kor_korean_daemado = {
+		icon = mission_rice_field
+		required_missions = { kor_take_daemado }
+		trigger = {
+			4651 = {
+				culture_group = korean_g
+			}
+		}
+		effect = {
+			add_prestige = 10
+			add_dip_power = 25
+		}
+	}
+	
+	
+	###Korea Colonial Tree
+	kor_discover_siberia = {
+		icon = mission_alliances
+		position = 7
+		required_missions = { }
+		trigger = {
+			OR = {
+				has_discovered = 1034 #Kamchatka
+				has_discovered = 2440 #Chukchi
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = "kor_naval_attrition_temp_cmod"
+				duration = 3650 #10 years
+			}
+		}
+	}
+	
+	kor_discover_america = {
+		icon = mission_invade_island
+		required_missions = { kor_discover_siberia }
+		trigger = {
+			colonial_alaska = { has_discovered = ROOT }
+		}
+		effect = {
+			add_country_modifier = {
+				name = "the_unknown_frontier"
+				duration = 5475 #15 years
+			}
+			add_dip_power = 50
+		}
+	}
+	
+	kor_colonize_alaska = {
+		icon = mission_colonial
+		required_missions = { kor_discover_america }
+		provinces_to_highlight = {
+			OR = {
+				region = cascadia_region
+			}
+			NOT = { owned_by = ROOT }
+		}
+		trigger = {
+			cascadia_region = {
+				type = any
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = "colonial_enthusiasm"
+				duration = 9125 #25 years
+			}
+		}
+	}
+	
+	#kor_hangul_debate = {
+	#	icon = mission_alliances ###WIP
+	#	position = 11
+	#	required_missions = {}
+	#	trigger = {
+	#		
+	#	}
+	#	effect = {
+	#		
+	#	}
+	#}
+}

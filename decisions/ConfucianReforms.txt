@@ -1,0 +1,178 @@
+# For Players without Rule Britannia
+country_decisions = {
+	confucianism_imperial_examinations_decision = {
+		major = yes
+		potential = {
+			NOT = {
+				has_dlc = "Rule Britannia"
+				has_country_modifier = imperial_examinations_aspect_modifier
+			}
+			religion = confucianism
+		}
+		allow = {
+			custom_trigger_tooltip = {
+				tooltip = confucianism_reforms_timer_tooltip
+				NOT = { has_country_modifier = confucianism_reforms_timer }
+			}
+			stability = 0
+			confucian_reforms_estates_are_pleased = yes
+		}
+		effect = {
+			hidden_effect = {
+				add_country_modifier = {
+					name = "confucianism_reforms_timer"
+					duration = 7300 #20 years
+					hidden = yes
+				}
+			}
+			add_country_modifier = {
+				name = "imperial_examinations_aspect_modifier"
+				duration = -1
+			}
+			confucian_reform_estates_mad = yes
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	confucianism_hierarchy_decision = {
+		major = yes
+		potential = {
+			NOT = {
+				has_dlc = "Rule Britannia"
+				has_country_modifier = denounce_hierarchy_aspect_modifier
+			}
+			religion = confucianism
+		}
+		allow = {
+			custom_trigger_tooltip = {
+				tooltip = confucianism_reforms_timer_tooltip
+				NOT = { has_country_modifier = confucianism_reforms_timer }
+			}
+			stability = 0
+			confucian_reforms_estates_are_pleased = yes
+		}
+		effect = {
+			hidden_effect = {
+				add_country_modifier = {
+					name = "confucianism_reforms_timer"
+					duration = 7300 #20 years
+					hidden = yes
+				}
+			}
+			add_country_modifier = {
+				name = "denounce_hierarchy_aspect_modifier"
+				duration = -1
+			}
+			confucian_reform_estates_mad = yes
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	confucianism_globalism_decision = {
+		major = yes
+		potential = {
+			NOT = {
+				has_dlc = "Rule Britannia"
+				has_country_modifier = globalism_aspect_modifier
+			}
+			religion = confucianism
+		}
+		allow = {
+			custom_trigger_tooltip = {
+				tooltip = confucianism_reforms_timer_tooltip
+				NOT = { has_country_modifier = confucianism_reforms_timer }
+			}
+			stability = 0
+			confucian_reforms_estates_are_pleased = yes
+		}
+		effect = {
+			hidden_effect = {
+				add_country_modifier = {
+					name = "confucianism_reforms_timer"
+					duration = 7300 #20 years
+					hidden = yes
+				}
+			}
+			add_country_modifier = {
+				name = "globalism_aspect_modifier"
+				duration = -1
+			}
+			confucian_reform_estates_mad = yes
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	confucianism_military_reform_decision = {
+		major = yes
+		potential = {
+			NOT = {
+				has_dlc = "Rule Britannia"
+				has_country_modifier = military_reform_aspect_modifier
+			}
+			religion = confucianism
+		}
+		allow = {
+			custom_trigger_tooltip = {
+				tooltip = confucianism_reforms_timer_tooltip
+				NOT = { has_country_modifier = confucianism_reforms_timer }
+			}
+			stability = 0
+			confucian_reforms_estates_are_pleased = yes
+		}
+		effect = {
+			hidden_effect = {
+				add_country_modifier = {
+					name = "confucianism_reforms_timer"
+					duration = 7300 #20 years
+					hidden = yes
+				}
+			}
+			add_country_modifier = {
+				name = "military_reform_aspect_modifier"
+				duration = -1
+			}
+			confucian_reform_estates_mad = yes
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	confucianism_tolerance_decision = {
+		major = yes
+		potential = {
+			NOT = {
+				has_dlc = "Rule Britannia"
+				has_country_modifier = religious_tolerance_aspect_modifier
+			}
+			religion = confucianism
+		}
+		allow = {
+			custom_trigger_tooltip = {
+				tooltip = confucianism_reforms_timer_tooltip
+				NOT = { has_country_modifier = confucianism_reforms_timer }
+			}
+			stability = 3
+			confucian_reforms_estates_are_pleased = yes
+		}
+		effect = {
+			hidden_effect = {
+				add_country_modifier = {
+					name = "confucianism_reforms_timer"
+					duration = 7300 #20 years
+					hidden = yes
+				}
+			}
+			add_country_modifier = {
+				name = "religious_tolerance_aspect_modifier"
+				duration = -1
+			}
+			confucian_reform_estates_super_mad = yes
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+}

@@ -1,0 +1,93 @@
+﻿l_english:
+ #Korean Mission Modifiers
+ gaesong_trade_power_modifier: "City of Gaesong"
+ desc_gaesong_trade_power_modifier: "The city of Gaesong has been an important center of commerce since the Goryeo era."
+ 
+ kor_daedongbeop_modifier: "Daedongbeop"
+ desc_kor_daedongbeop_modifier: "The implementation of Daedongbeop (Land Tax Reform) across the nation has seen major success in standardizing taxation and relieving peasants."
+ 
+ kor_country_of_fortresses_modifier: "Country of Fortresses"
+ desc_kor_country_of_fortresses_modifier: "Ever since the Three Kingdoms era, Korea has been a nation of many fortifications and castles."
+ 
+ kor_office_of_advisors: "Office of Special Advisors"
+ desc_kor_office_of_advisors: "Replacing the old Hall of Worthies, the Office of Special Advisors (Hongmungwan) serve to oversee the royal library and help the monarch rule the nation."
+ 
+ hwacha_firepower_bonus2:0 "Firepower of the Hwacha"
+ desc_hwacha_firepower_bonus2:0 "The hwacha was a multiple rocket launcher developed by the Koreans capable of firing 100 rockets at a time. It was used most famously during the Japanese Invasion of Korea in 1592-1598, where it was used to defend fortresses and deployed on the Korean warships, as well as in battle, where it proved effective in breaking up dense formations of Japanese samurais."
+ 
+ kor_geum_river_estuary: "Geum River"
+ desc_kor_geum_river_estuary: "Controlling the important river estuary of the Geum River strengthens our hold of the trade in the region."
+ 
+ kor_turtle_fleets2:0 "The Turtle Fleet"
+ desc_kor_turtle_fleets2:0 "The turtle ship, or 'Geobukseon', was a type of large warship used by the Korean navy during the Japanese Invasions of Korea (1592–1598), during which it played a key role in preventing the Japanese from attaining naval superiority, ultimately forcing them to retreat. Their name derives from the ship's protections, with a covered roof shaped vaguely like the shell of a turtle.\n\nThese are widely regarded as the first iron clad warships."
+ 
+ goguryeo_restored_mod:0 "Three Koreas Reunited"
+ desc_goguryeo_restored_mod:0 "The ancient era of the Three Kingdoms is long since past, but we have reunited their territory and restored Korea to its former glory."
+ 
+ kor_korean_manchuria:0 "Manchurian Tribute"
+ desc_kor_korean_manchuria:0 "With the tribes of Manchuria fully bowing down to us, we have been receiving an influx of horses as tribute, more than we ever have. Cultural exchanges have also heightened and Manchurian horse expertise is entering Korean military culture."
+ 
+ kor_greater_korea_restored_cmod:0 "Greater Korea Restored"
+ desc_kor_greater_korea_restored_cmod:0 "The unity of all rightful Korean lands make our people proud and willing to work for the advancement of our race."
+ 
+ kor_united_east_sea:0 "United East Sea"
+ desc_kor_united_east_sea:0 "With the Japanese isles under our control, the East Sea is completely ours, free from pirates and bandits."
+ 
+ kor_naval_attrition_temp_cmod:0 "Explorer Enthusiasm"
+ desc_kor_naval_attrition_temp_cmod:0 "The people of east Siberia speak of a landmass to their east across the sea."
+ 
+ kor_practical_learning: "Silhak Encouraged"
+ desc_kor_practical_learning: "Silhak, or \"Practical Learning,\" has been encouraged in our country to defend against the disconnected Neo-Confucians who do not understand the rapid changes happening in Korea and the rest of the world."
+ 
+ #---------------------------------------------------------------------------------------------------------------------------
+ #Japanese Mission Modifiers
+ jap_navy_debuff:0 "Naval Incompetence" #Unused
+ desc_jap_navy_debuff:0 "The feudal state of Japan has left our navy in poor shape. It will need to be modernized if we are to stand against outsiders."
+ 
+ generic_culture_convert_mod: "Encouraged Migration"
+ desc_generic_culture_convert_mod: "We have encouraged our people to settle in these lands."
+ 
+ #Ainu Mission Modifiers
+ anu_pushed_back_yamato: "Pushed Back the Yamato"
+ desc_anu_pushed_back_yamato: "The people of the sun have been pushed out of the land that they stole from us, the original inhabitants of Japan."
+ anu_restoration_of_ainu: "Restoration of Greater Ainu"
+ desc_anu_restoration_of_ainu: "The Ainu have rightfully resettled the lands that the people of the sun stole from them. No more shall the Ainu people face extinction from the Yamato invaders."
+ 
+ #---------------------------------------------------------------------------------------------------------------------------
+ #Vietnam Mission Modifiers
+ vietnam_nam_tien_pmod:0 "Nam Tien"
+ desc_vietnam_nam_tien_pmod:0 "In our march to the south we must seek to settle these new lands with our own people."
+ 
+ vietnam_city_of_kings_pmod: "Imperial Capital"
+ desc_vietnam_city_of_kings_pmod: "This province experiences great economic development and prosperity as one of the key capitals of Vietnam."
+ 
+ dai_fertile_red_river: "Fertile Red River"
+ desc_dai_fertile_red_river: "The Red River is one of the most fertile regions in the world and is home to a large part of the Vietnamese population."
+ 
+ dai_curtailed_nobles2: "Curtailed Nobles"
+ desc_dai_curtailed_nobles2: "We have curtailed the power of the nobility."
+ 
+ dai_chinese_relations: "Chinese Relations"
+ desc_dai_chinese_relations: "Improved relations with China will hopefully secure Vietnam from future invasions."
+ 
+ dai_national_defence: "National Defence"
+ desc_dai_national_defence: "We are at war with our mortal enemy, the Chinese, once again."
+ 
+ dai_restored_nam_viet_modifier: "Nam Viet Restored"
+ desc_dai_restored_nam_viet_modifier: "The lands of the ancient state Nam Viet have been returned to the Viet people, bringing great prestige and unity to our nation."#---------------------------------------------------------------------------------------------------------------------------
+
+ ldk_cashmere_wool_pmod: "Cashmere Wool"
+ desc_ldk_cashmere_wool_pmod: "Now that we possess the means of production in Kashmir, this will boost our overall economy."
+ 
+ uts_dalai_lama_pmod: "The Dalai Lama"
+ desc_uts_dalai_lama_pmod: "The Dalai Lama is the foremost spiritual leader of the Gelug or "Yellow Hat" school of Tibetan Buddhism, the newest of the classical schools of Tibetan Buddhism. Since the time of the 5th Dalai Lama in the 17th century, his personage has always been a symbol of unification of the state of Tibet, where he has represented Buddhist values and traditions."
+ 
+ uts_reconquest_pmod: "The Great Reconquest"
+ desc_uts_reconquest_pmod: "Now with U-Tsang consolidated, we will enforce our rule over the rest of Tibet"
+ 
+ qam_trade_city_pmod: "Kham Trade City"
+ desc_qam_trade_city_pmod: "With a trade city established, we can not only make our trade income even stronger, but we can also use the very horses we trade with China for our own military."
+ 
+ qam_patronize_local_festivals_pmod: "Patronizing Equestrian Festivals"
+ desc_qam_patronize_local_festivals_pmod: "Horse festivals are prevalent throughout the east of Tibet. Now that we have patronized the festivals, we will keep our warrior traditions alive."
+ 

@@ -1,0 +1,12 @@
+﻿l_english:
+ meritocracy_for_empires: "Meritocracy for Empires"
+ desc_meritocracy_for_empires: "A large empire requires numerous high level advisors to efficiently run its nation."
+ meritocracy_for_kingdoms:0 "Meritocracy for Large Kingdoms"
+ desc_meritocracy_for_kingdoms:0 "A large nation requires high level advisors to efficiently run its nation."
+ meritocracy_for_kingdoms_small:0 "Meritocracy for Small Kingdoms"
+ desc_meritocracy_for_kingdoms_small:0 "A smaller nation is able to efficiently run its nation even without high level advisors."
+ meritocracy_for_duchies:0 "Meritocracy for Duchies"
+ desc_meritocracy_for_duchies:0 "As a tiny nation, our government is able to efficiently run our nation without much help from external advisors."
+ ai_horde_bandaid: "AI Horde bandaid"
+ ai_eoc_bandaid: "AI Empire of China bandaid"
+ ai_warring_states_bandaid: "AI Warring State bandaid"

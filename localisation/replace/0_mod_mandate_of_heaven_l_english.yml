@@ -1,0 +1,10 @@
+﻿l_english:
+ CURRENT_HARMONY:0 "Harmony"
+ HARMONY_DESCRIPTION:1 "The religious Harmony of our nation will naturally move towards 0."
+ CURRENT_HARMONY_VAL:0 "§YHarmony: $VAL$§!\nChanges with $CHANGE$ per year:\n"
+ HARMONY_LOSS_FROM_CONV:0 "This decreases our Harmony by §R$VAL$§!."
+ HARMONY_FROM_HARMONIZING:0 "Harmonizing $RELIGION$: $VAL$"
+ MISSIONARY_HARMONY_LOSS_DESC:1 ""
+ MODIFIER_YEARLY_HARMONY:0 "Yearly Harmony Change"
+ low_harmony:0 "Taoism"
+ high_harmony:0 "Neo-Confucianism"

@@ -1,0 +1,585 @@
+country_decisions = {
+	become_chinese_warring_state = { #For Chinese
+		major = yes
+		potential = {
+			NOT = {
+				has_reform = chinese_warring_state
+				has_reform = celestial_empire
+			}
+			culture_group = east_asian
+			NOT = {
+				culture = manchu_new
+				culture = mongol_new
+				culture = korean_new
+				culture = sino_japonic
+				culture = vietnamese_new
+			}
+		}
+		allow = {
+			is_at_war = no
+			is_subject = no
+		}
+		effect = {
+			custom_tooltip = become_chinese_warring_state_effectDesc #"We will become a Chinese Warring State and have accesss to the Chinese Mechanics"
+			hidden_effect = {
+				set_country_flag = chinese_warring_state_flag
+				change_government = monarchy
+				add_government_reform = chinese_warring_state
+				country_event = { id = asiarework_mandate.1 }
+			}
+		}
+		ai_will_do = {
+			factor = 1000
+		}
+		ai_importance = 400 #High Importance
+	}
+	
+	become_chinese_warring_state_korean = {
+		major = yes
+		potential = {
+			NOT = {
+				has_reform = chinese_warring_state
+				has_reform = celestial_empire
+			}
+			culture_group = korean_g
+		}
+		allow = {
+			is_at_war = no
+			is_subject = no
+			owns_core_province = 726 #Shenyang
+			owns_core_province = 1816 #Beijing
+		}
+		effect = {
+			custom_tooltip = become_chinese_warring_state_effectDesc
+			hidden_effect = {
+				set_country_flag = chinese_warring_state_flag
+				add_government_reform = chinese_warring_state
+				country_event = { id = asiarework_mandate.1 }
+			}
+		}
+		ai_will_do = {
+			factor = 0 #Never.
+		}
+	}
+	
+	become_chinese_warring_state_japanese = {
+		major = yes
+		potential = {
+			NOT = {
+				has_reform = chinese_warring_state
+				has_reform = celestial_empire
+				has_reform = daimyo
+				has_reform = shogunate
+			}
+			culture_group = japanese_g
+		}
+		allow = {
+			is_at_war = no
+			is_subject = no
+			owns_core_province = 1816 #Beijing
+			owns_core_province = 1821 #Nanjing
+		}
+		effect = {
+			custom_tooltip = become_chinese_warring_state_effectDesc
+			hidden_effect = {
+				set_country_flag = chinese_warring_state_flag
+				add_government_reform = chinese_warring_state
+				country_event = { id = asiarework_mandate.1 }
+			}
+		}
+		ai_will_do = {
+			factor = 0 #Never.
+		}
+	}
+	
+	become_chinese_warring_state_vietnamese = {
+		major = yes
+		potential = {
+			NOT = {
+				has_reform = chinese_warring_state
+				has_reform = celestial_empire
+			}
+			OR = {
+				primary_culture = vietnamese
+				primary_culture = zhuang
+			}
+		}
+		allow = {
+			is_at_war = no
+			is_subject = no
+			owns_core_province = 667 #Canton
+		}
+		effect = {
+			custom_tooltip = become_chinese_warring_state_effectDesc
+			hidden_effect = {
+				set_country_flag = chinese_warring_state_flag
+				add_government_reform = chinese_warring_state
+				country_event = { id = asiarework_mandate.1 }
+			}
+		}
+		ai_will_do = {
+			factor = 0 #Never.
+		}
+	}
+	
+	convert_to_chinese_culture_manchu = {
+		major = yes
+		potential = {
+			tag = QNG
+			is_emperor_of_china = yes
+		}
+		allow = {
+			NOT = { has_country_modifier = new_mandate_holder }
+		}
+		effect = {
+			custom_tooltip = convert_to_chinese_culture_manchu_tt
+			hidden_effect = {
+				every_country = {
+					limit = {
+						primary_culture = manchu
+					}
+					change_primary_culture = manchu_new
+					if = { #Change Jurchen Ruler to Manchu
+						limit = {
+							ruler_culture = manchu
+						}
+						set_ruler_culture = manchu_new
+					}
+					if = { #Change Jurchen Heir to Manchu
+						limit = {
+							has_heir = yes
+							heir_culture = manchu
+						}
+						set_heir_culture = manchu_new
+					}
+					if = { #Change Jurchen Consort to Manchu
+						limit = {
+							has_consort = yes
+							consort_culture = manchu
+						}
+						set_consort_culture = manchu_new
+					}
+				}
+				every_province = { #Change all Jurchen provinces to Manchu
+					limit = {
+						culture = manchu
+					}
+					change_culture = manchu_new
+				}
+			}
+		}
+	}
+	
+	convert_to_chinese_culture_mongol = {
+		major = yes
+		potential = {
+			tag = YUA
+			is_emperor_of_china = yes
+		}
+		allow = {
+			NOT = { has_country_modifier = new_mandate_holder }
+		}
+		effect = {
+			custom_tooltip = convert_to_chinese_culture_mongol_tt
+			hidden_effect = {
+				every_country = {
+					limit = {
+						OR = {
+							primary_culture = mongol
+							primary_culture = chahar
+							primary_culture = oirats
+							primary_culture = khalkha
+							primary_culture = khorchin
+						}
+					}
+					change_primary_culture = mongol_new
+					if = { #Change Ruler to Sino-Mongol
+						limit = {
+							OR = {
+								ruler_culture = mongol
+								ruler_culture = chahar
+								ruler_culture = oirats
+								ruler_culture = khalkha
+								primary_culture = khorchin
+							}
+						}
+						set_ruler_culture = mongol_new
+					}
+					if = {  #Change Heir to Sino-Mongol
+						limit = {
+							has_heir = yes
+							OR = {
+								heir_culture = mongol
+								heir_culture = chahar
+								heir_culture = oirats
+								heir_culture = khalkha
+								primary_culture = khorchin
+							}
+						}
+						set_heir_culture = mongol_new
+					}
+					if = {  #Change Consort to Sino-Mongol
+						limit = {
+							has_consort = yes
+							OR = {
+								consort_culture = mongol
+								consort_culture = chahar
+								consort_culture = oirats
+								consort_culture = khalkha
+								primary_culture = khorchin
+							}
+						}
+						set_consort_culture = mongol_new
+					}
+				}
+				every_province = { #Change all Mongolic provinces to Sino-Mongol
+					limit = {
+						OR = {
+							culture = mongol
+							culture = chahar
+							culture = oirats
+							culture = khalkha
+							primary_culture = khorchin
+						}
+					}
+					change_culture = mongol_new
+				}
+			}
+		}
+	}
+	
+	convert_to_chinese_culture_korean = {
+		major = yes
+		potential = {
+			culture_group = korean_g
+			is_emperor_of_china = yes
+		}
+		allow = {
+			NOT = { has_country_modifier = new_mandate_holder }
+			custom_trigger_tooltip = {
+				tooltip = accepts_china_proper_cultures
+				calc_true_if = {
+					accepted_culture = chihan
+					accepted_culture = miao
+					accepted_culture = cantonese
+					accepted_culture = jin
+					accepted_culture = wu
+					accepted_culture = chimin
+					accepted_culture = hakka
+					accepted_culture = gan
+					accepted_culture = xiang
+					accepted_culture = sichuanese
+					accepted_culture = jianghuai
+					accepted_culture = xibei
+					accepted_culture = hubei
+					accepted_culture = zhongyuan
+					accepted_culture = shandong_culture
+					amount = 3
+				}
+			}
+			adm_power = 100
+			dip_power = 100
+			stability = 1
+		}
+		effect = {
+			add_adm_power = -100
+			add_dip_power = -100
+			add_stability = -1
+			custom_tooltip = convert_to_chinese_culture_korean_effect_tt
+			hidden_effect = {
+				every_country = {
+					limit = {
+						culture_group = korean_g #Korean
+					}
+					change_primary_culture = korean_new
+					if = { #Change Ruler to Sino-Korean
+						limit = {
+							OR = {
+								ruler_culture = korean
+								ruler_culture = pyongan
+								ruler_culture = hamgyong
+								ruler_culture = gyeongsang
+								ruler_culture = jeolla
+								ruler_culture = buyeo
+								ruler_culture = jeju
+								ruler_culture = yukjin
+							}
+						}
+						set_ruler_culture = korean_new
+					}
+					if = {  #Change Heir to Sino-Korean
+						limit = {
+							has_heir = yes
+							OR = {
+								heir_culture = korean
+								heir_culture = pyongan
+								heir_culture = hamgyong
+								heir_culture = gyeongsang
+								heir_culture = jeolla
+								heir_culture = buyeo
+								heir_culture = jeju
+								heir_culture = yukjin
+							}
+						}
+						set_heir_culture = korean_new
+					}
+					if = {  #Change Consort to Sino-Korean
+						limit = {
+							has_consort = yes
+							OR = {
+								consort_culture = korean
+								consort_culture = pyongan
+								consort_culture = hamgyong
+								consort_culture = gyeongsang
+								consort_culture = jeolla
+								consort_culture = buyeo
+								consort_culture = jeju
+								consort_culture = yukjin
+							}
+						}
+						set_consort_culture = korean_new
+					}
+				}
+				every_province = { #Change all Korean provinces to Sino-Korean
+					limit = {
+						culture_group = korean_g
+					}
+					change_culture = korean_new
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 1000
+		}
+	}
+	
+	convert_to_chinese_culture_japanese = {
+		major = yes
+		potential = {
+			culture_group = japanese_g
+			is_emperor_of_china = yes
+		}
+		allow = {
+			NOT = { has_country_modifier = new_mandate_holder }
+			custom_trigger_tooltip = {
+				tooltip = accepts_china_proper_cultures
+				calc_true_if = {
+					accepted_culture = chihan
+					accepted_culture = miao
+					accepted_culture = cantonese
+					accepted_culture = jin
+					accepted_culture = wu
+					accepted_culture = chimin
+					accepted_culture = hakka
+					accepted_culture = gan
+					accepted_culture = xiang
+					accepted_culture = sichuanese
+					accepted_culture = jianghuai
+					accepted_culture = xibei
+					accepted_culture = hubei
+					accepted_culture = zhongyuan
+					accepted_culture = shandong_culture
+					amount = 3
+				}
+			}
+			adm_power = 100
+			dip_power = 100
+			stability = 1
+		}
+		effect = {
+			add_adm_power = -100
+			add_dip_power = -100
+			add_stability = -1
+			custom_tooltip = convert_to_chinese_culture_japanese_effect_tt
+			hidden_effect = {
+				every_country = {
+					limit = {
+						culture_group = japanese_g
+					}
+					change_primary_culture = sino_japonic
+					if = {
+						limit = {
+							OR = {
+								ruler_culture = japanese
+								ruler_culture = togoku
+								ruler_culture = kanto
+								ruler_culture = tokai_tosan
+								ruler_culture = chugoku
+								ruler_culture = shikoku
+								ruler_culture = kyushuan
+								ruler_culture = ryukyuan
+							}
+						}
+						set_ruler_culture = sino_japonic
+					}
+					if = {
+						limit = {
+							has_heir = yes
+							OR = {
+								heir_culture = japanese
+								heir_culture = togoku
+								heir_culture = kanto
+								heir_culture = tokai_tosan
+								heir_culture = chugoku
+								heir_culture = shikoku
+								heir_culture = kyushuan
+								heir_culture = ryukyuan
+							}
+						}
+						set_heir_culture = sino_japonic
+					}
+					if = {
+						limit = {
+							has_consort = yes
+							OR = {
+								consort_culture = japanese
+								consort_culture = togoku
+								consort_culture = kanto
+								consort_culture = tokai_tosan
+								consort_culture = chugoku
+								consort_culture = shikoku
+								consort_culture = kyushuan
+								consort_culture = ryukyuan
+							}
+						}
+						set_consort_culture = sino_japonic
+					}
+				}
+				every_province = {
+					limit = {
+						culture_group = japanese_g
+					}
+					change_culture = sino_japonic
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 1000
+		}
+	}
+	
+	convert_to_chinese_culture_vietnamese = {
+		major = yes
+		potential = {
+			OR = {
+				primary_culture = vietnamese
+				primary_culture = zhuang
+			}
+			is_emperor_of_china = yes
+		}
+		allow = {
+			NOT = { has_country_modifier = new_mandate_holder }
+			custom_trigger_tooltip = {
+				tooltip = accepts_china_proper_cultures
+				calc_true_if = {
+					accepted_culture = chihan
+					accepted_culture = miao
+					accepted_culture = cantonese
+					accepted_culture = jin
+					accepted_culture = wu
+					accepted_culture = chimin
+					accepted_culture = hakka
+					accepted_culture = gan
+					accepted_culture = xiang
+					accepted_culture = sichuanese
+					accepted_culture = jianghuai
+					accepted_culture = xibei
+					accepted_culture = hubei
+					accepted_culture = zhongyuan
+					accepted_culture = shandong_culture
+					amount = 3
+				}
+			}
+			adm_power = 100
+			dip_power = 100
+			stability = 1
+		}
+		effect = {
+			add_adm_power = -100
+			add_dip_power = -100
+			add_stability = -1
+			custom_tooltip = convert_to_chinese_culture_vietnamese_effect_tt
+			hidden_effect = {
+				every_country = {
+					if = {
+						limit = {
+							primary_culture = vietnamese
+						}
+						change_primary_culture = sino_vietnamese
+						if = {
+							limit = {
+								ruler_culture = vietnamese
+							}
+							set_ruler_culture = sino_vietnamese
+						}
+						if = {
+							limit = {
+								has_heir = yes
+								OR = {
+									heir_culture = vietnamese
+								}
+							}
+							set_heir_culture = sino_vietnamese
+						}
+						if = {
+							limit = {
+								has_consort = yes
+								OR = {
+									consort_culture = vietnamese
+								}
+							}
+							set_consort_culture = sino_vietnamese
+						}
+					}
+					if = {
+						limit = {
+							primary_culture = zhuang
+						}
+						change_primary_culture = sino_zhuang
+						if = {
+							limit = {
+								ruler_culture = zhuang
+							}
+							set_ruler_culture = sino_zhuang
+						}
+						if = {
+							limit = {
+								has_heir = yes
+								OR = {
+									heir_culture = zhuang
+								}
+							}
+							set_heir_culture = sino_zhuang
+						}
+						if = {
+							limit = {
+								has_consort = yes
+								OR = {
+									consort_culture = zhuang
+								}
+							}
+							set_consort_culture = sino_zhuang
+						}
+					}
+				}
+				every_province = {
+					if = {
+						limit = {
+							culture = vietnamese
+						}
+						change_culture = sino_vietnamese
+					}
+					if = {
+						limit = {
+							culture = zhuang
+						}
+						change_culture = sino_zhuang
+					}
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 1000
+		}
+	}
+}

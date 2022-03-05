@@ -1,0 +1,89 @@
+#################################################
+# Events for Joseon
+#
+# written by BlazeKnight
+#
+#################################################
+
+namespace = asiarework_joseon
+
+#Korean Empire (Mission)
+country_event = {
+	id = asiarework_joseon.1
+	title = "asiarework_joseon_1_title"
+	desc = "asiarework_joseon_1_desc"
+	picture = GOOD_WITH_MONARCH_eventPicture
+	major = yes
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = "asiarework_joseon_1_option"
+	}
+}
+
+#The Gyeyu Coup D'etat (Sejo)
+country_event = {
+	id = asiarework_joseon.2
+	title = "asiarework_joseon_2_title"
+	desc = "asiarework_joseon_2_desc"
+	picture = ASSASSINATION_eventPicture
+	fire_only_once = yes
+	
+	trigger = {
+		tag = KOR
+		is_year = 1455
+		NOT = {
+			has_ruler_flag = sejong_do_gyeyu_coup
+		}
+		NOT = { is_year = 1500 }
+	}
+	
+	mean_time_to_happen = {
+		months = 5
+	}
+	
+	immediate = {
+		hidden_effect = {
+			if = {
+				limit = {
+					has_heir = no
+				}
+				define_heir = {
+					name = "Hongwi" #Danjong
+					dynasty = "Yi"
+					birth_date = 1452.5.14
+				}
+			}
+			kill_ruler = yes
+		}
+	}
+	
+	option = {
+		name = "asiarework_joseon_2_option_1" #Crown Sejo!
+		add_stability = -1
+		define_ruler = {
+			name = "Yu"
+			dynasty = "Yi"
+			ADM = 3
+			DIP = 3
+			MIL = 5
+			age = 38
+			fixed = yes
+			add_ruler_personality = cruel_personality
+		}
+		define_heir = {
+			name = "Hwang"
+			dynasty = "Yi"
+			ADM = 3
+			DIP = 2
+			MIL = 3
+			birth_date = 1450.1.4
+		}
+		custom_tooltip = joseon_factionalism_stage_one_begins
+		hidden_effect = {
+			set_country_flag = factionalism_stage_one # The Age of Korean Factionalism begins (Stage 1)
+		}
+		change_statists_vs_orangists = -0.33 #Sejo was supported by the Hungu
+	}
+}

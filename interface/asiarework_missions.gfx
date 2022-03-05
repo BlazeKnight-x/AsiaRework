@@ -1,0 +1,13 @@
+spriteTypes = {
+
+	spriteType = {
+		name = "mission_turtle_ship"
+		texturefile = "gfx/interface/missions/asiarework/turtle_ship.dds"
+	}
+	
+	spriteType = {
+		name = "mission_united_east_sea"
+		texturefile = "gfx/interface/missions/asiarework/united_east_sea.dds"
+	}
+	
+}

@@ -1,0 +1,39 @@
+﻿l_english:
+ korea_strait:0 "Korea Strait"
+ trade_company_korea_strait: "Korea Strait Charter"
+ TRADE_COMPANY_KOREA_STRAIT_Root_Culture_GetName: "[Root.Culture.GetName] Korea Strait Company"
+ TRADE_COMPANY_KOREA_STRAIT_Asia_Trade_Company: "Korea Strait Company"
+ east_siberia:0 "Okhotsk Sea"
+ trade_company_east_siberia: "Okhotsk Sea Charter"
+ TRADE_COMPANY_EAST_SIBERIA_Root_Culture_GetName: "[Root.Culture.GetName] Okhotsk Sea Company"
+ TRADE_COMPANY_EAST_SIBERIA_Asia_Trade_Company: "Okhotsk Sea Company"
+ central_china: "Hankou"
+ trade_company_central_china: "Central Chinese Charter"
+ TRADE_COMPANY_CENTRAL_CHINA_Root_Culture_GetName: "[Root.Culture.GetName] Central Chinese Company"
+ TRADE_COMPANY_CENTRAL_CHINA_Asia_Trade_Company: "[Root.Culture.GetName] Central Chinese Company"
+ 
+ beijing:1 "Yellow Sea"
+ hangzhou:1 "Yang Zse"
+ canton:1 "South China Sea"
+ yumen:1 "Mongolia"
+ 
+ han_estuary_modifier:0 "Han Estuary"
+ desc_han_estuary_modifier:0 "Controlling the important river estuary of the Han River strengthens our hold of the trade in the region."
+ taedong_estuary_modifier: "Taedong Estuary"
+ desc_taedong_estuary_modifier:0 "Controlling the important river estuary of the Taedong River strengthens our hold of the trade in the region."
+ nakdong_estuary_modifier: "Nakdong Estuary"
+ desc_nakdong_estuary_modifier:0 "Controlling the important river estuary of the Nakdong River strengthens our hold of the trade in the region."
+ 
+ huang_he_split_estuary_modifier:0 "Huang He Estuary"
+ desc_huang_he_split_estuary_modifier:0 "Controlling one of the important mouths of the Huang He River strengthens our hold of the trade in the region."
+ yangtze_split_estuary_modifier:0 "Yangtze Estuary"
+ desc_yangtze_split_estuary_modifier:0 "Controlling one of the important mouths of the Yangtze River strengthens our hold of the trade in the region."
+ liao_river_estuary_modifier: "Liao River Estuary"
+ desc_liao_river_estuary_modifier: "Controlling the important river estuary of the Liao River strengthens our hold of the trade in the region."
+ 
+ 
+ red_river_split_estuary_modifier:0 "Red River Estuary"
+ desc_red_river_split_estuary_modifier:0 "Controlling one of the important mouths of the Red River strengthens our hold of the trade in the region."
+ 
+ mahakam_river_estuary_modifier: "Mahakam River Estuary"
+ desc_mahakam_river_estuary_modifier: "Controlling the important river estuary of the Mahakam River strengthens our hold of the trade in the region."

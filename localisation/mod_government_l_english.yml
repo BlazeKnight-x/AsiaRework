@@ -1,0 +1,13 @@
+﻿l_english:
+ eastern_monarchy:0 "Eastern Monarchy"
+ eastern_monarchy_desc:0 "Eastern monarchies maintain their dynasty and believe that their rulers have the right to rule from heaven."
+ eastern_trading_city: "Trading Kingdom"
+ eastern_trading_city_desc: "Small trading kingdoms controlled political power through their trade power. These trading kingdoms can only have one province and boost the income of trade in their node."
+ eastern_trading_city_trade_power_tt: "§G+10.00§! Trade Power"
+ eastern_trading_city_province_trigger: "Trading Kingdom City"
+ desc_eastern_trading_city_province_trigger: "This province holds a lot of strategic value that the local Kingdom has fully exploited."
+ manchu_tribal_federation: "Jurchen Tribal Federation"
+ manchu_tribal_federation_desc: "Jurchen Tribal Federations are a group of loosely allied sedentary tribes."
+ 
+ joseon_monarchy: "Joseon Monarchy"
+ joseon_monarchy_desc: "The Kingdom of Great Joseon was a quasi-absolute monarchy where the king was bound by Confucian teachings and influenced by officials. Several offices of government existed to ensure the state would remain meritocratic and efficient. Unfortunately, the state also suffered from occational factional strife. In contrast to the previous kingdom, Goryeo, Joseon was more focused on agriculture compared to trade."

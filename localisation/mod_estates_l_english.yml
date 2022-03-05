@@ -1,0 +1,17 @@
+﻿l_english:
+ estate_confucian_scholars: "Confucian Scholars"
+ estate_church_inwards_perfection_ming: "Ming Inwards Perfection"
+ estate_church_inwards_perfection_ming_effect_tooltip: "Mandate Growth Modifier: §G+0.05§! when at peace for 10 years.\nMandate Growth Modifier: §R-0.05§! when not at peace within the last 10 years."
+ estate_church_inwards_perfection_ming_desc: "The Ming have always been an inwards focused nation, more content with maintaining stability than foreign expansion and trade."
+ custom_line_break_tt: "\n"
+ estate_church_clergy_run_bureaucracy: "Clergy Run Bureaucracy"
+ estate_church_clergy_run_bureaucracy_desc: "The upper-class Clergy and Confucian scholars dominate the nation's bureaucratic affairs. This gives our nation plenty of cheap advisors to fill up the ranks, but gives the clergy massive influence over our government."
+ 
+ #Korean Faction Estates
+ #estate_hungu: "Hungu"
+ #estate_hungu_desc: "The Hungu is a political faction of the Joseon Kingdom arising from King Sejo's coup. They consist of the aristocratic bureaucrats and officials who supported King Sejo's coup. The Hungu are quite conservative and want to hold on to their power, leading to loss in innovation and decadance if they are dominant. However, they are more supportive of religious minorities, such as Buddhists and Muists, compared to the radical Neo-Confucianist Sarim faction."
+ #estate_sarim: "Sarim"
+ #estate_sarim_desc: "The Sarim, or the "forest of scholars," is a political faction of the Joseon Kingdom consisting of Neo-Confucian scholars. They originated from the later Goryeo period, although during the early Joseon era they were forced to retreat to the countryside by the aristocratic Hungu. The Sarim push for reform of Joseon's decadent systems, which challenges the entrenched Hungu faction. As devout Neo-Confucianists, the Sarim is very intolerant of religion, such as Buddhism and Muism."
+ 
+ #estate_hungu_clergy_run_bureaucracy: "Hungu Run Bureaucracy"
+ #estate_hungu_clergy_run_bureaucracy_desc: "The Hungu faction dominate the nation's bureaucratic affairs. This gives our nation plenty of cheap advisors to fill up the ranks, but gives the Hungu massive influence over our government."

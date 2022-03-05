@@ -1,0 +1,25 @@
+country_decisions = {
+
+	become_tributary_military_commission = {
+		major = yes
+		potential = {
+			is_subject_of_type = military_commission
+			always = no
+		}
+		allow = {
+			is_at_war = no
+			overlord = { is_at_war = no }
+			total_development = 200
+		}
+		effect = {
+			overlord = {
+				create_subject = {
+					subject_type = confucian_tributary_state
+					subject = ROOT
+				}
+			}
+			set_government_rank = 2
+		}
+		ai_importance = 500
+	}
+}

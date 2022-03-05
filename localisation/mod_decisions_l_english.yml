@@ -1,0 +1,16 @@
+﻿l_english:
+ form_joseon_title:0 "Proclaim Joseon"
+ form_joseon_desc:0 "All Koreans remember the old prosperity of the Joseon kingdom. With our hold over the Korean peninsula, it is time to identify ourselves as the rightful rulers of Korea."
+ owns_japan_proper_tt: "All provinces in the Japan region with Japanese (not Ryukyuan) culture:\nOwned by §Y[Root.GetName]§!"
+ owns_java_tooltip: "Conquered Java Island"
+ form_mongolia_decision_title: "Unite the Mongols"
+ form_mongolia_decision_desc: "The unity of the Mongols is what enabled the great conquests of the Mongol Empire to happen. The time is now to bring the Mongols back under one banner."
+ form_chagatai_decision_title: "Reform Chagatai Khanate"
+ form_chagatai_decision_desc: ""
+
+ bhutan_nation_title:0 "Unify Bhutan"
+ bhutan_nation_desc:0 "Bhutan has lay divided among numerous states for too long. Now that we have united this land, we should proclaim ourselves as the ruler of all Bhutan."
+ kham_nation_title:0 "Unify Mdo-Kham"
+ kham_nation_desc:0 "Kham and Amdo have been divided among numerous states for too long. Now that we have united this land, we should proclaim ourselves as the ruler of all of Kham and Amdo."
+ ainu_nation_title:0 "Unite Ainu-Mosir"
+ kham_nation_desc:0 "The Ainu people throughout Ezo, Sakhalin and the Kurils must unite to withstand outside threats!"

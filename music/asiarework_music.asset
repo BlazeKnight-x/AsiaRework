@@ -1,0 +1,49 @@
+music = {
+	name = "KoreanFestival"
+	file = "korean_festival.ogg"
+}
+
+music = {
+	name = "CherryBlossoms"
+	file = "CherryBlossoms.ogg"
+}
+
+music = {
+	name = "GazingRiver"
+	file = "GazingRiver.ogg"
+}
+
+music = {
+	name = "HighMountainFlowingWater"
+	file = "HighMountainFlowingWater.ogg"
+}
+
+music = {
+	name = "TamerlaneGoesEast"
+	file = "TamerlaneGoesEast.ogg"
+}
+
+music = {
+	name = "SuyangsPlay"
+	file = "SuyangsPlay.ogg"
+}
+
+music = {
+	name = "HalongBay"
+	file = "HalongBay.ogg"
+}
+
+music = {
+	name = "FolkChinese"
+	file = "FolkChinese.ogg"
+}
+
+music = {
+	name = "TuvanAnthem"
+	file = "tuva.ogg"
+}
+
+music = {
+	name = "YellowEmperor"
+	file = "YellowEmperor.ogg"
+}

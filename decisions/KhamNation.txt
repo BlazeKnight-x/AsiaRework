@@ -1,0 +1,114 @@
+country_decisions = {
+
+	kham_nation = {
+		major = yes
+		potential = {
+			normal_or_historical_nations = yes
+			was_never_end_game_tag_trigger = yes
+			NOT = { has_country_flag = formed_bhutan_flag }
+			OR = {
+				ai = no
+				is_playing_custom_nation = no
+			}
+			NOT = { tag = BHU }
+			NOT = { tag = QAM }
+			NOT = { tag = TIB }
+			NOT = { tag = HLR }
+			NOT = { tag = PAP }
+			OR = {
+				primary_culture = khampa
+				primary_culture = gyelrong
+				primary_culture = amdowa
+			}
+			is_colonial_nation = no
+			OR = {
+				is_former_colonial_nation = no
+				AND = {
+					is_former_colonial_nation = yes
+					ai = no
+				}
+			}
+		}
+		provinces_to_highlight = {
+			OR = {
+				area = qamdo_area
+				area = yalong_area
+				area = hor_area
+				area = nyingchi_area
+				area = gyelrong_area
+				area = amdo_area
+				area = tsaidam_area
+			}
+			NOT = { owned_by = ROOT}
+		}
+		allow = {
+			is_at_war = no
+			is_free_or_tributary_trigger = yes
+			is_nomad = no			
+			NOT = { exists = QAM }
+			qamdo_area = {
+				type = all
+				owned_by = ROOT
+			}
+			yalong_area = {
+				type = all
+				owned_by = ROOT
+			}
+			hor_area = {
+				type = all
+				owned_by = ROOT
+			}
+			nyingchi_area = {
+				type = all
+				owned_by = ROOT
+			}
+			gyelrong_area = {
+				type = all
+				owned_by = ROOT
+			}
+			amdo_area = {
+				type = all
+				owned_by = ROOT
+			}
+			tsaidam_area = {
+				type = all
+				owned_by = ROOT
+			}
+		}
+		effect = {
+		restore_country_name = yes
+			change_tag = QAM
+			swap_non_generic_missions = yes
+			remove_non_electors_emperors_from_empire_effect = yes
+			every_province = {
+				limit = {
+					OR = {
+						area = hor_area
+						area = qamdo_area
+						area = gyelrong_area
+						area = kham_area
+						area = amdo_area
+						area = nyingchi_area
+						area = tsaidam_area
+					}
+				}
+				add_core = QAM
+			}
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			add_prestige = 25
+			set_country_flag = formed_kham_flag
+			if = {
+				limit = { has_custom_ideas = no }
+				country_event = { id = ideagroups.1 } #Swap Ideas
+			}
+		
+			ai_will_do = {
+				factor = 1
+			}
+			ai_importance = 400
+		}
+	}
+}

@@ -1,0 +1,336 @@
+###########################################################
+### East Asian Music ###
+### MEIOU ###
+song = {
+	name = "GazingRiver"
+	chance = {
+		modifier = {
+			factor = 2
+			OR = {
+				culture_group = east_asian
+				culture_group = korean_g
+				culture_group = japanese_g
+				culture_group = lingnan
+				culture_group = altaic
+				culture_group = evenki
+			}
+		}
+		modifier = {
+			factor = 0
+			NOT = {
+				culture_group = east_asian
+				culture_group = korean_g
+				culture_group = japanese_g
+				culture_group = lingnan
+				culture_group = altaic
+				culture_group = evenki
+			}
+		}
+	}
+}
+
+song = {
+	name = "HighMountainFlowingWater"
+	chance = {
+		modifier = {
+			factor = 2
+			OR = {
+				culture_group = east_asian
+				culture_group = korean_g
+				culture_group = japanese_g
+				culture_group = lingnan
+				culture_group = altaic
+				culture_group = evenki
+			}
+		}
+		modifier = {
+			factor = 0
+			NOT = {
+				culture_group = east_asian
+				culture_group = korean_g
+				culture_group = japanese_g
+				culture_group = lingnan
+				culture_group = altaic
+				culture_group = evenki
+			}
+		}
+	}
+}
+
+song = {
+	name = "TamerlaneGoesEast"
+	chance = {
+		modifier = {
+			factor = 2
+			OR = {
+				culture_group = east_asian
+				culture_group = korean_g
+				culture_group = japanese_g
+				culture_group = lingnan
+				culture_group = altaic
+				culture_group = evenki
+			}
+		}
+		modifier = {
+			factor = 0
+			NOT = {
+				culture_group = east_asian
+				culture_group = korean_g
+				culture_group = japanese_g
+				culture_group = lingnan
+				culture_group = altaic
+				culture_group = evenki
+			}
+		}
+	}
+}
+
+### Specifics ###
+song = {
+	name = "FolkChinese"
+	chance = {
+		modifier = {
+			factor = 3
+			culture_group = east_asian
+		}
+		modifier = {
+			factor = 2
+			NOT = { culture_group = east_asian }
+			OR = {
+				culture_group = korean_g
+				culture_group = japanese_g
+				culture_group = lingnan
+				culture_group = altaic
+				culture_group = evenki
+			}
+		}
+		modifier = {
+			factor = 0
+			NOT = {
+				culture_group = korean_g
+				culture_group = east_asian
+				culture_group = japanese_g
+				culture_group = lingnan
+				culture_group = altaic
+				culture_group = evenki
+			}
+		}
+		modifier = {
+			factor = 0
+			is_at_war = yes
+		} 
+	}
+}
+
+song = {
+	name = "YellowEmperor"
+	chance = {
+		modifier = {
+			factor = 3
+			culture_group = east_asian
+		}
+		modifier = {
+			factor = 2
+			NOT = { culture_group = east_asian }
+			OR = {
+				culture_group = korean_g
+				culture_group = japanese_g
+				culture_group = lingnan
+				culture_group = altaic
+				culture_group = evenki
+			}
+		}
+		modifier = {
+			factor = 0
+			NOT = {
+				culture_group = korean_g
+				culture_group = east_asian
+				culture_group = japanese_g
+				culture_group = lingnan
+				culture_group = altaic
+				culture_group = evenki
+			}
+		}
+		modifier = {
+			factor = 0
+			is_at_war = yes
+		} 
+	}
+}
+
+song = {
+	name = "KoreanFestival"
+	chance = {
+		modifier = {
+			factor = 3
+			OR = {
+				culture_group = korean_g
+				culture = sino_korean
+			}
+		}
+		modifier = {
+			factor = 2
+			NOT = { culture = sino_korean }
+			OR = {
+				culture_group = east_asian #Chinese
+				culture_group = japanese_g
+				culture_group = lingnan
+				culture_group = altaic
+				culture_group = evenki
+			}
+		}
+		modifier = {
+			factor = 0
+			NOT = {
+				culture_group = korean_g
+				culture_group = east_asian
+				culture_group = japanese_g
+				culture_group = lingnan
+				culture_group = altaic
+				culture_group = evenki
+			}
+		}
+		modifier = {
+			factor = 0
+			is_at_war = yes
+		}
+	}
+}
+
+song = {
+	name = "SuyangsPlay"
+	chance = {
+		modifier = {
+			factor = 3
+			OR = {
+				culture_group = korean_g
+				culture = sino_korean
+			}
+		}
+		modifier = {
+			factor = 2
+			NOT = { culture = sino_korean }
+			OR = {
+				culture_group = east_asian #Chinese
+				culture_group = japanese_g
+				culture_group = lingnan
+				culture_group = altaic
+				culture_group = evenki
+			}
+		}
+		modifier = {
+			factor = 0
+			NOT = {
+				culture_group = korean_g
+				culture_group = east_asian
+				culture_group = japanese_g
+				culture_group = lingnan
+				culture_group = altaic
+				culture_group = evenki
+				is_at_war = yes #Not at War
+			}
+		}
+	}
+}
+
+### MEIOU ###
+song = {
+	name = "CherryBlossoms"
+	chance = {
+		modifier = {
+			factor = 3
+			OR = {
+				culture_group = japanese_g
+				culture = sino_japonic
+			}
+		}
+		modifier = {
+			factor = 2
+			NOT = { culture = sino_japonic }
+			OR = {
+				culture_group = east_asian #Chinese
+				culture_group = korean_g
+				culture_group = lingnan
+				culture_group = altaic
+				culture_group = evenki
+			}
+		}
+		modifier = {
+			factor = 0
+			NOT = {
+				culture_group = korean_g
+				culture_group = east_asian
+				culture_group = japanese_g
+				culture_group = lingnan
+				culture_group = altaic
+				culture_group = evenki
+			}
+		}
+		modifier = {
+			factor = 0
+			is_at_war = yes
+		}
+	}
+}
+
+song = {
+	name = "HalongBay"
+	chance = {
+		modifier = {
+			factor = 3
+			culture = vietnamese
+		}
+		modifier = {
+			factor = 2
+			NOT = { culture = vietnamese }
+			OR = {
+				culture_group = east_asian #Chinese
+				culture_group = korean_g
+				culture_group = japanese_g
+				culture_group = lingnan
+				culture_group = altaic
+				culture_group = evenki
+			}
+		}
+		modifier = {
+			factor = 0
+			NOT = {
+				culture_group = korean_g
+				culture_group = east_asian
+				culture_group = japanese_g
+				culture_group = lingnan
+				culture_group = altaic
+				culture_group = evenki
+			}
+		}
+		modifier = {
+			factor = 0
+			is_at_war = yes
+		}
+	}
+}
+
+song = {
+	name = "TuvanAnthem"
+	chance = {
+		modifier = {
+			factor = 3
+			OR = {
+				culture_group = altaic
+				culture_group = turkic
+				culture = sino_mongol
+			}
+		}
+		modifier = {
+			factor = 2
+			OR = {
+				culture = manchu
+				culture = manchu_new
+			}
+		}
+		modifier = {
+			factor = 0
+			is_at_war = yes
+		}
+	}
+}

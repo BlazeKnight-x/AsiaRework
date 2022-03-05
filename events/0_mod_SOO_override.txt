@@ -1,0 +1,10 @@
+
+namespace = pirates
+
+country_event = {
+	id = pirates.21
+	
+	trigger = {
+		always = no
+	}
+}

@@ -1,0 +1,33 @@
+﻿l_english:
+ #STATISTS_NOT_IN_POWER:1 "$NAME$ NOT in power"
+ #STATISTS_IN_POWER:1 "$NAME$ in Power"
+ #MONARCHISTS_NOT_IN_POWER:0 "$NAME$ NOT in power"
+ #MONARCHISTS_IN_POWER:0 "$NAME$ in Power"
+ #STATIST_VS_MONARCHISTS_LESS_THAN:0 "$STATISTS$ vs $MONARCHISTS$ less than $VAL$"
+ #STATIST_VS_MONARCHISTS_AT_LEAST:0 "$STATISTS$ vs $MONARCHISTS$ at least $VAL$"
+ #STRENG_STATISTS_EFFECT:1 "Strengthen $NAME$ by $VAL|Y%$"
+ #STRENG_MONARCHISTS_EFFECT:0 "Strengthen $NAME$ by $VAL|Y%$"
+ 
+ ### We are removing the Hard Coded Line and using the Dynamic "Names (MECHANIC_TOOLTIP)" to make the entire string dynamic. ###
+ #STATISTS_IRO:1 "$NAME|Y$\n"
+ STATISTS_DRO:2 "$NAME$" #it is hard coded, making the tooltip wrong at times even in vanilla
+ MONARCHISTS_IRO:1 "$NAME|Y$\n" #god dammit PDX, you made the left side Yellow but forgot to make the right side Yellow since 2014.
+ MONARCHISTS_DRO:1 "$NAME$" #same reason
+ 
+ #Vanilla Tooltip Fixing.
+ statists_MECHANIC_TOOLTIP: "When Statists are in power we will get new rulers elected based on our current election cycle, but no ruler can hold more than 1 term at a time."
+ revolutionaries_MECHANIC_TOOLTIP: "When Revolutionaries are in power we will get new rulers elected based on our current election cycle, but no ruler can hold more than 1 term at a time."
+ militarists_MECHANIC_TOOLTIP: "When Militarists are in power, our current ruler will continue to rule until his/her death."
+ 
+ monarchists_MECHANIC_TOOLTIP: "When Monarchists are in power, our current ruler will continue to rule until his/her death."
+ orangists_MECHANIC_TOOLTIP: "When Orangists are in power, our current ruler will continue to rule until his/her death."
+ theocrats_MECHANIC_TOOLTIP: "When Theocrats are in power, our current ruler will continue to rule until his/her death."
+ 
+ #Modded
+ hungu_faction_MECHANIC_TOOLTIP: "The Hungu is a political faction of the Joseon Kingdom arising from King Sejo's coup. They consist of the aristocratic bureaucrats and officials who supported King Sejo's coup. The Hungu are quite conservative and want to hold on to their power, leading to loss in innovation and decadance if they are dominant. However, they are more supportive of religious minorities, such as Buddhists and Muists, compared to the radical Neo-Confucianist Sarim faction."
+ sarim_faction_MECHANIC_TOOLTIP: "The Sarim, or the "forest of scholars," is a political faction of the Joseon Kingdom consisting of Neo-Confucian scholars. They originated from the later Goryeo period, although during the early Joseon era they were forced to retreat to the countryside by the aristocratic Hungu. The Sarim push for reform of Joseon's decadent systems, which challenges the entrenched Hungu faction. As devout Neo-Confucianists, the Sarim is very intolerant of organized religion, such as Buddhism and Muism."
+ 
+ hungu_faction: "Hungu"
+ sarim_faction: "Sarim"
+ 
+ states_general_hungu_sarim_description: "The Hungu and Sarim factions will fight for control over power in the government. Every time a new ruler is crowned, you can choose to push either faction into prominence or stay neutral."

@@ -1,0 +1,135 @@
+country_decisions = {
+
+	### Notes about Forming Yuan ###
+	### Yuan in vanilla EU4 is treated more like a "final reward" tag with its many requirements.
+	### However, it makes more sense for a horde to declare a new Dynasty with a Chinese-style name long before they unite China.
+	### In the mod, Yuan (and Qing) are tags that you form to become a Chinese warring state.
+	###--------------------------###
+	form_mongolia_decision = {
+		major = yes
+		potential = {
+			normal_or_historical_nations = yes
+			was_never_end_game_tag_trigger = yes
+			NOT = { has_country_flag = formed_mongolia_flag }
+			OR = {
+				ai = no
+				is_playing_custom_nation = no
+			}
+			NOT = { exists = MGA }
+			NOT = { tag = YUA }
+			NOT = { tag = MUG }
+			NOT = { tag = QNG }
+			NOT = { tag = MNG }
+			NOT = { tag = MCH }
+			culture_group = altaic
+			OR = {
+				ai = no
+				AND = {
+					ai = yes
+					num_of_cities = 8
+				}
+			}
+			is_colonial_nation = no
+			OR = {
+				is_former_colonial_nation = no
+				AND = {
+					is_former_colonial_nation = yes
+					ai = no
+				}
+			}
+		}
+		provinces_to_highlight = {
+			AND = {
+				culture = mongol
+				NOT = { country_or_non_sovereign_subject_holds = ROOT }
+			}
+			AND = {
+				culture = oirats
+				NOT = { country_or_non_sovereign_subject_holds = ROOT }
+			}
+			AND = {
+				culture = khalkha
+				NOT = { country_or_non_sovereign_subject_holds = ROOT }
+			}
+			AND = {
+				culture = chahar
+				NOT = { country_or_non_sovereign_subject_holds = ROOT }
+			}
+			province_id = 723 #Xilin Gol
+			province_id = 1816 #Beijing
+			province_id = 2190 #Qaraqorum
+			owns_or_non_sovereign_subject_of = 708 #Zhangye
+			NOT = { OR = {
+				owned_by = ROOT
+				every_subject_country = {
+					owned_by = PREV
+				}
+			} }
+		}
+		allow = {
+			OR = {
+				culture_group = altaic
+				culture = sino_mongol
+			}
+			is_at_war = no
+			is_subject = no
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				culture = mongol
+				value = 5
+			}
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				culture = chahar
+				value = 5
+			}
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				culture = khalkha
+				value = 5
+			}
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				culture = oirats
+				value = 5
+			}
+			owns_or_non_sovereign_subject_of = 723 #Xilin Gol
+			owns_or_non_sovereign_subject_of = 1816 #Beijing
+			owns_or_non_sovereign_subject_of = 2190 #Qaraqorum
+			owns_or_non_sovereign_subject_of = 708 #Zhangye
+		}
+		effect = {
+			clr_country_flag = esen_taishi_oirats
+			#--------------------------------------------------------------------
+			set_government_rank = 3
+			1816 = {
+				change_province_name = Khanbaliq
+				rename_capital = Khanbaliq
+				move_capital_effect = yes
+				add_core = MGA
+			}
+			723 = {
+				change_province_name = Xanadu
+				rename_capital = Xanadu 
+			}
+			
+			change_tag = MGA
+			swap_non_generic_missions = yes
+			remove_non_electors_emperors_from_empire_effect = yes
+			
+			set_country_flag = formed_mongolia_flag
+			custom_tooltip = asiarework_mongol.2_mongols_integrate
+			hidden_effect = {
+				every_subject_country = {
+					limit = { is_subject_of_type = mongolian_tumen }
+					ROOT = { inherit = PREV }
+				}
+			}
+			add_prestige = 100
+			if = {
+				limit = { has_custom_ideas = no }
+				country_event = { id = ideagroups.1 } #Swap Ideas
+			}
+		}
+		ai_will_do = {
+			factor = 500
+		}
+		ai_importance = 400
+	}
+}
