@@ -1,0 +1,168 @@
+#Country Name: Please see filename.
+
+graphical_culture = asiangfx
+
+color = { 0 119 255 }
+
+historical_idea_groups = {
+	naval_ideas
+	offensive_ideas
+	maritime_ideas
+	trade_ideas
+	spy_ideas
+	diplomatic_ideas
+	economic_ideas
+	quality_ideas
+}
+
+historical_units = {
+	east_asian_spearmen
+	eastern_bow
+	asian_arquebusier
+	asian_charge_cavalry
+	asian_mass_infantry
+	asian_musketeer
+	reformed_asian_musketeer
+	reformed_asian_cavalry
+}
+
+monarch_names = {
+	Eulla = 5
+	Geon = 5
+	Samgye = 5
+	Ilmang = 5
+	Doje = 5
+	Eon-gyeong = 5
+	Bomyeong = 5
+	Haengcheon = 5
+	Hwan = 5
+	Sik = 5
+	Uk = 5
+	Hwang = 5
+	Wi = 5
+	Weong = 5
+	Hu = 5
+	Dumyeong = 5
+	Seonju = 5
+	Jinam = 5
+	Seongbang = 5
+	Munseong = 5
+	Ik = 5
+	Jihyo = 5
+	Suk = 5
+	Hyeonbang = 5
+	Gi = 5
+	Dam = 5
+	Ji-un = 5
+	Seo = 5
+	Damyeong = 5
+	Dam = 5
+	Cheseam = 5
+	Seongjin = 5
+	Hong = 5
+	Cheoryang = 5
+	Won = 5
+	Pyoryun = 5
+	Hyeong = 5
+	Chido = 5
+	Uk = 5
+	Cheonwon = 5
+	Hogong = 5
+	So = 5
+	Gyeongjik = 5
+	Min = 5
+	Jagyeon = 5
+	Mallo = 5
+	Yu = 5
+	Jogi = 5
+	Jeongik = 5
+	Jeok = 5
+	Yeorim = 5
+	Jeongan = 5
+	Sun = 5
+	Boksu = 5
+	Indan = 5
+	Sujwa = 5
+	Seok = 5
+	Sunryang = 5
+	Sunwon = 5
+	Myeongeol = 5
+	Singeol = 5
+	Bong-ye= 5
+	"Hyesun #0" = -5
+	"Hyejeong #0" = -5
+	"Hyohye #0" = -5
+	"Uihye #0" = -5
+	"Hyosun #0" = -5
+	"Gyeonghyeon #0" = -5
+	"Insun #0" = -5
+	"Jeongsin #0" = -5
+	"Jeonghye #0" = -5
+	"Jeongsuk #0" = -5
+	"Jeong-an #0" = -5
+	"Jeonghyu #0" = -5
+	"Jeongmyeong #0" = -5
+	"I #0" = 0
+	"Guem #0" = 0
+	"Rip #0" = 0
+	"Il #0" = 0
+	"Dong #0" = 0
+	"Gwai #0" = 0
+	"Sang #0" = 0
+	"Ji #0" = 0
+	"U #0" = 0
+	"Gyu #0" = 0
+	"Dae #0" = 0
+	"Gu #0" = 0
+}
+
+leader_names = {
+	Go Yang Bu
+	An
+	Bin
+	Choe
+	Geyong
+	Gyun
+	Jae-u
+	Jung
+	Kim
+	Lip
+	Myung
+	O 
+	Pak
+	Shi-min
+	Shin
+	Sun-sin
+	Won
+	Yi Yu Yun
+	Young
+	Yúl
+}
+
+ship_names = {
+	Tamna Jeju
+	Baekdu Baekje Buyeo
+	Chilbosan
+	Duman Daedeok Dongmyeongseong
+	"Eulji Mundeok"
+	Gayasan Geumgang Geumho Goguryeo Gumiho "Gyeon Hwon"
+	Imjingang Inmyeonjo
+	Jangbaek "Jang Bogo" Jirisan Jeongjong
+	Kumgangsan
+	Myohyangsan
+	Nakdong
+	Samjogo Sincheon Silla Sobaek
+	Taebaek Taejo 
+	Hanseong Haemosu Habaek Hwaeomsa
+	Worak
+	Yuhwa Yeong "Yeon Gaesomun"
+	"Jeong Do-jeon" "Yi Seong-gye"
+}
+
+army_names = {
+	"$PROVINCE$ Yukgun" "Royal Army"
+}
+
+fleet_names = {
+	"$PROVINCE$ Haegun" "$PROVINCE$ Hamdae" "Royal Navy"
+}

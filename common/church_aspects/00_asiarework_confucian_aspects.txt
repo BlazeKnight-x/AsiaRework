@@ -1,0 +1,120 @@
+#################### RELIGIOUS TOLERANCE ####################
+religious_tolerance_aspect = {
+	sprite = "GFX_asiarework_religious_tolerance"
+	cost = 200
+	potential = {
+		NOT = { has_country_modifier = religious_tolerance_aspect_modifier }
+	}
+	trigger = {
+		stability = 3
+		confucian_reforms_estates_are_pleased = yes
+		NOT = { has_country_modifier = confucian_reforms_estates_mad_modifier }
+	}
+	effect = {
+		custom_tooltip = "religious_tolerance_aspect_tt"
+		hidden_effect = {
+			country_event = {
+				id = "asiarework_confucianism_events.3"
+			}
+		}
+	}
+	ai_will_do = {
+		factor = 0
+	}
+}
+#################### IMPERIAL EXAMINATIONS ####################
+reformed_imperial_examinations_aspect = {
+	sprite = "GFX_asiarework_imperial_examinations"
+	cost = 200
+	potential = {
+		NOT = { has_country_modifier = imperial_examinations_aspect_modifier }
+	}
+	trigger = {
+		stability = 0
+		confucian_reforms_estates_are_pleased = yes
+		NOT = { has_country_modifier = confucian_reforms_estates_mad_modifier }
+	}
+	effect = {
+		custom_tooltip = reformed_imperial_examinations_aspect_tt
+		hidden_effect = {
+			country_event = {
+				id = "asiarework_confucianism_events.5"
+			}
+		}
+	}
+	ai_will_do = {
+		factor = 0
+	}
+}
+#################### Hierarchy ####################
+denounce_hierarchy_aspect = {
+	sprite = "GFX_asiarework_hierarchy"
+	cost = 200
+	potential = {
+		NOT = { has_country_modifier = denounce_hierarchy_aspect_modifier }
+	}
+	trigger = {
+		stability = 0
+		confucian_reforms_estates_are_pleased = yes
+		NOT = { has_country_modifier = confucian_reforms_estates_mad_modifier }
+	}
+	effect = {
+		custom_tooltip = "denounce_hierarchy_aspect_tt"
+		hidden_effect = {
+			country_event = {
+				id = "asiarework_confucianism_events.7"
+			}
+		}
+	}
+	ai_will_do = {
+		factor = 0
+	}
+}
+#################### GLOBALISM ####################
+globalism_aspect = {
+	sprite = "GFX_asiarework_globalism"
+	cost = 200
+	potential = {
+		NOT = { has_country_modifier = globalism_aspect_modifier }
+	}
+	trigger = {
+		stability = 0
+		confucian_reforms_estates_are_pleased = yes
+		NOT = { has_country_modifier = confucian_reforms_estates_mad_modifier }
+	}
+	effect = {
+		custom_tooltip = "globalism_aspect_tt"
+		hidden_effect = {
+			country_event = {
+				id = "asiarework_confucianism_events.9"
+			}
+		}
+	}
+	ai_will_do = {
+		factor = 0
+	}
+}
+#################### MILITARY REFORM ####################
+military_reform_aspect = {
+	sprite = "GFX_asiarework_military_reform"
+	cost = 200
+	potential = {
+		NOT = { has_country_modifier = military_reform_aspect_modifier }
+	}
+	trigger = {
+		stability = 0
+		confucian_reforms_estates_are_pleased = yes
+		NOT = { has_country_modifier = confucian_reforms_estates_mad_modifier }
+	}
+	effect = {
+		custom_tooltip = "military_reform_aspect_tt"
+		hidden_effect = {
+			country_event = {
+				id = "asiarework_confucianism_events.11"
+			}
+		}
+	}
+	ai_will_do = {
+		factor = 0
+	}
+}

@@ -1,0 +1,21 @@
+cb_chinese_civil_war = {
+	valid_for_subject = no
+
+	prerequisites = {
+		has_reform = chinese_warring_state
+		FROM = {
+			OR = {
+				has_reform = chinese_warring_state
+				is_emperor_of_china = yes
+			}
+		}
+	}
+
+	war_goal = chinese_civil_war_wargoal
+
+	attacker_disabled_po = {
+		po_revoke_cores
+		po_become_tributary_state
+		po_form_personal_union
+	}
+}
