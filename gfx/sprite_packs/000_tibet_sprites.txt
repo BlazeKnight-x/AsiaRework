@@ -1,0 +1,49 @@
+dlc041_tib_sprite_pack = {
+	country_trigger = {
+		OR = {
+			tag = TIB
+			tag = UTS
+			tag = GUG
+			tag = KAM
+			tag = PHA
+			tag = MAQ
+			tag = LDK
+			tag = GIL
+			tag = HNZ
+			tag = DIA
+			tag = SKK
+			tag = RAL
+			tag = BUM
+			tag = NAN
+			tag = PWO
+			tag = LIN
+			tag = CKL
+			tag = HOR
+			tag = GLK
+			tag = JON
+			tag = BHU
+			tag = QAM
+			tag = LOO
+		}
+	}
+	sprite_infantry = {
+		0 = TIB_INFANTRY_1
+		1 = TIB_INFANTRY_2
+		2 = TIB_INFANTRY_3
+		3 = TIB_INFANTRY_4
+	}
+
+	sprite_cavalry = {
+		0 = TIB_CAVALRY_1
+		1 = TIB_CAVALRY_2
+		2 = TIB_CAVALRY_3
+		3 = TIB_CAVALRY_4
+	}
+
+	sprite_artillery = {
+		0 = TIB_ARTILLERY_1
+		1 = TIB_ARTILLERY_2
+		2 = TIB_ARTILLERY_3
+		3 = TIB_ARTILLERY_4
+	}
+}
